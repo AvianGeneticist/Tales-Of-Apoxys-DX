@@ -1,0 +1,90 @@
+outfitter "everything"
+	"Small Turret Base"
+	"Medium Turret Base"
+	"Large Turret Base"
+	"Huge Turret Base"
+	"Link Node"
+	"Enhancer Node"
+
+# UTILITIES
+
+outfit "Key Drive"
+	category "Systems"
+	cost 1050000
+	thumbnail "outfit/jump drive"
+	"mass" 20
+	"outfit space" -20
+	"jump speed" .3
+	"jump fuel" 200
+	"jump drive" 1
+	"quantum keystone" 1
+	description "A Jump Drive modified by Claire to include a Quantum Keystone in its design without compromising effectiveness. Eliminates the need to have a separate keystone."
+
+outfit "Reserve Drive"
+	category "Systems"
+	cost 1100000
+	thumbnail "outfit/jump drive"
+	"mass" 25
+	"outfit space" -25
+	"jump speed" .3
+	"jump fuel" 200
+	"jump drive" 1
+	"quantum keystone" 1
+	"fuel capacity" 200
+	"ramscoop" 1
+	"fuel generation" 0.07
+	description "An upgraded Key Drive featuring fuel storage and recovery effects of a Fuel Processor. Allows the ship to recover fuel anywhere (if slowly)."
+
+# COMPONENTS
+# Components so the crafting system makes sense.
+
+category "outfit"
+	"Crafting"
+
+outfit "Small Turret Base"
+	cost 5000
+	category "Crafting"
+	mass 10
+	thumbnail "outfit/unknown"
+	unusable -1
+	description "A swift turret base designed for small weapons."
+
+outfit "Medium Turret Base"
+	cost 10000
+	category "Crafting"
+	mass 20
+	thumbnail "outfit/unknown"
+	unusable -1
+	description "A moderate turret base designed for medium weapons."
+
+outfit "Large Turret Base"
+	cost 20000
+	category "Crafting"
+	mass 40
+	thumbnail "outfit/unknown"
+	unusable -1
+	description "A heavy turret base designed for large weapons."
+
+outfit "Huge Turret Base"
+	cost 40000
+	category "Crafting"
+	mass 80
+	thumbnail "outfit/unknown"
+	unusable -1
+	description "An oversized turret base designed for only the largest, most racuous of weapons."
+
+outfit "Link Node"
+	cost 2500
+	category "Crafting"
+	mass 2
+	thumbnail "outfit/unknown"
+	unusable -1
+	description "A device for linking multiple weapons together on one mount, typically without the aid of a turret mount."
+
+outfit "Enhancer Node"
+	cost 50000
+	category "Crafting"
+	mass 5
+	thumbnail "outfit/unknown"
+	unusable -1
+	description "A device for modifying the performance of a weapon in a variety of ways; a prized crafting ingredient by those who can isolate them."

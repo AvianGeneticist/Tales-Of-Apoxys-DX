@@ -1,0 +1,524 @@
+mission "TOA Crafting Intro"
+	name "Starting the Forges"
+	description "Maribelle thinks she's received a transmission from another AI on New Boston. Might as well go investigate."
+	landing
+	source
+		not planet "New Boston"
+	destination "New Boston"
+	to offer
+		has "Apoxys Level 25: declined"
+	on offer
+		conversation
+			`Maribelle looks surprised as she perks up abruptly during what should be a fairly normal landing sequence. It takes her some time to speak, holding an indecipherable card in her holographic hand. "Captain, I've just received a message from someone calling themselves 'Claire'," Maribelle says, offering you the card.`
+			`	You try very hard to read it, but it's nothing but flashy lights. "Could you read it to me?" You ask.`
+			`	"Oh! It says we're sisters, or something like that... She runs a forge on New Boston. If you don't mind, I'd like to go investigate. I don't know if anything would come of it, but it can't hurt to look," Maribelle expresses to you.`
+			choice
+				`	"We'll swing by when we're able."`
+				`	"It's a bit out of the way, but we can head there."`
+				`	"We'll put a pin in it for when we have some time."`
+
+			`"Okay Captain!" Maribelle nods giddily. "I'll leave a marker on New Boston!"`
+				accept
+
+	on complete
+		conversation
+			`As you enter New Boston, Maribelle directs you away from the usual spaceport, instead sending you coasting over the horizon for roughly an hour. Eventually, however, you find what looks to be a very large, but otherwise inconspicuous factory complex. You can't even tell there's anything unusual about it, until a new voice comes through your ship's speakers.`
+			`	"Can ya both hear me?" Asks a gruffer-sounding female AI, "I've been trying to contact y'all for a while."`
+			`	"Loud and clear!" Maribelle answers before you can, "Sorry for the wait! Who's idea was it to make space so big, huh?"`
+			`	This gets a laugh out of the other AI. "We'll find 'em eventually. Oh- but, here I am gettin' distracted. I'll welcome y'all in on the main landin' pad," They say.`
+			``
+			`As you touch down near the front of the factory, the door opens up to reveal a staggeringly large, seemingly automated workspace. Like the Apoxys, it looks some degree larger inside than it does outside.`
+			`	A chubbier, older-looking hologram waves at you as you enter the ship. "So, you're the cap'n?" She asks, "I'm Claire. I'd shake yer hand but I'm afraid I can't do much of firm anything."`
+			choice
+				`	"It's nice to meet you, I'm Captain <last>."`
+				`	"You're the operator of this forge, I assume?"`
+					goto business
+
+			`	"Nice to meet you, Cap'n. I think you'll like the sorts of surprises I have in store," Claire says.`
+			`	"What sorts of things do you do here?" You ask.`
+			label business
+			`	"Straight to the point, eh? I like that; never was much for lollygaggin'," Claire chuckles, "I'm a blacksmith; whatever that implies in this age o' technology. Bring me the right things and I can make some tweaks to yer kit; make it easier to fit all your heart desires. 'Specially weapons; I'm always fancyin' a tinker with somethin' big 'n' boisterous," She explains.`
+			`	"What sort of things can you make?" You ask.`
+			`	"Well, that's kinda the tricky part... My databanks are locked down for the most part. Recently, though, a couple of 'em opened up for me. Simple stuff; bring me a Quantum Keystone and a Jump Drive, and I'll save you the dead space of having a hunk of rock crammed in a corner somewhere. There's other recipes too; I'll know 'em when I see 'em, but I gotta have faces to put names to, I reckon."`
+			`	"Finding a Jump Drive and a Quantum Keystone shouldn't be too hard," You agree. "I'll come back once I find them."`
+			`	"Sounds great, cap'n," Claire nods.`
+			``
+			`"Might get a bit tedious for you to scour the spaceport looking for the right terminal to get in touch with me, so I'll tell you what, Cap'n: I'll post open bills on the job board just for you when you're on-world; keep an eye out for jobs tagged 'crafting' an' you'll know that's me. Sound good?" Claire asks.`
+			`	"Seems simple enough," You nod, "I'll be sure to check the job board when I think I've found something interesting."`
+			`	"Great. Speakin' of, I've got a spare forge open. If you want me to craft up some components for you, I'll leave a bill on the board," Claire says.`
+			`	"Components?" You ask, "What sorts of components?"`
+			`	"Well, I can't do everythin' for ya, but I can cover the basics. Links for puttin' multiple guns on one mounts, and turret mounts good fer up to 120 tons. I'll need credits and time for the parts 'n' labor, though," Claire says.`
+			choice
+				`	"Thank you, Claire."`
+					goto thanks
+				`	"So how do you know Maribelle?"`
+					goto maribelle
+
+			label thanks
+			`"'Ey, don't mention it, Cap'n," Claire says, "I got a job to do an' I love doin' it. I've been custom-makin' parts for folks as long as I can remember," Claire smiles at you. "You bring me back some interestin' stuff to tinker with, now," She requests, waving you off.`
+				goto end
+
+			label maribelle
+			`"Well Cap'n, I ain't too perfectly sure of that m'self," Claire replies, scratching her head a bit. "Some kinda, I dunno. Sisterly intuition. Ain't ever met her before, but she just felt so darn familiar," She attempts to explain.`
+			`	"Perhaps you knew each other before some kind of data wipe," You posit, finding it slightly suspicious that both Claire and Maribelle have databanks that are or were locked to them in certain peculiar ways.`
+			`	"Your guess is as good as mine, Cap'n," Claire nods. "But, I oughtta get back ta runnin' the forge. You find me somethin' interestin' to tinker with, now," She requests.`
+
+			label end
+			`	You nod and return to your ship. What sort of things can she make? She mentioned fusing a Jump Drive and a Quantum Keystone in particular...`
+			`	Maribelle greets you. "Well, how'd it go?" She asks excitedly.`
+			`	"She's a crafter. If we bring her the right combinations of things, she can make better outfits and weapons for us," You explain.`
+			`	"Oh, very nice! I bet we'll be seeing her a lot!" Maribelle giggles, clapping her hands together excitedly.`
+
+mission "TOA Component Forging"
+	name "(Crafting) Component Forging"
+	description "Claire has an open forging bay for components like turret bases or nodes."
+	repeat
+	job
+	source "New Boston"
+	to offer
+		has "TOA Crafting Intro: offered"
+		not "forge occupied"
+	on accept
+		conversation
+			`"Welcome back, Cap'n! What can I do you for today?" Claire asks, smiling wide at you.`
+			label main
+			choice
+				`	"I'd like to craft some nodes."`
+					goto nodes
+				`	"I'd like to craft some turret bases."`
+					goto turretbases
+				`	"Nevermind."`
+					goto end
+
+			label nodes
+			`"You're in the market for nodes, eh?" Claire nods, "What flavour's catchin' yer fancy?" She asks.`
+			choice
+				`	(Make link nodes.)`
+					goto link
+				`	(Make enhancer nodes.)`
+					goto enhancer
+				`	(Reconsider.)`
+					goto main
+
+			label link
+			`	"Link Nodes; always handy to have a few around," Claire remarks, "I can whip you up a batch o' ten in five weeks, for twenty-five-thousand credits." She offers.`
+			choice
+				`	"That sounds great, let's do it."`
+					goto makelink
+					to display
+						"credits" >= 25000
+				`	"On second thought, let me rethink."`
+					goto nodes
+
+			label makelink
+			action
+				event "apoxys link nodes" 35
+				"forge occupied" ++
+				payment -25000
+			`	You give Claire the credits for the components' parts and bid her adieu.`
+				goto end
+
+			label enhancer
+			`	"Enhancers... Those suckers can be tricky," Claire remarks, "I can whip you up a batch o' two in fifteen weeks, for one-hundred-thousand credits." She offers.`
+			choice
+				`	"That sounds great, let's do it."`
+					goto makeenhancer
+					to display
+						"credits" >= 100000
+				`	"On second thought, let me rethink."`
+					goto nodes
+
+			label makeenhancer
+			action
+				event "apoxys enhancer nodes" 105
+				"forge occupied" ++
+				payment -100000
+			`	You give Claire the credits for the components' parts and bid her adieu.`
+				goto end
+
+			label turretbases
+			`"Turret bases, eh? I can do that alright," Claire nods, "What size are you in the mood for?" She asks.`
+			choice
+				`	(Make small turret bases.)`
+					goto small
+				`	(Make medium turret bases.)`
+					goto medium
+				`	(Make large turret bases.)`
+					goto large
+				`	(Make huge turret bases.)`
+					goto huge
+					to display
+						has "Apoxys Level 35: declined"
+				`	(Reconsider.)`
+					goto main
+
+			label small
+			`	"Smalls, 'ey? I don't judge," Claire remarks, "I can whip you up a batch o' six in two weeks, for thirty-thousand credits." She offers.`
+			choice
+				`	"That sounds great, let's do it."`
+					goto makesmall
+					to display
+						"credits" >= 30000
+				`	"On second thought, let me rethink."`
+					goto turretbases
+
+			label makesmall
+			action
+				event "apoxys small turrets" 14
+				"forge occupied" ++
+				payment -30000
+			`	You give Claire the credits for the components' parts and bid her adieu.`
+				goto end
+
+			label medium
+			`	"Can't go wrong with good ol' mediums," Claire remarks, "I can whip you up a batch o' five in four weeks, for fifty-thousand credits." She offers.`
+			choice
+				`	"That sounds great, let's do it."`
+					goto makemedium
+					to display
+						"credits" >= 50000
+				`	"On second thought, let me rethink."`
+					goto turretbases
+
+			label makemedium
+			action
+				event "apoxys medium turrets" 28
+				"forge occupied" ++
+				payment -50000
+			`	You give Claire the credits for the components' parts and bid her adieu.`
+				goto end
+
+			label large
+			`	"Larges, eh? You plannin' somethin' fun?" Claire remarks, "I can whip you up a batch o' four in seven weeks, for eighty-thousand credits." She offers.`
+			choice
+				`	"That sounds great, let's do it."`
+					goto makelarge
+					to display
+						"credits" >= 80000
+				`	"On second thought, let me rethink."`
+					goto turretbases
+
+			label makelarge
+			action
+				event "apoxys large turrets" 49
+				"forge occupied" ++
+				payment -80000
+			`	You give Claire the credits for the components' parts and bid her adieu.`
+				goto end
+
+			label huge
+			`	"Huges? Ohoho, now you're speakin' my language, Cap'n," Claire remarks with a grin, "I can whip you up a batch o' three in twelve weeks, for one-hundred-twenty-thousand credits." She offers.`
+			choice
+				`	"That sounds great, let's do it."`
+					goto makehuge
+					to display
+						"credits" >= 120000
+				`	"On second thought, let me rethink."`
+					goto turretbases
+
+			label makehuge
+			action
+				event "apoxys huge turrets" 84
+				"forge occupied" ++
+				payment -120000
+			`	You give Claire the credits for the components' parts and bid her adieu.`
+				goto end
+
+			label end
+			`	"Mhm, seeya soon, Cap'n," Claire bids as you close communications.`
+
+event "apoxys link nodes"
+
+mission "apoxys link nodes"
+	name "Nodes are finished."
+	description "Claire's finished her batch of link nodes. Come to New Boston to collect them."
+	landing
+	repeat
+	destination "New Boston"
+	to offer
+		has "event: apoxys link nodes"
+	on offer
+		"forge occupied" --
+		clear "event: apoxys link nodes"
+		conversation
+			`	You receive a notification from Claire: "Hey Cap'n! Your nodes are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
+				accept
+	on complete
+		outfit "Link Node" 10
+		dialog `Claire welcomes you back as the nodes are loaded onto your ship.`
+
+event "apoxys enhancer nodes"
+
+mission "apoxys enhancer nodes"
+	name "Nodes are finished."
+	description "Claire's finished her batch of enhancer nodes. Come to New Boston to collect them."
+	landing
+	repeat
+	destination "New Boston"
+	to offer
+		has "event: apoxys enhancer nodes"
+	on offer
+		"forge occupied" --
+		clear "event: apoxys enhancer nodes"
+		conversation
+			`	You receive a notification from Claire: "Hey Cap'n! Your nodes are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
+				accept
+	on complete
+		outfit "Enhancer Node" 2
+		dialog `Claire welcomes you back as the nodes are loaded onto your ship.`
+
+event "apoxys small turrets"
+
+mission "apoxys small turrets"
+	name "Turret Bases are finished."
+	description "Claire's finished her batch of small turret bases. Come to New Boston to collect them."
+	landing
+	repeat
+	destination "New Boston"
+	to offer
+		has "event: apoxys small turrets"
+	on offer
+		"forge occupied" --
+		clear "event: apoxys small turrets"
+		conversation
+			`	You receive a notification from Claire: "Hey Cap'n! Your turret bases are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
+				accept
+	on complete
+		outfit "Small Turret Base" 6
+		dialog `Claire welcomes you back as the turret bases are loaded onto your ship.`
+
+event "apoxys medium turrets"
+
+mission "apoxys medium turrets"
+	name "Turret Bases are finished."
+	description "Claire's finished her batch of medium turret bases. Come to New Boston to collect them."
+	landing
+	repeat
+	destination "New Boston"
+	to offer
+		has "event: apoxys medium turrets"
+	on offer
+		conversation
+			`	You receive a notification from Claire: "Hey Cap'n! Your turret bases are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
+				accept
+	on complete
+		"forge occupied" --
+		clear "event: apoxys medium turrets"
+		outfit "Medium Turret Base" 5
+		dialog `Claire welcomes you back as the turret bases are loaded onto your ship.`
+
+event "apoxys large turrets"
+
+mission "apoxys large turrets"
+	name "Turret Bases are finished."
+	description "Claire's finished her batch of large turret bases. Come to New Boston to collect them."
+	landing
+	repeat
+	destination "New Boston"
+	to offer
+		has "event: apoxys large turrets"
+	on offer
+		conversation
+			`	You receive a notification from Claire: "Hey Cap'n! Your turret bases are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
+				accept
+	on complete
+		"forge occupied" --
+		clear "event: apoxys large turrets"
+		outfit "Large Turret Base" 4
+		dialog `Claire welcomes you back as the turret bases are loaded onto your ship.`
+
+event "apoxys huge turrets"
+
+mission "apoxys huge turrets"
+	name "Turret Bases are finished."
+	description "Claire's finished her batch of huge turret bases. Come to New Boston to collect them."
+	landing
+	repeat
+	destination "New Boston"
+	to offer
+		has "event: apoxys huge turrets"
+	on offer
+		conversation
+			`	You receive a notification from Claire: "Hey Cap'n! Your turret bases are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
+				accept
+	on complete
+		"forge occupied" --
+		clear "event: apoxys huge turrets"
+		outfit "Huge Turret Base" 3
+		dialog `Claire welcomes you back as the turret bases are loaded onto your ship.`
+
+mission "TOA Crafting Utilities"
+	name "(Crafting) Craft Utilities"
+	description "Craft utilities like systems or power outfits."
+	job
+	repeat
+	source "New Boston"
+	to offer
+		has "TOA Crafting Intro: offered"
+	on accept
+		conversation
+			`Claire welcomes you back to the forge readily. "What're we makin' today, Cap'n?" She asks.`
+			label main
+			choice
+				`	(Make a Key Drive.)`
+					goto keydrive
+					to display
+						and
+							"outfit (cargo): Jump Drive" >= 1
+							"outfit (cargo): Quantum Keystone" >= 1
+				`	(Make a Reserve Drive.)`
+					goto reservedrive
+					to display
+						and
+							"outfit (cargo): Key Drive" >= 1
+							"outfit (cargo): Fuel Processor" >= 1
+				`	(Nevermind.)`
+					goto end
+
+			label keydrive
+			`"The Key Drive's a classic," Claire asserts, "Break up a fancy space rock and sprinkle it over a jump drive; it'll save you a bit of space and look a lot prettier than a big hunk of rock sittin' in the corner. Want me to make one for ya?"`
+			choice
+				`	(Craft a Key Drive with a Jump Drive and a Quantum Keystone.)`
+					goto makekeydrive
+				`	(Reconsider.)`
+					goto main
+
+			label makekeydrive
+			action
+				outfit "Jump Drive" -1
+				outfit "Quantum Keystone" -1
+				outfit "Key Drive" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label reservedrive
+			`"Reserve Drives used to be common somewhere in the galaxy; drives that could store and scoop their own fuel for emergencies," Claire says, "It's a bit smaller than trying to cram fuel outfits and a drive into one ship. Wanna make one?" She asks.`
+			choice
+				`	(Craft a Reserve Drive with a Key Drive and a Fuel Processor.)`
+					goto makereservedrive
+				`	(Reconsider.)`
+					goto main
+
+			label makereservedrive
+			action
+				outfit "Key Drive" -1
+				outfit "Fuel Processor" -1
+				outfit "Reserve Drive" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label end
+			`	"Seeya when I seeya, Cap'n!" Claire waves.`
+
+mission "TOA Crafting Weapons"
+	name "(Crafting) Craft Weapons"
+	description "Craft weapons (guns or turrets in particular)."
+	job
+	repeat
+	source "New Boston"
+	to offer
+		has "TOA Crafting Intro: offered"
+	on accept
+		conversation
+			`Claire welcomes you back to the forge readily. "What're we makin' today, Cap'n?" She asks.`
+			label main
+			choice
+				`	(Make a Starcutter Beam.)`
+					goto starcutter
+					to display
+						and
+							"outfit (cargo): Sunbeam" >= 1
+							"outfit (cargo): Husk-Slice" >= 1
+				`	(Make a Starcutter Turret.)`
+					goto starcutterturret
+					to display
+						and
+							"outfit (cargo): Dual Sunbeam Turret" >= 1
+							"outfit (cargo): Husk-Slice" >= 2
+				`	(Make a Multi-Disruptor.)`
+					goto multidisruptor
+					to display
+						and
+							"outfit (cargo): Korath Detainer" >= 1
+							"outfit (cargo): Ion Cannon" >= 1
+							"outfit (cargo): Shield Disruptor Turret" >= 1
+				`	(Make a Centipede Devastator.)`
+					goto centipededevastator
+					to display
+						and
+							"outfit (cargo): Thorax Cannon" >= 2
+							"outfit (cargo): Enhancer Node" >= 2
+							"outfit (cargo): Huge Turret Base" >= 1
+							has "Apoxys Level 35: declined"
+				`	(Nevermind.)`
+					goto end
+
+			label starcutter
+			`"Starcutter Beam, Starcutter Beam... That does sound familiar, Cap'n. It's a big ol' beam that'll cut through whatever's in front of it, but it takes a good hunk of space and energy to use properly," Claire recalls, "Wanna make one?"`
+			choice
+				`	(Craft a Starcutter Beam with a Sunbeam and a Husk-Slice.)`
+					goto makestarcutter
+				`	(Reconsider.)`
+					goto main
+
+			label makestarcutter
+			action
+				outfit "Sunbeam" -1
+				outfit "Husk-Slice" -1
+				outfit "Starcutter Beam" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label starcutterturret
+			`"Starcutter Turret, eh? Sounds familiar; two big ol' beams designed for cuttin' through whatever sits in front of 'em. Careful with this one, though; puttin' two of 'em on one mount makes for a mighty hungry weapon," Claire warns.`
+			choice
+				`	(Craft a Starcutter Turret with a Dual Sunbeam Turret and two Husk-Slices.)`
+					goto makestarcutterturret
+				`	(Reconsider.)`
+					goto main
+
+			label makestarcutterturret
+			action
+				outfit "Dual Sunbeam Turret" -1
+				outfit "Husk-Slice" -2
+				outfit "Starcutter Turret" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label multidisruptor
+			`"If you're lookin' for a big gun, the Multi-Disruptor's an excellent choice, Cap'n," Claire says with a grin. "Sure, the damage ain't too great... But it ain't like your opponent's gonna be fightin' back all too hard when they're saddled with ion, scramble, slowing, and - of course - disruption. Well, did I sell ya on it?"`
+			choice
+				`	(Craft a Multi-Disruptor with a Korath Detainer, an Ion Cannon, and a Shield Disruptor Turret.)`
+					goto makemultidisruptor
+				`	(Reconsider.)`
+					goto main
+
+			label makemultidisruptor
+			action
+				outfit "Korath Detainer" -1
+				outfit "Shield Disruptor Turret" -1
+				outfit "Ion Cannon" -1
+				outfit "Multi-Disruptor" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label centipededevastator
+			`"In terms of making big booms, the Centipede Devastator's second ta none, ya hear me?" Claire chuckles, "Not much that can keep flyin' straight after bein' hit with five Thorax Cannon shots. Y'up for makin' one?"`
+			choice
+				`	(Craft a Centipede Devastator with a two Thorax Cannons, two Enhancer Nodes, and a Huge Turret Base.)`
+					goto makecentipededevastator
+				`	(Reconsider.)`
+					goto main
+
+			label makecentipededevastator
+			action
+				outfit "Thorax Cannon" -2
+				outfit "Enhancer Node" -2
+				outfit "Huge Turret Base" -1
+				outfit "Centipede Devastator" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label end
+			`	"Seeya when I seeya, Cap'n!" Claire waves.`
+

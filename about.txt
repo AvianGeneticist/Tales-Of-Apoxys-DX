@@ -1,0 +1,1 @@
+This is a major rewrite of my "Tales of Apoxys" plugin, featuring new mechanics and readjusted progression. I do hope you find it agreeable.

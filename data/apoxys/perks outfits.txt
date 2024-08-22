@@ -1,0 +1,156 @@
+outfit "Perk: Shield Overclock"
+	category "Apoxys Perks"
+	cost 0
+	"mass" -0
+	"outfit space" 0
+	"shield generation multiplier" 0.1
+	"shield energy multiplier" 0.1
+	"shield heat multiplier" 0.1
+	"shield fuel multiplier" 0.1
+	"unplunderable" 1
+	description "Increases shield generator generation, power use, and heat generation."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Heat Dissipation"
+	category "Apoxys Perks"
+	cost 0
+	"mass" -0
+	"outfit space" 0
+	"heat dissipation" 0.1
+	"unplunderable" 1
+	description "Increases heat dissipation."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Inertia Reduction"
+	category "Apoxys Perks"
+	cost 0
+	"mass" -0
+	"outfit space" 0
+	"inertia reduction" 0.1
+	"unplunderable" 1
+	description "Gives inertia reduction, which makes you turn/accelerate faster."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: No Pushover"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 250
+	"outfit space" 0
+	"force protection" 0.5
+	"unplunderable" 1
+	description "You're no pushover. Cuts the effect of hit force by a third, but makes you heavier by 250 tons."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Long Hauler"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"cargo space" 300
+	"inertia reduction" 0.05
+	"unplunderable" 1
+	description "You're here to haul things, ideally at a reasonable speed. Increases cargo space, reduces inertia."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Heat Shielding"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"heat protection" 0.2
+	"burn protection" 0.2
+	"unplunderable" 1
+	description "Reduces incoming heat and burn damage. These perks will eventually exist for each basic damage type, but burn is unlocked much earlier on due to the presence of heat weapons in human space."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Natural Regeneration"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"shield generation" 2
+	"shield energy" 2
+	"unplunderable" 1
+	description "Regenerates your shields over time; no fuss. 1 energy per shield, no heat."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Natural Repair"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"hull repair rate" 1.5
+	"hull energy" 1.5
+	"hull heat" 1.5
+	"unplunderable" 1
+	description "Regenerates your hull over time; no fuss. 1 energy and 1 heat per hull."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Stellar Drinker"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"ramscoop" 20
+	"fuel capacity" 400
+	"unplunderable" 1
+	description "Stellar Drinker gives you a huge amount of ramscoop and some fuel capacity."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Sneaky Packer"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"scan interference" 2
+	"scan concealment" 250
+	"unplunderable" 1
+	description "Gives a lot of anti-scanning features. Excellent for running contraband or capping."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Repair Overdrive"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"hull repair multiplier" 0.1
+	"hull energy multiplier" 0.1
+	"hull heat multiplier" 0.1
+	"hull fuel multiplier" 0.1
+	"unplunderable" 1
+	description "Increases hull repair rate, power use, and heat generation."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Disassembler"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"disassembler" 1
+	description "Unlocks breakdown/rebuild turret recipes. Extremely useful for later game crafting."
+	description "YOU SHOULD NEVER SEE THIS."
+
+# Level 50 Specials
+# These are picked at level 50, and are mutually exclusive.
+
+outfit "Perk: Spinal Mount"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"spinal mount" 1
+	"unplunderable" 1
+	description `"Nooo," They said, "Don't make spinal mounts installable!" They said. Well, I think this is a fair compromise.`
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Perk: Cloaking Field"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"cloak" .12
+	"cloaking energy" 8.5
+	"cloaking fuel" .15
+	"unplunderable" 1
+	description "It's the best of both worlds! Integrated cloaking in the form of an outfit! :D"
+	description "YOU SHOULD NEVER SEE THIS."

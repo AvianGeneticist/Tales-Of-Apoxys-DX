@@ -1,0 +1,999 @@
+mission "Apoxys Disassembler"
+	name "(Crafting) Weapon Disassembly"
+	description "Break turrets apart into guns and components, or build turrets from guns and components."
+	job
+	source "New Boston"
+	repeat
+	to offer
+		"flagship attribute: disassembler" != 0
+	on accept
+		conversation
+			label start
+			"Let's have a look in that cargo hold of yours."
+			choice
+				`	(Disassemble weapons.)`
+					goto disassemble
+				`	(Assemble weapons.)`
+					goto assemble
+				`	(Finish for now.)`
+					goto end
+
+			label disassemble
+			`Let's see what we're working with here.`
+			choice
+				`	(Break down a Twin Blaster.)`
+					goto breaktwinblaster
+					to display
+						"outfit (cargo): Twin Blaster" != 0
+				`	(Break down a Blaster Turret.)`
+					goto breaktwinblasterturret
+					to display
+						"outfit (cargo): Blaster Turret" != 0
+				`	(Break down a Quad Blaster Turret.)`
+					goto breakquadblasterturret
+					to display
+						"outfit (cargo): Quad Blaster Turret" != 0
+				`	(Break down a Twin Modified Blaster.)`
+					goto breaktwinmodifiedblaster
+					to display
+						"outfit (cargo): Twin Modified Blaster" != 0
+				`	(Break down a Modified Blaster Turret.)`
+					goto breaktwinmodifiedblasterturret
+					to display
+						"outfit (cargo): Modified Blaster Turret" != 0
+				`	(Break down a Laser Turret.)`
+					goto breaklaserturret
+					to display
+						"outfit (cargo): Laser Turret" != 0
+				`	(Break down a Heavy Laser Turret.)`
+					goto breakheavylaserturret
+					to display
+						"outfit (cargo): Heavy Laser Turret" != 0
+				`	(Break down a Electron Turret.)`
+					goto breakelectronturret
+					to display
+						"outfit (cargo): Electron Turret" != 0
+				`	(Break down a Proton Turret.)`
+					goto breakprotonturret
+					to display
+						"outfit (cargo): Proton Turret" != 0
+				`	(Break down a Plasma Turret.)`
+					goto breakplasmaturret
+					to display
+						"outfit (cargo): Plasma Turret" != 0
+				`	(Break down a Gatling Turret.)`
+					goto breakgatlingturret
+					to display
+						"outfit (cargo): Gatling Turret" != 0
+				`	(Break down a Javelin Turret.)`
+					goto breakjavelinturret
+					to display
+						"outfit (cargo): Javelin Turret" != 0
+				`	(Break down a Pulse Turret.)`
+					goto breakpulseturret
+					to display
+						"outfit (cargo): Pulse Turret" != 0
+				`	(Break down a Tripulse Shredder.)`
+					goto breaktripulseshredder
+					to display
+						"outfit (cargo): Tripulse Shredder" != 0
+				`	(Break down a Banisher Grav-Turret.)`
+					goto breakbanishergravturret
+					to display
+						"outfit (cargo): Banisher Grav-Turret" != 0
+				`	(Break down a Digger Mining Turret.)`
+					goto breakdiggerminingturret
+					to display
+						"outfit (cargo): Digger Mining Turret" != 0
+				`	(Break down a Blaze-Pike Turret.)`
+					goto breakblazepiketurret
+					to display
+						"outfit (cargo): Blaze-Pike Turret" != 0
+				`	(Break down a Korath Inferno.)`
+					goto breakkorathinferno
+					to display
+						"outfit (cargo): Korath Inferno" != 0
+				`	(Break down a Thermal Repeater Turret.)`
+					goto breakthermalrepeaterturret
+					to display
+						"outfit (cargo): Thermal Repeater Turret" != 0
+				`	(Break down a Husk-Slice Turret.)`
+					goto breakhusksliceturret
+					to display
+						"outfit (cargo): Husk-Slice Turret" != 0
+				`	(Break down a Pug Zapper Turret.)`
+					goto breakpugzapperturret
+					to display
+						"outfit (cargo): Pug Zapper Turret" != 0
+				`	(Break down a Ka'het Annihilator Turret.)`
+					goto breakkahetannihilatorturret
+					to display
+						"outfit (cargo): Ka'het Annihilator Turret" != 0
+				`	(Break down a Ka'het Ravager Turret.)`
+					goto breakkahetravagerturret
+					to display
+						"outfit (cargo): Ka'het Ravager Turret" != 0
+				`	(Break down a Thrasher Turret.)`
+					goto breakthrasherturret
+					to display
+						"outfit (cargo): Thrasher Turret" != 0
+				`	(Break down a Sunbeam Turret.)`
+					goto breaksunbeamturret
+					to display
+						"outfit (cargo): Sunbeam Turret" != 0
+				`	(Break down a Dual Sunbeam Turret.)`
+					goto breakdualsunbeamturret
+					to display
+						"outfit (cargo): Dual Sunbeam Turret" != 0
+				`	(Break down a Moonbeam Turret.)`
+					goto breakmoonbeamturret
+					to display
+						"outfit (cargo): Moonbeam Turret" != 0
+				`	(Break down a Locust Turret.)`
+					goto breaklocustturret
+					to display
+						"outfit (cargo): Locust Turret" != 0
+				`	(Break down an Irate Cannon Turret.)`
+					goto breakiratecannonturret
+					to display
+						"outfit (cargo): Irate Cannon Turret" != 0
+				`	(Break down a Choleric Cannon Turret.)`
+					goto breakcholericcannonturret
+					to display
+						"outfit (cargo): Choleric Cannon Turret" != 0
+				`	(Break down a Ballistic Cannon Turret.)`
+					goto breakballisticcannonturret
+					to display
+						"outfit (cargo): Ballistic Cannon Turret" != 0
+				`	(Break down an Ion Hail Turret.)`
+					goto breakionhailturret
+					to display
+						"outfit (cargo): Ion Hail Turret" != 0
+				`	(Break down a Bombardment Turret.)`
+					goto breakbombardmentturret
+					to display
+						"outfit (cargo): Bombardment Turret" != 0
+				`	(Break down a Starcutter Turret.)`
+					goto breakstarcutterturret
+					to display
+						"outfit (cargo): Starcutter Turret" != 0
+				`	(Break down a Medium Turret Base.)`
+					goto breakmediumturretbase
+					to display
+						"outfit (cargo): Medium Turret Base" != 0
+				`	(Break down a Large Turret Base.)`
+					goto breaklargeturretbase
+					to display
+						"outfit (cargo): Large Turret Base" != 0
+				`	(Break down a Huge Turret Base.)`
+					goto breakhugeturretbase
+					to display
+						"outfit (cargo): Huge Turret Base" != 0
+				`	(Back to main menu.)`
+					goto start
+
+			label breaktwinblaster
+			action
+				outfit "Twin Blaster" -1
+				outfit "Link Node" 1
+				outfit "Energy Blaster" 2
+			`You break a Twin Blaster into one Link Node and two Energy Blasters.`
+				goto disassemble
+
+			label breaktwinblasterturret
+			action
+				outfit "Blaster Turret" -1
+				outfit "Energy Blaster" 2
+				outfit "Small Turret Base" 1
+			`You break a Blaster Turret into two Energy Blasters and one Small Turret Base.`
+				goto disassemble
+
+			label breakquadblasterturret
+			action
+				outfit "Quad Blaster Turret" -1
+				outfit "Twin Blaster" 2
+				outfit "Small Turret Base" 1
+			`You break a Quad Blaster Turret into two Twin Blasters and one Small Turret Base.`
+				goto disassemble
+
+			label breaktwinmodifiedblaster
+			action
+				outfit "Twin Modified Blaster" -1
+				outfit "Link Node" 1
+				outfit "Modified Blaster" 2
+			`You break a Twin Modified Blaster into one Link Node and two Modified Blasters.`
+				goto disassemble
+
+			label breaktwinmodifiedblasterturret
+			action
+				outfit "Modified Blaster Turret" -1
+				outfit "Modified Blaster" 2
+				outfit "Small Turret Base" 1
+			`You break a Modified Blaster Turret into two Modified Blasters and one Small Turret Base.`
+				goto disassemble
+
+			label breaklaserturret
+			action
+				outfit "Laser Turret" -1
+				outfit "Beam Laser" 2
+				outfit "Small Turret Base" 1
+			`You break a Laser Turret into two Beam Lasers and one Small Turret Base.`
+				goto disassemble
+
+			label breakheavylaserturret
+			action
+				outfit "Heavy Laser Turret" -1
+				outfit "Heavy Laser" 2
+				outfit "Medium Turret Base" 1
+			`You break a Heavy Laser Turret into two Heavy Lasers and one Medium Turret Base.`
+				goto disassemble
+
+			label breakelectronturret
+			action
+				outfit "Electron Turret" -1
+				outfit "Electron Beam" 2
+				outfit "Medium Turret Base" 1
+			`You break an Electron Turret into two Electron Beams and one Medium Turret Base.`
+				goto disassemble
+
+			label breakprotonturret
+			action
+				outfit "Proton Turret" -1
+				outfit "Proton Gun" 1
+				outfit "Medium Turret Base" 1
+			`You break a Proton Turret into one Proton Gun and one Medium Turret Base.`
+				goto disassemble
+
+			label breakplasmaturret
+			action
+				outfit "Plasma Turret" -1
+				outfit "Plasma Cannon" 2
+				outfit "Large Turret Base" 1
+			`You break a Plasma Turret into two Plasma Cannons and one Large Turret Base.`
+				goto disassemble
+
+			label breakgatlingturret
+			action
+				outfit "Gatling Turret" -1
+				outfit "Gatling Gun" 2
+				outfit "Small Turret Base" 1
+			`You break a Gatling Turret into two Gatling Guns and one Small Turret Base.`
+				goto disassemble
+
+			label breakjavelinturret
+			action
+				outfit "Javelin Turret" -1
+				outfit "Javelin Pod" 2
+				outfit "Medium Turret Base" 1
+			`You break a Javelin Turret into two Javelin Pods and one Medium Turret Base.`
+				goto disassemble
+
+			label breaktripulseshredder
+			action
+				outfit "Tripulse Shredder" -1
+				outfit "Pulse Cannon" 3
+				outfit "Link Node" 3
+			`You break a Tripulse Shredder into three Link Nodes and three Pulse Cannons.`
+				goto disassemble
+
+			label breakpulseturret
+			action
+				outfit "Pulse Turret" -1
+				outfit "Pulse Cannon" 2
+				outfit "Medium Turret Base" 1
+			`You break a Pulse Turret into two Pulse Cannons and one Medium Turret Base.`
+				goto disassemble
+
+			label breakbanishergravturret
+			action
+				outfit "Banisher Grav-Turret" -1
+				outfit "Expeller Grav-Ray" 1
+				outfit "Enhancer Node" 1
+				outfit "Medium Turret Base" 1
+			`You break a Banisher Grav-Turret into one Expeller Grav-Ray, one Enhancer Node, and one Medium Turret Base.`
+				goto disassemble
+
+			label breakdiggerminingturret
+			action
+				outfit "Digger Mining Turret" -1
+				outfit "Digger Mining Beam" 1
+				outfit "Small Turret Base" 1
+			`You break a Digger Mining Turret into one Digger Mining Beam and one Small Turret Base.`
+				goto disassemble
+
+			label breakblazepiketurret
+			action
+				outfit "Blaze-Pike Turret" -1
+				outfit "Fire-Lance" 2
+				outfit "Medium Turret Base" 1
+			`You break a Blaze-Pike Turret into two Fire-Lances and one Medium Turret Base.`
+				goto disassemble
+
+			label breakkorathinferno
+			action
+				outfit "Korath Inferno" -1
+				outfit "Fire-Lance" 3
+				outfit "Enhancer Node" 1
+				outfit "Large Turret Base" 1
+			`You break a Korath Inferno into three Fire-Lances, one Enhancer Node, and one Large Turret Base.`
+				goto disassemble
+
+			label breakthermalrepeaterturret
+			action
+				outfit "Thermal Repeater Turret" -1
+				outfit "Thermal Repeater" 2
+				outfit "Small Turret Base" 1
+			`You break a Thermal Repeater Turret into two Thermal Repeaters and one Small Turret Base.`
+				goto disassemble
+
+			label breakhusksliceturret
+			action
+				outfit "Husk-Slice Turret" -1
+				outfit "Husk-Slice" 1
+				outfit "Medium Turret Base" 1
+			`You break a Husk-Slice Turret into a Husk-Slice and one Medium Turret Base.`
+				goto disassemble
+
+			label breakpugzapperturret
+			action
+				outfit "Pug Zapper Turret" -1
+				outfit "Pug Zapper" 2
+				outfit "Large Turret Base" 1
+			`You break a Pug Zapper Turret into two Pug Zappers and one Large Turret Base.`
+				goto disassemble
+
+			label breakkahetannihilatorturret
+			action
+				outfit "Ka'het Annihilator Turret" -1
+				outfit "Ka'het Annihilator" 2
+				outfit "Medium Turret Base" 1
+			`You break a Ka'het Annihilator Turret into two Ka'het Annihilators and one Medium Turret Base.`
+				goto disassemble
+
+			label breakkahetravagerturret
+			action
+				outfit "Ka'het Ravager Turret" -1
+				outfit "Ka'het Ravager Beam" 1
+				outfit "Small Turret Base" 1
+			`You break a Ka'het Ravager Turret into one Ka'het Ravager Beam and one Small Turret Base.`
+				goto disassemble
+
+			label breakthrasherturret
+			action
+				outfit "Thrasher Turret" -1
+				outfit "Thrasher Cannon" 4
+				outfit "Medium Turret Base" 1
+			`You break a Thrasher Turret into four Thrasher Cannons and one Medium Turret Base.`
+				goto disassemble
+
+			label breaksunbeamturret
+			action
+				outfit "Sunbeam Turret" -1
+				outfit "Sunbeam" 1
+				outfit "Medium Turret Base" 1
+			`You break a Sunbeam Turret into one Sunbeam and one Medium Turret Base.`
+				goto disassemble
+
+			label breakdualsunbeamturret
+			action
+				outfit "Dual Sunbeam Turret" -1
+				outfit "Sunbeam" 2
+				outfit "Large Turret Base" 1
+			`You break a Sunbeam Turret into two Sunbeams and one Large Turret Base.`
+				goto disassemble
+
+			label breakmoonbeamturret
+			action
+				outfit "Moonbeam Turret" -1
+				outfit "Moonbeam" 1
+				outfit "Enhancer Node" 1
+				outfit "Medium Turret Base" 1
+			`You break a Moonbeam Turret into one Moonbeam, one Enhancer Node, and one Medium Turret Base.`
+				goto disassemble
+
+			label breaklocustturret
+			action
+				outfit "Locust Turret" -1
+				outfit "Locust Blaster" 3
+				outfit "Small Turret Base" 1
+			`You break a Locust Turret into three Locust Blasters and one Small Turret Base.`
+				goto disassemble
+
+			label breakiratecannonturret
+			action
+				outfit "Irate Cannon Turret" -1
+				outfit "Irate Cannon" 2
+				outfit "Small Turret Base" 1
+			`You break an Irate Cannon Turret into two Irate Cannons and one Small Turret Base.`
+				goto disassemble
+
+			label breakcholericcannonturret
+			action
+				outfit "Choleric Cannon Turret" -1
+				outfit "Choleric Cannon" 1
+				outfit "Medium Turret Base" 1
+			`You break an Choleric Cannon Turret into one Choleric Cannon and one Medium Turret Base.`
+				goto disassemble
+
+			label breakballisticcannonturret
+			action
+				outfit "Ballistic Cannon Turret" -1
+				outfit "Ballistic Cannon" 1
+				outfit "Huge Turret Base" 1
+			`You break an Ballistic Cannon Turret into one Ballistic Cannon and one Huge Turret Base.`
+				goto disassemble
+
+			label breakionhailturret
+			action
+				outfit "Ion Hail Turret" -1
+				outfit "Ion Rain Gun" 1
+				outfit "Enhancer Node" 1
+				outfit "Small Turret Base" 1
+			`You break an Ion Hail Turret into one Ion Rain Gun, one Enhancer Node, and one Small Turret Base.`
+				goto disassemble
+
+			label breakbombardmentturret
+			action
+				outfit "Bombardment Turret" -1
+				outfit "Bombardment Cannon" 3
+				outfit "Medium Turret Base" 1
+			`You break a Bombardment Turret into three Bombardment Cannons and one Medium Turret Base.`
+				goto disassemble
+
+			label breakstarcutterturret
+			action
+				outfit "Starcutter Turret" -1
+				outfit "Starcutter Beam" 2
+				outfit "Large Turret Base" 1
+			`You break a Starcutter Turret into two Starcutter Beams and one Large Turret Base.`
+				goto disassemble
+
+			label breakmediumturretbase
+			action
+				outfit "Medium Turret Base" -1
+				outfit "Small Turret Base" 2
+			`You break a Medium Turret Base into two Small Turret Bases.`
+				goto disassemble
+
+			label breaklargeturretbase
+			action
+				outfit "Large Turret Base" -1
+				outfit "Medium Turret Base" 2
+			`You break a Large Turret Base into two Medium Turret Bases.`
+				goto disassemble
+
+			label breakhugeturretbase
+			action
+				outfit "Huge Turret Base" -1
+				outfit "Large Turret Base" 2
+			`You break a Huge Turret Base into two Large Turret Bases.`
+				goto disassemble
+
+			label assemble
+			`Let's see what we're working with here.`
+			choice
+				`	(Make up a Twin Blaster.)`
+					goto maketwinblaster
+					to display
+						and
+							"outfit (cargo): Energy Blaster" >= 2
+							"outfit (cargo): Link Node" >= 1
+				`	(Make up a Blaster Turret.)`
+					goto maketwinblasterturret
+					to display
+						and
+							"outfit (cargo): Energy Blaster" >= 2
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Quad Blaster Turret.)`
+					goto makequadblasterturret
+					to display
+						and
+							"outfit (cargo): Twin Blaster" >= 2
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Twin Modified Blaster.)`
+					goto maketwinmodifiedblaster
+					to display
+						and
+							"outfit (cargo): Modified Blaster" >= 2
+							"outfit (cargo): Link Node" >= 1
+				`	(Make up a Modified Blaster Turret.)`
+					goto maketwinmodifiedblasterturret
+					to display
+						and
+							"outfit (cargo): Modified Blaster" >= 2
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Laser Turret.)`
+					goto makelaserturret
+					to display
+						and
+							"outfit (cargo): Beam Laser" >= 2
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Heavy Laser Turret.)`
+					goto makeheavylaserturret
+					to display
+						and
+							"outfit (cargo): Heavy Laser" >= 2
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Electron Turret.)`
+					goto makeelectronturret
+					to display
+						and
+							"outfit (cargo): Electron Beam" >= 2
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Proton Turret.)`
+					goto makeprotonturret
+					to display
+						and
+							"outfit (cargo): Proton Gun" >= 1
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Plasma Turret.)`
+					goto makeplasmaturret
+					to display
+						and
+							"outfit (cargo): Plasma Cannon" >= 2
+							"outfit (cargo): Large Turret Base" >= 1
+				`	(Make up a Gatling Turret.)`
+					goto makegatlingturret
+					to display
+						and
+							"outfit (cargo): Gatling Gun" >= 2
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Javelin Turret.)`
+					goto makejavelinturret
+					to display
+						and
+							"outfit (cargo): Javelin Pod" >= 2
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Pulse Turret.)`
+					goto makepulseturret
+					to display
+						and
+							"outfit (cargo): Pulse Cannon" >= 2
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Tripulse Shredder.)`
+					goto maketripulseshredder
+					to display
+						and
+							"outfit (cargo): Pulse Cannon" >= 3
+							"outfit (cargo): Link Node" >= 3
+				`	(Make up a Banisher Grav-Turret.)`
+					goto makebanishergravturret
+					to display
+						and
+							"outfit (cargo): Expeller Grav-Ray" >= 1
+							"outfit (cargo): Enhancer Node" >= 1
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Digger Mining Turret.)`
+					goto makediggerminingturret
+					to display
+						and
+							"outfit (cargo): Digger Mining Beam" >= 1
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Blaze-Pike Turret.)`
+					goto makeblazepiketurret
+					to display
+						and
+							"outfit (cargo): Fire-Lance" >= 2
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Korath Inferno.)`
+					goto makekorathinferno
+					to display
+						and
+							"outfit (cargo): Fire-Lance" >= 3
+							"outfit (cargo): Enhancer Node" >= 1
+							"outfit (cargo): Large Turret Base" >= 1
+				`	(Make up a Thermal Repeater Turret.)`
+					goto makethermalrepeaterturret
+					to display
+						and
+							"outfit (cargo): Thermal Repeater" >= 2
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Husk-Slice Turret.)`
+					goto makehusksliceturret
+					to display
+						and
+							"outfit (cargo): Husk-Slice" >= 1
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Pug Zapper Turret.)`
+					goto makepugzapperturret
+					to display
+						and
+							"outfit (cargo): Pug Zapper" >= 2
+							"outfit (cargo): Large Turret Base" >= 1
+				`	(Make up a Ka'het Annihilator Turret.)`
+					goto makekahetannihilatorturret
+					to display
+						and
+							"outfit (cargo): Ka'het Annihilator" >= 2
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Ka'het Ravager Turret.)`
+					goto makekahetravagerturret
+					to display
+						and
+							"outfit (cargo): Ka'het Ravager Beam" >= 1
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Thrasher Turret.)`
+					goto makethrasherturret
+					to display
+						and
+							"outfit (cargo): Thrasher Cannon" >= 4
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Sunbeam Turret.)`
+					goto makesunbeamturret
+					to display
+						and
+							"outfit (cargo): Sunbeam" >= 1
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Dual Sunbeam Turret.)`
+					goto makedualsunbeamturret
+					to display
+						and
+							"outfit (cargo): Sunbeam" >= 2
+							"outfit (cargo): Large Turret Base" >= 1
+				`	(Make up a Moonbeam Turret.)`
+					goto makemoonbeamturret
+					to display
+						and
+							"outfit (cargo): Moonbeam" >= 1
+							"outfit (cargo): Enhancer Node" >= 1
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Locust Turret.)`
+					goto makelocustturret
+					to display
+						and
+							"outfit (cargo): Locust Blaster" >= 3
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up an Irate Cannon Turret.)`
+					goto makeiratecannonturret
+					to display
+						and
+							"outfit (cargo): Irate Cannon" >= 2
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Choleric Cannon Turret.)`
+					goto makecholericcannonturret
+					to display
+						and
+							"outfit (cargo): Choleric Cannon" >= 1
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Ballistic Cannon Turret.)`
+					goto makeballisticcannonturret
+					to display
+						and
+							"outfit (cargo): Ballistic Cannon" >= 1
+							"outfit (cargo): Huge Turret Base" >= 1
+				`	(Make up an Ion Hail Turret.)`
+					goto makeionhailturret
+					to display
+						and
+							"outfit (cargo): Ion Rain Gun" >= 1
+							"outfit (cargo): Enhancer Node" >= 1
+							"outfit (cargo): Small Turret Base" >= 1
+				`	(Make up a Bombardment Turret.)`
+					goto makebombardmentturret
+					to display
+						and
+							"outfit (cargo): Bombardment Cannon" >= 3
+							"outfit (cargo): Medium Turret Base" >= 1
+				`	(Make up a Starcutter Turret.)`
+					goto makestarcutterturret
+					to display
+						and
+							"outfit (cargo): Starcutter Beam" >= 2
+							"outfit (cargo): Large Turret Base" >= 1
+				`	(Make up a Medium Turret Base.)`
+					goto makemediumturretbase
+					to display
+						and
+							"outfit (cargo): Small Turret Base" >= 2
+				`	(Make up a Large Turret Base.)`
+					goto makelargeturretbase
+					to display
+						and
+							"outfit (cargo): Medium Turret Base" >= 2
+				`	(Make up a Huge Turret Base.)`
+					goto makehugeturretbase
+					to display
+						and
+							"outfit (cargo): Large Turret Base" >= 2
+				`	(Back to main menu.)`
+					goto start
+
+			label maketwinblaster
+			action
+				outfit "Twin Blaster" 1
+				outfit "Link Node" -1
+				outfit "Energy Blaster" -2
+			`You make a Twin Blaster from one Link Node and two Energy Blasters.`
+				goto assemble
+
+			label maketwinblasterturret
+			action
+				outfit "Blaster Turret" 1
+				outfit "Energy Blaster" -2
+				outfit "Small Turret Base" -1
+			`You make a Blaster Turret from two Energy Blasters and one Small Turret Base.`
+				goto assemble
+
+			label makequadblasterturret
+			action
+				outfit "Quad Blaster Turret" 1
+				outfit "Twin Blaster" -2
+				outfit "Small Turret Base" -1
+			`You make a Quad Blaster Turret from two Twin Blasters and one Small Turret Base.`
+				goto assemble
+
+			label maketwinmodifiedblaster
+			action
+				outfit "Twin Modified Blaster" 1
+				outfit "Link Node" -1
+				outfit "Modified Blaster" -2
+			`You make a Twin Modified Blaster from one Link Node and two Modified Blasters.`
+				goto assemble
+
+			label maketwinmodifiedblasterturret
+			action
+				outfit "Modified Blaster Turret" 1
+				outfit "Modified Blaster" -2
+				outfit "Small Turret Base" -1
+			`You make a Modified Blaster Turret from two Modified Blasters and one Small Turret Base.`
+				goto assemble
+
+			label makelaserturret
+			action
+				outfit "Laser Turret" 1
+				outfit "Beam Laser" -2
+				outfit "Small Turret Base" -1
+			`You make a Laser Turret from two Beam Lasers and one Small Turret Base.`
+				goto assemble
+
+			label makeheavylaserturret
+			action
+				outfit "Heavy Laser Turret" 1
+				outfit "Heavy Laser" -2
+				outfit "Medium Turret Base" -1
+			`You make a Heavy Laser Turret from two Heavy Lasers and one Medium Turret Base.`
+				goto assemble
+
+			label makeelectronturret
+			action
+				outfit "Electron Turret" 1
+				outfit "Electron Beam" -2
+				outfit "Medium Turret Base" -1
+			`You make an Electron Turret from two Electron Beams and one Medium Turret Base.`
+				goto assemble
+
+			label makeprotonturret
+			action
+				outfit "Proton Turret" 1
+				outfit "Proton Gun" -1
+				outfit "Medium Turret Base" -1
+			`You make a Proton Turret from one Proton Gun and one Medium Turret Base.`
+				goto assemble
+
+			label makeplasmaturret
+			action
+				outfit "Plasma Turret" 1
+				outfit "Plasma Cannon" -2
+				outfit "Large Turret Base" -1
+			`You make a Plasma Turret from two Plasma Cannons and one Large Turret Base.`
+				goto assemble
+
+			label makegatlingturret
+			action
+				outfit "Gatling Turret" 1
+				outfit "Gatling Gun" -2
+				outfit "Small Turret Base" -1
+			`You make a Gatling Turret from two Gatling Guns and one Small Turret Base.`
+				goto assemble
+
+			label makejavelinturret
+			action
+				outfit "Javelin Turret" 1
+				outfit "Javelin Pod" -2
+				outfit "Medium Turret Base" -1
+			`You make a Javelin Turret from two Javelin Pods and one Medium Turret Base.`
+				goto assemble
+
+			label maketripulseshredder
+			action
+				outfit "Tripulse Shredder" 1
+				outfit "Pulse Cannon" -3
+				outfit "Link Node" -3
+			`You make a Tripulse Shredder from three Link Nodes and three Pulse Cannons.`
+				goto assemble
+
+			label makepulseturret
+			action
+				outfit "Pulse Turret" 1
+				outfit "Pulse Cannon" -2
+				outfit "Medium Turret Base" -1
+			`You make a Pulse Turret from two Pulse Cannons and one Medium Turret Base.`
+				goto assemble
+
+			label makebanishergravturret
+			action
+				outfit "Banisher Grav-Turret" 1
+				outfit "Expeller Grav-Ray" -1
+				outfit "Enhancer Node" -1
+				outfit "Medium Turret Base" -1
+			`You make a Banisher Grav-Turret from one Expeller Grav-Ray, one Enhancer Node, and one Medium Turret Base.`
+				goto assemble
+
+			label makediggerminingturret
+			action
+				outfit "Digger Mining Turret" 1
+				outfit "Digger Mining Beam" -1
+				outfit "Small Turret Base" -1
+			`You make a Digger Mining Turret from one Digger Mining Beam and one Small Turret Base.`
+				goto assemble
+
+			label makeblazepiketurret
+			action
+				outfit "Blaze-Pike Turret" 1
+				outfit "Fire-Lance" -2
+				outfit "Medium Turret Base" -1
+			`You make a Blaze-Pike Turret from two Fire-Lances and one Medium Turret Base.`
+				goto assemble
+
+			label makekorathinferno
+			action
+				outfit "Korath Inferno" 1
+				outfit "Fire-Lance" -3
+				outfit "Enhancer Node" -1
+				outfit "Large Turret Base" -1
+			`You make a Korath Inferno from three Fire-Lances, one Enhancer Node, and one Large Turret Base.`
+				goto assemble
+
+			label makethermalrepeaterturret
+			action
+				outfit "Thermal Repeater Turret" 1
+				outfit "Thermal Repeater" -2
+				outfit "Small Turret Base" -1
+			`You make a Thermal Repeater Turret from two Thermal Repeaters and one Small Turret Base.`
+				goto assemble
+
+			label makehusksliceturret
+			action
+				outfit "Husk-Slice Turret" 1
+				outfit "Husk-Slice" -1
+				outfit "Medium Turret Base" -1
+			`You make a Husk-Slice Turret from a Husk-Slice and one Medium Turret Base.`
+				goto assemble
+
+			label makepugzapperturret
+			action
+				outfit "Pug Zapper Turret" 1
+				outfit "Pug Zapper" -2
+				outfit "Large Turret Base" -1
+			`You make a Pug Zapper Turret from two Pug Zappers and one Large Turret Base.`
+				goto assemble
+
+			label makekahetannihilatorturret
+			action
+				outfit "Ka'het Annihilator Turret" 1
+				outfit "Ka'het Annihilator" -2
+				outfit "Medium Turret Base" -1
+			`You make a Ka'het Annihilator Turret from two Ka'het Annihilators and one Medium Turret Base.`
+				goto assemble
+
+			label makekahetravagerturret
+			action
+				outfit "Ka'het Ravager Turret" 1
+				outfit "Ka'het Ravager Beam" -1
+				outfit "Small Turret Base" -1
+			`You make a Ka'het Ravager Turret from one Ka'het Ravager Beam and one Small Turret Base.`
+				goto assemble
+
+			label makethrasherturret
+			action
+				outfit "Thrasher Turret" 1
+				outfit "Thrasher Cannon" -4
+				outfit "Medium Turret Base" -1
+			`You make a Thrasher Turret from four Thrasher Cannons and one Medium Turret Base.`
+				goto assemble
+
+			label makesunbeamturret
+			action
+				outfit "Sunbeam Turret" 1
+				outfit "Sunbeam" -1
+				outfit "Medium Turret Base" -1
+			`You make a Sunbeam Turret from one Sunbeam and one Medium Turret Base.`
+				goto assemble
+
+			label makedualsunbeamturret
+			action
+				outfit "Dual Sunbeam Turret" 1
+				outfit "Sunbeam" -2
+				outfit "Large Turret Base" -1
+			`You make a Sunbeam Turret from two Sunbeams and one Large Turret Base.`
+				goto assemble
+
+			label makemoonbeamturret
+			action
+				outfit "Moonbeam Turret" 1
+				outfit "Moonbeam" -1
+				outfit "Enhancer Node" -1
+				outfit "Medium Turret Base" -1
+			`You make a Moonbeam Turret from one Moonbeam, one Enhancer Node, and one Medium Turret Base.`
+				goto assemble
+
+			label makelocustturret
+			action
+				outfit "Locust Turret" 1
+				outfit "Locust Blaster" -3
+				outfit "Small Turret Base" -1
+			`You make a Locust Turret from three Locust Blasters and one Small Turret Base.`
+				goto assemble
+
+			label makeiratecannonturret
+			action
+				outfit "Irate Cannon Turret" 1
+				outfit "Irate Cannon" -2
+				outfit "Small Turret Base" -1
+			`You make an Irate Cannon Turret from two Irate Cannons and one Small Turret Base.`
+				goto assemble
+
+			label makecholericcannonturret
+			action
+				outfit "Choleric Cannon Turret" 1
+				outfit "Choleric Cannon" -1
+				outfit "Medium Turret Base" -1
+			`You make an Choleric Cannon Turret from one Choleric Cannon and one Medium Turret Base.`
+				goto assemble
+
+			label makeballisticcannonturret
+			action
+				outfit "Ballistic Cannon Turret" 1
+				outfit "Ballistic Cannon" -1
+				outfit "Huge Turret Base" -1
+			`You make an Ballistic Cannon Turret from one Ballistic Cannon and one Huge Turret Base.`
+				goto assemble
+
+			label makeionhailturret
+			action
+				outfit "Ion Hail Turret" 1
+				outfit "Ion Rain Gun" -1
+				outfit "Enhancer Node" -1
+				outfit "Small Turret Base" -1
+			`You make an Ion Hail Turret from one Ion Rain Gun, one Enhancer Node, and one Small Turret Base.`
+				goto assemble
+
+			label makebombardmentturret
+			action
+				outfit "Bombardment Turret" 1
+				outfit "Bombardment Cannon" -3
+				outfit "Medium Turret Base" -1
+			`You make a Bombardment Turret from three Bombardment Cannons and one Medium Turret Base.`
+				goto assemble
+
+			label makestarcutterturret
+			action
+				outfit "Starcutter Turret" 1
+				outfit "Starcutter Beam" -2
+				outfit "Large Turret Base" -1
+			`You make a Starcutter Turret from two Starcutter Beams and one Large Turret Base.`
+				goto assemble
+
+			label makemediumturretbase
+			action
+				outfit "Medium Turret Base" 1
+				outfit "Small Turret Base" -2
+			`You make a Medium Turret Base from two Small Turret Bases.`
+				goto assemble
+
+			label makelargeturretbase
+			action
+				outfit "Large Turret Base" 1
+				outfit "Medium Turret Base" -2
+			`You make a Large Turret Base from two Medium Turret Bases.`
+				goto assemble
+
+			label makehugeturretbase
+			action
+				outfit "Huge Turret Base" 1
+				outfit "Large Turret Base" -2
+			`You make a Huge Turret Base from two Large Turret Bases.`
+				goto assemble
+
+			label end
+			`You decide to stop crafting for now.`

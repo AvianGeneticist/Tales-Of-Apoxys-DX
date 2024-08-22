@@ -1,0 +1,71 @@
+outfit "Fortitude"
+	plural "Fortitude"
+	category "Apoxys Upgrades"
+	cost 0
+	"mass" 0
+	"outfit space" -0
+	"unplunderable" 1
+	"shield multiplier" .02
+	"hull multiplier" .02
+	"energy protection" .02
+	"ion protection" .02
+	"heat protection" .02
+	"burn protection" .02
+	"fuel protection" .02
+	"leak protection" .02
+	"scramble protection" .02
+	"slowing protection" .02
+	"disruption protection" .02
+	description "A fundamental stat. Gives multipliers to shields and hull, and small amounts of special DPS protection."
+
+outfit "Force"
+	plural "Force"
+	category "Apoxys Upgrades"
+	cost 0
+	"mass" 0
+	"outfit space" -0
+	"unplunderable" 1
+	"heat capacity" 30
+	"weapon capacity" 25
+	"cargo space" 40
+	description "A fundamental stat. Gives bonuses to cargo and weapon space, as well as heat capacity."
+
+outfit "Focus"
+	plural "Focus"
+	category "Apoxys Upgrades"
+	cost 0
+	"mass" 0
+	"outfit space" -0
+	"unplunderable" 1
+	"cargo scan power" 12
+	"cargo scan efficiency" 6
+	"outfit scan power" 40
+	"outfit scan efficiency" 25
+	"asteroid scan power" 60
+	"tactical scan power" 45
+	"ramscoop" 0.5
+	"fuel generation" 0.005
+	description "A fundamental stat. Gives bonuses to fuel production and integral scanning."
+
+outfit "Flightiness"
+	plural "Flightiness"
+	category "Apoxys Upgrades"
+	cost 0
+	"mass" 0
+	"outfit space" -0
+	"unplunderable" 1
+	"engine capacity" 20
+	"shield generation multiplier" 0.04
+	"hull repair multiplier" 0.04
+	"drag reduction" 0.25
+	description "A fundamental stat. Gives bonuses to regeneration and engine space, and small amounts of drag reduction."
+
+outfit "Friendliness"
+	plural "Friendliness"
+	category "Apoxys Upgrades"
+	cost 0
+	"mass" 0
+	"outfit space" 50
+	"unplunderable" 1
+	"bunks" 10
+	description "A fundamental stat. Gives bonuses to outfit space and bunk capacity."

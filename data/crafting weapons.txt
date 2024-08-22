@@ -1,0 +1,129 @@
+outfit "Starcutter Beam"
+	category "Guns"
+	cost 2220000
+	thumbnail "outfit/sunbeam"
+	"mass" 84
+	"outfit space" -84
+	"weapon capacity" -84
+	"gun ports" -1
+	weapon
+		sprite "projectile/sunbeam/sunbeam"
+			"frame rate" 30
+			"scale" 1.1
+		sound "sunbeam"
+		"hit effect" "sunbeam impact"
+		"inaccuracy" .18
+		"range override" 594
+		"velocity" 592
+		"random velocity" 4
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 8.7
+		"firing heat" 17.2
+		"shield damage" 11.1
+		"hull damage" 13.3
+		"heat damage" 12.7
+	description "The Starcutter Beam is an extremely powerful beam weapon made by Claire. While not the flashiest weapon, or the longest-ranged, it can cut through both shield and hull with frightening speed and accuracy."
+
+outfit "Starcutter Turret"
+	category "Turrets"
+	cost 2220000
+	thumbnail "outfit/dual sunbeam turret"
+	"mass" 186
+	"outfit space" -186
+	"weapon capacity" -186
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/sunbeam/2x sunbeam"
+			"frame rate" 30
+			"scale" 1.1
+		sound "sunbeam"
+		"hit effect" "sunbeam impact" 2
+		"turret turn" 1.2
+		"inaccuracy" .18
+		"range override" 594
+		"velocity" 592
+		"random velocity" 4
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 17.4
+		"firing heat" 34.4
+		"shield damage" 22.2
+		"hull damage" 26.6
+		"heat damage" 25.4
+	description "This is a dual-turret variation of the Starcutter Beam. The amount of damage on offer is terrifying, though this comes at the cost of substantial space and support system requirements, and somewhat lackluster range."
+
+outfit "Multi-Disruptor"
+	category "Guns"
+	cost 1340000
+	thumbnail "outfit/detainer"
+	"mass" 167
+	"outfit space" -167
+	"weapon capacity" -167
+	"energy capacity" 2200
+	"gun ports" -1
+	weapon
+		sprite "projectile/detainer"
+			"frame rate" 2.5
+		sound "detainer"
+		"hit effect" "detainer impact" 3
+		"hit effect" "ion impact" 5
+		"hit effect" "detainer smoke" 5
+		"live effect" "detainer sparks" 50
+		"live effect" "ionball trail" 70
+		"inaccuracy" .5
+		"velocity" 14
+		"lifetime" 140
+		"reload" 72
+		"burst reload" 15
+		"burst count" 2
+		"firing energy" 1128
+		"firing force" 80
+		"firing heat" 600
+		"hit force" 180
+		"shield damage" 520
+		"hull damage" 380
+		"slowing damage" 40
+		"ion damage" 20
+		"scrambling damage" 15
+		"disruption damage" 15
+		"blast radius" 35
+	description "A large weapon made by Claire. While its damage is somewhat unimpressive for its size, its debilitating combo of ionization, slowing, scrambling, and shield disruption makes it a terrifying weapon to go up against."
+
+outfit "Centipede Devastator"
+	category "Turrets"
+	cost 3484000
+	thumbnail "outfit/thorax cannon"
+	"mass" 280
+	"outfit space" -280
+	"weapon capacity" -280
+	"turret mounts" -1
+	"required crew" 1
+	"energy capacity" 15000
+	weapon
+		sprite "projectile/thorax cannon"
+			"frame rate" 15
+			"rewind"
+		sound "thorax cannon"
+		"fire effect" "torpedo fire"
+		"live effect" "yellow spark" 140
+		"live effect" "yellow spark trail" 840
+		"live effect" "yellow spark twinkle" 400
+		"hit effect" "finisher impact" 2
+		"hit effect" "yellow spark" 10
+		"hit effect" "yellow spark fragment" 150
+		"turret turn" 0.6
+		"inaccuracy" 2.5
+		"velocity" 15
+		"lifetime" 120
+		"reload" 48
+		"burst count" 5
+		"burst reload" 20
+		"firing energy" 3150
+		"firing force" 1215
+		"firing heat" 1905
+		"hit force" 3750
+		"shield damage" 2870
+		"hull damage" 3430
+	description "A weapon made by Claire. This puts a pair of Thorax Cannons on one mount and tweaks their firing cycles to fire bursts of five shots (alternating which cannon fires three shots each burst). The hit force per shot and accuracy seem to be inferior, but this comes as little consolation to those being shot at by the weapon."
