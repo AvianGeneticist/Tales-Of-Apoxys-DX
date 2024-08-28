@@ -372,6 +372,34 @@ mission "TOA Crafting Utilities"
 						and
 							"outfit (cargo): Key Drive" >= 1
 							"outfit (cargo): Fuel Processor" >= 1
+				`	(Make a Skip Drive.)`
+					goto skipdrive
+					to display
+						and
+							"outfit (cargo): Reserve Drive" >= 1
+							"outfit (cargo): Scram Drive" >= 1
+							has "Apoxys Level 35: declined"
+				`	(Make a Shunted Tri-Triple Plasma Core.)`
+					goto shuntedtritripleplasmacore
+					to display
+						and
+							"outfit (cargo): Triple Plasma Core" >= 3
+							"outfit (cargo): Large Heat Shunt" >= 3
+							has "Apoxys Level 35: declined"
+				`	(Make an Action Potential Cell.)`
+					goto actionpotentialcell
+					to display
+						and
+							"outfit (cargo): Large Biochemical Cell" >= 2
+							"outfit (cargo): Epoch Cell" >= 1
+				`	(Make an Systems Core (Overclocked).)`
+					goto overloadedsystemscore
+					to display
+						and
+							"outfit (cargo): Systems Core (Large)" >= 1
+							"outfit (cargo): Dark Storm Shielding" >= 1
+							"outfit (cargo): Large Repair Module" >= 1
+							"outfit (cargo): Enhancer Node" >= 1
 				`	(Nevermind.)`
 					goto end
 
@@ -407,6 +435,72 @@ mission "TOA Crafting Utilities"
 			`	"Alright, there you go. Anythin' else?" Claire asks.`
 				goto main
 
+			label skipdrive
+			`"If ya need to get somewhere in a hurry, there ain't much faster'n a Skip Drive. Takes the increased speed from a Scram Drive and mixes it with some cosmological oomph to 'skip' over more space in one jump," Claire explains. "Fancy makin' one?"`
+			choice
+				`	(Craft a Skip Drive with a Reserve Drive and a Scram Drive.)`
+					goto makeskipdrive
+				`	(Reconsider.)`
+					goto main
+
+			label makeskipdrive
+			action
+				outfit "Reserve Drive" -1
+				outfit "Scram Drive" -1
+				outfit "Skip Drive" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label shuntedtritripleplasmacore
+			`"Well, Cap'n, I can't pretend this is a small investment," Claire remarks, "Nine plasma cores in total, with three poor li'l shunts doin' their best to cool 'em off. It'll run hot as all get-out, but it'll sate yer power needs for a while. Think ya really need it?"`
+			choice
+				`	(Craft a Shunted Tri-Triple Plasma Core with three Triple Plasma Cores and three Large Heat Shunts.)`
+					goto makeshuntedtritripleplasmacore
+				`	(Reconsider.)`
+					goto main
+
+			label makeshuntedtritripleplasmacore
+			action
+				outfit "Triple Plasma Core" -3
+				outfit "Large Heat Shunt" -3
+				outfit "Shunted Tri-Triple Plasma Core" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label actionpotentialcell
+			`"Tricky bit o' technology, the Action Potential Cell is. I can't pretend I know entirely how it works, but it'll store energy to last you a while and even makes a bit of extra power outta any ions that come yer way," Claire informs. "I'd say at least one's a good space investment for washin' off the bits o' ion here'n there."`
+			choice
+				`	(Craft an Action Potential Cell with two Large Biochemical Cells and an Epoch Cell.)`
+					goto makeactionpotentialcell
+				`	(Reconsider.)`
+					goto main
+
+			label makeactionpotentialcell
+			action
+				outfit "Large Biochemical Cell" -2
+				outfit "Epoch Cell" -1
+				outfit "Action Potential Cell" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label overloadedsystemscore
+			`"Now look, I'm all fer modifyin' alien technology 'till it works just how ya want it, but you be careful with overclockin' stuff like this. Ah know the extra recovery speed's a temptin' mistress, but ah hope ya know what ye're doin'," Claire expresses concernedly.`
+			choice
+				`	(Craft an Systems Core (Overclocked) with a Systems Core (Large), a Dark Storm Shielding, a Large Repair Module, and an Enhancer Node.)`
+					goto makeoverloadedsystemscore
+				`	(Reconsider.)`
+					goto main
+
+			label makeoverloadedsystemscore
+			action
+				outfit "Systems Core (Large)" -1
+				outfit "Dark Storm Shielding" -1
+				outfit "Large Repair Module" -1
+				outfit "Enhancer Node" -1
+				outfit "Systems Core (Overclocked)" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
 			label end
 			`	"Seeya when I seeya, Cap'n!" Claire waves.`
 
@@ -435,6 +529,26 @@ mission "TOA Crafting Weapons"
 						and
 							"outfit (cargo): Dual Sunbeam Turret" >= 1
 							"outfit (cargo): Husk-Slice" >= 2
+				`	(Make a Proton Undulator Cannon.)`
+					goto protonundulator
+					to display
+						and
+							"outfit (cargo): Ka'het Annihilator" >= 2
+							"outfit (cargo): Proton Gun" >= 1
+				`	(Make a Proton Undulator Turret.)`
+					goto protonundulatorturret
+					to display
+						and
+							"outfit (cargo): Ka'het Annihilator Turret" >= 4
+							"outfit (cargo): Proton Gun" >= 4
+							has "Apoxys Level 35: declined"
+				`	(Make a Rampager Battery.)`
+					goto rampagerbattery
+					to display
+						and
+							"outfit (cargo): Pug Seeker" >= 1
+							"outfit (cargo): Thrasher Cannon" >= 10
+							"outfit (cargo): Link Node" >= 5
 				`	(Make a Multi-Disruptor.)`
 					goto multidisruptor
 					to display
@@ -442,6 +556,12 @@ mission "TOA Crafting Weapons"
 							"outfit (cargo): Korath Detainer" >= 1
 							"outfit (cargo): Ion Cannon" >= 1
 							"outfit (cargo): Shield Disruptor Turret" >= 1
+				`	(Make an Interdiction Turret.)`
+					goto interdictionturret
+					to display
+						and
+							"outfit (cargo): Grab-Strike Turret" >= 2
+							"outfit (cargo): Inhibitor Cannon" >= 4
 				`	(Make a Centipede Devastator.)`
 					goto centipededevastator
 					to display
@@ -450,8 +570,38 @@ mission "TOA Crafting Weapons"
 							"outfit (cargo): Enhancer Node" >= 2
 							"outfit (cargo): Huge Turret Base" >= 1
 							has "Apoxys Level 35: declined"
+				`	(Make a Weft Barrage.)`
+					goto weftbarrage
+					to display
+						and
+							"outfit (cargo): Locust Blaster" >= 12
+							"outfit (cargo): Pulse Cannon" >= 5
+							"outfit (cargo): Jump Drive" >= 1
+				`	(Make a Sanctuary Beam.)`
+					goto sanctuarybeam
+					to display
+						and
+							"outfit (cargo): Heavy Anti-Missile Turret" >= 2
+							"outfit (cargo): Warder Anti-Missile" >= 2
 				`	(Nevermind.)`
 					goto end
+
+			label weftbarrage
+			`"I'm not entirely sure what folks thought they were accomplishing by using a Jump Drive to shoot their guns, but the Weft Barrage is certainly an example of unusual technology," Claire comments, "A whole mess o' projectiles gettin' reoriented mid-jump to track whatever you're lookin' at. Interested in tryin' it, Cap'n?"`
+			choice
+				`	(Craft a Weft Barrage with twelve Locust Blasters, five Pulse Cannons, and a Jump Drive.)`
+					goto makeweftbarrage
+				`	(Reconsider.)`
+					goto main
+
+			label makeweftbarrage
+			action
+				outfit "Locust Blaster" -12
+				outfit "Pulse Cannon" -5
+				outfit "Jump Drive" -1
+				outfit "Weft Barrage" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
 
 			label starcutter
 			`"Starcutter Beam, Starcutter Beam... That does sound familiar, Cap'n. It's a big ol' beam that'll cut through whatever's in front of it, but it takes a good hunk of space and energy to use properly," Claire recalls, "Wanna make one?"`
@@ -485,6 +635,55 @@ mission "TOA Crafting Weapons"
 			`	"Alright, there you go. Anythin' else?" Claire asks.`
 				goto main
 
+			label protonundulator
+			`"The Proton Undulator Cannon's one of the smaller weapons I know how to make, but that doesn't mean it don't have its uses," Claire comments. "It's a bit lacking against hull, but it hammers shields hard, and it has good darn range to boot. Wanna make one?"`
+			choice
+				`	(Craft a Proton Undulator Cannon with a Proton Gun and two Ka'het Annihilators.)`
+					goto makeprotonundulator
+				`	(Reconsider.)`
+					goto main
+
+			label makeprotonundulator
+			action
+				outfit "Proton Gun" -1
+				outfit "Ka'het Annihilator" -2
+				outfit "Proton Undulator Cannon" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label protonundulatorturret
+			`"The Proton Undulator Turret slaps four cannons on one mount for a big up in damage. Traverse speed's a little low, but that's less important with the range being as big as it is," Claire remarks, "Well cap'n, how about it?"`
+			choice
+				`	(Craft a Proton Undulator Turret with a Proton Gun and two Ka'het Annihilators.)`
+					goto makeprotonundulatorturret
+				`	(Reconsider.)`
+					goto main
+
+			label makeprotonundulatorturret
+			action
+				outfit "Proton Gun" -4
+				outfit "Ka'het Annihilator Turret" -4
+				outfit "Proton Undulator Turret" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label rampagerbattery
+			`"The Rampager Battery's great if y'ain't much fer aimin', Cap'n. Range is a little on the short side for a homing weapon, but it'll bombard whatever you sick it on," Claire explains. "Well, whaddaya say?"`
+			choice
+				`	(Craft a Rampager Battery with a Pug Seeker, ten Thrasher Cannons, and five Link Nodes.)`
+					goto makerampagerbattery
+				`	(Reconsider.)`
+					goto main
+
+			label makerampagerbattery
+			action
+				outfit "Thrasher Cannon" -10
+				outfit "Pug Seeker" -1
+				outfit "Link Node" -5
+				outfit "Rampager Battery" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
 			label multidisruptor
 			`"If you're lookin' for a big gun, the Multi-Disruptor's an excellent choice, Cap'n," Claire says with a grin. "Sure, the damage ain't too great... But it ain't like your opponent's gonna be fightin' back all too hard when they're saddled with ion, scramble, slowing, and - of course - disruption. Well, did I sell ya on it?"`
 			choice
@@ -502,6 +701,22 @@ mission "TOA Crafting Weapons"
 			`	"Alright, there you go. Anythin' else?" Claire asks.`
 				goto main
 
+			label interdictionturret
+			`"Interdiction Turrets are one of those more tactical weapons; their damage ain't too shabby, but their main draw is... Well, drawing their target in an' slowin' 'em so they can't get away," Claire explains. "The shot splits inta homin' fragments, too, so it'll be a lot harder for whatever you're shootin' at to lead 'em away. Well, whaddaya say?"`
+			choice
+				`	(Craft an Interdiction Turret with two Grab-Strike Turrets and four Inhibitor Cannons.)`
+					goto makeinterdictionturret
+				`	(Reconsider.)`
+					goto main
+
+			label makeinterdictionturret
+			action
+				outfit "Grab-Strike Turret" -2
+				outfit "Inhibitor Cannon" -4
+				outfit "Interdiction Turret" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
 			label centipededevastator
 			`"In terms of making big booms, the Centipede Devastator's second ta none, ya hear me?" Claire chuckles, "Not much that can keep flyin' straight after bein' hit with five Thorax Cannon shots. Y'up for makin' one?"`
 			choice
@@ -516,6 +731,22 @@ mission "TOA Crafting Weapons"
 				outfit "Enhancer Node" -2
 				outfit "Huge Turret Base" -1
 				outfit "Centipede Devastator" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label sanctuarybeam
+			`"The Sanctuary Beam is the kinda thing that only a very specific sorta person needs. It carves at any missile that dares enter its range, slicin' em ta bits. O'course, it's pretty energy hungry," Claire warns. "Think ya need it?"`
+			choice
+				`	(Craft a Sanctuary Beam with two Warder Anti-Missiles and two Heavy Anti-Missile Turrets.)`
+					goto makesanctuarybeam
+				`	(Reconsider.)`
+					goto main
+
+			label makesanctuarybeam
+			action
+				outfit "Warder Anti-Missile" -2
+				outfit "Heavy Anti-Missile Turret" -2
+				outfit "Sanctuary Beam" 1
 			`	"Alright, there you go. Anythin' else?" Claire asks.`
 				goto main
 

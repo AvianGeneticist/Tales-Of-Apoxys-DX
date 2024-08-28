@@ -1,3 +1,15 @@
+outfitter "everything"
+	"Starcutter Beam"
+	"Starcutter Turret"
+	"Proton Undulator Cannon"
+	"Proton Undulator Turret"
+	"Rampager Battery"
+	"Multi-Disruptor"
+	"Interdiction Turret"
+	"Weft Barrage"
+	"Centipede Devastator"
+	"Sanctuary Beam"
+
 outfit "Starcutter Beam"
 	category "Guns"
 	cost 2220000
@@ -27,7 +39,7 @@ outfit "Starcutter Beam"
 
 outfit "Starcutter Turret"
 	category "Turrets"
-	cost 2220000
+	cost 4950000
 	thumbnail "outfit/dual sunbeam turret"
 	"mass" 186
 	"outfit space" -186
@@ -54,9 +66,114 @@ outfit "Starcutter Turret"
 		"heat damage" 25.4
 	description "This is a dual-turret variation of the Starcutter Beam. The amount of damage on offer is terrifying, though this comes at the cost of substantial space and support system requirements, and somewhat lackluster range."
 
+outfit "Proton Undulator Cannon"
+	category "Guns"
+	cost 862500
+	thumbnail "outfit/ka'het annihilator"
+	"mass" 53
+	"outfit space" -61
+	"weapon capacity" -61
+	"gun ports" -1
+	weapon
+		sprite "projectile/annihilator"
+			"frame rate" 7
+		sound "inhibitor"
+		"hit effect" "bullet impact"
+		"hit effect" "proton impact"
+		"submunition" "Undulator Propagate" 2
+		"inaccuracy" 2
+		"velocity" 23
+		"lifetime" 19
+		"reload" 8
+		"firing energy" 64.6
+		"firing heat" 72.8
+	description "A mix of the Proton Gun and the Ka'Het Ravager, this weapon produces long-ranged projectiles that break apart over long distance, reducing the likelihood that all the projectile's energy will land on target, but massively increasing the amount of area the weapon can control."
+
+outfit "Undulator Propagate"
+	weapon
+		sprite "projectile/annihilator"
+			"frame rate" 6
+			"scale" .75
+		"hit effect" "proton impact"
+		"submunition" "Undulator Trail" 3
+		"random velocity" 2
+		"inaccuracy" 3
+		"lifetime" 21
+		
+outfit "Undulator Trail"
+	weapon
+		sprite "projectile/annihilator"
+			"frame rate" 5
+			"scale" .5
+		"hit effect" "proton impact"
+		"random velocity" 2
+		"inaccuracy" 5
+		"random lifetime" 6
+		"lifetime" 23
+		"hit force" 1
+		"shield damage" 16.4
+		"hull damage" 7.4
+
+outfit "Proton Undulator Turret"
+	category "Turrets"
+	cost 3675000
+	thumbnail "outfit/ka'het annihilator turret"
+	"mass" 246
+	"outfit space" -278
+	"weapon capacity" -278
+	"required crew" 1
+	"turret mounts" -1
+	weapon
+		sprite "projectile/annihilator"
+			"frame rate" 7
+		sound "inhibitor"
+		"hit effect" "proton impact"
+		"submunition" "Undulator Propagate" 2
+		"turret turn" 0.84
+		"inaccuracy" 2
+		"velocity" 23
+		"lifetime" 19
+		"reload" 2
+		"firing energy" 64.6
+		"firing heat" 72.8
+	description "The Proton Undulator Turret mounts four cannons on a single mount, allowing it to saturate an area with a significant amount of anti-shield fire. Its resource requirements are, however, quite intense."
+
+outfit "Rampager Battery"
+	category "Guns"
+	cost 2910000
+	thumbnail "outfit/pug seeker"
+	"mass" 147
+	"outfit space" -147
+	"weapon capacity" -147
+	"gun ports" -1
+	weapon
+		sprite "projectile/thrasher"
+			"frame rate" 10
+			"random start frame"
+			"no repeat"
+		sound "thrasher"
+		"hit effect" "thrasher impact"
+		"inaccuracy" 7
+		"velocity" 11
+		"random velocity" 4
+		"lifetime" 108
+		"reload" 2
+		"acceleration" 1.1
+		"drag" .1
+		"turn" 3
+		"homing" 4
+		"tracking" .6
+		"firing energy" 41
+		"firing heat" 31
+		"shield damage" 38
+		"hull damage" 46
+		"hit force" 3
+		"missile strength" 18
+	description "A weapon made by Claire. A Pug Seeker has been used to modify a large battery of Thrasher Cannons, resulting in a weapon with less refined homing capabilities and reduced range, but colossally greater damage output. Even one of these batteries can quickly shred a target at close range."
+
 outfit "Multi-Disruptor"
 	category "Guns"
-	cost 1340000
+	cost 2240000
 	thumbnail "outfit/detainer"
 	"mass" 167
 	"outfit space" -167
@@ -90,6 +207,150 @@ outfit "Multi-Disruptor"
 		"disruption damage" 15
 		"blast radius" 35
 	description "A large weapon made by Claire. While its damage is somewhat unimpressive for its size, its debilitating combo of ionization, slowing, scrambling, and shield disruption makes it a terrifying weapon to go up against."
+
+outfit "Interdiction Turret"
+	category "Turrets"
+	cost 2600000
+	thumbnail "outfit/grab-strike"
+	"mass" 171
+	"outfit space" -171
+	"weapon capacity" -171
+	"energy capacity" 500
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/grab-strike"
+			"frame rate" 25
+			"random start frame"
+		"hardpoint sprite" "hardpoint/grab-strike"
+		"hardpoint offset" 7.
+		sound "grab-strike"
+		"hit effect" "grab-strike impact" 3
+		"die effect" "grab-strike impact"
+		"submunition" "Interdiction Shard" 3
+		"inaccuracy" 1
+		"range override" 1500
+		"turret turn" 1.4
+		"velocity" 20
+		"lifetime" 40
+		"reload" 10
+		"firing energy" 140
+		"firing heat" 280
+		"acceleration" 2
+		"drag" .1
+		"turn" .3
+		"homing" 4
+		"tracking" .8
+		"split range" 500
+	description "The Interdiction Turret is a turret crafted by Claire from two Grab-Strike turrets and several Inhibitor Cannons. While at first glance the weapon only seems to include superior velocity and slowing, the projectiles split near their target, separating into multiple far more nimble fragments."
+
+outfit "Interdiction Shard"
+	weapon
+		sprite "projectile/interdictionshard"
+			"frame rate" 25
+			"random start frame"
+		"hit effect" "grab-strike impact"
+		"inaccuracy" 22.5
+			"uniform"
+		"velocity" 10
+		"lifetime" 100
+		"acceleration" 3
+		"drag" .2
+		"turn" 3.8
+		"homing" 4
+		"shield damage" 62.6
+		"hull damage" 30
+		"slowing damage" .47
+		"hit force" -104
+
+outfit "Weft Barrage"
+	category "Turrets"
+	cost 3300000
+	thumbnail "outfit/jump drive"
+	"mass" 162
+	"outfit space" -162
+	"weapon capacity" -162
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		"hardpoint sprite" "hardpoint/point defense"
+		"hardpoint offset" 7.
+		sound "grab-strike"
+		"fire effect" "jump drive" 4
+		"submunition" "Weft Barrage Locust Spawn" 16
+		"submunition" "Weft Barrage Pulse Spawn" 3
+		"inaccuracy" 10
+		"range override" 1200
+		"turret turn" 0.4
+		"velocity" 42
+		"lifetime" 1
+		"reload" 4
+		"firing energy" 81
+		"firing heat" 119
+		"acceleration" 1
+		"drag" .1
+		"turn" .1
+		"homing" 4
+		"tracking" .8
+		"no ship collisions"
+		"no asteroid collisions"
+		"no minable collisions"
+	description "Unlike most of Claire's weapons, which have a fairly easily identifiable origin, the Weft Barrage incorporates some extremely unusual technology into its operation. The weapon works by blinking assorted types of weapons fire through the weft, allowing the projectiles to reenter regular space closer to their target and at the correct angle, typically with increased velocity."
+
+outfit "Weft Barrage Locust Spawn"
+	weapon
+		"no ship collisions"
+		"no asteroid collisions"
+		"no minable collisions"
+		"die effect" "jump drive" 1
+		"inaccuracy" 15
+		"random velocity" 8
+		"lifetime" 14
+		"random lifetime" 6
+		"acceleration" 0.01
+		"drag" 0.05
+		"turn" 120
+		"homing" 2
+		"tracking" 1
+		"submunition" "Weft Barrage Locust"
+
+outfit "Weft Barrage Pulse Spawn"
+	weapon
+		"no ship collisions"
+		"no asteroid collisions"
+		"no minable collisions"
+		"die effect" "jump drive" 1
+		"inaccuracy" 15
+		"random velocity" 8
+		"lifetime" 5
+		"random lifetime" 5
+		"acceleration" 0.01
+		"drag" 0.05
+		"turn" 120
+		"homing" 2
+		"tracking" 1
+		"submunition" "Weft Barrage Pulse"
+
+outfit "Weft Barrage Locust"
+	weapon
+		sprite "projectile/locust blaster"
+		"hit effect" "bullet impact"
+		"inaccuracy" 5
+		"velocity" 15
+		"random velocity" 3
+		"lifetime" 40
+		"shield damage" 5
+		"hull damage" 4
+
+outfit "Weft Barrage Pulse"
+	sprite "projectile/pulse"
+		sound "pulse"
+		"hit effect" "pulse impact"
+		"inaccuracy" 1
+		"velocity" 22.5
+		"lifetime" 30
+		"shield damage" 45
+		"hull damage" 34
 
 outfit "Centipede Devastator"
 	category "Turrets"
@@ -127,3 +388,32 @@ outfit "Centipede Devastator"
 		"shield damage" 2870
 		"hull damage" 3430
 	description "A weapon made by Claire. This puts a pair of Thorax Cannons on one mount and tweaks their firing cycles to fire bursts of five shots (alternating which cannon fires three shots each burst). The hit force per shot and accuracy seem to be inferior, but this comes as little consolation to those being shot at by the weapon."
+
+outfit "Sanctuary Beam"
+	category "Turrets"
+	cost 1945000
+	thumbnail "outfit/warder"
+	"mass" 118
+	"outfit space" -118
+	"weapon capacity" -118
+	"energy capacity" 100
+	"turret mounts" -1
+	weapon
+		"hardpoint sprite" "hardpoint/warder"
+		"hardpoint offset" 3.
+		"hit effect" "sanctuary beam"
+		"anti-missile" 8
+		"velocity" 350
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 10
+		"firing heat" 8
+	description "The Sanctuary Beam is a potent mix of human, korath, and pug technology. Firing missile-carving beams of energy, the Sanctuary Beam is an extremely strong anti-missile system, particularly against swarms of weak missiles."
+
+effect "sanctuary beam"
+	sprite "effect/warder"
+		"no repeat"
+		"frame rate" 6
+	sound "warder"
+	"lifetime" 1
+	"velocity scale" 1

@@ -122,7 +122,7 @@ mission "Apoxys Level 41"
 	name "Level 41"
 	description "You've reached level 41!"
 	to offer
-		"combat rating" >= 42843
+		"combat rating" >= 47804
 		has "Apoxys Level 40: declined"
 	
 	on offer
@@ -213,7 +213,7 @@ mission "Apoxys Level 42"
 	description "You've reached level 42!"
 	to offer
 		has "Apoxys Level 40: declined"
-		"combat rating" >= 47084
+		"combat rating" >= 51722
 	
 	on offer
 		require "Apoxys Core DX"
@@ -308,7 +308,7 @@ mission "Apoxys Level 43"
 	name "Level 43"
 	description "You've reached level 43!"
 	to offer
-		"combat rating" >= 51722
+		"combat rating" >= 56795
 		has "Apoxys Level 42: declined"
 	
 	on offer
@@ -400,7 +400,7 @@ mission "Apoxys Level 44"
 	description "You've reached level 44!"
 	to offer
 		has "Apoxys Level 43: declined"
-		"combat rating" >= 56795
+		"combat rating" >= 62356
 	
 	on offer
 		require "Apoxys Core DX"
@@ -496,7 +496,7 @@ mission "Apoxys Level 45"
 	name "Level 45"
 	description "You've reached level 45!"
 	to offer
-		"combat rating" >= 62356
+		"combat rating" >= 68428
 		has "Apoxys Level 44: declined"
 	
 	on offer
@@ -587,7 +587,7 @@ mission "Apoxys Level 46"
 	description "You've reached level 46!"
 	to offer
 		has "Apoxys Level 45: declined"
-		"combat rating" >= 68428
+		"combat rating" >= 75072
 	
 	on offer
 		require "Apoxys Core DX"

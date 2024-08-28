@@ -1,0 +1,23 @@
+news "apoxys crafting hint"
+	location
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent" "Hai" "Quarg" "Remnant" "Wanderer"
+			not attributes "uninhabited"
+	name
+		word
+			"Mysterious Poem"
+	message
+		word
+			"From Keystone and Drive that permits one to Jump, craft them together, allows one to lump." # Key Drive
+			"The Drive is the key, but without fuel it takes no lock. Process fuel, it must, lest it be just a mock." # Reserve Drive
+			"With hunger satiated, and key in hand, for the final drive, a Reserve and Scram must band." # Skip Drive
+			"Stacks of fire and bands of cold, in a dance that time called old: Three triads and their partners, locked together forever." # Shunted Tri-Triple Plasma Core
+			"Two large vats of bioelectric, left to their own devices for an epoch." # Action Potential Cell
+			"On the cusp of greatness, a core is. A large beast, under dark stormy sky, with enhancer and repair always on standby." # Systems Core (Overloaded)
+			"To cut the stars, a beam must be of their ilk. Return the sun its husk, and all enemies will feel like silk." # Starcutter
+			"Protons locked in deadly marriage, surrounded by annihilators on both sides. Yet, all together they eventually come, to bring forth a cataclysm." # Proton Undulator
+			"Ten thrashing beasts of a rapportive fury, bound by five chain links, led by that which seeks the truth." # Rampager Battery
+			"To detain, to disrupt, to ionize and scramble. Together one must bring that of the lizard and squirrel; two in endless battle, one left to survey." # Multi-Disruptor
+			"The trick to interdict is not known by all; those hidden away and those mid-fall. Clinging strikes inhibit escape." # Interdiction Turret
+			"A beast of two thoraces, one can make, but further modifications, such power takes. Enhance each arm, bound to the largest base, to make a weapon none can face." # Centipede Devastator
+			"Not of this world, the mechanism must be. Allow locust and pulse to jump, I plead of thee." # Weft Barrage
+			"The ravages of space are a dangerous place; yet a beam exists to save one's face. Four turrets, two of ward, the other of bulk, must come together to make such a hulk." # Sanctuary Beam

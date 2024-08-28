@@ -157,6 +157,10 @@ mission "Apoxys Disassembler"
 					goto breakstarcutterturret
 					to display
 						"outfit (cargo): Starcutter Turret" != 0
+				`	(Break down a Proton Undulator Turret.)`
+					goto breakprotonundulatorturret
+					to display
+						"outfit (cargo): Proton Undulator Turret" != 0
 				`	(Break down a Medium Turret Base.)`
 					goto breakmediumturretbase
 					to display
@@ -448,6 +452,14 @@ mission "Apoxys Disassembler"
 			`You break a Starcutter Turret into two Starcutter Beams and one Large Turret Base.`
 				goto disassemble
 
+			label breakprotonundulatorturret
+			action
+				outfit "Proton Undulator Turret" -1
+				outfit "Proton Undulator Cannon" 4
+				outfit "Huge Turret Base" 1
+			`You break a Proton Undulator Turret into four Proton Undulator Cannons and one Huge Turret Base.`
+				goto disassemble
+
 			label breakmediumturretbase
 			action
 				outfit "Medium Turret Base" -1
@@ -680,6 +692,12 @@ mission "Apoxys Disassembler"
 						and
 							"outfit (cargo): Starcutter Beam" >= 2
 							"outfit (cargo): Large Turret Base" >= 1
+				`	(Make up a Proton Undulator Turret.)`
+					goto makeprotonundulatorturret
+					to display
+						and
+							"outfit (cargo): Proton Undulator Cannon" >= 4
+							"outfit (cargo): Huge Turret Base" >= 1
 				`	(Make up a Medium Turret Base.)`
 					goto makemediumturretbase
 					to display
@@ -973,6 +991,14 @@ mission "Apoxys Disassembler"
 				outfit "Large Turret Base" -1
 			`You make a Starcutter Turret from two Starcutter Beams and one Large Turret Base.`
 				goto assemble
+
+			label makeprotonundulatorturret
+			action
+				outfit "Proton Undulator Turret" 1
+				outfit "Proton Undulator Cannon" -4
+				outfit "Huge Turret Base" -1
+			`You make a Proton Undulator Turret from four Proton Undulator Cannons and one Huge Turret Base.`
+				goto disassemble
 
 			label makemediumturretbase
 			action

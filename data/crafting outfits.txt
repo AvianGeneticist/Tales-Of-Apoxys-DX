@@ -1,4 +1,6 @@
 outfitter "everything"
+	"Key Drive"
+	"Reserve Drive"
 	"Small Turret Base"
 	"Medium Turret Base"
 	"Large Turret Base"
@@ -34,6 +36,64 @@ outfit "Reserve Drive"
 	"ramscoop" 1
 	"fuel generation" 0.07
 	description "An upgraded Key Drive featuring fuel storage and recovery effects of a Fuel Processor. Allows the ship to recover fuel anywhere (if slowly)."
+
+outfit "Skip Drive"
+	category "Systems"
+	cost 1250000
+	thumbnail "outfit/jump drive"
+	"mass" 30
+	"outfit space" -30
+	"jump speed" 1.2
+	"jump fuel" 200
+	"jump range" 150
+	"jump drive" 1
+	"quantum keystone" 1
+	"fuel capacity" 200
+	"ramscoop" 1
+	"fuel generation" 0.07
+	description "An upgrade to the Reserve Drive. While it does have a greatly increased tolerance for movement while jumping, the bigger draw for most is that the Skip Drive has an improved potential range."
+
+# POWER
+
+outfit "Shunted Tri-Triple Plasma Core"
+	category "Power"
+	cost 70680000
+	thumbnail "outfit/triple plasma core"
+	"mass" 579
+	"outfit space" -579
+	"energy generation" 130.8
+	"heat generation" 297.0
+	description "This is a triad of Triple Plasma cores carefully interwoven with heat shunts to reduce their colossal heat output. Integrated in this way, the heat shunts are not only more efficient, but also cannot be harmed by typical cooling inefficiencies."
+
+outfit "Action Potential Cell"
+	category "Power"
+	cost 4019000
+	thumbnail "outfit/large biochemical"
+	"mass" 224
+	"outfit space" -224
+	"energy generation" 23.62
+	"heat generation" 26.64
+	"energy capacity" 72000
+	"ion resistance" 0.11
+	"ion resistance energy" -4.72
+	"scramble resistance" 0.09
+	description "The Action Potential Cell is a particularly peculiar piece of technology, as elements of its operation hint that it may have undergone some biological evolution as well. In addition to storing and producing energy, the cell appears to react positively to the energy produced by ionic impacts, generating energy when a charge is present. This effect does not appear to work for weapons scrambling."
+
+# SYSTEMS
+
+outfit "Systems Core (Overclocked)"
+	category "Systems"
+	cost 9075000
+	thumbnail "outfit/large systems core"
+	"mass" 168
+	"outfit space" -168
+	"energy capacity" 7400
+	"shield generation" 10.7
+	"shield energy" 21.4
+	"hull repair rate" 2.2
+	"hull energy" 2.2
+	"hull heat" 3.3
+	description "This is a large systems core that's been tampered with to improve its output. It consumes even more energy and has reduced battery capacity despite its increased size, but it can restore its host ship's shields and hull to pristine condition much faster."
 
 # COMPONENTS
 # Components so the crafting system makes sense.
