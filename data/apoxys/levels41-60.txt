@@ -122,7 +122,7 @@ mission "Apoxys Level 41"
 	name "Level 41"
 	description "You've reached level 41!"
 	to offer
-		"combat rating" >= 47804
+		"combat rating" >= 54751
 		has "Apoxys Level 40: declined"
 	
 	on offer
@@ -212,8 +212,8 @@ mission "Apoxys Level 42"
 	name "Level 42"
 	description "You've reached level 42!"
 	to offer
-		has "Apoxys Level 40: declined"
-		"combat rating" >= 51722
+		has "Apoxys Level 41: declined"
+		"combat rating" >= 59572
 	
 	on offer
 		require "Apoxys Core DX"
@@ -299,7 +299,7 @@ mission "Apoxys Level 42"
 
 			label next
 			action
-				set "perk in waiting"
+				"perk in waiting" += 1
 			`"Okay, I'll need some time to do the basic upgrades; let's do the special stuff next time we land!" Maribelle suggests excitedly.`
 				decline
 
@@ -308,7 +308,7 @@ mission "Apoxys Level 43"
 	name "Level 43"
 	description "You've reached level 43!"
 	to offer
-		"combat rating" >= 56795
+		"combat rating" >= 64620
 		has "Apoxys Level 42: declined"
 	
 	on offer
@@ -400,7 +400,7 @@ mission "Apoxys Level 44"
 	description "You've reached level 44!"
 	to offer
 		has "Apoxys Level 43: declined"
-		"combat rating" >= 62356
+		"combat rating" >= 69895
 	
 	on offer
 		require "Apoxys Core DX"
@@ -487,7 +487,7 @@ mission "Apoxys Level 44"
 
 			label next
 			action
-				set "perk in waiting"
+				"perk in waiting" += 1
 			`"I think I have another special upgrade in me, too, captain. Let's pick next time we land!" She suggests excitedly.`
 				decline
 
@@ -496,7 +496,7 @@ mission "Apoxys Level 45"
 	name "Level 45"
 	description "You've reached level 45!"
 	to offer
-		"combat rating" >= 68428
+		"combat rating" >= 75937
 		has "Apoxys Level 44: declined"
 	
 	on offer
@@ -587,7 +587,7 @@ mission "Apoxys Level 46"
 	description "You've reached level 46!"
 	to offer
 		has "Apoxys Level 45: declined"
-		"combat rating" >= 75072
+		"combat rating" >= 81126
 	
 	on offer
 		require "Apoxys Core DX"
@@ -674,7 +674,7 @@ mission "Apoxys Level 46"
 
 			label next
 			action
-				set "perk in waiting"
+				"perk in waiting" += 1
 			`"I think I have another special upgrade in me, too, captain. Let's pick next time we land!" She suggests excitedly.`
 				decline
 
@@ -683,7 +683,7 @@ mission "Apoxys Level 47"
 	name "Level 47"
 	description "You've reached level 47!"
 	to offer
-		"combat rating" >= 82341
+		"combat rating" >= 87082
 		has "Apoxys Level 46: declined"
 	
 	on offer
@@ -774,7 +774,7 @@ mission "Apoxys Level 48"
 	description "You've reached level 48!"
 	to offer
 		has "Apoxys Level 47: declined"
-		"combat rating" >= 90243
+		"combat rating" >= 93265
 	
 	on offer
 		require "Apoxys Core DX"
@@ -861,7 +861,7 @@ mission "Apoxys Level 48"
 
 			label next
 			action
-				set "perk in waiting"
+				"perk in waiting" += 1
 			`"I think I have another special upgrade in me, too, captain. Let's pick next time we land!" She suggests excitedly.`
 				decline
 
@@ -870,7 +870,7 @@ mission "Apoxys Level 49"
 	name "Level 49"
 	description "You've reached level 49!"
 	to offer
-		"combat rating" >= 98787
+		"combat rating" >= 99675
 		has "Apoxys Level 48: declined"
 	
 	on offer
@@ -961,7 +961,7 @@ mission "Apoxys Level 50"
 	description "You've reached level 50!"
 	to offer
 		has "Apoxys Level 49: declined"
-		"combat rating" >= 108004
+		"combat rating" >= 106312
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1084,7 +1084,7 @@ mission "Apoxys Level 51"
 	description "You've reached level 51!"
 	to offer
 		has "Apoxys Level 50: declined"
-		"combat rating" >= 117935
+		"combat rating" >= 113176
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1174,7 +1174,7 @@ mission "Apoxys Level 52"
 	description "You've reached level 52!"
 	to offer
 		has "Apoxys Level 51: declined"
-		"combat rating" >= 128616
+		"combat rating" >= 120267
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1261,7 +1261,7 @@ mission "Apoxys Level 52"
 
 			label next
 			action
-				set "perk in waiting"
+				"perk in waiting" += 1
 			`"Okay, I'll need some time to do the basic upgrades; let's do the special stuff next time we land!" Maribelle suggests excitedly.`
 				decline
 
@@ -1270,7 +1270,7 @@ mission "Apoxys Level 53"
 	name "Level 53"
 	description "You've reached level 53!"
 	to offer
-		"combat rating" >= 140087
+		"combat rating" >= 127585
 		has "Apoxys Level 52: declined"
 	
 	on offer
@@ -1362,7 +1362,7 @@ mission "Apoxys Level 54"
 	description "You've reached level 54!"
 	to offer
 		has "Apoxys Level 53: declined"
-		"combat rating" >= 1523484
+		"combat rating" >= 135130
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1449,7 +1449,7 @@ mission "Apoxys Level 54"
 
 			label next
 			action
-				set "perk in waiting"
+				"perk in waiting" += 1
 			`"I think I have another special upgrade in me, too, captain. Let's pick next time we land!" She suggests excitedly.`
 				decline
 
@@ -1458,7 +1458,7 @@ mission "Apoxys Level 55"
 	name "Level 55"
 	description "You've reached level 55!"
 	to offer
-		"combat rating" >= 165546
+		"combat rating" >= 142902
 		has "Apoxys Level 54: declined"
 	
 	on offer
@@ -1549,7 +1549,7 @@ mission "Apoxys Level 56"
 	description "You've reached level 56!"
 	to offer
 		has "Apoxys Level 55: declined"
-		"combat rating" >= 179630
+		"combat rating" >= 150900
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1636,7 +1636,7 @@ mission "Apoxys Level 56"
 
 			label next
 			action
-				set "perk in waiting"
+				"perk in waiting" += 1
 			`"I think I have another special upgrade in me, too, captain. Let's pick next time we land!" She suggests excitedly.`
 				decline
 
@@ -1645,7 +1645,7 @@ mission "Apoxys Level 57"
 	name "Level 57"
 	description "You've reached level 57!"
 	to offer
-		"combat rating" >= 194661
+		"combat rating" >= 159123
 		has "Apoxys Level 56: declined"
 	
 	on offer
@@ -1736,7 +1736,7 @@ mission "Apoxys Level 58"
 	description "You've reached level 58!"
 	to offer
 		has "Apoxys Level 57: declined"
-		"combat rating" >= 210675
+		"combat rating" >= 167570
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1823,7 +1823,7 @@ mission "Apoxys Level 58"
 
 			label next
 			action
-				set "perk in waiting"
+				"perk in waiting" += 1
 			`"I think I have another special upgrade in me, too, captain. Let's pick next time we land!" She suggests excitedly.`
 				decline
 
@@ -1832,7 +1832,7 @@ mission "Apoxys Level 59"
 	name "Level 59"
 	description "You've reached level 59!"
 	to offer
-		"combat rating" >= 227726
+		"combat rating" >= 176240
 		has "Apoxys Level 58: declined"
 	
 	on offer
@@ -1923,7 +1923,7 @@ mission "Apoxys Level 60"
 	description "You've reached level 60!"
 	to offer
 		has "Apoxys Level 59: declined"
-		"combat rating" >= 245837
+		"combat rating" >= 185132
 	
 	on offer
 		require "Apoxys Core DX"
@@ -2011,6 +2011,6 @@ mission "Apoxys Level 60"
 
 			label next
 			action
-				set "perk in waiting"
+				"perk in waiting" += 1
 			`"I'll be sure to save some of this extra energy for a special upgrade, too! We'll pick next time we land!" Maribelle decides. You hope all the excited shaking isn't hurting her.`
 				decline

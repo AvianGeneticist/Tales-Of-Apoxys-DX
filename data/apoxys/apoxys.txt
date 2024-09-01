@@ -44,7 +44,7 @@ ship "Apoxys"
 		"Volcano Afterburner"
 		"Hyperdrive"
 		
-		"Apoxys Core"
+		"Apoxys Core DX"
 		
 	engine -18 230
 	engine 18 230
@@ -92,6 +92,152 @@ ship "Apoxys"
 	explode "large explosion" 45
 	explode "huge explosion" 30
 	"final explode" "final explosion large"
+	description "The Apoxys is a large warship of unknown origin, quite weak by most standards, but with the curious ability to grow and evolve as it experiences the galaxy. The ship is helmed not only by a human crew, but a powerful AI, known only as Maribelle; it's believed that, at one point, the Apoxys was a completely autonomous war machine, but for one reason or another, it has since been turned into a human-crewed vessel."
+
+ship "Apoxys II"
+	plural "Apoxys IIs"
+	sprite "ship/apoxys ii"
+	thumbnail "ship/thumbapoxys ii"
+	swizzle 6
+	attributes
+		category "Heavy Warship"
+		"cost" 25000000
+		"shields" 20000
+		"hull" 20000
+		"required crew" 20
+		"bunks" 80
+		"mass" 675
+		"drag" 15
+		"heat dissipation" .5
+		"fuel capacity" 1000
+		"cargo space" 100
+		"outfit space" 450
+		"weapon capacity" 75
+		"engine capacity" 150
+		"growth" -1
+		"fostersome" 1
+		weapon
+			"blast radius" 1500
+			"shield damage" 10000
+			"hull damage" 7500
+			"hit force" 7000
+	outfits
+		"Beam Laser" 3
+		
+		"Blaster Turret"
+		"Anti-Missile Turret" 2
+	
+		"Breeder Reactor"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Liquid Nitrogen Cooler"
+		
+		"Orca Plasma Steering"
+		"Orca Plasma Thruster"
+		"Caldera Afterburner"
+		"Hyperdrive"
+		
+		"Apoxys Core DX"
+		"Fortitude" 5
+		"Force" 5
+		"Focus" 5
+		"Flightiness" 5
+		"Friendliness" 5
+		"Basal Level I" 18
+		"Basal Level II" 18
+		"Basal Level III" 18
+		"Basal Level IV" 18
+		"Basal Level V" 18
+		"Milestone I" 2
+		"Milestone II" 2
+		"Milestone III" 2
+		"Milestone IV" 2
+		"Milestone V" 2
+		
+	engine -59.5 -96
+	engine -72.5 333
+	engine 43 355
+	engine 78 355
+	engine -20 394
+	engine 1 394
+	gun 12.5 -396
+	gun 0 -391.5
+	gun 0 -391.5
+	gun 25.5 -390.5
+	gun 25.5 -390.5
+	gun 38 -343
+	gun -28 -296
+	gun -38 -290
+	gun -43.5 -224
+	gun 73 -217.5
+	gun 90 116.5
+	gun 110 139.5
+	gun -88 175
+	gun -101 258.5
+	turret 13 -359
+	turret -10 -314.5
+	turret 29.5 -293.5
+	turret -31.5 -268
+	turret 22.5 -243.5
+	turret 50 -212.5
+	turret 63 -212.5
+	turret -10.5 -188
+	turret -58 -158
+	turret 51.5 -135.5
+	turret -12 -11
+	turret 10.5 28
+	turret 63 54.5
+	turret 8.5 54.5
+	turret 62.5 80
+	turret -49 108.5
+	turret -49 132
+	turret -71.5 153.5
+	turret 98.5 156
+	turret -39.5 215.5
+	turret -30 254.5
+	turret -91.5 291
+	turret 22 314.5
+	turret -19 330.5
+	bay "Fighter" 30.5 -308
+	bay "Fighter" 30.5 -308
+	bay "Fighter" 57.5 -206
+	bay "Fighter" -53.5 101.5
+	bay "Fighter" 55.5 62
+	bay "Fighter" -31 265.5
+	bay "Fighter" 30.5 -308
+	bay "Fighter" 57.5 -206
+	bay "Fighter" -53.5 101.5
+	bay "Fighter" 55.5 62
+	bay "Fighter" -31 265.5
+	bay "Fighter" -31 265.5
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	bay "Drone" 0 0
+	leak "leak" 30 50
+	leak "flame" 30 80
+	leak "big leak" 50 30
+	explode "small explosion" 25
+	explode "medium explosion" 35
+	explode "large explosion" 45
+	explode "huge explosion" 30
+	"final explode" "final explosion huge"
 	description "The Apoxys is a large warship of unknown origin, quite weak by most standards, but with the curious ability to grow and evolve as it experiences the galaxy. The ship is helmed not only by a human crew, but a powerful AI, known only as Maribelle; it's believed that, at one point, the Apoxys was a completely autonomous war machine, but for one reason or another, it has since been turned into a human-crewed vessel."
 
 outfit "Apoxys Core DX"

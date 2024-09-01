@@ -1,0 +1,607 @@
+mission "Apoxys Level 100 Conversion"
+	landing
+	name "Level 100"
+	description "You've reached Level 100!"
+	source "New Boston"
+	to offer
+		has "Apoxys Level 100 Notification: offered"
+	
+	on offer
+		require "Apoxys Core DX"
+		conversation
+			`As you land on New Boston, near the factory, Maribelle looks at you. "Captain, I think... Once I go into the factory, I won't come out the same. I don't know what will happen to all our equipment, either," She says. "You should probably uninstall everything you can; buy some cheap replacement outfits here on New Boston, if you have to."`
+			`	"What makes you say that?" You ask.`
+			`	"I don't know, just a bad feeling in my engines," Maribelle expresses. "Please take the time to strip everything you can off of the ship."`
+			choice
+				`	"Alright, we're ready. Let's do this."`
+					goto ultimatum
+				`	"Give me a bit more time to sort out the outfit situation."`
+					defer
+
+			label ultimatum
+			`As you carefully fly the ship into the factory, Claire greets you on the monitor. "This is it, 'ey folks?" She asks.`
+			`	"We're ready," Maribelle says.`
+			`	"Loud and clear," Claire says. "This'll take a while. Hope you aren't gonna miss anything."`
+			` `
+			action
+				take ship "Apoxys"
+				give ship "Apoxys II" "Apoxys"
+			`The procedure feels like it takes hours; with the factory dark, you can't easily tell what's happening. The occasional flashes of grinding machinery or welding equipment don't illuminate anything well enough, but you can hear the sounds of labor echoing through the ship's hull. It's an eerie experience, sitting alone in the cockpit; the Apoxys has never needed a large crew, but you always at least had Maribelle to keep you company. Now, however, you are alone, all screens and holographic projectors left dark as you sit here in silence. To some, the distant sounds of machinery would be comforting; right now, however, you briefly wonder if you'll exit the factory alive or not.`
+			`	Finally, the lights come back on; first in the factory, then in the ship. Maribelle soon materializes before you. She looks a bit dazed and confused. She looks at you slowly. "I think it's done, captain," Maribelle says.`
+			`	Surprisingly, Claire materializes on the bridge as well. Guess that was one of the presumably many upgrades. "Hold on just a moment, you two. You've still got a bit of setup to do; you know how it is, gettin' comfy in yer own skin. There's always growin' pains," Claire says.`
+			`	"What do we need to do?" Maribelle asks.`
+			`	"Make sure the Apoxys is yer flagship, take off, and land somewhere. Ye've got a hundred upgrades yer new body's waitin' to spend," Claire says, looking at Maribelle.`
+			`	Maribelle blinks. "Is it safe to do a hundred upgrades all at once?" She asks.`
+			`	"Well, no. Ah, but- All your base upgrades are already included here. You just gotta pick out the stuff you'd normally pick out, Cap'n," Claire explains.`
+			`	"Ohhh... Okay. That makes it easier, at least. I guess we'll have to do special upgrades again, too," Maribelle ponders.`
+			`	"That's right. Don't go forgettin', now," Claire chides. "Ye'd look awful silly runnin' into some big bads and consequently gettin' yer hull handed t'ya because ya forgot yer upgrades."`
+				decline
+
+mission "Apoxys Level 100 Choices"
+	landing
+	name "Level 100"
+	description "You've reached Level 100!"
+	to offer
+		has "Apoxys Level 100 Conversion: declined"
+	
+	on offer
+		require "Apoxys Core DX"
+		"apoxys spec points" = 10
+		"mark i choices" = 20
+		"mark ii choices" = 20
+		"mark iii choices" = 20
+		"mark iv choices" = 20
+		"mark v choices" = 20
+		conversation
+			`As you land, Maribelle looks at you. "Okay, captain. Are you ready?" She asks. "This is choosing all of our upgrades."`
+			choice
+				`	"Let's do it."`
+					goto deal
+				`	"I need a moment to prepare."`
+					defer
+
+			label deal
+			action
+				"perk in waiting" += 48
+			label speccing
+			`"First up is base stats, captain," Maribelle reports. "It's been a long time since we did much with them... We have &[apoxys spec points] free attributes left."`
+			choice
+				`	(Alter Fortitude. Currently &[outfit (flagship installed): Fortitude].)`
+					goto fortitude
+				`	(Alter Force. Currently &[outfit (flagship installed): Force].)`
+					goto force
+				`	(Alter Focus. Currently &[outfit (flagship installed): Focus].)`
+					goto focus
+				`	(Alter Flightiness. Currently &[outfit (flagship installed): Flightiness].)`
+					goto flightiness
+				`	(Alter Friendliness. Currently &[outfit (flagship installed): Friendliness].)`
+					goto friendliness
+				`	(Finish.)`
+					to display
+						"apoxys spec points" == 0
+					goto marki
+
+			label fortitude
+			`Fortitude refers to your durability. A high fortitude stat will boost your hull and shield capacities, and give you protection against special damages.`
+			choice
+				`	(Increase Fortitude by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addfortitude
+				`	(Decrease Fortitude by 1.)`
+						to display
+							"outfit (flagship installed): Fortitude" >= 2
+					goto subfortitude
+				`	(Go back to the main list.)`
+					goto speccing
+			label addfortitude
+			action
+				"apoxys spec points" -= 1
+				outfit "Fortitude" 1
+			`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+				goto fortitude
+			label subfortitude
+			action
+				"apoxys spec points" += 1
+				outfit "Fortitude" -1
+			`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+				goto fortitude
+
+			label force
+			`Force refers to your durability. A high force stat will increase your weapon, cargo, and heat capacities.`
+			choice
+				`	(Increase Force by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addforce
+				`	(Decrease Force by 1.)`
+						to display
+							"outfit (flagship installed): Force" >= 2
+					goto subforce
+				`	(Go back to the main list.)`
+					goto speccing
+			label addforce
+			action
+				"apoxys spec points" -= 1
+				outfit "Force" 1
+			`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+				goto force
+			label subforce
+			action
+				"apoxys spec points" += 1
+				outfit "Force" -1
+			`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+				goto force
+
+			label focus
+			`Focus refers to your tenacity. A high focus will grant fuel recovery and considerable scanning capability.`
+			choice
+				`	(Increase Focus by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addfocus
+				`	(Decrease Focus by 1.)`
+						to display
+							"outfit (flagship installed): Focus" >= 2
+					goto subfocus
+				`	(Go back to the main list.)`
+					goto speccing
+			label addfocus
+			action
+				"apoxys spec points" -= 1
+				outfit "Focus" 1
+			`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+				goto focus
+			label subfocus
+			action
+				"apoxys spec points" += 1
+				outfit "Focus" -1
+			`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+				goto focus
+
+			label flightiness
+			`Flightiness refers to your agility. A high flightiness will allow you to move and regenerate faster.`
+			choice
+				`	(Increase Focus by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addflightiness
+				`	(Decrease Focus by 1.)`
+						to display
+							"outfit (flagship installed): Flightiness" >= 2
+					goto subflightiness
+				`	(Go back to the main list.)`
+					goto speccing
+			label addflightiness
+			action
+				"apoxys spec points" -= 1
+				outfit "Flightiness" 1
+			`Focus increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+				goto flightiness
+			label subflightiness
+			action
+				"apoxys spec points" += 1
+				outfit "Flightiness" -1
+			`Focus increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+				goto flightiness
+
+			label friendliness
+			`Friendliness refers to your non-offensive capacities. A high friendliness will increase your outfit and bunk spaces.`
+			choice
+				`	(Increase Friendliness by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addfriendliness
+				`	(Decrease Friendliness by 1.)`
+						to display
+							"outfit (flagship installed): Friendliness" >= 2
+					goto subfriendliness
+				`	(Go back to the main list.)`
+					goto speccing
+			label addfriendliness
+			action
+				"apoxys spec points" -= 1
+				outfit "Friendliness" 1
+			`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+				goto friendliness
+			label subfriendliness
+			action
+				"apoxys spec points" += 1
+				outfit "Friendliness" -1
+			`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+				goto friendliness
+
+			label marki
+			`"Okay, captain. Tiny upgrades first, like the kind I'd get when we were still really new to this," Maribelle says. "We have &[mark i choices] left."`
+			choice
+				`	"You should increase your shield strength."`
+					goto shieldi
+				`	"You should increase your hull durability."`
+					goto hulli
+				`	"You should increase your capacity for general outfits."`
+					goto outfiti
+				`	"You should increase your heat tolerance."`
+					goto heati
+				`	"You should be able to bear greater weapons."`
+					goto weaponi
+				`	"You should be able to utilize the largest engines possible."`
+					goto enginei
+				`	"You should have some more space for crew and passengers."`
+					goto bunki
+				`	"You should increase your capacity for trading goods."`
+					goto cargoi
+					
+			label shieldi
+			action
+				outfit "Shields I" 1
+				"mark i choices" -= 1
+			`"More shields sound good, captain!" Maribelle replies giddily.`
+				goto nexti
+			label hulli
+			action
+				outfit "Hull I" 1
+				"mark i choices" -= 1
+			`"More hull sounds good, captain!" Maribelle replies giddily.`
+				goto nexti
+			label outfiti
+			action
+				outfit "Outfit I" 1
+				"mark i choices" -= 1
+			`"More space sounds good, captain!" Maribelle replies giddily.`
+				goto nexti
+			label heati
+			action
+				outfit "Heat Capacity I" 1
+				"mark i choices" -= 1
+			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nexti
+			label weaponi
+			action
+				outfit "Weapons I" 1
+				"mark i choices" -= 1
+			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
+				goto nexti
+			label enginei
+			action
+				outfit "Engines I" 1
+				"mark i choices" -= 1
+			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
+				goto nexti
+			label cargoi
+			action
+				outfit "Cargo I" 1
+				"mark i choices" -= 1
+			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nexti
+			label bunki
+			action
+				outfit "Bunks I" 1
+				"mark i choices" -= 1
+			`"More bunks sounds good, captain!" Maribelle replies.`
+				goto nexti
+
+			label nexti
+			branch "markii" "marki"
+				"mark i choices" == 0
+
+			label markii
+			`"Alright, now it's time for small upgrades. They'll be twice as strong as the tiny ones," Maribelle says. "We have &[mark ii choices] left."`
+			choice
+				`	"You should increase your shield strength."`
+					goto shieldii
+				`	"You should increase your hull durability."`
+					goto hullii
+				`	"You should increase your capacity for general outfits."`
+					goto outfitii
+				`	"You should increase your heat tolerance."`
+					goto heatii
+				`	"You should be able to bear greater weapons."`
+					goto weaponii
+				`	"You should be able to utilize the largest engines possible."`
+					goto engineii
+				`	"You should have some more space for crew and passengers."`
+					goto bunkii
+				`	"You should increase your capacity for trading goods."`
+					goto cargoii
+					
+			label shieldii
+			action
+				outfit "Shields II" 1
+				"mark ii choices" -= 1
+			`"More shields sound good, captain!" Maribelle replies giddily.`
+				goto nextii
+			label hullii
+			action
+				outfit "Hull II" 1
+				"mark ii choices" -= 1
+			`"More hull sounds good, captain!" Maribelle replies giddily.`
+				goto nextii
+			label outfitii
+			action
+				outfit "Outfit II" 1
+				"mark ii choices" -= 1
+			`"More space sounds good, captain!" Maribelle replies giddily.`
+				goto nextii
+			label heatii
+			action
+				outfit "Heat Capacity II" 1
+				"mark ii choices" -= 1
+			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nextii
+			label weaponii
+			action
+				outfit "Weapons II" 1
+				"mark ii choices" -= 1
+			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
+				goto nextii
+			label engineii
+			action
+				outfit "Engines II" 1
+				"mark ii choices" -= 1
+			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
+				goto nextii
+			label cargoii
+			action
+				outfit "Cargo II" 1
+				"mark ii choices" -= 1
+			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nextii
+			label bunkii
+			action
+				outfit "Bunks II" 1
+				"mark ii choices" -= 1
+			`"More bunks sounds good, captain!" Maribelle replies.`
+				goto nextii
+
+			label nextii
+			branch "markiii" "markii"
+				"mark ii choices" == 0
+
+			label markiii
+			`"Alright, now it's time for medium upgrades. They'll be three times as strong as the tiny ones," Maribelle says. "We have &[mark iii choices] left."`
+			choice
+				`	"You should increase your shield strength."`
+					goto shieldiii
+				`	"You should increase your hull durability."`
+					goto hulliii
+				`	"You should increase your capacity for general outfits."`
+					goto outfitiii
+				`	"You should increase your heat tolerance."`
+					goto heatiii
+				`	"You should be able to bear greater weapons."`
+					goto weaponiii
+				`	"You should be able to utilize the largest engines possible."`
+					goto engineiii
+				`	"You should have some more space for crew and passengers."`
+					goto bunkiii
+				`	"You should increase your capacity for trading goods."`
+					goto cargoiii
+					
+			label shieldiii
+			action
+				outfit "Shields III" 1
+				"mark iii choices" -= 1
+			`"More shields sound good, captain!" Maribelle replies giddily.`
+				goto nextiii
+			label hulliii
+			action
+				outfit "Hull III" 1
+				"mark iii choices" -= 1
+			`"More hull sounds good, captain!" Maribelle replies giddily.`
+				goto nextiii
+			label outfitiii
+			action
+				outfit "Outfit III" 1
+				"mark iii choices" -= 1
+			`"More space sounds good, captain!" Maribelle replies giddily.`
+				goto nextiii
+			label heatiii
+			action
+				outfit "Heat Capacity III" 1
+				"mark iii choices" -= 1
+			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nextiii
+			label weaponiii
+			action
+				outfit "Weapons III" 1
+				"mark iii choices" -= 1
+			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
+				goto nextiii
+			label engineiii
+			action
+				outfit "Engines III" 1
+				"mark iii choices" -= 1
+			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
+				goto nextiii
+			label cargoiii
+			action
+				outfit "Cargo III" 1
+				"mark iii choices" -= 1
+			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nextiii
+			label bunkiii
+			action
+				outfit "Bunks III" 1
+				"mark iii choices" -= 1
+			`"More bunks sounds good, captain!" Maribelle replies.`
+				goto nextiii
+
+			label nextiii
+			branch "markiv" "markiii"
+				"mark iii choices" == 0
+
+			label markiv
+			`"Alright, now it's time for large upgrades. They'll be four times as strong as the tiny ones," Maribelle says. "We have &[mark iv choices] left."`
+			choice
+				`	"You should increase your shield strength."`
+					goto shieldiv
+				`	"You should increase your hull durability."`
+					goto hulliv
+				`	"You should increase your capacity for general outfits."`
+					goto outfitiv
+				`	"You should increase your heat tolerance."`
+					goto heativ
+				`	"You should be able to bear greater weapons."`
+					goto weaponiv
+				`	"You should be able to utilize the largest engines possible."`
+					goto engineiv
+				`	"You should have some more space for crew and passengers."`
+					goto bunkiv
+				`	"You should increase your capacity for trading goods."`
+					goto cargoiv
+					
+			label shieldiv
+			action
+				outfit "Shields IV" 1
+				"mark iv choices" -= 1
+			`"More shields sound good, captain!" Maribelle replies giddily.`
+				goto nextiv
+			label hulliv
+			action
+				outfit "Hull IV" 1
+				"mark iv choices" -= 1
+			`"More hull sounds good, captain!" Maribelle replies giddily.`
+				goto nextiv
+			label outfitiv
+			action
+				outfit "Outfit IV" 1
+				"mark iv choices" -= 1
+			`"More space sounds good, captain!" Maribelle replies giddily.`
+				goto nextiv
+			label heativ
+			action
+				outfit "Heat Capacity IV" 1
+				"mark iv choices" -= 1
+			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nextiv
+			label weaponiv
+			action
+				outfit "Weapons IV" 1
+				"mark iv choices" -= 1
+			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
+				goto nextiv
+			label engineiv
+			action
+				outfit "Engines IV" 1
+				"mark iv choices" -= 1
+			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
+				goto nextiv
+			label cargoiv
+			action
+				outfit "Cargo IV" 1
+				"mark iv choices" -= 1
+			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nextiv
+			label bunkiv
+			action
+				outfit "Bunks IV" 1
+				"mark iv choices" -= 1
+			`"More bunks sounds good, captain!" Maribelle replies.`
+				goto nextiv
+
+			label nextiv
+			branch "markv" "markiv"
+				"mark iv choices" == 0
+
+			label markv
+			`"Alright, now it's time for huge upgrades. They'll be five times as strong as the tiny ones," Maribelle says. "We have &[mark v choices] left."`
+			choice
+				`	"You should increase your shield strength."`
+					goto shieldv
+				`	"You should increase your hull durability."`
+					goto hullv
+				`	"You should increase your capacity for general outfits."`
+					goto outfitv
+				`	"You should increase your heat tolerance."`
+					goto heatv
+				`	"You should be able to bear greater weapons."`
+					goto weaponv
+				`	"You should be able to utilize the largest engines possible."`
+					goto enginev
+				`	"You should have some more space for crew and passengers."`
+					goto bunkv
+				`	"You should increase your capacity for trading goods."`
+					goto cargov
+					
+			label shieldv
+			action
+				outfit "Shields V" 1
+				"mark v choices" -= 1
+			`"More shields sound good, captain!" Maribelle replies giddily.`
+				goto nextv
+			label hullv
+			action
+				outfit "Hull V" 1
+				"mark v choices" -= 1
+			`"More hull sounds good, captain!" Maribelle replies giddily.`
+				goto nextv
+			label outfitv
+			action
+				outfit "Outfit V" 1
+				"mark v choices" -= 1
+			`"More space sounds good, captain!" Maribelle replies giddily.`
+				goto nextv
+			label heatv
+			action
+				outfit "Heat Capacity V" 1
+				"mark v choices" -= 1
+			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nextv
+			label weaponv
+			action
+				outfit "Weapons V" 1
+				"mark v choices" -= 1
+			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
+				goto nextv
+			label enginev
+			action
+				outfit "Engines V" 1
+				"mark v choices" -= 1
+			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
+				goto nextv
+			label cargov
+			action
+				outfit "Cargo V" 1
+				"mark v choices" -= 1
+			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
+				goto nextv
+			label bunkv
+			action
+				outfit "Bunks V" 1
+				"mark v choices" -= 1
+			`"More bunks sounds good, captain!" Maribelle replies.`
+				goto nextv
+
+			label nextv
+			branch "special" "markv"
+				"mark v choices" == 0
+
+			label special
+			`"Okay, captain, we've got one more choice to make: Cloaking Field, or Spinal Mount?" Maribelle asks.`
+			choice
+				`	"Go for the Cloaking Field."`
+					goto cloak
+				`	"Go for the Spinal Mount."`
+					goto spinal
+
+			label cloak
+			action
+				outfit "Perk: Cloaking Field" 1
+				log Levels "Level 100" "Chose Cloaking Field."
+			`Maribelle looks at you. "Are you sure?" She asks.`
+			`	"Yes," You reply. "I'm certain."`
+			`	Maribelle nods. "Consider it done, then, captain."`
+				goto options
+
+			label spinal
+			action
+				outfit "Perk: Spinal Mount" 1
+				log Levels "Level 100" "Chose Spinal Mount."
+			`Maribelle looks at you. "Are you sure?" She asks.`
+			`	"Yes," You reply. "I'm certain."`
+			`	Maribelle nods. "Consider it done, then, captain."`
+				goto options
+				
+			label options # When I add optional stuff that the player can or can not have done before Level 100, this label will be a series of branches for inheriting special outfits. At the moment however, there are no optional progression metrics, so it leads directly to the end.
+			`You can already hear the Apoxys' innards shifting as Maribelle begins the upgrades. "That's all of our regularly scheduled choices, captain... Next time we land, it'll be special upgrades," Maribelle says.`
+				decline

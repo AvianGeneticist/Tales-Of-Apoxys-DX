@@ -258,6 +258,7 @@ outfit "Interdiction Shard"
 		"drag" .2
 		"turn" 3.8
 		"homing" 4
+		"tracking" .8
 		"shield damage" 62.6
 		"hull damage" 30
 		"slowing damage" .47
@@ -343,7 +344,8 @@ outfit "Weft Barrage Locust"
 		"hull damage" 4
 
 outfit "Weft Barrage Pulse"
-	sprite "projectile/pulse"
+	weapon
+		sprite "projectile/pulse"
 		sound "pulse"
 		"hit effect" "pulse impact"
 		"inaccuracy" 1

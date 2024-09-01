@@ -4,16 +4,16 @@ mission "Apoxys Perks List"
 	name "Perks List"
 	description "Pick a perk!"
 	to offer
-		has "perk in waiting"
+		"perk in waiting" != 0
 	
 	on offer
 		require "Apoxys Core DX"
-		clear "perk in waiting"
 		conversation "perkslist"
 
 conversation "perkslist"
 	`Before you lies a large list of 'perks'; special upgrades that may alter how the ship handles in more drastic ways than simple level-up stat boosts. Be sure to read descriptions carefully!`
 	label hub
+	`	You have &[perk in waiting] perks left.`
 	choice
 		`	(Core Restructure.)`
 			goto corerestructure
@@ -21,20 +21,43 @@ conversation "perkslist"
 			goto shieldoverclock
 		`	(Heat Dissipation.)`
 			goto heatdissipation
+		`	(Drag Reduction.)`
+			goto dragreduction
 		`	(No Pushover.)`
 			goto nopushover
 		`	(Long Hauler.)`
 			goto longhauler
 		`	(Heat Shielding.)`
 			goto heatshield
+		`	(Energy Shielding.)`
+			goto energyshield
 		`	(Natural Regeneration.)`
 			goto naturalregeneration
 		`	(Natural Repair.)`
 			goto naturalrepair
 		`	(Repair Overdrive.)`
 			goto repairoverdrive
+		`	(Stellar Drinker.)`
+			goto stellardrinker
+		`	(Sneaky Packer.)`
+			goto sneakypacker
 		`	(Disassembler.)`
 			goto disassembler
+		`	(Pick-Me-Up.)`
+			goto pickmeup
+		`	(Adrenal Surge.)`
+			goto adrenalsurge
+		`	(Not now.)`
+			defer
+
+	label buffer
+	action
+		"perk in waiting" -= 1
+	branch "hub"
+		"perk in waiting" != 0
+
+	`You've spent all your perk points for now.`
+		decline
 
 	label corerestructure
 	`Core Restructure allows you to take an extra "spec point" in any of the Apoxys' core attributes: Fortitude, Force, Focus, Flightiness, or Friendliness. In addition to their core benefits, taking extra points in core attributes can allow you to unlock new perks.`
@@ -69,7 +92,7 @@ conversation "perkslist"
 		`	(Finish.)`
 			to display
 				"apoxys spec points" == 0
-			decline
+			goto buffer
 
 	label fortitude
 	`Fortitude refers to your durability. A high fortitude stat will boost your hull and shield capacities, and give you protection against special damages.`
@@ -203,7 +226,7 @@ conversation "perkslist"
 
 	label shieldoverclock
 	`Shield Overclock boosts all shield regeneration on your ship by a percentage amount, at a rate of 10% per rank. It does, however, proportionately increase shield energy, heat, and fuel.`
-	`	This perk can be taken 7 times. Rank 1 starts at level 2, rank 2 at level 6, rank 3 at level 10, rank 4 at level 14, rank 5 at level 20, rank 6 at level 30, and rank 7 at level 42. Do you want to take a rank?`
+	`	This perk can be taken 10 times. Rank 1 starts at level 2, rank 2 at level 6, rank 3 at level 10, rank 4 at level 14, rank 5 at level 20, rank 6 at level 30, rank 7 at level 42, rank 8 at level 56, rank 9 at level 72, rank 10 at level 90. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Shield Overclock] ranks.)`
 	choice
 		`	(Take a rank in the Shield Overclock Perk.)`
 			to display
@@ -229,6 +252,15 @@ conversation "perkslist"
 					and
 						has "Apoxys Level 42: declined"
 						"outfit (flagship installed): Perk: Shield Overclock" == 6
+					and
+						has "Apoxys Level 56: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 7
+					and
+						has "Apoxys Level 72: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 8
+					and
+						has "Apoxys Level 90: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 9
 			goto shieldoverclock2
 		`	(Return to the main list.)`
 			goto hub
@@ -237,11 +269,11 @@ conversation "perkslist"
 	action
 		outfit "Perk: Shield Overclock" 1
 	`You have taken a rank in the Shield Overclock Perk.`
-		decline
+		goto buffer
 
 	label heatdissipation
 	`Heat Dissipation increases your ship's heat dissipation by 10% per rank (additively), up to three ranks.`
-	`	This perk can be taken 3 times. Rank 1 starts at level 2, rank 2 at level 14, and rank 3 at level 30. Do you want to take a rank?`
+	`	This perk can be taken 3 times. Rank 1 starts at level 2, rank 2 at level 14, and rank 3 at level 30. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Heat Dissipation] ranks.)`
 	choice
 		`	(Take a rank in the Heat Dissipation Perk.)`
 			to display
@@ -263,43 +295,43 @@ conversation "perkslist"
 	action
 		outfit "Perk: Heat Dissipation" 1
 	`You have taken a rank in the Heat Dissipation Perk.`
-		decline
+		goto buffer
 
-	label inertiareduction
-	`Inertia Reduction reduces your ship's mass for the sake of Acceleration and Steering, at a rate of 10% per rank.`
-	`	This perk can be taken 5 times. Rank 1 starts at level 4, rank 2 at level 10, rank 3 at level 18, rank 4 at level 30, and rank 5 at level 44. Do you want to take a rank?`
+	label dragreduction
+	`Drag Reduction reduces your ship's drag (which limits your top speed), at a rate of 20% per rank.`
+	`	This perk can be taken 5 times. Rank 1 starts at level 8, rank 2 at level 22, rank 3 at level 40, rank 4 at level 62, and rank 5 at level 86. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Drag Reduction] ranks.)`
 	choice
-		`	(Take a rank in the Inertia Reduction Perk.)`
+		`	(Take a rank in the Drag Reduction Perk.)`
 			to display
 				or
 					and
-						has "Apoxys Level 2: declined"
-						"outfit (flagship installed): Perk: Inertia Reduction" == 0
+						has "Apoxys Level 8: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 0
 					and
-						has "Apoxys Level 10: declined"
-						"outfit (flagship installed): Perk: Inertia Reduction" == 1
+						has "Apoxys Level 22: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 1
 					and
-						has "Apoxys Level 18: declined"
-						"outfit (flagship installed): Perk: Inertia Reduction" == 2
+						has "Apoxys Level 40: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 2
 					and
-						has "Apoxys Level 30: declined"
-						"outfit (flagship installed): Perk: Inertia Reduction" == 3
+						has "Apoxys Level 62: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 3
 					and
-						has "Apoxys Level 44: declined"
-						"outfit (flagship installed): Perk: Inertia Reduction" == 4
-			goto inertiareduction2
+						has "Apoxys Level 86: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 4
+			goto dragreduction2
 		`	(Return to the main list.)`
 			goto hub
 
-	label inertiareduction2
+	label dragreduction2
 	action
-		outfit "Perk: Inertia Reduction" 1
-	`You have taken a rank in the Inertia Reduction Perk.`
-		decline
+		outfit "Perk: Drag Reduction" 1
+	`You have taken a rank in the Drag Reduction Perk.`
+		goto buffer
 
 	label nopushover
 	`No Pushover increases your mass by 250 tons per rank, but reduces the effect of hit force on you by 33% at rank 1 and 50% at rank 2.`
-	`	This perk can be taken up to twice. Rank 1 starts at level 4, and rank 2 at level 32. Do you want to take a rank?`
+	`	This perk can be taken up to twice. Rank 1 starts at level 4, and rank 2 at level 32. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: No Pushover] ranks.)`
 	choice
 		`	(Take the No Pushover Perk.)`
 			to display
@@ -318,11 +350,11 @@ conversation "perkslist"
 	action
 		outfit "Perk: No Pushover" 1
 	`You have taken a rank in the No Pushover perk.`
-		decline
+		goto buffer
 	
 	label longhauler
 	`Long Hauler increases your cargo space by 300 tons and gives 5% inertia reduction per rank.`
-	`	This perk can be taken up to three times. Rank 1 starts at level 4, rank 2 at level 18, and rank 3 at level 38. Do you want to take a rank?`
+	`	This perk can be taken 5 times. Rank 1 starts at level 4, rank 2 at level 18, rank 3 at level 38, rank 4 at level 60, and rank 5 at level 88. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Long Hauler] ranks.)`
 	choice
 		`	(Take the Long Hauler Perk.)`
 			to display
@@ -336,6 +368,12 @@ conversation "perkslist"
 					and
 						has "Apoxys Level 38: declined"
 						"outfit (flagship installed): Perk: Long Hauler" == 2
+					and
+						has "Apoxys Level 60: declined"
+						"outfit (flagship installed): Perk: Long Hauler" == 3
+					and
+						has "Apoxys Level 88: declined"
+						"outfit (flagship installed): Perk: Long Hauler" == 4
 			goto longhauler2
 		`	(Return to the main list.)`
 			goto hub
@@ -344,11 +382,11 @@ conversation "perkslist"
 	action
 		outfit "Perk: Long Hauler" 1
 	`You have taken a rank in the Long Hauler perk.`
-		decline
+		goto buffer
 	
 	label heatshield
-	`Heat Shielding reduces incoming heat damage by 20% per rank (with diminishing returns). Also counteracts Burning (heat damage over time).`
-	`	This perk can be taken up to three times. Rank 1 starts at level 6, Rank 2 at level 24, and Rank 3 at level 46. Do you want to take a rank?`
+	`Heat Shielding reduces incoming Heat damage by 20% per rank (with diminishing returns). Also counteracts Burning (heat damage over time).`
+	`	This perk can be taken 3 times. Rank 1 starts at level 6, Rank 2 at level 24, and Rank 3 at level 46. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Heat Shielding] ranks.)`
 	choice
 		`	(Take the Heat Shielding Perk.)`
 			to display
@@ -370,27 +408,56 @@ conversation "perkslist"
 	action
 		outfit "Perk: Heat Shielding" 1
 	`You have taken a rank in the Heat Shielding perk.`
-		decline
+		goto buffer
+	
+	label energyshield
+	`Energy Shielding reduces incoming Energy damage by 20% per rank (with diminishing returns). Also counteracts Ion (energy damage over time).`
+	`	This perk can be taken 3 times. Rank 1 starts at level 12, Rank 2 at level 30, and Rank 3 at level 52. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Energy Shielding] ranks.)`
+	choice
+		`	(Take the Energy Shielding Perk.)`
+			to display
+				or
+					and
+						has "Apoxys Level 6: declined"
+						"outfit (flagship installed): Perk: Energy Shielding" == 0
+					and
+						has "Apoxys Level 24: declined"
+						"outfit (flagship installed): Perk: Energy Shielding" == 1
+					and
+						has "Apoxys Level 46: declined"
+						"outfit (flagship installed): Perk: Energy Shielding" == 2
+			goto energyshield2
+		`	(Return to the main list.)`
+			goto hub
+
+	label energyshield2
+	action
+		outfit "Perk: Energy Shielding" 1
+	`You have taken a rank in the Energy Shielding perk.`
+		goto buffer
 	
 	label naturalregeneration
 	`Natural Regeneration grants 120 shield regeneration per second per rank, at the cost of 1 energy per shield.`
-	`	This perk can be taken 4 times. Rank 1 starts at level 8, rank 2 at level 24, rank 3 at level 32, and rank 4 at level 44. Do you want to take a rank?`
+	`	This perk can be taken 5 times. Rank 1 starts at level 6, rank 2 at level 22, rank 3 at level 30, rank 4 at level 42, and rank 5 at level 56. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Natural Regeneration] ranks.)`
 	choice
 		`	(Take a rank in the Natural Regeneration Perk.)`
 			to display
 				or
 					and
-						has "Apoxys Level 8: declined"
+						has "Apoxys Level 6: declined"
 						"outfit (flagship installed): Perk: Natural Regeneration" == 0
 					and
-						has "Apoxys Level 24: declined"
+						has "Apoxys Level 22: declined"
 						"outfit (flagship installed): Perk: Natural Regeneration" == 1
 					and
-						has "Apoxys Level 32: declined"
+						has "Apoxys Level 30: declined"
 						"outfit (flagship installed): Perk: Natural Regeneration" == 2
 					and
-						has "Apoxys Level 44: declined"
+						has "Apoxys Level 42: declined"
 						"outfit (flagship installed): Perk: Natural Regeneration" == 3
+					and
+						has "Apoxys Level 56: declined"
+						"outfit (flagship installed): Perk: Natural Regeneration" == 4
 			goto naturalregeneration2
 		`	(Return to the main list.)`
 			goto hub
@@ -399,11 +466,11 @@ conversation "perkslist"
 	action
 		outfit "Perk: Natural Regeneration" 1
 	`You have taken a rank in the Natural Regeneration Perk.`
-		decline
+		goto buffer
 
 	label naturalrepair
-	`Natural Repair grants 90 shield regeneration per second per rank, at the cost of 1 energy and 1 heat per hull.`
-	`	This perk can be taken 4 times. Rank 1 starts at level 8, rank 2 at level 24, rank 3 at level 32, and rank 4 at level 44. Do you want to take a rank?`
+	`Natural Repair grants 90 hull regeneration per second per rank, at the cost of 1 energy and 1 heat per hull.`
+	`	This perk can be taken 5 times. Rank 1 starts at level 8, rank 2 at level 24, rank 3 at level 32, rank 4 at level 44, and rank 5 at level 58. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Natural Repair] ranks.)`
 	choice
 		`	(Take a rank in the Natural Repair Perk.)`
 			to display
@@ -420,6 +487,9 @@ conversation "perkslist"
 					and
 						has "Apoxys Level 44: declined"
 						"outfit (flagship installed): Perk: Natural Repair" == 3
+					and
+						has "Apoxys Level 58: declined"
+						"outfit (flagship installed): Perk: Natural Repair" == 4
 			goto naturalrepair2
 		`	(Return to the main list.)`
 			goto hub
@@ -428,11 +498,11 @@ conversation "perkslist"
 	action
 		outfit "Perk: Natural Repair" 1
 	`You have taken a rank in the Natural Repair Perk.`
-		decline
+		goto buffer
 
 	label stellardrinker
 	`Stellar Drinker grants 20 ramscoop and 400 fuel capacity per rank, allowing you to easily refuel in space.`
-	`	This perk can be taken 3 times. Rank 1 starts at level 12, rank 2 at level 28, and rank 3 at level 42. Do you want to take a rank?`
+	`	This perk can be taken 3 times. Rank 1 starts at level 12, rank 2 at level 28, and rank 3 at level 42. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Stellar Drinker] ranks.)`
 	choice
 		`	(Take a rank in the Stellar Drinker Perk.)`
 			to display
@@ -454,11 +524,11 @@ conversation "perkslist"
 	action
 		outfit "Perk: Stellar Drinker" 1
 	`You have taken a rank in the Stellar Drinker Perk.`
-		decline
+		goto buffer
 
 	label sneakypacker
 	`Sneaky Packer reduces the likelihood of you being successfully scanned and conceals up to 250 tons of illegal good per rank.`
-	`	This perk can be taken 4 times. Rank 1 starts at level 12, rank 2 at level 22, rank 3 at level 34, and rank 4 at level 48. Do you want to take a rank?`
+	`	This perk can be taken 8 times. Rank 1 starts at level 12, rank 2 at level 22, rank 3 at level 34, rank 4 at level 46, rank 5 at level 58, rank 6 at level 70, rank 7 at level 82, and rank 8 at level 94. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Sneaky Packer] ranks.)`
 	choice
 		`	(Take a rank in the Sneaky Packer Perk.)`
 			to display
@@ -475,6 +545,18 @@ conversation "perkslist"
 					and
 						has "Apoxys Level 48: declined"
 						"outfit (flagship installed): Perk: Sneaky Packer" == 3
+					and
+						has "Apoxys Level 58: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 4
+					and
+						has "Apoxys Level 70: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 5
+					and
+						has "Apoxys Level 82: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 6
+					and
+						has "Apoxys Level 94: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 7
 			goto sneakypacker2
 		`	(Return to the main list.)`
 			goto hub
@@ -483,11 +565,11 @@ conversation "perkslist"
 	action
 		outfit "Perk: Sneaky Packer" 1
 	`You have taken a rank in the Sneaky Packer Perk.`
-		decline
+		goto buffer
 
 	label repairoverdrive
 	`Repair Overdrive boosts all hull repair on your ship by a percentage amount, at a rate of 10% per rank. It does, however, proportionately increase repair energy, heat, and fuel.`
-	`	This perk can be taken 6 times. Rank 1 starts at level 16, rank 2 at level 20, rank 3 at level 26, rank 4 at level 32, rank 5 at level 40, and rank 6 at level 48. Do you want to take a rank?`
+	`	This perk can be taken 6 times. Rank 1 starts at level 16, rank 2 at level 20, rank 3 at level 26, rank 4 at level 32, rank 5 at level 40, rank 6 at level 48, rank 7 at level 58, rank 8 at level 70, rank 9 at level 82, and rank 10 at level 96. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Repair Overdrive] ranks.)`
 	choice
 		`	(Take a rank in the Repair Overdrive Perk.)`
 			to display
@@ -510,6 +592,18 @@ conversation "perkslist"
 					and
 						has "Apoxys Level 48: declined"
 						"outfit (flagship installed): Perk: Repair Overdrive" == 5
+					and
+						has "Apoxys Level 58: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 6
+					and
+						has "Apoxys Level 70: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 7
+					and
+						has "Apoxys Level 82: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 8
+					and
+						has "Apoxys Level 96: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 9
 			goto repairoverdrive2
 		`	(Return to the main list.)`
 			goto hub
@@ -518,11 +612,11 @@ conversation "perkslist"
 	action
 		outfit "Perk: Repair Overdrive" 1
 	`You have taken a rank in the Repair Overdrive Perk.`
-		decline
+		goto buffer
 
 	label disassembler
 	`Disassembler unlocks unique crafting recipes in the forge by allowing you to break turrets down into their base components, or build turrets from said components.`
-	`	This perk can only be taken once, starting at level 28. Do you want to take it?`
+	`	This perk can only be taken once, starting at level 28. Do you want to take it? (You currently have &[outfit (flagship installed): Perk: Disassembler] ranks.)`
 	choice
 		`	(Take the Disassembler Perk.)`
 			to display
@@ -537,4 +631,45 @@ conversation "perkslist"
 	action
 		outfit "Perk: Disassembler" 1
 	`You have taken the Disassembler Perk.`
-		decline
+		goto buffer
+
+	label pickmeup
+	`Pick-Me-Up allows you to recover from being disabled without external assistance. It takes 15 seconds to recover.`
+	`	This perk can only be taken once, starting at level 54, and requires a Fortitude stat of at least 8. Do you want to take it? (You currently have &[outfit (flagship installed): Perk: Pick-Me-Up] ranks.)`
+	choice
+		`	(Take the Pick-Me-Up Perk.)`
+			to display
+				and
+					has "Apoxys Level 54: declined"
+					"outfit (flagship installed): Perk: Pick-Me-Up" == 0
+					"outfit (flagship installed): Fortitude" >= 8
+			goto pickmeup2
+		`	(Return to the main list.)`
+			goto hub
+
+	label pickmeup2
+	action
+		outfit "Perk: Pick-Me-Up" 1
+	`You have taken the Pick-Me-Up Perk.`
+		goto buffer
+
+	label adrenalsurge
+	`Adrenal Surge grants a massive +45 fuel/second generation effect, but only while you are repairing hull damage.`
+	`	This perk can only be taken once, starting at level 36, and requires a Focus stat of at least 7. Do you want to take it? (You currently have &[outfit (flagship installed): Perk: Adrenal Surge] ranks.)`
+	choice
+		`	(Take the Pick-Me-Up Perk.)`
+			to display
+				and
+					has "Apoxys Level 36: declined"
+					"outfit (flagship installed): Perk: Adrenal Surge" == 0
+					"outfit (flagship installed): Focus" >= 7
+			goto adrenalsurge2
+		`	(Return to the main list.)`
+			goto hub
+
+	label adrenalsurge2
+	action
+		outfit "Perk: Adrenal Surge" 1
+	`You have taken the Adrenal Surge Perk.`
+		goto buffer
+

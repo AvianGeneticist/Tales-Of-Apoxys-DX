@@ -21,14 +21,14 @@ outfit "Perk: Heat Dissipation"
 	description "Increases heat dissipation."
 	description "YOU SHOULD NEVER SEE THIS."
 
-outfit "Perk: Inertia Reduction"
+outfit "Perk: Drag Reduction"
 	category "Apoxys Perks"
 	cost 0
 	"mass" -0
 	"outfit space" 0
-	"inertia reduction" 0.1
+	"drag reduction" 0.2
 	"unplunderable" 1
-	description "Gives inertia reduction, which makes you turn/accelerate faster."
+	description "Gives drag reduction, which increases your top speed."
 	description "YOU SHOULD NEVER SEE THIS."
 
 outfit "Perk: No Pushover"
@@ -61,6 +61,17 @@ outfit "Perk: Heat Shielding"
 	"burn protection" 0.2
 	"unplunderable" 1
 	description "Reduces incoming heat and burn damage. These perks will eventually exist for each basic damage type, but burn is unlocked much earlier on due to the presence of heat weapons in human space."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Energy Shielding"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"energy protection" 0.2
+	"ion protection" 0.2
+	"unplunderable" 1
+	description "Reduces incoming ion and energy damage. This is unlocked only marginally later than heat shielding, as ion is quite common and can be found without a jump drive."
 	description "YOU SHOULD NEVER SEE THIS."
 
 outfit "Perk: Natural Regeneration"
@@ -128,6 +139,27 @@ outfit "Perk: Disassembler"
 	"outfit space" 0
 	"disassembler" 1
 	description "Unlocks breakdown/rebuild turret recipes. Extremely useful for later game crafting."
+	description "YOU SHOULD NEVER SEE THIS."
+
+# FFFFF Perks
+# These perks require a certain base stat be above a certain threshhold to take.
+
+outfit "Perk: Pick-Me-Up"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"disabled recovery time" 900
+	description "Allows the Apoxys to recover from disabling after a period of time."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Adrenal Surge"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"hull fuel" -.75
+	description "Greatly increases fuel production while repairing hull."
 	description "YOU SHOULD NEVER SEE THIS."
 
 # Level 50 Specials

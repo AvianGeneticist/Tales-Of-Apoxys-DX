@@ -1,0 +1,44 @@
+mission "Small EXP"
+	description `Gain 100 CR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"combat rating" += 100
+		
+mission "Medium EXP"
+	description `Gain 1000 CR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"combat rating" += 1000
+		
+mission "Large EXP"
+	description `Gain 10000 CR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"combat rating" += 10000
+		
+mission "Huge EXP"
+	description `Gain 100000 CR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"combat rating" += 100000
+		
+mission "Gigantic EXP"
+	description `Gain 1000000 CR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"combat rating" += 1000000
