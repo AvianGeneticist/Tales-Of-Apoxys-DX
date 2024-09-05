@@ -696,6 +696,12 @@ conversation "perkslist"
 		`	(Return to the main list.)`
 			goto hub
 
+	label repairoverdrive2
+	action
+		outfit "Perk: Repair Overdrive" 1
+	`You have taken a rank in the Repair Overdrive Perk.`
+		goto buffer
+
 	label raiderrally
 	`Raider Rally increases capture attack by 200 and capture defense by 25 per rank (each rank replaces a normal crew weapon).`
 	`	This perk can be taken 5 times. Rank 1 starts at level 10, rank 2 at level 24, rank 3 at level 44, rank 4 at level 66, and rank 5 at level 92. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Raider Rally] ranks.)`
