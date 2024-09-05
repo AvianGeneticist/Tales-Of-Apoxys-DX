@@ -74,6 +74,39 @@ outfit "Perk: Energy Shielding"
 	description "Reduces incoming ion and energy damage. This is unlocked only marginally later than heat shielding, as ion is quite common and can be found without a jump drive."
 	description "YOU SHOULD NEVER SEE THIS."
 
+outfit "Perk: Artilleur"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"weapon capacity" 200
+	"scramble resistance" 0.25
+	"unplunderable" 1
+	description "Provides a one-time boost to weapon capacity and grants scrambling resistance. Yes, it's french."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Engineer"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"engine capacity" 200
+	"slowing resistance" 0.25
+	"unplunderable" 1
+	description "Provides a one-time boost to engine capacity and grants slowing resistance."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Shieldsmith"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"piercing resistance" 0.1
+	"disruption resistance" 0.25
+	"unplunderable" 1
+	description "Grants piercing and disruption resistance.."
+	description "YOU SHOULD NEVER SEE THIS."
+
 outfit "Perk: Natural Regeneration"
 	category "Apoxys Perks"
 	cost 0
@@ -132,6 +165,17 @@ outfit "Perk: Repair Overdrive"
 	description "Increases hull repair rate, power use, and heat generation."
 	description "YOU SHOULD NEVER SEE THIS."
 
+outfit "Perk: Raider Rally"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"capture attack" 200
+	"capture defense" 25
+	"unplunderable" 1
+	description "Hehe big boarding outfit."
+	description "YOU SHOULD NEVER SEE THIS."
+
 outfit "Perk: Disassembler"
 	category "Apoxys Perks"
 	cost 0
@@ -139,6 +183,15 @@ outfit "Perk: Disassembler"
 	"outfit space" 0
 	"disassembler" 1
 	description "Unlocks breakdown/rebuild turret recipes. Extremely useful for later game crafting."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Missile Lover"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"missile lover" 1
+	description "Unlocks bottomless missile launcher recipes."
 	description "YOU SHOULD NEVER SEE THIS."
 
 # FFFFF Perks

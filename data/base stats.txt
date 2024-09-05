@@ -44,7 +44,7 @@ outfit "Focus"
 	"asteroid scan power" 60
 	"tactical scan power" 45
 	"ramscoop" 0.5
-	"fuel generation" 0.005
+	"fuel generation" 0.01
 	description "A fundamental stat. Gives bonuses to fuel production and integral scanning."
 
 outfit "Flightiness"

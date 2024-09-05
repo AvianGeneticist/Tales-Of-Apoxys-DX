@@ -1,0 +1,94 @@
+government "Pet"
+	swizzle 1
+	"player reputation" -1000
+
+government "Pet (Friendly)"
+	"display name" "Pet"
+	swizzle 1
+	"player reputation" 1000
+
+outfit "Emotional Support"
+	"gun ports" -1
+	weapon
+		"reload" 1
+		"velocity" 30
+		"lifetime" 10
+		"phasing"
+		"heat damage" -50
+		"ion damage" -0.5
+		"scrambling damage" -0.5
+
+ship "Subsidurial (Pet)"
+	noun "creature"
+	sprite "pet/subsidurial"
+	thumbnail "thumbnail/subsidurial"
+	"swizzle" 0
+	attributes
+		category "Light Freighter"
+		"hull" 4000000
+		"automaton" 1
+		"mass" 1050
+		"cargo space" 70
+		"drag" 12
+		"heat dissipation" .54
+		"fuel capacity" 100
+		"thrust" 240
+		"turn" 3000
+		"hull repair rate" 3000
+		"ion protection" 3
+		"scramble protection" 3
+		"ion resistance" 1
+		"scramble resistance" 1
+		"energy capacity" 1
+		"inscrutable" 1
+		"gaslining" 1
+		"jump drive" 1
+		"jump range" 200
+		"jump speed" .2
+		"jump fuel" 10
+		"fuel generation" 1
+	outfits
+		"Emotional Support"
+	gun 0 -97 "Emotional Support"
+	turret -28 0
+	turret 28 0
+	leak "blood" 30 50
+	explode "blood" 45
+	"final explode" "subsidurial death"
+	description "This subsidurial seems to have taken a liking to the Apoxys. Though it won't fight, it will follow you around, scrubbing heat, ion, and scramble from you as it snuggles up against the ship's hull."
+
+mission "Subsidurial Pet Rescue"
+	invisible
+	landing
+	repeat
+	to offer
+		has "Apoxys Level 10: declined"
+		not "Subsidurial Pet Rescue: active"
+		not "Subsidurial Pet Rescue: done"
+	npc accompany assist
+		government "Pet (Friendly)"
+		personality heroic unconstrained waiting nemesis derelict
+		system "Orbona"
+		ship "Subsidurial (Pet)" "Sylvia"
+		on assist
+			conversation
+				`As you pull alongside the Subsidurial, you notice several blast marks along its body. It looks like someone was either hunting it, or using it as target practice.`
+				`	"It looks tired and worn down, captain," Maribelle expresses concernedly. "Perhaps we could bring some asteroids over to feed it?"`
+				`	After some coaxing, you manage to get the Subsidurial to settle among a nook of the Apoxys, and ferry it around the system, feeding it asteroids. Its energy comes back after a while, and it moves around the ship, occasionally brushing and nuzzling against parts of the hull."`
+				`	"Aww, it looks like we have a friend!" Maribelle giggles. "What a sweetheart!"`
+					decline
+
+mission "Subsidurial Pet Accompaniment"
+	invisible
+	landing
+	repeat
+	to offer
+		not "Subsidurial Pet Rescue: active"
+		not "Subsidurial Pet Accompaniment: active"
+		has "Subsidurial Pet Rescue: done"
+	npc
+		government "Pet"
+		personality heroic unconstrained launching nemesis escort
+		ship "Subsidurial (Pet)" "Sylvia"
+
+

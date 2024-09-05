@@ -1,0 +1,813 @@
+# GENERAL FORMULA
+# Outfit space = Launcher + 6 Storages
+# Weapon space = Launcher * 1.33
+
+outfit "Bottomless Swarm Pod"
+	category "Secondary Weapons"
+	cost 363000
+	thumbnail "outfit/swarm pod"
+	"mass" 81
+	"outfit space" -88
+	"weapon capacity" -28
+	"gun ports" -1
+	weapon
+		sprite "effect/swarm"
+			"frame rate" .01
+		sound "swarm missile"
+		icon "icon/meteor"
+		"die effect" "missile death"
+		"hit effect" "particle impact"
+		"live effect" "swarm flare" 1000000
+		"inaccuracy" 90
+		"velocity" 13
+		"lifetime" 460
+		"reload" 10
+		"firing energy" 6
+		"firing heat" 3
+		"acceleration" 1.3
+		"drag" .1
+		"turn" 5.35
+		"homing" 2
+		"radar tracking" 0.5
+		"optical tracking" 0.5
+		"shield damage" 46
+		"hull damage" 24
+		"missile strength" 8
+		"stream"
+	description "This is a bottomless version of the Swarm Pod, crafted by Claire. The exact mechanism is unknown to you, though it does take some extra space, energy, and cooling over a typical version."
+
+outfit "Bottomless Finisher Pod"
+	category "Secondary Weapons"
+	cost 1370000
+	thumbnail "outfit/finisher pod"
+	"mass" 126
+	"outfit space" -126
+	"weapon capacity" -48
+	"gun ports" -1
+	weapon
+		sprite "projectile/finisher activating"
+			"frame rate" 1
+			"no repeat"
+		sound "finisher"
+		icon "icon/finisher"
+		"fire effect" "finisher sparks" 8
+		"hit effect" "finisher impact" 1
+		"hit effect" "finisher fragment" 12
+		"die effect" "finisher fragment" 6
+		"inaccuracy" 5
+		"velocity" 10
+		"lifetime" 60
+		"reload" 80
+		"firing energy" 360
+		"firing heat" 60
+		"acceleration" .8
+		"drag" .1
+		"turn" 0.1
+		"homing" 2
+		"radar tracking" .8
+		"missile strength" 50
+		"submunition" "Active Finisher" 1
+	description `This is a bottomless version of the Finisher Pod, crafted by Claire. It consumes extra energy and cooling and requires an excess of space, but is a devastating weapon regardless.`
+
+# Maegro is an XL launcher, so it uses 9 storages instead.
+
+outfit "Bottomless Finisher Maegrolain"
+	category "Secondary Weapons"
+	cost 7260000
+	thumbnail "outfit/finisher maegrolain"
+	"mass" 208
+	"outfit space" -208
+	"weapon capacity" -117
+	"gun ports" -1
+	weapon
+		sprite "projectile/finisher activating"
+			"frame rate" 1
+			"no repeat"
+		sound "finisher"
+		icon "icon/finisher"
+		"fire effect" "finisher sparks" 8
+		"hit effect" "finisher impact" 1
+		"hit effect" "finisher fragment" 12
+		"die effect" "finisher fragment" 6
+		"inaccuracy" 6
+		"velocity" 9
+		"lifetime" 60
+		"reload" 60
+		"burst reload" 15
+		"burst count" 20
+		"firing energy" 552
+		"firing heat" 228
+		"acceleration" .8
+		"drag" .1
+		"turn" 0.1
+		"homing" 2
+		"radar tracking" .8
+		"missile strength" 50
+		"submunition" "Active Finisher" 1
+	description "This is a bottomless version of the Finisher Maegrolain, crafted by Claire. With its capacity limits removed, this weapon is a truly bestial sight on the battlefield."
+
+outfit "Bottomless Railgun"
+	"display name" "Bottomless Skipper Railgun"
+	category "Secondary Weapons"
+	cost 20000
+	thumbnail "outfit/railgun"
+	"mass" 22
+	"outfit space" -22
+	"weapon capacity" -6
+	"gun ports" -1
+	weapon
+		sprite "projectile/rail slug"
+			"frame rate" 30
+		icon "icon/rail gun"
+		sound "ion impact"
+		"fire effect" "rail sparks"
+		"hit effect" "bullet impact"
+		"inaccuracy" 3
+		"velocity" 44
+		"lifetime" 1
+		"range override" 2100
+		"reload" 12
+		"firing energy" 10.5
+		"firing heat" 21.6
+		"firing force" 105
+		"stream"
+		"submunition" "rslug" 1
+	description "This is a bottomless version of the Railgun, crafted by Claire. It's pretty puny, even with the extra sizing... Perhaps it would be better on a fighter or drone?"
+
+outfit "Bottomless Tracker Pod"
+	category "Secondary Weapons"
+	cost 150000
+	thumbnail "outfit/hai tracker pod"
+	"mass" 79
+	"outfit space" -79
+	"weapon capacity" -25
+	"gun ports" -1
+	weapon
+		sprite "projectile/tracker"
+			"frame rate" 10
+			"random start frame"
+		sound "tracker"
+		icon "icon/tracker"
+		"fire effect" "tracker fire"
+		"hit effect" "tracker impact"
+		"hit effect" "tracker cloud" 3
+		"die effect" "tracker impact"
+		"inaccuracy" 20
+		"velocity" 14
+		"lifetime" 475
+		"reload" 60
+		"firing energy" 135
+		"firing heat" 15
+		"acceleration" .7
+		"drag" .05
+		"turn" 1.2
+		"homing" 4
+		"optical tracking" .8
+		"infrared tracking" .4
+		"shield damage" 200
+		"hull damage" 160
+		"hit force" 525
+		"missile strength" 16
+	description "This is a bottomless version of the Tracker Pod, made by Claire. It's a good zoning weapon, though its damage can be a bit lackluster compared to other missiles."
+
+outfit "Bottomless Meteor Launcher"
+	category "Secondary Weapons"
+	cost 15000
+	thumbnail "outfit/meteor launcher"
+	"mass" 44
+	"outfit space" -44
+	"weapon capacity" -19
+	"gun ports" -1
+	weapon
+		sprite "projectile/meteor"
+			"no repeat"
+			"frame rate" .25
+		sound "meteor"
+		icon "icon/meteor"
+		"fire effect" "meteor fire"
+		"die effect" "missile death"
+		"hit effect" "missile hit"
+		"inaccuracy" 5
+		"velocity" 11
+		"lifetime" 350
+		"reload" 80
+		"firing energy" 3
+		"firing heat" 60
+		"acceleration" 1
+		"drag" .1
+		"turn" 1.8
+		"homing" 1
+		"infrared tracking" .65
+		"shield damage" 360
+		"hull damage" 220
+		"hit force" 330
+		"missile strength" 6
+	description "This is a bottomless version of the Meteor Missile Launcher, made by Claire. It's not exactly an impressive weapon, but against poorly defended, hot targets, it can be a threat if employed in numbers."
+
+outfit "Bottomless Sidewinder Launcher"
+	category "Secondary Weapons"
+	cost 60000
+	thumbnail "outfit/sidewinder launcher"
+	"mass" 62
+	"outfit space" -62
+	"weapon capacity" -27
+	"gun ports" -1
+	weapon
+		sprite "projectile/sidewinder"
+			"no repeat"
+			"frame rate" .25
+		sound "sidewinder"
+		icon "icon/sidewinder"
+		"fire effect" "sidewinder fire"
+		"die effect" "missile death"
+		"hit effect" "missile hit"
+		"inaccuracy" 4
+		"velocity" 14
+		"lifetime" 350
+		"reload" 60
+		"firing energy" 3
+		"firing heat" 45
+		"acceleration" 1.2
+		"drag" .1
+		"turn" 4
+		"homing" 4
+		"radar tracking" .9
+		"shield damage" 260
+		"hull damage" 180
+		"hit force" 255
+		"missile strength" 18
+	description "This is a bottomless version of the Sidewinder Missile Launcher, made by Claire. While not as damaging as Meteors, the improved durability, fire rate, and accuracy of sidewinders makes them a much more refined and effective weapon."
+
+outfit "Bottomless Javelin Pod"
+	category "Secondary Weapons"
+	cost 20000
+	thumbnail "outfit/javelin pod"
+	"mass" 48
+	"outfit space" -48
+	"weapon capacity" -18
+	"gun ports" -1
+	weapon
+		sprite "projectile/javelin"
+		sound "javelin"
+		icon "icon/javelin"
+		"hit effect" "tiny explosion"
+		"inaccuracy" 1
+		"velocity" 10
+		"lifetime" 60
+		"reload" 15
+		"firing energy" .6
+		"firing heat" 36
+		"shield damage" 48
+		"hull damage" 26
+		"hit force" 75
+		"missile strength" 3
+	description "With an endless supply of missiles, this bottomless version of the Javelin Pod is a significantly threatening weapon, especially when employed in great numbers."
+
+# It's a dual turret, so it uses 12 storages instead of 6.
+
+outfit "Bottomless Javelin Turret"
+	category "Secondary Weapons"
+	cost 110000
+	thumbnail "outfit/javelin turret"
+	"mass" 103
+	"outfit space" -103
+	"weapon capacity" -41
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/javelin"
+		"hardpoint sprite" "hardpoint/javelin turret"
+		"hardpoint offset" 9.
+		sound "javelin"
+		ammo "Javelin"
+		icon "icon/javelin turret"
+		"hit effect" "tiny explosion"
+		"inaccuracy" 4
+		"turret turn" 2
+		"velocity" 10
+		"lifetime" 60
+		"reload" 7.5
+		"firing energy" .6
+		"firing heat" 36
+		"shield damage" 48
+		"hull damage" 26
+		"hit force" 75
+		"missile strength" 3
+	description "With two Bottomless Javelin Pods on one mount, this is a very powerful turret, able to dispense vast quantities of unguided missiles in short order."
+
+outfit "Bottomless Torpedo Launcher"
+	category "Secondary Weapons"
+	cost 80000
+	thumbnail "outfit/torpedo launcher"
+	"mass" 84
+	"outfit space" -84
+	"weapon capacity" -40
+	"gun ports" -1
+	weapon
+		sprite "projectile/torpedo"
+			"frame rate" 2
+			"random start frame"
+		sound "torpedo"
+		icon "icon/torpedo"
+		"fire effect" "torpedo fire"
+		"hit effect" "torpedo hit"
+		"die effect" "tiny explosion"
+		"inaccuracy" 5
+		"velocity" 7
+		"lifetime" 900
+		"reload" 150
+		"firing energy" 6
+		"firing heat" 135
+		"acceleration" .15
+		"drag" .025
+		"turn" 1.5
+		"homing" 3
+		"optical tracking" .8
+		"shield damage" 820
+		"hull damage" 820
+		"hit force" 450
+		"missile strength" 30
+	description "This is a bottomless version of a Torpedo Launcher. Though it's ineffective against fighters and other nimble ships, it can severely punish capital ships that dare venture too close."
+
+outfit "Bottomless Typhoon Launcher"
+	category "Secondary Weapons"
+	cost 260000
+	thumbnail "outfit/typhoon launcher"
+	"mass" 100
+	"outfit space" -100
+	"weapon capacity" -53
+	"gun ports" -1
+	weapon
+		sprite "projectile/typhoon"
+			"frame rate" 4
+			"random start frame"
+		sound "typhoon"
+		icon "icon/typhoon"
+		"fire effect" "typhoon fire"
+		"hit effect" "torpedo hit"
+		"die effect" "tiny explosion"
+		"inaccuracy" 5
+		"velocity" 6
+		"lifetime" 1100
+		"reload" 120
+		"firing energy" 12
+		"firing heat" 150
+		"acceleration" .1
+		"drag" .02
+		"turn" 1.5
+		"homing" 4
+		"optical tracking" .9
+		"shield damage" 1050
+		"hull damage" 1050
+		"hit force" 675
+		"missile strength" 40
+	description "A bottomless version of a Typhoon Launcher, made by Claire. Its marginally increased fire rate over a standard torpedo launcher benefits greatly from the released capacity constraints."
+
+outfit "Bottomless Heavy Rocket Launcher"
+	category "Secondary Weapons"
+	cost 40000
+	thumbnail "outfit/rocket launcher"
+	"mass" 67
+	"outfit space" -67
+	"weapon capacity" -33
+	"gun ports" -1
+	weapon
+		sprite "projectile/rocket"
+			"frame rate" 4
+		sound "rocket"
+		icon "icon/rocket"
+		"hit effect" "heavy rocket hit"
+		"die effect" "small explosion"
+		"inaccuracy" 1
+		"velocity" 8
+		"lifetime" 125
+		"reload" 240
+		"firing energy" 3
+		"firing heat" 750
+		"acceleration" .8
+		"drag" .1
+		"trigger radius" 20
+		"blast radius" 90
+		"shield damage" 790
+		"hull damage" 670
+		"hit force" 900
+		"missile strength" 16
+	description "With unlimited chances to hit something, this bottomless Heavy Rocket Launcher becomes a stellar anti-fighter gun. Of course, one still has to watch out for potential backblast."
+
+outfit "Bottomless Gatling Gun"
+	category "Secondary Weapons"
+	cost 20000
+	thumbnail "outfit/gat"
+	"mass" 38
+	"outfit space" -38
+	"weapon capacity" -11
+	"gun ports" -1
+	weapon
+		sprite "projectile/tinyflare"
+			"random start frame"
+		sound "gatling"
+		ammo "Gatling Gun Ammo"
+		icon "icon/gat"
+		"inaccuracy" 2
+		"velocity" 16
+		"lifetime" 1
+		"reload" 3
+		"burst count" 180
+		"burst reload" 1
+		"firing energy" .09
+		"firing heat" 7.5
+		"submunition" "gbullet"
+		"cluster"
+		"hit effect" "bullet impact"
+	description "The bottomless version of the Gatling Gun is constrained only by its own ability to mitigate heat, making it a considerably powerful weapon."
+
+# Again, dual turret. 12 storages it is.
+
+outfit "Bottomless Gatling Turret"
+	category "Secondary Weapons"
+	cost 120000
+	thumbnail "outfit/gat turret"
+	"mass" 83
+	"outfit space" -83
+	"weapon capacity" -31
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sound "gatling"
+		sprite "projectile/2x tinyflare"
+			"random start frame"
+		"hardpoint sprite" "hardpoint/gat turret hardpoint"
+		"submunition" "gbullet"
+			"offset" 1.5 -6
+			"facing" 0.3
+		"submunition" "gbullet"
+			"offset" -1.5 -6
+			"facing" -0.3
+		icon "icon/gat turret"
+		"inaccuracy" 2
+		"turret turn" 3.4
+		"velocity" 16
+		"lifetime" 1
+		"reload" 3
+		"burst count" 180
+		"burst reload" 1
+		"firing energy" .18
+		"firing heat" 15
+		"cluster"
+		"hit effect" "bullet impact"
+	description "Carrying a pair of bottomless Gatling Guns makes for a considerably effective weapon, though the performance against shields could use some shoring up."
+
+# This is, uniquely, an energy weapon that uses ammo. It only needs 4 storages' worth of extra space, but uses 6x the energy and heat instead of 3x
+
+outfit "Bottomless Star Tail"
+	category "Secondary Weapons"
+	cost 320000
+	mass 90
+	"outfit space" -90
+	"weapon capacity" -67
+	"gun ports" -1
+	thumbnail "outfit/star tail launcher"
+	weapon
+		sprite "projectile/star tail upload"
+			"frame rate" 10
+			"no repeat"
+		sound "star tail"
+		"hit effect" "blaster impact"
+		"velocity" 1
+		"lifetime" 58
+		"reload" 180
+		"firing energy" 360
+		"firing heat" 180
+		"shield damage" 820
+		"hull damage" 860
+		"range override" 3000
+		"homing" 1
+		"optical tracking" 1
+		"turn" 0.5
+		"submunition" "Star Tail Projectile" 1
+	description "This is a bottomless version of the Star Tail. As it was an energy weapon to begin with, less space was required for storage. However, the energy use is significantly higher than most bottomless weaponry."
+
+outfit "Bottomless EMP Deployer"
+	category "Secondary Weapons"
+	cost 715000
+	thumbnail "outfit/ka'het emp deployer"
+	"mass" 98
+	"outfit space" -98
+	"weapon capacity" -35
+	"gun ports" -1
+	weapon
+		sprite "projectile/emp torpedo"
+			"frame rate" 2
+			"no repeat"
+		sound "torpedo"
+		stream
+		icon "icon/emp"
+		"fire effect" "emp torpedo fire" 5
+		"hit effect" "nuke explosion"
+		"hit effect" "emp ring" 30
+		"hit effect" "emp spark" 20
+		"die effect" "tiny explosion"
+		"inaccuracy" 4
+		"velocity" 7
+		"lifetime" 300
+		"reload" 180
+		"firing energy" 1080
+		"firing heat" 99
+		"acceleration" .7
+		"drag" .1
+		"turn" 2
+		"homing" 3
+		"infrared tracking" .7
+		"radar tracking" .8
+		"trigger radius" 50
+		"blast radius" 200
+		"shield damage" 700
+		"hull damage" 100
+		"ion damage" 48
+		"scrambling damage" 48
+		"hit force" 135
+		"missile strength" 80
+	description "This is a bottomless version of the Ka'het EMP Deployer. It benefits considerably from the lack of ammo constraints, and optimizations were included that reduce the necessary energy to fire relative to other bottomless launchers."
+
+outfit "Bottomless Firelight Bank"
+	category "Secondary Weapons"
+	cost 1937000
+	thumbnail "outfit/firelight bank"
+	"mass" 64
+	"outfit space" -64
+	"weapon capacity" -37
+	"gun ports" -1
+	"energy capacity" 700
+	"energy generation" 1.6
+	"heat generation" 8
+	weapon
+		sprite "projectile/firelight"
+		sound "firelight"
+		icon "icon/firelight"
+		"hit effect" "firelight ring" 20
+		"die effect" "piercer fire"
+		"velocity" 4
+		"velocity override" 16
+		"lifetime" 10
+		"reload" 120
+		"burst reload" 30
+		"burst count" 3
+		"firing energy" 633
+		"firing heat" 453
+		"acceleration" 0.6
+		"drag" .1
+		"infrared tracking" .7
+		"optical tracking" .9
+		"homing" 4
+		"trigger radius" 30
+		"blast radius" 60
+		"hit force" 150
+		"missile strength" 30
+		submunition "Firelight Turning"
+		"stream"
+	description "This is an bottomless version of the Firelight Missile Bank. Despite supposedly having an endless source of Firelight Missiles, it only taps power and heat from 80 of them at any given time."
+
+outfit "Bottomless Firestorm Battery"
+	plural "Firestorm Batteries"
+	category "Secondary Weapons"
+	cost 2383000
+	thumbnail "outfit/firestorm battery"
+	"mass" 35
+	"outfit space" -168
+	"weapon capacity" -64
+	"energy capacity" 1300
+	"turret mounts" -1
+	"required crew" 1
+	"energy generation" 5.46
+	"heat generation" 27.3
+	weapon
+		sprite "projectile/firestorm torpedo"
+			"frame rate" 6
+			"random start frame"
+		"hardpoint sprite" "hardpoint/firestorm battery"
+		sound "firestorm"
+		"turret turn" 2.7
+		icon "icon/firestorm torpedo"
+		"hit effect" "firestorm ring" 40
+		"die effect" "small explosion"
+		stream
+		"reload" 210
+		"firing energy" 1905
+		"firing heat" 1353
+		"inaccuracy" 3
+		"lifetime" 1900
+		"velocity" 6.6
+		"acceleration" .6
+		"drag" .12
+		"turn" 1.6
+		"homing" 4
+		"infrared tracking" .7
+		"optical tracking" .9
+		"trigger radius" 40
+		"blast radius" 95
+		"shield damage" 2760
+		"hull damage" 2760
+		"heat damage" 5320
+		"burn damage" 40
+		"corrosion damage" 5
+		"hit force" 6000
+		"missile strength" 115
+	description "This is a bottomless version of the Firestorm Battery, made by Claire. With 91 Firestorm Torpedoes on tap, and an endless stream well on the way, this weapon is a considerable investment that rarely doesn't pay off."
+
+outfit "Bottomless Cluster Mine Layer"
+	category "Secondary Weapons"
+	cost 1073000
+	thumbnail "outfit/korath minelayer"
+	"mass" 102
+	"outfit space" -102
+	"weapon capacity" -48
+	"energy capacity" 50
+	"gun ports" -1
+	weapon
+		sprite "projectile/korath minelayer"
+			"frame rate" .6
+			"no repeat"
+		sound "minelayer"
+		icon "icon/minelayer"
+		"fire effect" "minelayer fire"
+		"hit effect" "huge explosion"
+		"die effect" "minelayer split" 5
+		"submunition" "Korath Mine Submunition" 11
+		"inaccuracy" 10
+		"velocity" 3
+		"lifetime" 100
+		"reload" 180
+		"firing energy" 108
+		"firing heat" 108
+		"acceleration" .16
+		"drag" .04
+		"turn" 2
+		"homing" 4
+		"infrared tracking" .9
+		"missile strength" 35
+		"shield damage" -3200
+		"hull damage" -2400
+		"hit force" -225
+		"stream"
+	description "This is a bottomless version of the Cluster Mine layer. Why would you need an endless supply of mines, exactly? Well it's not like space has no room to put them."
+
+outfit "Bottomless Piercer Launcher"
+	category "Secondary Weapons"
+	cost 593000
+	thumbnail "outfit/piercer launcher"
+	"mass" 69
+	"outfit space" -69
+	"weapon capacity" -36
+	"energy capacity" 50
+	"gun ports" -1
+	weapon
+		sprite "projectile/piercer"
+			"frame rate" 5
+			"random start frame"
+		sound "piercer"
+		icon "icon/piercer"
+		"fire effect" "piercer fire"
+		"hit effect" "piercer impact"
+		"hit effect" "piercer explosion"
+		"die effect" "piercer explosion"
+		"inaccuracy" 3
+		"velocity" 18
+		"lifetime" 200
+		"reload" 72
+		"firing energy" 87
+		"firing heat" 432
+		"acceleration" .54
+		"drag" .03
+		"turn" 1.6
+		"homing" 4
+		"infrared tracking" .9
+		"shield damage" 290
+		"hull damage" 440
+		"piercing" .2
+		"hit force" 450
+		"missile strength" 73
+		"stream"
+	description "This is a bottomless version of the Piercer Missile Launcher. While Piercers aren't the most lethal of missiles, a consistent stream of them can put significant stress on a ship's hull repair systems."
+
+# This is a smaller EMP Torpedo launcher, so I'll be nice. Dock it to 5, lads! It doesn't get the energy reduction though.
+
+outfit "Bottomless EMP Torpedo Bay"
+	category "Secondary Weapons"
+	cost 583000
+	thumbnail "outfit/emp torpedo bay"
+	"mass" 78
+	"outfit space" -78
+	"weapon capacity" -24
+	"gun ports" -1
+	weapon
+		sprite "projectile/emp torpedo"
+			"frame rate" 2
+			"no repeat"
+		sound "torpedo"
+		icon "icon/emp"
+		"fire effect" "emp torpedo fire" 5
+		"hit effect" "nuke explosion"
+		"hit effect" "emp ring" 30
+		"hit effect" "emp spark" 20
+		"die effect" "tiny explosion"
+		stream
+		"reload" 330
+		"firing energy" 1200
+		"firing heat" 36
+		"inaccuracy" 5
+		"lifetime" 300
+		"velocity" 7
+		"acceleration" .7
+		"drag" .1
+		"turn" 2
+		"homing" 3
+		"infrared tracking" .7
+		"radar tracking" .8
+		"trigger radius" 50
+		"blast radius" 200
+		"shield damage" 700
+		"hull damage" 100
+		"ion damage" 48
+		"scrambling damage" 48
+		"hit force" 135
+		"missile strength" 80
+	description "This is a bottomless version of the EMP Torpedo Bay. While its energy usage sadly couldn't be optimized, its slower fire rate meant that more space could be spared on the ammo generation componentry."
+
+outfit "Bottomless Teciimach Bay"
+	category "Secondary Weapons"
+	cost 1525000
+	thumbnail "outfit/teciimach bay"
+	"mass" 67
+	"outfit space" -67
+	"weapon capacity" -17
+	"gun ports" -1
+	weapon
+		sprite "projectile/emp torpedo"
+			"frame rate" 2
+			"no repeat"
+		sound "torpedo"
+		icon "icon/emp"
+		"fire effect" "emp torpedo fire" 5
+		"hit effect" "nuke explosion"
+		"hit effect" "emp ring" 30
+		"hit effect" "emp spark" 20
+		"die effect" "tiny explosion"
+		cluster
+		safe
+		"reload" 310
+		"firing energy" 1200
+		"firing heat" 54
+		"inaccuracy" 5
+		"lifetime" 300
+		"velocity" 8
+		"acceleration" .7
+		"drag" .1
+		"turn" 2.5
+		"homing" 3
+		"infrared tracking" .8
+		"radar tracking" .9
+		"trigger radius" 50
+		"blast radius" 200
+		"shield damage" 900
+		"hull damage" 125
+		"disabled damage" 60
+		"ion damage" 65
+		"scrambling damage" 65
+		"energy damage" 2000
+		"hit force" 135
+		"missile strength" 95
+	description "This is a bottomless version of a Teciimach Bay. The upgrades to the EMP system makes this a far more effective weapon."
+
+outfit "Bottomless Thunderhead Launcher"
+	category "Secondary Weapons"
+	cost 450000
+	thumbnail "outfit/thunderhead launcher"
+	"mass" 74
+	"outfit space" -74
+	"weapon capacity" -35
+	"gun ports" -1
+	weapon
+		sprite "projectile/thunderhead"
+			"no repeat"
+			"frame rate" .1
+		sound "thunderhead"
+		icon "icon/thunderhead"
+		"submunition" "Thunderhead" 5
+		"split range" 600
+		"fire effect" "meteor fire"
+		"die effect" "missile death"
+		"hit effect" "medium explosion"
+		"inaccuracy" 10
+		"velocity" 4
+		"lifetime" 400
+		"reload" 75
+		"firing energy" 54
+		"firing heat" 108
+		"acceleration" 1.1
+		"drag" .1
+		"turn" 2
+		"homing" 4
+		"infrared tracking" .9
+		"radar tracking" .6
+		"missile strength" 12
+	description "This is a bottomless version of the Thunderhead Launcher. It makes for a considerably effective ranged weapon thanks to its balance of efficient firing and pinpoint accuracy."

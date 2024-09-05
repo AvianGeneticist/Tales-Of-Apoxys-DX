@@ -122,7 +122,7 @@ mission "Apoxys Level 81"
 	name "Level 81"
 	description "You've reached Level 81!"
 	to offer
-		"combat rating" >= 194244
+		"combat rating" >= 418445
 		has "Apoxys Level 80: declined"
 	
 	on offer
@@ -213,7 +213,7 @@ mission "Apoxys Level 82"
 	description "You've reached Level 82!"
 	to offer
 		has "Apoxys Level 81: declined"
-		"combat rating" >= 203574
+		"combat rating" >= 431453
 	
 	on offer
 		require "Apoxys Core DX"
@@ -308,7 +308,7 @@ mission "Apoxys Level 83"
 	name "Level 83"
 	description "You've reached Level 83!"
 	to offer
-		"combat rating" >= 213120
+		"combat rating" >= 444595
 		has "Apoxys Level 82: declined"
 	
 	on offer
@@ -400,7 +400,7 @@ mission "Apoxys Level 84"
 	description "You've reached Level 84!"
 	to offer
 		has "Apoxys Level 83: declined"
-		"combat rating" >= 222880
+		"combat rating" >= 457865
 	
 	on offer
 		require "Apoxys Core DX"
@@ -496,7 +496,7 @@ mission "Apoxys Level 85"
 	name "Level 85"
 	description "You've reached Level 85!"
 	to offer
-		"combat rating" >= 232852
+		"combat rating" >= 471257
 		has "Apoxys Level 84: declined"
 	
 	on offer
@@ -587,7 +587,7 @@ mission "Apoxys Level 86"
 	description "You've reached Level 86!"
 	to offer
 		has "Apoxys Level 85: declined"
-		"combat rating" >= 243033
+		"combat rating" >= 484764
 	
 	on offer
 		require "Apoxys Core DX"
@@ -683,7 +683,7 @@ mission "Apoxys Level 87"
 	name "Level 87"
 	description "You've reached Level 87!"
 	to offer
-		"combat rating" >= 253420
+		"combat rating" >= 498379
 		has "Apoxys Level 86: declined"
 	
 	on offer
@@ -774,7 +774,7 @@ mission "Apoxys Level 88"
 	description "You've reached Level 88!"
 	to offer
 		has "Apoxys Level 87: declined"
-		"combat rating" >= 264010
+		"combat rating" >= 512095
 	
 	on offer
 		require "Apoxys Core DX"
@@ -870,7 +870,7 @@ mission "Apoxys Level 89"
 	name "Level 89"
 	description "You've reached Level 89!"
 	to offer
-		"combat rating" >= 274800
+		"combat rating" >= 525905
 		has "Apoxys Level 88: declined"
 	
 	on offer
@@ -961,7 +961,7 @@ mission "Apoxys Level 90"
 	description "You've reached Level 90!"
 	to offer
 		has "Apoxys Level 89: declined"
-		"combat rating" >= 285787
+		"combat rating" >= 539802
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1057,7 +1057,7 @@ mission "Apoxys Level 91"
 	description "You've reached Level 91!"
 	to offer
 		has "Apoxys Level 90: declined"
-		"combat rating" >= 296967
+		"combat rating" >= 553778
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1147,7 +1147,7 @@ mission "Apoxys Level 92"
 	description "You've reached Level 92!"
 	to offer
 		has "Apoxys Level 91: declined"
-		"combat rating" >= 308336
+		"combat rating" >= 567825
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1243,7 +1243,7 @@ mission "Apoxys Level 93"
 	name "Level 93"
 	description "You've reached Level 93!"
 	to offer
-		"combat rating" >= 319890
+		"combat rating" >= 581935
 		has "Apoxys Level 92: declined"
 	
 	on offer
@@ -1335,7 +1335,7 @@ mission "Apoxys Level 94"
 	description "You've reached Level 94!"
 	to offer
 		has "Apoxys Level 93: declined"
-		"combat rating" >= 331625
+		"combat rating" >= 596100
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1431,7 +1431,7 @@ mission "Apoxys Level 95"
 	name "Level 95"
 	description "You've reached Level 95!"
 	to offer
-		"combat rating" >= 343537
+		"combat rating" >= 610312
 		has "Apoxys Level 94: declined"
 	
 	on offer
@@ -1522,7 +1522,7 @@ mission "Apoxys Level 96"
 	description "You've reached Level 96!"
 	to offer
 		has "Apoxys Level 95: declined"
-		"combat rating" >= 355621
+		"combat rating" >= 632562
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1618,7 +1618,7 @@ mission "Apoxys Level 97"
 	name "Level 97"
 	description "You've reached Level 97!"
 	to offer
-		"combat rating" >= 367872
+		"combat rating" >= 638841
 		has "Apoxys Level 96: declined"
 	
 	on offer
@@ -1709,7 +1709,7 @@ mission "Apoxys Level 98"
 	description "You've reached Level 98!"
 	to offer
 		has "Apoxys Level 97: declined"
-		"combat rating" >= 380285
+		"combat rating" >= 653140
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1805,7 +1805,7 @@ mission "Apoxys Level 99"
 	name "Level 99"
 	description "You've reached Level 99!"
 	to offer
-		"combat rating" >= 392855
+		"combat rating" >= 667450
 		has "Apoxys Level 98: declined"
 	
 	on offer
@@ -1897,7 +1897,7 @@ mission "Apoxys Level 100 Notification"
 	destination "New Boston"
 	to offer
 		has "Apoxys Level 99: declined"
-		"combat rating" >= 405577
+		"combat rating" >= 681763
 	
 	on offer
 		require "Apoxys Core DX"
@@ -1907,7 +1907,7 @@ mission "Apoxys Level 100 Notification"
 				`	"What's wrong?"`
 				`	"Is something the matter?"`
 
-			`	"Ah!" Maribelle jumps, caught off-guard. "Oh, captain, it's just... I think I've reached the limit. I don't think I can get any larger in this body," Maribelle says.`
+			`	"Ah!" Maribelle jumps, caught off-guard. "Oh, captain, it's just... I think I've reached the limit. I don't think I can get any stronger in this body," Maribelle says.`
 			`	"In this body?" You ask.`
 			`	"Well, I think there'd be a way for me to, sort of... Make the Apoxys larger," Maribelle attempts to explain. "Claire says she knows something about it. We should go to New Boston."`
 			`	You nod, sitting in the well-worn captain's chair and plotting a course for New Boston.`

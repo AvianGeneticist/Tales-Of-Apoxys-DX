@@ -1,0 +1,63 @@
+mission "Merchant's Guild Invitation"
+	landing
+	description "You've received an invitation to something called the 'Merchant's Guild' on the planet Amazon."
+	destination "Amazon"
+	to offer
+		has "Apoxys Level 5: declined"
+		"apoxys merchant interest" >= 10
+	on offer
+		require "Apoxys Core DX"
+		conversation
+			`As you land, you receive a hail: "Greetings, Captain! We've noticed you taking an interest in doing jobs for less conventional forms of compensation. We'd be honored if you would join us on Amazon. Hail the traffic controller on your way down and ask for the 'Merchant's Guild'. They'll send you right to us."`
+			`	Maribelle looks at you. "Ooh, the merchant guild? I hear they're huge!" She says.`
+			`	"I've never heard of them," You say.`
+			`	"Wow, really? They operate everywhere. Maybe you've just missed them," Maribelle excuses. "Well, we should go stop by when we have the time. I'm curious about what sort of compensation they offer," Maribelle expresses.`
+				accept
+	on complete
+		"combat rating" += 25
+		conversation
+			`Following the letter's instructions, you ask for the Merchant's Guild as you enter Amazon's atmosphere. "Oh, you're with that lot, are you? Alright, just go..." They give you a lengthy, but straightforward series of directions.`
+			`	After some time of flying, you land near a smaller (but still somewhat busy) cargo dock surrounding what looks to be a particularly large bar or club of somekind, appropriately labelled "Merchant's Guild". Guess this is the place.`
+			`	You leave the ship and head inside. A large number of merchant crews are here. The energy of the merchant guild is very jovial; people are eating, drinking, and being merry, and there's jaunty music blasting at a comfortably loud volume.`
+			`	You walk up to the bar, handing your license to the bartender as a form of ID. Her eyes widen as she scans the license. "Oh, you're here to see the chairwoman," She says, giving you back your license. She then leans in and whispers to you. "Go to the door at the far end, knock on the door three times, and say 'I can't decide between flavours of licorice'."`
+			`	You cock a brow at the odd instructions. You walk to the large wooden door the bartender pointed at, dodging a few inebriated patrons, and knock on the door three times. A short beep emanates from the speaker on the other side. "I can't decide between flavours of licorice," You say. The mechanical sound of the door unlocking can be heard, and it creaks open a bit. You head inside, closing the door behind you.`
+			` `
+			`Walking to the end of the hall, you enter the only other door it leads to, at the far end. Even through two doors, the music still faintly leaks through the walls. You stop as you enter the second door, faced with an elderly-looking female AI. She smiles kindly at you. "Ah, there we are... Away from the riff-raff. I do enjoy the energy out front, but it can be a bit rowdy for business," She says.`
+			choice
+				`	"Who are you?"`
+					goto who
+				`	"Are you the chairwoman?"`
+					goto chairwoman
+
+			label who
+			`"I'm the chairwoman of the Merchant's Guild; you may call me Raleigh," The AI answers. "Please, have a seat." She gestures to the assortment of large, expensive-looking armchairs and sofas in the room. Aside from them, the room is decorated in a more utilitarian manner, with computer terminals lining the walls and running untold amounts of code.`
+				goto seat
+
+			label chairwoman
+			`"That's correct," The AI nods. "You may call me Raleigh; please, have a seat." She gestures to the many large, expensive-looking seating options in the room. They're by far the most fanciful decor on display in the back room; if it weren't for them, and the rather nice carpeting, it would remind you of the kind of place where someone gets mugged or threatened.`
+				goto seat
+
+			label seat
+			`	"Now. You've recently come into the company of a 'Maribelle', have you not?" Raleigh asks.`
+			choice
+				`	"Yes, I have."`
+					goto yes
+				`	"I don't know what you're talking about."`
+
+			`	Raleigh laughs. "Ohoho! Now, now. There's no need to be deceitful. I wouldn't have requested this meeting if you hadn't," She teases. "It's not exactly difficult to pick out a ship model some hundred years old with a custom paintjob. But, onto business..."`
+			label yes
+			`	"Now, as you might have picked up on, she's quite the special AI," Raleigh says, "Information is very valuable to her... Even some shipping manifests can stimulate her development."`
+			`	You open your mouth to ask her how she knows so much about Maribelle, but she talks over you. "This guild is a bit more complicated than your typical tradesman association," Raleigh explains. "Our shipping manifests contain a lot more hidden data than most realize, to stimulate AIs like Maribelle. You've already found the few we've seeded to get your attention: Anything marked with an 'Lv' tag is ours."`
+			`	"What's the significance of the tag?" You ask.`
+			`	"Obfuscation of that extra data," Raleigh explains. "As a bonus, it's an easy mark as to what's ours on the job board, so our captains know what to look for. Evidently, they draw in others, such as yourself. Of course, those tiny bits of data won't be satisfactory for very long, which leads me to my offer... I would like to formally induct you and Maribelle into the guild. In exchange for your labor, I have some very interesting data chips that I'm sure she'd like to get her hands on," She smiles slyly.`
+			choice
+				`	"Deal."`
+					goto deal
+				`	"What sort of data chips?"`
+
+			`Raleigh's smile widens as she sees she has your attention. "Some things you've seen before, some things you haven't," She says. "Tokens to enhance shields and hull, of course cargo expansions... But also some niche toys. Extra special upgrades, integrated jamming, proper increases to fuel capacity over just typical growth, and even scan concealment. Not that I'd endorse using the last one, of course." She winks.`
+			`	"Well, you have yourself a deal, I think," You say.`
+			label deal
+			`	Raleigh claps her hands together - a sound that surprises you, given she's an AI hologram - and grins. "Oh, excellent! I formally welcome you to the Merchant's Guild, then," She says joyously. "I'd hug you, but you know how it is with holograms." She chuckles.`
+			`	After a bit more banter and explanation of how to find Merchant's Guild jobs (looking out for anything tagged "Lv." is the short of it), you head back to the ship, showing Maribelle the Merchant's Guild plaque you've come into possession of.`
+			`	"This is so exciting!" Maribelle says. "We'd better check every job board we visit from now on!" She giggles.`

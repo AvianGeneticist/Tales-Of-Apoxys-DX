@@ -1,0 +1,394 @@
+mission "Apoxys Bottomless Launchers"
+	name "(Crafting) Bottomless Launchers"
+	description "Assemble bottomless secondary weapons from Launchers, Storages, and significant quantities of Ammunition."
+	job
+	source "New Boston"
+	repeat
+	to offer
+		"flagship attribute: missile lover" >= 1000
+	on accept
+		conversation
+			label start
+			`Let's see what we're working with here. It seems like the general formula is a Launcher, 6 Storages, and Ammunition to fill, but some larger or smaller launchers might require more or less.`
+			choice
+				`	(Make a Bottomless Swarm Pod.)`
+					goto makeswarmpod
+					to display
+						and
+							"outfit (cargo): Swarm Pod" >= 1
+							"outfit (cargo): Swarm Clip" >= 6
+							"outfit (cargo): Swarm Missile" >= 1600
+				`	(Make a Bottomless Finisher Pod.)`
+					goto makefinisherpod
+					to display
+						and
+							"outfit (cargo): Finisher Pod" >= 1
+							"outfit (cargo): Finisher Storage Tube" >= 6
+							"outfit (cargo): Finisher Torpedo" >= 160
+				`	(Make a Bottomless Finisher Maegrolain.)`
+					goto makefinishermaegrolain
+					to display
+						and
+							"outfit (cargo): Finisher Maegrolain" >= 1
+							"outfit (cargo): Finisher Storage Tube" >= 9
+							"outfit (cargo): Finisher Torpedo" >= 240
+				`	(Make a Bottomless Skipper Railgun.)`
+					goto makerailgun
+					to display
+						and
+							"outfit (cargo): Railgun" >= 1
+							"outfit (cargo): Railgun Slug Rack" >= 6
+							"outfit (cargo): Railgun Slug" >= 4000
+				`	(Make a Hai Tracker Pod.)`
+					goto maketrackerpod
+					to display
+						and
+							"outfit (cargo): Hai Tracker Pod" >= 1
+							"outfit (cargo): Tracker Storage Pod" >= 6
+							"outfit (cargo): Hai Tracker" >= 224
+				`	(Make a Hai Tracker Pod.)`
+					goto maketrackerpod
+					to display
+						and
+							"outfit (cargo): Hai Tracker Pod" >= 1
+							"outfit (cargo): Tracker Storage Pod" >= 6
+							"outfit (cargo): Hai Tracker" >= 224
+				`	(Make a Meteor Missile Launcher.)`
+					goto makemeteorlauncher
+					to display
+						and
+							"outfit (cargo): Meteor Missile Launcher" >= 1
+							"outfit (cargo): Meteor Missile Box" >= 6
+							"outfit (cargo): Meteor Missile" >= 120
+				`	(Make a Sidewinder Missile Launcher.)`
+					goto makesidewinderlauncher
+					to display
+						and
+							"outfit (cargo): Sidewinder Missile Launcher" >= 1
+							"outfit (cargo): Sidewinder Missile Box" >= 6
+							"outfit (cargo): Sidewinder Missile" >= 183
+				`	(Make a Javelin Pod.)`
+					goto makejavelinpod
+					to display
+						and
+							"outfit (cargo): Javelin Pod" >= 1
+							"outfit (cargo): Javelin Storage Crate" >= 6
+							"outfit (cargo): Javelin" >= 800
+				`	(Make a Javelin Turret.)`
+					goto makejavelinturret
+					to display
+						and
+							"outfit (cargo): Javelin Turret" >= 1
+							"outfit (cargo): Javelin Storage Crate" >= 12
+							"outfit (cargo): Javelin" >= 1600
+				`	(Make a Torpedo Launcher.)`
+					goto maketorpedolauncher
+					to display
+						and
+							"outfit (cargo): Torpedo Launcher" >= 1
+							"outfit (cargo): Torpedo Storage Rack" >= 6
+							"outfit (cargo): Torpedo" >= 120
+				`	(Make a Typhoon Launcher.)`
+					goto maketorpedolauncher
+					to display
+						and
+							"outfit (cargo): Typhoon Launcher" >= 1
+							"outfit (cargo): Typhoon Storage Tube" >= 6
+							"outfit (cargo): Typhoon Torpedo" >= 120
+				`	(Make a Heavy Rocket Launcher.)`
+					goto makeheavyrocketlauncher
+					to display
+						and
+							"outfit (cargo): Heavy Rocket Launcher" >= 1
+							"outfit (cargo): Heavy Rocket Rack" >= 6
+							"outfit (cargo): Heavy Rocket" >= 120
+				`	(Make a Gatling Gun.)`
+					goto makegatlinggun
+					to display
+						and
+							"outfit (cargo): Gatling Gun" >= 1
+							"outfit (cargo): Bullet Boxes" >= 6
+							"outfit (cargo): Gatling Gun Ammo" >= 12000
+				`	(Make a Gatling Turret.)`
+					goto makegatlingturret
+					to display
+						and
+							"outfit (cargo): Gatling Turret" >= 1
+							"outfit (cargo): Bullet Boxes" >= 12
+							"outfit (cargo): Gatling Gun Ammo" >= 24000
+				`	(Make a Star Tail.)`
+					goto makestartail
+					to display
+						and
+							"outfit (cargo): Star Tail" >= 1
+							"outfit (cargo): Star Tail Storage" >= 6
+							"outfit (cargo): Star Tail Cell" >= 140
+				`	(Make a Ka'het EMP Deployer.)`
+					goto makekahetempdeployer
+					to display
+						and
+							"outfit (cargo): Ka'het EMP Deployer" >= 1
+							"outfit (cargo): EMP Torpedo Storage Bay" >= 6
+							"outfit (cargo): EMP Torpedo" >= 58
+				`	(Make a Firelight Missile Bank.)`
+					goto makefirelightbank
+					to display
+						and
+							"outfit (cargo): Firelight Missile Bank" >= 1
+							"outfit (cargo): Firelight Storage Rack" >= 6
+							"outfit (cargo): Firelight Missile" >= 80
+				`	(Make a Firestorm Battery.)`
+					goto makefirestormbattery
+					to display
+						and
+							"outfit (cargo): Firestorm Battery" >= 1
+							"outfit (cargo): Firestorm Torpedo Rack" >= 6
+							"outfit (cargo): Firestorm Torpedo" >= 91
+				`	(Make a Cluster Mine Layer.)`
+					goto makeclusterminelayer
+					to display
+						and
+							"outfit (cargo): Cluster Mine Layer" >= 1
+							"outfit (cargo): Cluster Mine Rack" >= 6
+							"outfit (cargo): Cluster Mine" >= 71
+				`	(Make a Piercer Missile Launcher.)`
+					goto makepiercerlauncher
+					to display
+						and
+							"outfit (cargo): Piercer Missile Launcher" >= 1
+							"outfit (cargo): Piercer Missile Rack" >= 6
+							"outfit (cargo): Piercer Missile" >= 127
+				`	(Make an EMP Torpedo Bay.)`
+					goto makeemptorpedobay
+					to display
+						and
+							"outfit (cargo): EMP Torpedo Bay" >= 1
+							"outfit (cargo): EMP Torpedo Storage Bay" >= 5
+							"outfit (cargo): EMP Torpedo" >= 44
+				`	(Make a Teciimach Bay.)`
+					goto maketeciimachbay
+					to display
+						and
+							"outfit (cargo): Teciimach Bay" >= 1
+							"outfit (cargo): Teciimach Canister Rack" >= 6
+							"outfit (cargo): Teciimach Canister" >= 63
+				`	(Make a Thunderhead Launcher.)`
+					goto makethunderheadlauncher
+					to display
+						and
+							"outfit (cargo): Thunderhead Launcher" >= 1
+							"outfit (cargo): Thunderhead Storage Array" >= 6
+							"outfit (cargo): Thunderhead Missile" >= 63
+				`	(Finish.)`
+					goto end
+				
+
+			label makeswarmpod
+			action
+				outfit "Swarm Pod" -1
+				outfit "Swarm Clip" -6
+				outfit "Swarm Missile" -1600
+				outfit "Bottomless Swarm Pod" 1
+			`You make a Bottomless Swarm Pod.`
+				goto start
+
+			label makefinisherpod
+			action
+				outfit "Finisher Pod" -1
+				outfit "Finisher Storage Tube" -6
+				outfit "Finisher Torpedo" -160
+				outfit "Bottomless Finisher Pod" 1
+			`You make a Bottomless Finisher Pod.`
+				goto start
+
+			label makefinishermaegrolain
+			action
+				outfit "Finisher Maegrolain" -1
+				outfit "Finisher Storage Tube" -9
+				outfit "Finisher Torpedo" -240
+				outfit "Bottomless Finisher Maegrolain" 1
+			`You make a Bottomless Finisher Maegrolain.`
+				goto start
+
+			label makerailgun
+			action
+				outfit "Railgun" -1
+				outfit "Railgun Slug Rack" -6
+				outfit "Railgun Slug" -4000
+				outfit "Bottomless Railgun" 1
+			`You make a Bottomless Skipper Railgun.`
+				goto start
+
+			label maketrackerpod
+			action
+				outfit "Hai Tracker Pod" -1
+				outfit "Tracker Storage Pod" -6
+				outfit "Hai Tracker" -224
+				outfit "Bottomless Tracker Pod" 1
+			`You make a Bottomless Tracker Pod.`
+				goto start
+
+			label makemeteorlauncher
+			action
+				outfit "Meteor Missile Launcher" -1
+				outfit "Meteor Missile Box" -6
+				outfit "Meteor Missile" -120
+				outfit "Bottomless Meteor Launcher" 1
+			`You make a Bottomless Meteor Launcher.`
+				goto start
+
+			label makesidewinderlauncher
+			action
+				outfit "Sidewinder Missile Launcher" -1
+				outfit "Sidewinder Missile Rack" -6
+				outfit "Sidewinder Missile" -183
+				outfit "Bottomless Sidewinder Launcher" 1
+			`You make a Bottomless Sidewinder Launcher.`
+				goto start
+
+			label makejavelinpod
+			action
+				outfit "Javelin Pod" -1
+				outfit "Javelin Storage Crate" -6
+				outfit "Javelin" -800
+				outfit "Bottomless Javelin Pod" 1
+			`You make a Bottomless Javelin Pod.`
+				goto start
+
+			label makejavelinturret
+			action
+				outfit "Javelin Turret" -1
+				outfit "Javelin Storage Crate" -12
+				outfit "Javelin" -1600
+				outfit "Bottomless Javelin Turret" 1
+			`You make a Bottomless Javelin Turret.`
+				goto start
+
+			label maketorpedolauncher
+			action
+				outfit "Torpedo Launcher" -1
+				outfit "Torpedo Storage Rack" -6
+				outfit "Torpedo" -120
+				outfit "Bottomless Torpedo Launcher" 1
+			`You make a Bottomless Torpedo Launcher.`
+				goto start
+
+			label maketyphoonlauncher
+			action
+				outfit "Typhoon Launcher" -1
+				outfit "Typhoon Storage Tube" -6
+				outfit "Typhoon Torpedo" -120
+				outfit "Bottomless Torpedo Launcher" 1
+			`You make a Bottomless Torpedo Launcher.`
+				goto start
+
+			label makeheavyrocketlauncher
+			action
+				outfit "Heavy Rocket Launcher" -1
+				outfit "Heavy Rocket Rack" -6
+				outfit "Heavy Rocket" -80
+				outfit "Bottomless Heavy Rocket Launcher" 1
+			`You make a Bottomless Heavy Rocket Launcher.`
+				goto start
+
+			label makegatlinggun
+			action
+				outfit "Gatling Gun" -1
+				outfit "Bullet Boxes" -6
+				outfit "Gatling Gun Ammo" -12000
+				outfit "Bottomless Gatling Gun" 1
+			`You make a Bottomless Gatling Gun.`
+				goto start
+
+			label makegatlingturret
+			action
+				outfit "Gatling Turret" -1
+				outfit "Bullet Boxes" -12
+				outfit "Gatling Gun Ammo" -24000
+				outfit "Bottomless Gatling Turret" 1
+			`You make a Bottomless Gatling Turret.`
+				goto start
+
+			label makestartail
+			action
+				outfit "Star Tail" -1
+				outfit "Star Tail Storage" -6
+				outfit "Star Tail Cell" -140
+				outfit "Bottomless Star Tail" 1
+			`You make a Bottomless Star Tail.`
+				goto start
+
+			label makekahetempdeployer
+			action
+				outfit "Ka'het EMP Deployer" -1
+				outfit "EMP Torpedo Storage Bay" -6
+				outfit "EMP Torpedo" -58
+				outfit "Bottomless EMP Deployer" 1
+			`You make a Bottomless EMP Deployer.`
+				goto start
+
+			label makefirelightbank
+			action
+				outfit "Firelight Missile Bank" -1
+				outfit "Firelight Storage Rack" -6
+				outfit "Firelight Missile" -80
+				outfit "Bottomless Firelight Bank" 1
+			`You make a Bottomless Firelight Bank.`
+				goto start
+
+			label makefirestormbattery
+			action
+				outfit "Firestorm Battery" -1
+				outfit "Firestorm Torpedo Rack" -6
+				outfit "Firestorm Torpedo" -91
+				outfit "Bottomless Firestorm Battery" 1
+			`You make a Bottomless Firestorm Battery.`
+				goto start
+
+			label makeclusterminelayer
+			action
+				outfit "Cluster Mine Layer" -1
+				outfit "Cluster Mine Rack" -6
+				outfit "Cluster Mine" -71
+				outfit "Bottomless Cluster Mine Layer" 1
+			`You make a Bottomless Cluster Mine Layer.`
+				goto start
+
+			label makepiercerlauncher
+			action
+				outfit "Piercer Missile Launcher" -1
+				outfit "Piercer Missile Rack" -6
+				outfit "Piercer Missile" -127
+				outfit "Bottomless Piercer Launcher" 1
+			`You make a Bottomless Piercer Launcher.`
+				goto start
+
+			label makeemptorpedobay
+			action
+				outfit "EMP Torpedo Bay" -1
+				outfit "EMP Torpedo Storage Bay" -5
+				outfit "EMP Torpedo" -44
+				outfit "Bottomless EMP Torpedo Bay" 1
+			`You make a Bottomless EMP Torpedo Bay.`
+				goto start
+
+			label maketeciimachbay
+			action
+				outfit "Teciimach Bay" -1
+				outfit "Teciimach Canister Rack" -6
+				outfit "Teciimach Canister" -63
+				outfit "Bottomless Teciimach Bay" 1
+			`You make a Bottomless Teciimach Bay.`
+				goto start
+
+			label makethunderheadlauncher
+			action
+				outfit "Thunderhead Launcher" -1
+				outfit "Thunderhead Storage Array" -6
+				outfit "Thunderhead Missile" -160
+				outfit "Bottomless Thunderhead Launcher" 1
+			`You make a Bottomless Thunderhead Launcher.`
+				goto start
+
+			label end
+			`You decide to stop crafting for now.`

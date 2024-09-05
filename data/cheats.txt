@@ -42,3 +42,49 @@ mission "Gigantic EXP"
 		government "Omnis"
 	on accept
 		"combat rating" += 1000000
+
+mission "Small Merchant EXP"
+	description `Gain 100 MR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"merchant rating" += 100
+		
+mission "Medium Merchant EXP"
+	description `Gain 1000 MR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"merchant rating" += 1000
+		
+mission "Large Merchant EXP"
+	description `Gain 10000 MR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"merchant rating" += 10000
+		
+mission "Huge Merchant EXP"
+	description `Gain 100000 MR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"merchant rating" += 100000
+		
+mission "Gigantic Merchant EXP"
+	description `Gain 1000000 MR, for levelling up with the Apoxys.`
+	job
+	repeat
+	source
+		government "Omnis"
+	on accept
+		"merchant rating" += 1000000
+

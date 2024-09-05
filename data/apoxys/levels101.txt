@@ -1,0 +1,236 @@
+outfit "Basal Level VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 120
+	"outfit space" 120
+	"cargo space" 60
+	"weapon capacity" 30
+	"engine capacity" 24
+	"unplunderable" 1
+	"hull" 3000
+	"shields" 3000
+	"fuel capacity" 30
+	"heat capacity" 60
+	"operating costs" 500
+	"drag" 3.5
+	"bunks" 7
+	description "Levels 21-40 give these stats immediately, plus the player's choice of spec. By the end of these early levels, you should be able to take on most human ships."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Shields VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"unplunderable" 1
+	"shields" 15000
+	description "A modest level shield extension, in case the basic health increase wasn't enough for some players."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Hull VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"unplunderable" 1
+	"hull" 15000
+	description "A modest level hull extension, in case the basic health increase wasn't enough for some players."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Outfit VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 300
+	"unplunderable" 1
+	description "A general outfit expansion for players who want to have some more general outfit space for whatever reason."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Cargo VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"cargo space" 360
+	"unplunderable" 1
+	description "A cargo expansion for players who want to have some more cargo space for missions or trading."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Weapons VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"weapon capacity" 180
+	"unplunderable" 1
+	description "A modest-level weapons expansion, to be chosen by the player upon a level up. Choosing this all 10 times will result in a whopping 600 weapon capacity being at your disposal."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Engines VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"engine capacity" 120
+	"unplunderable" 1
+	description "A modest-level engines expansion, to be chosen by the player upon a Level 10up. Choosing this all 10 times will result in a whopping 600 engine capacity being at your disposal."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Bunks VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"bunks" 35
+	"unplunderable" 1
+	description "Some more beds for crew, or passenger missions. A player will eventually have to purchase these due to the Apoxys' crew requirement increasing with level."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Heat Capacity VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"heat capacity" 1440
+	"unplunderable" 1
+	description "Extra heat capacity. While outfit space is more versatile (cooling), heat capacity can stack with perks for some insanely high heat tolerance later on."
+	description "YOU SHOULD NEVER SEE THIS." 
+	
+outfit "Milestone VI"
+	category "Level-Ups"
+	cost 0
+	"mass" 240
+	"outfit space" 420
+	"cargo space" 420
+	"weapon capacity" 210
+	"engine capacity" 144
+	"unplunderable" 1
+	"hull" 18000
+	"shields" 18000
+	"fuel capacity" 30
+	"heat capacity" 1500
+	"bunks" 42
+	"operating costs" 1000
+	"drag" 5
+	description "The twenties of each level are special. Enjoy not only your usual stat gains, but one of each level specialty as well!"
+	description "YOU SHOULD NEVER SEE THIS."
+	
+# Actual Level Missions
+
+mission "Apoxys Level 100+"
+	landing
+	repeat
+	name "Level Beyond!"
+	description "You're in levels beyond!"
+	to offer
+		"combat rating" >= "apoxys level requirement"
+		has "Apoxys Level 100 Choices: declined"
+	
+	on offer
+		require "Apoxys Core DX"
+		conversation
+			`Maribelle (the Apoxys' AI) seems very content as you come in for landing. "Captain!" She exclaims excitedly, "I know we've only just begun, but I think I'm already beginning to understand the galaxy. If you don't mind, I'd like to make some adjustments while we're parked today."`
+			`You notice a number of prompts before you. You could likely give Maribelle some feedback into what exactly you'd like to improve. You begin to say, "In addition to your own desired improvements..."`
+			choice
+				`	"You should increase your shield strength."`
+					goto shieldcap
+				`	"You should increase your hull durability."`
+					goto hullcap
+				`	"You should increase your capacity for general outfits."`
+					goto outfitcap
+				`	"You should increase your heat tolerance."`
+					goto heatcap
+				`	"You should be able to bear greater weapons."`
+					goto weaponcap
+				`	"You should be able to utilize the largest engines possible."`
+					goto enginecap
+				`	"You should have some more space for crew and passengers."`
+					goto bunkcap
+				`	"You should increase your capacity for trading goods."`
+					goto cargocap
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label shieldcap
+			action
+				outfit "Shields VI" 1
+			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
+				goto next
+			label hullcap
+			action
+				outfit "Hull VI" 1
+			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
+				goto next
+			label outfitcap
+			action
+				outfit "Outfit VI" 1
+			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
+				goto next
+			label heatcap
+			action
+				outfit "Heat Capacity VI" 1
+			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. No heat will be too mighty for our heatsinks!"`
+				goto next
+			label weaponcap
+			action
+				outfit "Weapons VI" 1
+			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
+				goto next
+			label enginecap
+			action
+				outfit "Engines VI" 1
+			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
+				goto next
+			label cargocap
+			action
+				outfit "Cargo VI" 1
+			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
+				goto next
+			label bunkcap
+			action
+				outfit "Bunks VI" 1
+			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
+				goto next
+
+			label next
+			action
+				"apoxys level requirement" += 14313
+			branch "even" "odd"
+				"apoxys even level" == 1
+
+			label even
+			action
+				"perk in waiting" ++
+				"apoxys even level" = 0
+			`You've received a perk point!`
+				goto milestone
+
+			label odd
+			action
+				"apoxys even level" = 1
+			` `
+				goto milestone
+
+			label milestone
+			branch "milestoneii" "normal"
+				"apoxys milestone level" == 9
+
+			label milestoneii
+			action
+				"apoxys milestone level" = 0
+				outfit "Milestone VI" 1
+			`Oh, happy milestone!`
+				goto end
+
+			label normal
+			action
+				"apoxys milestone level" += 1
+				outfit "Basal Level VI" 1
+			` `
+				goto end
+
+			label end
+			action
+
+			`And that's it for the level-up!`
+				decline

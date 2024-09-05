@@ -31,18 +31,28 @@ conversation "perkslist"
 			goto heatshield
 		`	(Energy Shielding.)`
 			goto energyshield
+		`	(Artilleur.)`
+			goto artilleur
+		`	(Engineer.)`
+			goto engineer
+		`	(Shieldsmith.)`
+			goto shieldsmith
 		`	(Natural Regeneration.)`
 			goto naturalregeneration
 		`	(Natural Repair.)`
 			goto naturalrepair
 		`	(Repair Overdrive.)`
 			goto repairoverdrive
+		`	(Raider Rally.)`
+			goto raiderrally
 		`	(Stellar Drinker.)`
 			goto stellardrinker
 		`	(Sneaky Packer.)`
 			goto sneakypacker
 		`	(Disassembler.)`
 			goto disassembler
+		`	(Missile Lover.)`
+			goto missilelover
 		`	(Pick-Me-Up.)`
 			goto pickmeup
 		`	(Adrenal Surge.)`
@@ -435,6 +445,84 @@ conversation "perkslist"
 		outfit "Perk: Energy Shielding" 1
 	`You have taken a rank in the Energy Shielding perk.`
 		goto buffer
+
+	label artilleur
+	`Artilleur provides 200 extra weapon capacity and 1500 scramble resistance per rank.`
+	`	This perk can be taken 3 times. Rank 1 starts at level 8, rank 2 at level 30, and rank 3 at level 60. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Artilleur] ranks.)`
+	choice
+		`	(Take the Artilleur Perk.)`
+			to display
+				or
+					and
+						has "Apoxys Level 8: declined"
+						"outfit (flagship installed): Perk: Artilleur" == 0
+					and
+						has "Apoxys Level 30: declined"
+						"outfit (flagship installed): Perk: Artilleur" == 1
+					and
+						has "Apoxys Level 60: declined"
+						"outfit (flagship installed): Perk: Artilleur" == 2
+			goto artilleur2
+		`	(Return to the main list.)`
+			goto hub
+
+	label artilleur2
+	action
+		outfit "Perk: Artilleur" 1
+	`You have taken a rank in the Artilleur perk.`
+		goto buffer
+	
+	label engineer
+	`Engineer provides 200 extra engine capacity and 1500 slowing resistance per rank.`
+	`	This perk can be taken 3 times. Rank 1 starts at level 14, rank 2 at level 38, and rank 3 at level 68. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Engineer] ranks.)`
+	choice
+		`	(Take the Engineer Perk.)`
+			to display
+				or
+					and
+						has "Apoxys Level 14: declined"
+						"outfit (flagship installed): Perk: Engineer" == 0
+					and
+						has "Apoxys Level 38: declined"
+						"outfit (flagship installed): Perk: Engineer" == 1
+					and
+						has "Apoxys Level 68: declined"
+						"outfit (flagship installed): Perk: Engineer" == 2
+			goto engineer2
+		`	(Return to the main list.)`
+			goto hub
+
+	label engineer2
+	action
+		outfit "Perk: Engineer" 1
+	`You have taken a rank in the Engineer perk.`
+		goto buffer
+	
+	label shieldsmith
+	`Shieldsmith provides 10% piercing resistance and 1500 disruption resistance per rank.`
+	`	This perk can be taken 3 times. Rank 1 starts at level 18, rank 2 at level 48, and rank 3 at level 80. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Shieldsmith] ranks.)`
+	choice
+		`	(Take the Shieldsmith Perk.)`
+			to display
+				or
+					and
+						has "Apoxys Level 14: declined"
+						"outfit (flagship installed): Perk: Shieldsmith" == 0
+					and
+						has "Apoxys Level 38: declined"
+						"outfit (flagship installed): Perk: Shieldsmith" == 1
+					and
+						has "Apoxys Level 68: declined"
+						"outfit (flagship installed): Perk: Shieldsmith" == 2
+			goto shieldsmith2
+		`	(Return to the main list.)`
+			goto hub
+
+	label shieldsmith2
+	action
+		outfit "Perk: Shieldsmith" 1
+	`You have taken a rank in the Shieldsmith perk.`
+		goto buffer
 	
 	label naturalregeneration
 	`Natural Regeneration grants 120 shield regeneration per second per rank, at the cost of 1 energy per shield.`
@@ -608,10 +696,36 @@ conversation "perkslist"
 		`	(Return to the main list.)`
 			goto hub
 
-	label repairoverdrive2
+	label raiderrally
+	`Raider Rally increases capture attack by 200 and capture defense by 25 per rank (each rank replaces a normal crew weapon).`
+	`	This perk can be taken 5 times. Rank 1 starts at level 10, rank 2 at level 24, rank 3 at level 44, rank 4 at level 66, and rank 5 at level 92. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Raider Rally] ranks.)`
+	choice
+		`	(Take a rank in the Raider Rally Perk.)`
+			to display
+				or
+					and
+						has "Apoxys Level 10: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 0
+					and
+						has "Apoxys Level 24: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 1
+					and
+						has "Apoxys Level 44: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 2
+					and
+						has "Apoxys Level 66: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 3
+					and
+						has "Apoxys Level 92: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 4
+			goto raiderrally2
+		`	(Return to the main list.)`
+			goto hub
+
+	label raiderrally2
 	action
-		outfit "Perk: Repair Overdrive" 1
-	`You have taken a rank in the Repair Overdrive Perk.`
+		outfit "Perk: Raider Rally" 1
+	`You have taken a rank in the Raider Rally Perk.`
 		goto buffer
 
 	label disassembler
@@ -631,6 +745,25 @@ conversation "perkslist"
 	action
 		outfit "Perk: Disassembler" 1
 	`You have taken the Disassembler Perk.`
+		goto buffer
+
+	label missilelover
+	`Missile Lover is a crafting perk that unlocks bottomless versions of missile weapons. These take extra space, energy, and cooling, but will never run out of ammunition.`
+	`	This perk can only be taken once, starting at level 36. Do you want to take it? (You currently have &[outfit (flagship installed): Perk: Missile Lover] ranks.)`
+	choice
+		`	(Take the Missile Lover Perk.)`
+			to display
+				and
+					has "Apoxys Level 36: declined"
+					"outfit (flagship installed): Perk: Missile Lover" == 0
+			goto missilelover2
+		`	(Return to the main list.)`
+			goto hub
+
+	label missilelover2
+	action
+		outfit "Perk: Missile Lover" 1
+	`You have taken the Missile Lover Perk.`
 		goto buffer
 
 	label pickmeup
@@ -657,7 +790,7 @@ conversation "perkslist"
 	`Adrenal Surge grants a massive +45 fuel/second generation effect, but only while you are repairing hull damage.`
 	`	This perk can only be taken once, starting at level 36, and requires a Focus stat of at least 7. Do you want to take it? (You currently have &[outfit (flagship installed): Perk: Adrenal Surge] ranks.)`
 	choice
-		`	(Take the Pick-Me-Up Perk.)`
+		`	(Take the Adrenal Surge Perk.)`
 			to display
 				and
 					has "Apoxys Level 36: declined"

@@ -52,8 +52,10 @@ mission "Apoxys Level 100 Choices"
 		"mark iii choices" = 20
 		"mark iv choices" = 20
 		"mark v choices" = 20
+		"merchant i choices" = "merchant's guild level"
+		"merchant perks" = ( "merchant's guild level" / 2 )
 		conversation
-			`As you land, Maribelle looks at you. "Okay, captain. Are you ready?" She asks. "This is choosing all of our upgrades."`
+			`As you land Maribelle looks at you. "Okay, captain. Are you ready?" She asks. "This is choosing all of our upgrades."`
 			choice
 				`	"Let's do it."`
 					goto deal
@@ -62,7 +64,10 @@ mission "Apoxys Level 100 Choices"
 
 			label deal
 			action
-				"perk in waiting" += 48
+				"apoxys level requirement" = 696076
+				"merchant i choices" <?= 20
+				"merchant ii choices" = ( "merchant's guild level" - 20 )
+				"perk in waiting" += ( 48 + "merchant perks" )
 			label speccing
 			`"First up is base stats, captain," Maribelle reports. "It's been a long time since we did much with them... We have &[apoxys spec points] free attributes left."`
 			choice
@@ -162,11 +167,11 @@ mission "Apoxys Level 100 Choices"
 			label flightiness
 			`Flightiness refers to your agility. A high flightiness will allow you to move and regenerate faster.`
 			choice
-				`	(Increase Focus by 1.)`
+				`	(Increase Flightiness by 1.)`
 						to display
 							"apoxys spec points" >= 1
 					goto addflightiness
-				`	(Decrease Focus by 1.)`
+				`	(Decrease Flightiness by 1.)`
 						to display
 							"outfit (flagship installed): Flightiness" >= 2
 					goto subflightiness
@@ -176,13 +181,13 @@ mission "Apoxys Level 100 Choices"
 			action
 				"apoxys spec points" -= 1
 				outfit "Flightiness" 1
-			`Focus increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+			`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
 				goto flightiness
 			label subflightiness
 			action
 				"apoxys spec points" += 1
 				outfit "Flightiness" -1
-			`Focus increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+			`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
 				goto flightiness
 
 			label friendliness
@@ -591,7 +596,7 @@ mission "Apoxys Level 100 Choices"
 			`Maribelle looks at you. "Are you sure?" She asks.`
 			`	"Yes," You reply. "I'm certain."`
 			`	Maribelle nods. "Consider it done, then, captain."`
-				goto options
+				goto merchant
 
 			label spinal
 			action
@@ -600,8 +605,132 @@ mission "Apoxys Level 100 Choices"
 			`Maribelle looks at you. "Are you sure?" She asks.`
 			`	"Yes," You reply. "I'm certain."`
 			`	Maribelle nods. "Consider it done, then, captain."`
-				goto options
-				
+				goto merchant
+			
+			label merchant
+			branch "merchanti" "options"
+				"merchant i choices" > 0
+			label merchanti
+			`"Oh, right, we have merchant upgrades too!" Maribelle says. "Guess we'll do the smaller ones first. We have &[merchant i choices] left."`
+			choice
+				`	"We'll take some extra shields."`
+					goto merchshieldi
+				`	"We'll take some extra hull."`
+					goto merchhulli
+				`	"We'll take some extra cargo space."`
+					goto merchcargoi
+				`	"We'll take some extra fuel capacity."`
+					goto merchfueli
+				`	"We'll take some jamming."`
+					goto merchjammingi
+				`	"We'll take some scan concealment."`
+					goto merchconcealmenti
+					
+			label merchshieldi
+			action
+				outfit "Shields I (Merchant)" 1
+				outfit "Basal Level I (Merchant)" 1
+			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
+				goto nextmerchi
+			label merchhulli
+			action
+				outfit "Hull I (Merchant)" 1
+				outfit "Basal Level I (Merchant)" 1
+			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
+				goto nextmerchi
+			label merchcargoi
+			action
+				outfit "Cargo I (Merchant)" 1
+				outfit "Basal Level I (Merchant)" 1
+			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
+				goto nextmerchi
+			label merchfueli
+			action
+				outfit "Fuel I (Merchant)" 1
+				outfit "Basal Level I (Merchant)" 1
+			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
+				goto nextmerchi
+			label merchjammingi
+			action
+				outfit "Jamming I (Merchant)" 1
+				outfit "Basal Level I (Merchant)" 1
+			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
+				goto nextmerchi
+			label merchconcealmenti
+			action
+				outfit "Concealment I (Merchant)" 1
+				outfit "Basal Level I (Merchant)" 1
+			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
+				goto nextmerchi
+
+			label nextmerchi
+			action
+				"merchant i choices" -= 1
+			branch "merchanti" "merchantiigate"
+				"merchant i choices" > 0
+
+			label merchantiigate
+			branch "merchantii" "options"
+				"merchant ii choices" > 0
+			label merchantii
+			`"Oh, right, we have merchant upgrades too!" Maribelle says. "Now it's time for the larger ones. We have &[merchant ii choices] left."`
+			choice
+				`	"We'll take some extra shields."`
+					goto merchshieldii
+				`	"We'll take some extra hull."`
+					goto merchhullii
+				`	"We'll take some extra cargo space."`
+					goto merchcargoii
+				`	"We'll take some extra fuel capacity."`
+					goto merchfuelii
+				`	"We'll take some jamming."`
+					goto merchjammingii
+				`	"We'll take some scan concealment."`
+					goto merchconcealmentii
+					
+			label merchshieldii
+			action
+				outfit "Shields II (Merchant)" 1
+				outfit "Basal Level II (Merchant)" 1
+			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
+				goto nextmerchii
+			label merchhullii
+			action
+				outfit "Hull II (Merchant)" 1
+				outfit "Basal Level II (Merchant)" 1
+			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
+				goto nextmerchii
+			label merchcargoii
+			action
+				outfit "Cargo II (Merchant)" 1
+				outfit "Basal Level II (Merchant)" 1
+			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
+				goto nextmerchii
+			label merchfuelii
+			action
+				outfit "Fuel II (Merchant)" 1
+				outfit "Basal Level II (Merchant)" 1
+			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
+				goto nextmerchii
+			label merchjammingii
+			action
+				outfit "Jamming II (Merchant)" 1
+				outfit "Basal Level II (Merchant)" 1
+			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
+				goto nextmerchii
+			label merchconcealmentii
+			action
+				outfit "Concealment II (Merchant)" 1
+				outfit "Basal Level II (Merchant)" 1
+			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
+				goto nextmerchii
+
+			label nextmerchii
+			action
+				"merchant ii choices" -= 1
+			branch "merchantii" "options"
+				"merchant ii choices" > 0
+
 			label options # When I add optional stuff that the player can or can not have done before Level 100, this label will be a series of branches for inheriting special outfits. At the moment however, there are no optional progression metrics, so it leads directly to the end.
 			`You can already hear the Apoxys' innards shifting as Maribelle begins the upgrades. "That's all of our regularly scheduled choices, captain... Next time we land, it'll be special upgrades," Maribelle says.`
 				decline
