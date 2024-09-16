@@ -137,7 +137,7 @@ mission "Novaxys Level 80+"
 
 			action
 				"novaxys level requirement" += 14313
-				"novaxys perk" ++
+				"novaxys perks" ++
 			`You've received a perk point!`
 				goto milestone
 

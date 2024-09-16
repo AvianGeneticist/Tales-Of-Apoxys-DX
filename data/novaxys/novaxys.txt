@@ -71,8 +71,8 @@ outfit "Novaxys Core DX"
 
 ship "Novaxys II"
 	plural "Novacies"
-	sprite "ship/novaxys"
-	thumbnail "ship/novaxys"
+	sprite "ship/novaxys ii"
+	thumbnail "ship/novaxys ii"
 	swizzle 6
 	attributes
 		category "Fighter"

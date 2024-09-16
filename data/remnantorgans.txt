@@ -288,3 +288,13 @@ mission "Apoxys Remnant Organs Tier V"
 		outfit "Remnant Ship Organs IV" -1
 		outfit "Remnant Ship Organs V" 1
 
+mission "Apoxys Remnant Organs Tier VI"
+	landing
+	invisible
+	to offer
+		has "outfit (flagship installed): Remnant Ship Organs V"
+		has "Apoxys Level 100+: declined"
+	on offer
+		outfit "Remnant Ship Organs V" -1
+		outfit "Remnant Ship Organs VI" 1
+
