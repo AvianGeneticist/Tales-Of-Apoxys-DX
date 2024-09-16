@@ -240,7 +240,7 @@ conversation "perkslist"
 
 	label shieldoverclock
 	`Shield Overclock boosts all shield regeneration on your ship by a percentage amount, at a rate of 10% per rank. It does, however, proportionately increase shield energy, heat, and fuel.`
-	`	This perk can be taken 10 times. Rank 1 starts at level 2, rank 2 at level 6, rank 3 at level 10, rank 4 at level 14, rank 5 at level 20, rank 6 at level 30, rank 7 at level 42, rank 8 at level 56, rank 9 at level 72, rank 10 at level 90. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Shield Overclock] ranks.)`
+	`	This perk can be taken an eventually unlimited number of times. Rank 1 starts at level 2, rank 2 at level 6, rank 3 at level 10, rank 4 at level 14, rank 5 at level 20, rank 6 at level 30, rank 7 at level 42, rank 8 at level 56, rank 9 at level 72, rank 10 at level 90. The perk's ranks will become uncapped after level 100. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Shield Overclock] ranks.)`
 	choice
 		`	(Take a rank in the Shield Overclock Perk.)`
 			to display
@@ -275,6 +275,7 @@ conversation "perkslist"
 					and
 						has "Apoxys Level 90: declined"
 						"outfit (flagship installed): Perk: Shield Overclock" == 9
+					has "Apoxys Level 100 Choices: declined"
 			goto shieldoverclock2
 		`	(Return to the main list.)`
 			goto hub
@@ -661,7 +662,7 @@ conversation "perkslist"
 
 	label repairoverdrive
 	`Repair Overdrive boosts all hull repair on your ship by a percentage amount, at a rate of 10% per rank. It does, however, proportionately increase repair energy, heat, and fuel.`
-	`	This perk can be taken 6 times. Rank 1 starts at level 16, rank 2 at level 20, rank 3 at level 26, rank 4 at level 32, rank 5 at level 40, rank 6 at level 48, rank 7 at level 58, rank 8 at level 70, rank 9 at level 82, and rank 10 at level 96. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Repair Overdrive] ranks.)`
+	`	This perk can be taken an eventually unlimited number of times. Rank 1 starts at level 16, rank 2 at level 20, rank 3 at level 26, rank 4 at level 32, rank 5 at level 40, rank 6 at level 48, rank 7 at level 58, rank 8 at level 70, rank 9 at level 82, and rank 10 at level 96. The perk's ranks will become uncapped after level 100. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Repair Overdrive] ranks.)`
 	choice
 		`	(Take a rank in the Repair Overdrive Perk.)`
 			to display
@@ -696,6 +697,7 @@ conversation "perkslist"
 					and
 						has "Apoxys Level 96: declined"
 						"outfit (flagship installed): Perk: Repair Overdrive" == 9
+					has "Apoxys Level 100 Choices: declined"
 			goto repairoverdrive2
 		`	(Return to the main list.)`
 			goto hub

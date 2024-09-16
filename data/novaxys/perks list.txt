@@ -251,7 +251,7 @@ conversation "novaperkslist"
 						has "Novaxys Level 67-68: declined"
 						"outfit (flagship installed): Perk: Tough Shields" == 8
 					and
-						has "Novaxys Level 79-80: declined"
+						has "Novaxys Level 80 Choices: declined"
 						"outfit (flagship installed): Perk: Tough Shields" == 9
 			goto toughshields2
 		`	(Return to the main list.)`
@@ -298,7 +298,7 @@ conversation "novaperkslist"
 						has "Novaxys Level 67-68: declined"
 						"outfit (flagship installed): Perk: Thick Skin" == 8
 					and
-						has "Novaxys Level 79-80: declined"
+						has "Novaxys Level 80 Choices: declined"
 						"outfit (flagship installed): Perk: Thick Skin" == 9
 			goto thickskin2
 		`	(Return to the main list.)`
