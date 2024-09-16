@@ -238,12 +238,12 @@ mission "apoxys link nodes"
 	to offer
 		has "event: apoxys link nodes"
 	on offer
-		"forge occupied" --
 		clear "event: apoxys link nodes"
 		conversation
 			`	You receive a notification from Claire: "Hey Cap'n! Your nodes are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
 				accept
 	on complete
+		"forge occupied" --
 		outfit "Link Node" 10
 		dialog `Claire welcomes you back as the nodes are loaded onto your ship.`
 
@@ -258,12 +258,12 @@ mission "apoxys enhancer nodes"
 	to offer
 		has "event: apoxys enhancer nodes"
 	on offer
-		"forge occupied" --
 		clear "event: apoxys enhancer nodes"
 		conversation
 			`	You receive a notification from Claire: "Hey Cap'n! Your nodes are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
 				accept
 	on complete
+		"forge occupied" --
 		outfit "Enhancer Node" 2
 		dialog `Claire welcomes you back as the nodes are loaded onto your ship.`
 
@@ -278,12 +278,12 @@ mission "apoxys small turrets"
 	to offer
 		has "event: apoxys small turrets"
 	on offer
-		"forge occupied" --
 		clear "event: apoxys small turrets"
 		conversation
 			`	You receive a notification from Claire: "Hey Cap'n! Your turret bases are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
 				accept
 	on complete
+		"forge occupied" --
 		outfit "Small Turret Base" 6
 		dialog `Claire welcomes you back as the turret bases are loaded onto your ship.`
 
@@ -298,12 +298,12 @@ mission "apoxys medium turrets"
 	to offer
 		has "event: apoxys medium turrets"
 	on offer
+		clear "event: apoxys medium turrets"
 		conversation
 			`	You receive a notification from Claire: "Hey Cap'n! Your turret bases are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
 				accept
 	on complete
 		"forge occupied" --
-		clear "event: apoxys medium turrets"
 		outfit "Medium Turret Base" 5
 		dialog `Claire welcomes you back as the turret bases are loaded onto your ship.`
 
@@ -318,12 +318,12 @@ mission "apoxys large turrets"
 	to offer
 		has "event: apoxys large turrets"
 	on offer
+		clear "event: apoxys large turrets"
 		conversation
 			`	You receive a notification from Claire: "Hey Cap'n! Your turret bases are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
 				accept
 	on complete
 		"forge occupied" --
-		clear "event: apoxys large turrets"
 		outfit "Large Turret Base" 4
 		dialog `Claire welcomes you back as the turret bases are loaded onto your ship.`
 
@@ -338,12 +338,12 @@ mission "apoxys huge turrets"
 	to offer
 		has "event: apoxys huge turrets"
 	on offer
+		clear "event: apoxys huge turrets"
 		conversation
 			`	You receive a notification from Claire: "Hey Cap'n! Your turret bases are all rarin' to go! Feel free to swing by 'n' grab 'em whenever!"`
 				accept
 	on complete
 		"forge occupied" --
-		clear "event: apoxys huge turrets"
 		outfit "Huge Turret Base" 3
 		dialog `Claire welcomes you back as the turret bases are loaded onto your ship.`
 
@@ -529,6 +529,20 @@ mission "TOA Crafting Weapons"
 						and
 							"outfit (cargo): Dual Sunbeam Turret" >= 1
 							"outfit (cargo): Husk-Slice" >= 2
+				`	(Make a Stellar Lance.)`
+					goto stellarlance
+					to display
+						and
+							"outfit (cargo): Starcutter Beam" >= 1
+							"outfit (cargo): Fire-Lance" >= 2
+							has "Apoxys Level 45: declined"
+				`	(Make a Stellar Lance Turret.)`
+					goto stellarlanceturret
+					to display
+						and
+							"outfit (cargo): Starcutter Turret" >= 1
+							"outfit (cargo): Blaze-Pike Turret" >= 2
+							has "Apoxys Level 45: declined"
 				`	(Make a Proton Undulator Cannon.)`
 					goto protonundulator
 					to display
@@ -542,13 +556,6 @@ mission "TOA Crafting Weapons"
 							"outfit (cargo): Ka'het Annihilator Turret" >= 4
 							"outfit (cargo): Proton Gun" >= 4
 							has "Apoxys Level 35: declined"
-				`	(Make a Rampager Battery.)`
-					goto rampagerbattery
-					to display
-						and
-							"outfit (cargo): Pug Seeker" >= 1
-							"outfit (cargo): Thrasher Cannon" >= 10
-							"outfit (cargo): Link Node" >= 5
 				`	(Make a Multi-Disruptor.)`
 					goto multidisruptor
 					to display
@@ -556,6 +563,43 @@ mission "TOA Crafting Weapons"
 							"outfit (cargo): Korath Detainer" >= 1
 							"outfit (cargo): Ion Cannon" >= 1
 							"outfit (cargo): Shield Disruptor Turret" >= 1
+				`	(Make a Multi-Disruptor Turret.)`
+					goto multidisruptorturret
+					to display
+						and
+							"outfit (cargo): Korath Detainer" >= 3
+							"outfit (cargo): Ion Cannon" >= 3
+							"outfit (cargo): Shield Disruptor Turret" >= 3
+							"outfit (cargo): Huge Turret Base" >= 1
+							has "Apoxys Level 35: declined"
+				`	(Make an Omni-Disruptor.)`
+					goto omnidisruptor
+					to display
+						and
+							"outfit (cargo): Multi-Disruptor" >= 1
+							"outfit (cargo): Ion Cannon" >= 1
+							"outfit (cargo): Shield Disruptor Turret" >= 1
+							"outfit (cargo): Korath Inferno" >= 1
+							has "Apoxys Level 45: declined"
+				`	(Make a Rampager Battery.)`
+					goto rampagerbattery
+					to display
+						and
+							"outfit (cargo): Pug Seeker" >= 1
+							"outfit (cargo): Thrasher Cannon" >= 10
+							"outfit (cargo): Link Node" >= 5
+				`	(Make a Static Cling.)`
+					goto staticcling
+					to display
+						and
+							"outfit (cargo): Ka'het Nullifier" >= 2
+							"outfit (cargo): Enhancer Node" >= 1
+				`	(Make a "Solar Flare".)`
+					goto solarflare
+					to display
+						and
+							"outfit (cargo): Langrage Hyper-Heaver" >= 1
+							"outfit (cargo): Plasma Repeater" >= 3
 				`	(Make an Interdiction Turret.)`
 					goto interdictionturret
 					to display
@@ -583,6 +627,14 @@ mission "TOA Crafting Weapons"
 						and
 							"outfit (cargo): Heavy Anti-Missile Turret" >= 2
 							"outfit (cargo): Warder Anti-Missile" >= 2
+				`	(Make a Dragonsbreath Battery.)`
+					goto dragonsbreath
+					to display
+						and
+							"outfit (cargo): Dragonflame Cannon" >= 1
+							"outfit (cargo): Double Plasma Core" >= 2
+							"outfit (cargo): Thermal Repeater" >= 12
+							has "Apoxys Level 55: declined"
 				`	(Nevermind.)`
 					goto end
 
@@ -635,6 +687,38 @@ mission "TOA Crafting Weapons"
 			`	"Alright, there you go. Anythin' else?" Claire asks.`
 				goto main
 
+			label stellarlance
+			`"The Stellar Lance takes a Starcutter Beam an' turns it up a few notches; particularly its heating potential, but it'll also cut right through its first target and have at a second," Claire comments. "Wanna make one?"`
+			choice
+				`	(Craft a Stellar Lance with a Starcutter Beam and two Fire-Lances.)`
+					goto makestellarlance
+				`	(Reconsider.)`
+					goto main
+
+			label makestellarlance
+			action
+				outfit "Starcutter Beam" -1
+				outfit "Fire-Lance" -2
+				outfit "Stellar Lance" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label stellarlanceturret
+			`"A pair o' Stellar Lances on a whopper of a turret mount makes for mighty deterrent against whatever's buggin' ya, cap'n," Claire remarks. "They'll even hit three targets, instead of just two. Y'up for it?"`
+			choice
+				`	(Craft a Stellar Lance Turret with a Starcutter Turret and two Blaze-Pike Turrets.)`
+					goto makestellarlanceturret
+				`	(Reconsider.)`
+					goto main
+
+			label makestellarlanceturret
+			action
+				outfit "Starcutter Turret" -1
+				outfit "Blaze-Pike Turret" -2
+				outfit "Stellar Lance Turret" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
 			label protonundulator
 			`"The Proton Undulator Cannon's one of the smaller weapons I know how to make, but that doesn't mean it don't have its uses," Claire comments. "It's a bit lacking against hull, but it hammers shields hard, and it has good darn range to boot. Wanna make one?"`
 			choice
@@ -667,6 +751,41 @@ mission "TOA Crafting Weapons"
 			`	"Alright, there you go. Anythin' else?" Claire asks.`
 				goto main
 
+			label multidisruptor
+			`"If you're lookin' for a big gun, the Multi-Disruptor's an excellent choice, Cap'n," Claire says with a grin. "Sure, the damage ain't too great... But it ain't like your opponent's gonna be fightin' back all too hard when they're saddled with ion, scramble, slowing, and - of course - disruption. Well, did I sell ya on it?"`
+			choice
+				`	(Craft a Multi-Disruptor with a Korath Detainer, an Ion Cannon, and a Shield Disruptor Turret.)`
+					goto makemultidisruptor
+				`	(Reconsider.)`
+					goto main
+
+			label makemultidisruptor
+			action
+				outfit "Korath Detainer" -1
+				outfit "Shield Disruptor Turret" -1
+				outfit "Ion Cannon" -1
+				outfit "Multi-Disruptor" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label multidisruptorturret
+			`"Ya want me ta take three big ol' support guns and put 'em on a turret mount, eh?" Claire asks with a chuckle. "Guess I can't blame ya. Three multi-disruptors on one mount'll shut down just about anythin' that moves; just keep in mind the traverse speed ain't gonna be breakin' any records."`
+			choice
+				`	(Craft a Multi-Disruptor Turret with three Korath Detainers, three Ion Cannons, three Shield Disruptor Turrets, and a Huge Turret Base.)`
+					goto makemultidisruptorturret
+				`	(Reconsider.)`
+					goto main
+
+			label makemultidisruptorturret
+			action
+				outfit "Korath Detainer" -3
+				outfit "Shield Disruptor Turret" -3
+				outfit "Ion Cannon" -3
+				outfit "Huge Turret Base" -1
+				outfit "Multi-Disruptor Turret" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
 			label rampagerbattery
 			`"The Rampager Battery's great if y'ain't much fer aimin', Cap'n. Range is a little on the short side for a homing weapon, but it'll bombard whatever you sick it on," Claire explains. "Well, whaddaya say?"`
 			choice
@@ -684,20 +803,53 @@ mission "TOA Crafting Weapons"
 			`	"Alright, there you go. Anythin' else?" Claire asks.`
 				goto main
 
-			label multidisruptor
-			`"If you're lookin' for a big gun, the Multi-Disruptor's an excellent choice, Cap'n," Claire says with a grin. "Sure, the damage ain't too great... But it ain't like your opponent's gonna be fightin' back all too hard when they're saddled with ion, scramble, slowing, and - of course - disruption. Well, did I sell ya on it?"`
+			label staticcling
+			`"Well, if you really just wanna shut your opponent's fleet off for a few seconds, the Static Cling's your girl. It makes a big bang and scatters a whole mess of smaller pulses and splinters to make sure whatever's nearby has a bad day," Claire remarks. "Y'up fer one?"`
 			choice
-				`	(Craft a Multi-Disruptor with a Korath Detainer, an Ion Cannon, and a Shield Disruptor Turret.)`
-					goto makemultidisruptor
+				`	(Craft a Static Cling with a two Ka'het Nullifiers and an Enhancer Node.)`
+					goto makestaticcling
 				`	(Reconsider.)`
 					goto main
 
-			label makemultidisruptor
+			label makestaticcling
 			action
-				outfit "Korath Detainer" -1
+				outfit "Ka'het Nullifier" -2
+				outfit "Enhancer Node" -1
+				outfit "Static Cling" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label omnidisruptor
+			`"What, the Multi-Disruptor wasn't enough for ya? You wanna see your opponents burn, too?" Claire asks, before chuckling. "Well, it ain't my duty ta adjudicate what is or isn't against galactic war laws. Let's put it all together an' see what it looks like, eh?`
+			choice
+				`	(Craft an Omni-Disruptor with a Multi-Disruptor, a Korath Inferno, an Ion Cannon, and a Shield Disruptor Turret.)`
+					goto makeomnidisruptor
+				`	(Reconsider.)`
+					goto main
+
+			label makeomnidisruptor
+			action
+				outfit "Multi-Disruptor" -1
 				outfit "Shield Disruptor Turret" -1
 				outfit "Ion Cannon" -1
-				outfit "Multi-Disruptor" 1
+				outfit "Korath Inferno" -1
+				outfit "Omni-Disruptor" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label solarflare
+			`"This weapons runs hot an' that's about it, Cap'n. Well, that, and it's a lot better at settin' fire to groups of enemies rather'n hitting singles; good for crowd control," Claire explains. "Eats quite a bit of fuel and vents a lot of heat back inta the ship, but other'n that it ain't too bad. Wanna make one?"`
+			choice
+				`	(Craft a "Solar Flare" with a Langrage Hyper-Heaver and three Plasma Repeaters.)`
+					goto makesolarflare
+				`	(Reconsider.)`
+					goto main
+
+			label makesolarflare
+			action
+				outfit "Plasma Repeater" -3
+				outfit "Langrage Hyper-Heaver" -1
+				outfit `"Solar Flare"` 1
 			`	"Alright, there you go. Anythin' else?" Claire asks.`
 				goto main
 
@@ -747,6 +899,23 @@ mission "TOA Crafting Weapons"
 				outfit "Warder Anti-Missile" -2
 				outfit "Heavy Anti-Missile Turret" -2
 				outfit "Sanctuary Beam" 1
+			`	"Alright, there you go. Anythin' else?" Claire asks.`
+				goto main
+
+			label dragonsbreath
+			`"Look, cap'n. I ain't gonna sugarcoat it. This thing is about five hundred tons of pure reptilian hatred, and it'll drain your fuel dry in no time. You'd better make sure you have room fer it BEFORE ya make it, or you'll be playin' catch-up with it for a while," Claire warns. "O'course, if you wanna make it, I can't stop ya."`
+			choice
+				`	(Craft a Dragonsbreath Battery with a Dragonflame Cannon, two Double Plasma Cores, and twelve Thermal Repeaters.)`
+					goto makedragonsbreath
+				`	(Reconsider.)`
+					goto main
+
+			label makedragonsbreath
+			action
+				outfit "Dragonflame Cannon" -1
+				outfit "Double Plasma Core" -2
+				outfit "Thermal Repeater" -12
+				outfit "Dragonsbreath Battery" 1
 			`	"Alright, there you go. Anythin' else?" Claire asks.`
 				goto main
 

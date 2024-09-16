@@ -1,6 +1,8 @@
 outfitter "everything"
 	"Starcutter Beam"
 	"Starcutter Turret"
+	"Stellar Lance"
+	"Stellar Lance Turret"
 	"Proton Undulator Cannon"
 	"Proton Undulator Turret"
 	"Rampager Battery"
@@ -9,6 +11,10 @@ outfitter "everything"
 	"Weft Barrage"
 	"Centipede Devastator"
 	"Sanctuary Beam"
+	"Static Cling"
+	`"Solar Flare"`
+
+# FLEXIBLE
 
 outfit "Starcutter Beam"
 	category "Guns"
@@ -65,6 +71,67 @@ outfit "Starcutter Turret"
 		"hull damage" 26.6
 		"heat damage" 25.4
 	description "This is a dual-turret variation of the Starcutter Beam. The amount of damage on offer is terrifying, though this comes at the cost of substantial space and support system requirements, and somewhat lackluster range."
+
+outfit "Stellar Lance"
+	category "Guns"
+	cost 3760000
+	thumbnail "outfit/sunbeam"
+	"mass" 141
+	"outfit space" -141
+	"weapon capacity" -141
+	"gun ports" -1
+	weapon
+		sprite "projectile/sunbeam/sunbeam"
+			"frame rate" 30
+			"scale" 1.4
+		sound "sunbeam"
+		"hit effect" "sunbeam impact"
+		"hit effect" "blaze-pike hit"
+		"inaccuracy" .15
+		"range override" 728
+		"velocity" 725
+		"random velocity" 6
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 13.7
+		"firing heat" 20.6
+		"shield damage" 18.1
+		"hull damage" 16.3
+		"heat damage" 28.7
+		"burn damage" .3
+		"penetration count" 2
+	description "Upgraded with a pair of Fire-Lances, the Stellar Lance is an improved Starcutter Beam. It does significantly more damage, particularly in the way of heat, and is so hot that it can puncture through its first target to damage a potential second."
+
+outfit "Stellar Lance Turret"
+	category "Turrets"
+	cost 8200000
+	thumbnail "outfit/dual sunbeam turret"
+	"mass" 313
+	"outfit space" -313
+	"weapon capacity" -313
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/sunbeam/2x sunbeam"
+			"frame rate" 30
+			"scale" 1.4
+		sound "sunbeam"
+		"hit effect" "sunbeam impact" 2
+		"hit effect" "blaze-pike hit" 2
+		"turret turn" 1.3
+		"range override" 728
+		"velocity" 725
+		"random velocity" 6
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 27.4
+		"firing heat" 41.2
+		"shield damage" 36.2
+		"hull damage" 32.6
+		"heat damage" 57.4
+		"burn damage" .6
+		"penetration count" 3
+	description "Equipped with a pair of Stellar Lances, this turret aims the two powerful beams in such a way that they can slice through a potential third target, making it a powerful weapon against swarms of capital ships and fighters alike."
 
 outfit "Proton Undulator Cannon"
 	category "Guns"
@@ -138,6 +205,122 @@ outfit "Proton Undulator Turret"
 		"firing heat" 72.8
 	description "The Proton Undulator Turret mounts four cannons on a single mount, allowing it to saturate an area with a significant amount of anti-shield fire. Its resource requirements are, however, quite intense."
 
+outfit "Multi-Disruptor"
+	category "Guns"
+	cost 2240000
+	thumbnail "outfit/detainer"
+	"mass" 167
+	"outfit space" -167
+	"weapon capacity" -167
+	"energy capacity" 2300
+	"gun ports" -1
+	weapon
+		sprite "projectile/detainer"
+			"frame rate" 2.5
+		sound "detainer"
+		"hit effect" "detainer impact" 3
+		"hit effect" "ion impact" 5
+		"hit effect" "detainer smoke" 5
+		"live effect" "detainer sparks" 50
+		"live effect" "ionball trail" 70
+		"inaccuracy" .5
+		"velocity" 14
+		"lifetime" 140
+		"reload" 72
+		"burst reload" 15
+		"burst count" 2
+		"firing energy" 1128
+		"firing force" 80
+		"firing heat" 600
+		"hit force" 180
+		"shield damage" 520
+		"hull damage" 380
+		"slowing damage" 40
+		"ion damage" 20
+		"scrambling damage" 15
+		"disruption damage" 15
+		"blast radius" 35
+	description "A large weapon made by Claire. While its damage is somewhat unimpressive for its size, its debilitating combo of ionization, slowing, scrambling, and shield disruption makes it a terrifying weapon to go up against."
+
+outfit "Multi-Disruptor Turret"
+	category "Turrets"
+	cost 7820000
+	thumbnail "outfit/detainer"
+	"mass" 587
+	"outfit space" -587
+	"weapon capacity" -587
+	"energy capacity" 6900
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/detainer"
+			"frame rate" 2.5
+		sound "detainer"
+		"hit effect" "detainer impact" 3
+		"hit effect" "ion impact" 5
+		"hit effect" "detainer smoke" 5
+		"live effect" "detainer sparks" 50
+		"live effect" "ionball trail" 70
+		"turret turn" .5
+		"inaccuracy" .5
+		"velocity" 14
+		"lifetime" 140
+		"reload" 24
+		"burst reload" 5
+		"burst count" 6
+		"firing energy" 1128
+		"firing force" 80
+		"firing heat" 600
+		"hit force" 180
+		"shield damage" 520
+		"hull damage" 380
+		"slowing damage" 40
+		"ion damage" 20
+		"scrambling damage" 15
+		"disruption damage" 15
+		"blast radius" 35
+	description "This colossal turret somehow carries three Multi-Disruptors on a single mount. While extremely large and quite resource-intensive, it makes for a devastating support weapon on ships big enough to wield it."
+
+# GUN ONLY
+
+outfit "Omni-Disruptor"
+	category "Guns"
+	cost 3840000
+	thumbnail "outfit/detainer"
+	"mass" 358
+	"outfit space" -358
+	"weapon capacity" -358
+	"energy capacity" 3400
+	"gun ports" -1
+	weapon
+		sprite "projectile/detainer"
+			"frame rate" 2.5
+		sound "detainer"
+		"hit effect" "detainer impact" 3
+		"hit effect" "ion impact" 5
+		"hit effect" "detainer smoke" 5
+		"live effect" "detainer sparks" 50
+		"live effect" "ionball trail" 110
+		"inaccuracy" .5
+		"velocity" 14
+		"lifetime" 140
+		"reload" 48
+		"burst reload" 10
+		"burst count" 3
+		"firing energy" 1672
+		"firing force" 100
+		"firing heat" 850
+		"hit force" 180
+		"shield damage" 720
+		"hull damage" 480
+		"slowing damage" 40
+		"ion damage" 27.5
+		"scrambling damage" 17.5
+		"disruption damage" 20
+		"burn damage" 50
+		"blast radius" 55
+	description "The Omni-Disruptor is a colossal main gun designed by Claire. It takes the existing Multi-Disruptor design and enhances it greatly: the addition of a Korath Inferno has caused the weapon to affect cooling as well, essentially meaning one Omni-Disruptor can disable a ship's shields, reactors, weapons, engines, and cooling systems, all in one blast."
+
 outfit "Rampager Battery"
 	category "Guns"
 	cost 2910000
@@ -171,42 +354,147 @@ outfit "Rampager Battery"
 		"missile strength" 18
 	description "A weapon made by Claire. A Pug Seeker has been used to modify a large battery of Thrasher Cannons, resulting in a weapon with less refined homing capabilities and reduced range, but colossally greater damage output. Even one of these batteries can quickly shred a target at close range."
 
-outfit "Multi-Disruptor"
+outfit "Static Cling"
 	category "Guns"
-	cost 2240000
-	thumbnail "outfit/detainer"
-	"mass" 167
-	"outfit space" -167
-	"weapon capacity" -167
-	"energy capacity" 2200
+	cost 3062000
+	thumbnail "outfit/ka'het nullifier"
+	"mass" 176
+	"outfit space" -238
+	"weapon capacity" -238
 	"gun ports" -1
 	weapon
-		sprite "projectile/detainer"
-			"frame rate" 2.5
-		sound "detainer"
-		"hit effect" "detainer impact" 3
-		"hit effect" "ion impact" 5
-		"hit effect" "detainer smoke" 5
-		"live effect" "detainer sparks" 50
-		"live effect" "ionball trail" 70
-		"inaccuracy" .5
-		"velocity" 14
-		"lifetime" 140
-		"reload" 72
-		"burst reload" 15
-		"burst count" 2
-		"firing energy" 1128
-		"firing force" 80
-		"firing heat" 600
-		"hit force" 180
-		"shield damage" 520
-		"hull damage" 380
-		"slowing damage" 40
-		"ion damage" 20
-		"scrambling damage" 15
-		"disruption damage" 15
-		"blast radius" 35
-	description "A large weapon made by Claire. While its damage is somewhat unimpressive for its size, its debilitating combo of ionization, slowing, scrambling, and shield disruption makes it a terrifying weapon to go up against."
+		sprite "projectile/ionball"
+			"frame rate" 15
+			"rewind"
+		sound "ionball"
+		"fire effect" "finisher sparks" 20
+		"hit effect" "ionball ring" 15
+		"hit effect" "ionball impact"
+		"hit effect" "ionball fragment" 24
+		"live effect" "ionball spark" 140
+		"live effect" "ionball trail" 140
+		"live effect" "ionball twinkle" 560
+		"submunition" "Static Cling Pulse" 1
+		"submunition" "Static Cling Cluster" 10
+		"submunition" "Static Cling Splinter" 30
+		"inaccuracy" 0.2
+		"velocity" 9
+		"lifetime" 200
+		"reload" 510
+		"firing energy" 2130
+		"firing force" 270
+		"firing heat" 160
+		"turn" 73
+		"split range" 126
+		"phasing"
+	description "The Static Cling is a permutation of the Ka'het Nullifier designed by Claire. While its single-target ionization isn't particularly up to scratch, the Static Cling's main advantage is that it hits a massive area and scatters a number of smaller sparks to hit additional targets. To encourage maximum spread, the ion ball will only detonate on contact with its target."
+
+outfit "Static Cling Pulse"
+	weapon
+		"lifetime" 1
+		"shield damage" 120
+		"hull damage" 40
+		"energy damage" 3200
+		"ion damage" 220
+		"scrambling damage" 10
+		"blast radius" 120
+		"no ship collisions"
+		"no asteroid collisions"
+		"no minable collisions"
+		"fused"
+
+outfit "Static Cling Cluster"
+	weapon
+		sprite "projectile/ionball"
+			"frame rate" 15
+			"rewind"
+		"hit effect" "ionball ring" 15
+		"live effect" "ionball spark" 40
+		"live effect" "ionball trail" 40
+		"live effect" "ionball twinkle" 140
+		"inaccuracy" 360
+			"uniform"
+		"turn" 73
+		"random velocity" 3
+		"lifetime" 10
+		"random lifetime" 10
+		"blast radius" 20
+		"turn" 73
+		"shield damage" 12
+		"hull damage" 4
+		"energy damage" 320
+		"ion damage" 22
+		"scrambling damage" 1
+		"blast radius" 40
+		"no ship collisions"
+		"no asteroid collisions"
+		"no minable collisions"
+		"fused"
+
+outfit "Static Cling Splinter"
+	weapon
+		sprite "projectile/ion bolt"
+			"frame rate" 5
+		sound "ion"
+		"hit effect" "ion impact" 2
+		"live effect" "ionball trail" 20
+		"inaccuracy" 360
+			"uniform"
+		"velocity" 8
+		"random velocity" 4
+		"lifetime" 20
+		"shield damage" 4
+		"hull damage" 1.5
+		"energy damage" 110
+		"ion damage" 7.5
+		"scrambling damage" .35
+
+outfit `"Solar Flare"`
+	category "Secondary Weapons"
+	cost 3450000
+	thumbnail "outfit/plasma repeater"
+	"mass" 142
+	"outfit space" -142
+	"weapon capacity" -142
+	"fuel capacity" 200
+	"gun ports" -1
+	weapon
+		sound "heaver"
+		icon "icon/korath heaver"
+		"inaccuracy" 0.5
+		"velocity" 24
+		"lifetime" 1
+		"reload" 20
+		"burst reload" 3
+		"burst count" 3
+		"firing energy" 122
+		"firing heat" 140
+		"firing burn" 5.7
+		"firing fuel" 10
+		"firing force" 121.5
+		"submunition" "Solar Flare Contact" 11
+		"penetration count" 6
+	description "The Solar Flare is a powerful weapon that fires explosive blobs of plasma in wild bursts. While the blobs do explode on contact, they also wash over their enemies, potentially dealing extra damage to the original target or even those behind it."
+	description "	(Note: Due to penetration and blast radius mechanics, the actual DPS of this weapon can vary wildly (typically between 2 and 4 times the displayed values)."
+
+outfit "Solar Flare Contact"
+	weapon
+		sprite "projectile/flamethrower"
+			"frame rate" 17
+			"random start frame"
+		"target effect" "flamethrower hit"
+		"die effect" "flamethrower die"
+		"inaccuracy" 11
+		"random velocity" 12
+		"lifetime" 32
+		"shield damage" 13.5
+		"hull damage" 6
+		"heat damage" 53
+		"blast radius" 20
+		"hit force" 10.5
+		"penetration count" 8
+
+# TURRET-ONLY
 
 outfit "Interdiction Turret"
 	category "Turrets"
@@ -410,7 +698,7 @@ outfit "Sanctuary Beam"
 		"reload" 1
 		"firing energy" 10
 		"firing heat" 8
-	description "The Sanctuary Beam is a potent mix of human, korath, and pug technology. Firing missile-carving beams of energy, the Sanctuary Beam is an extremely strong anti-missile system, particularly against swarms of weak missiles."
+	description "The Sanctuary Beam is a potent mix of human and korath technology. Firing missile-carving beams of energy, the Sanctuary Beam is an extremely strong anti-missile system, particularly against swarms of weak missiles."
 
 effect "sanctuary beam"
 	sprite "effect/warder"
@@ -419,3 +707,40 @@ effect "sanctuary beam"
 	sound "warder"
 	"lifetime" 1
 	"velocity scale" 1
+
+# FUEL SECONDARIES
+
+outfit "Dragonsbreath Battery"
+	category "Secondary Weapons"
+	cost 450000000
+	thumbnail "outfit/dragonflame"
+	"mass" 498
+	"outfit space" -498
+	"weapon capacity" -498
+	"required crew" 10
+	"gun ports" -1
+	"spinal mount" -1
+	"unique" 1
+	weapon
+		sound "dragonflame"
+		icon "icon/dragonflame"
+		"fire effect" "dragonflame"
+		"hit effect" "bright hit"
+		"hit effect" "dragonflame plasma" 30
+		"hit effect" "dragonflame debris" 50
+		"velocity" 2000
+		"lifetime" 1
+		"reload" 60
+		"burst count" 3
+		"burst reload" 20
+		"firing energy" 16000
+		"firing fuel" 200
+		"firing heat" 40000
+		"firing force" 1500
+		"hit force" 3000
+		"shield damage" 25000
+		"hull damage" 15000
+		"heat damage" 50000
+		"piercing" 0.4
+		"penetration count" 20
+	description "This enormous upgrade to the Dragonflame Cannon fires devastating three-round-bursts, assuming the ship carrying it has the resources to support such a fire rate."

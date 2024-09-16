@@ -239,3 +239,25 @@ outfit "Perk: Cloaking Field"
 	"unplunderable" 1
 	description "It's the best of both worlds! Integrated cloaking in the form of an outfit! :D"
 	description "YOU SHOULD NEVER SEE THIS."
+
+# Follower Perks
+# Perks that the game uses to control follower caps.
+
+outfit "Perk: Barrage Squad"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"barrage cykraxys" 2
+	description "Spawns 2 Barrage-type Cykracies per rank."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Crippler Squad"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"crippler cykraxys" 1
+	description "Spawns 1 Crippler-type Cykraxys per rank."
+	description "YOU SHOULD NEVER SEE THIS."
+

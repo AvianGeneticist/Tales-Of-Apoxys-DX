@@ -68,6 +68,11 @@ mission "Apoxys Level 100 Choices"
 				"merchant i choices" <?= 20
 				"merchant ii choices" = ( "merchant's guild level" - 20 )
 				"perk in waiting" += ( 48 + "merchant perks" )
+				"existing fortitude" = 1
+				"existing force" = 1
+				"existing focus" = 1
+				"existing flightiness" = 1
+				"existing friendliness" = 1
 			label speccing
 			`"First up is base stats, captain," Maribelle reports. "It's been a long time since we did much with them... We have &[apoxys spec points] free attributes left."`
 			choice
@@ -731,6 +736,24 @@ mission "Apoxys Level 100 Choices"
 			branch "merchantii" "options"
 				"merchant ii choices" > 0
 
-			label options # When I add optional stuff that the player can or can not have done before Level 100, this label will be a series of branches for inheriting special outfits. At the moment however, there are no optional progression metrics, so it leads directly to the end.
+			label options
+			branch "sylvia" "unsylvia"
+				has "sylvia rescued"
+
+			label sylvia
+			action
+				outfit "Sylvia's Blessing" 1
+			`Of course, Sylvia recognizes the Apoxys immediately, despite the changes. She happily cuddles into one of the ship's expanded nooks.`
+
+			label unsylvia
+			branch "remnant" "unremnant"
+				has "Apoxys Remnant Organs Upgrade: declined"
+
+			label remnant
+			action
+				outfit "Remnant Ship Organs VI" 1
+			`In the course of Claire's upgrading, it seems the modifications the Remnant did to the ship came over as well. They seem larger and more powerful than ever.`
+
+			label unremnant
 			`You can already hear the Apoxys' innards shifting as Maribelle begins the upgrades. "That's all of our regularly scheduled choices, captain... Next time we land, it'll be special upgrades," Maribelle says.`
 				decline

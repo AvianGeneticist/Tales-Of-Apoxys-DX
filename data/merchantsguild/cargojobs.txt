@@ -8,7 +8,10 @@ mission "Experience Cargo [0]"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 75 125
 	to offer
-		not "Apoxys Level 10: declined"
+		not and
+			"Apoxys Level 10: declined"
+			"Merchant's Guild Invitation: done"
+
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 	destination
@@ -31,7 +34,9 @@ mission "Experience Cargo [1]"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 75 125
 	to offer
-		not "Apoxys Level 10: declined"
+		not and
+			"Apoxys Level 10: declined"
+			"Merchant's Guild Invitation: done"
 		random > 25
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -55,7 +60,9 @@ mission "Experience Cargo [2]"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 75 125
 	to offer
-		not "Apoxys Level 10: declined"
+		not and
+			"Apoxys Level 10: declined"
+			"Merchant's Guild Invitation: done"
 		random > 50
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -647,32 +654,6 @@ mission "Merchant's Guild Cargo III [1]"
 		"merchant rating" += 75
 		dialog phrase "generic cargo delivery payment"
 
-mission "Merchant's Guild Cargo III [1]"
-	name "(Lv. 15+) Bulk delivery to <planet>"
-	job
-	repeat
-	description "Deliver <cargo> to <destination>. Payment is <payment>."
-	cargo random 600 1000
-	to offer
-		has "Apoxys Level 15: declined"
-		not "Apoxys Level 30: declined"
-		has "Merchant's Guild Invitation: done"
-		random > 25
-	source
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-	destination
-		distance 2 10
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-	on offer
-		require "Apoxys Core DX"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment
-		"combat rating" += 75
-		"merchant rating" += 75
-		dialog phrase "generic cargo delivery payment"
-
 mission "Merchant's Guild Cargo III [2]"
 	name "(Lv. 15+) Bulk delivery to <planet>"
 	job
@@ -700,6 +681,32 @@ mission "Merchant's Guild Cargo III [2]"
 		dialog phrase "generic cargo delivery payment"
 
 mission "Merchant's Guild Cargo III [3]"
+	name "(Lv. 15+) Bulk delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 600 1000
+	to offer
+		has "Apoxys Level 15: declined"
+		not "Apoxys Level 30: declined"
+		has "Merchant's Guild Invitation: done"
+		random > 25
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	destination
+		distance 2 10
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	on offer
+		require "Apoxys Core DX"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		"combat rating" += 75
+		"merchant rating" += 75
+		dialog phrase "generic cargo delivery payment"
+
+mission "Merchant's Guild Cargo III [4]"
 	name "(Lv. 15+) Bulk delivery to <planet>"
 	job
 	repeat
@@ -1663,31 +1670,6 @@ mission "Merchant's Guild Cargo VII [1]"
 		"merchant rating" += 960
 		dialog phrase "generic cargo delivery payment"
 
-mission "Merchant's Guild Cargo VII [1]"
-	name "(Lv. 50+) Giant delivery to <planet>"
-	job
-	repeat
-	description "Deliver <cargo> to <destination>. Payment is <payment>."
-	cargo random 3750 6250
-	to offer
-		has "Apoxys Level 50: declined"
-		has "Merchant's Guild Invitation: done"
-		random > 25
-	source
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-	destination
-		distance 2 10
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-	on offer
-		require "Apoxys Core DX"
-	on visit
-		dialog phrase "generic cargo on visit"
-	on complete
-		payment
-		"combat rating" += 960
-		"merchant rating" += 960
-		dialog phrase "generic cargo delivery payment"
-
 mission "Merchant's Guild Cargo VII [2]"
 	name "(Lv. 50+) Giant delivery to <planet>"
 	job
@@ -1722,7 +1704,7 @@ mission "Merchant's Guild Cargo VII [3]"
 	to offer
 		has "Apoxys Level 50: declined"
 		has "Merchant's Guild Invitation: done"
-		random > 50
+		random > 25
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 	destination
@@ -1747,6 +1729,31 @@ mission "Merchant's Guild Cargo VII [4]"
 	to offer
 		has "Apoxys Level 50: declined"
 		has "Merchant's Guild Invitation: done"
+		random > 50
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	destination
+		distance 2 10
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	on offer
+		require "Apoxys Core DX"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		"combat rating" += 960
+		"merchant rating" += 960
+		dialog phrase "generic cargo delivery payment"
+
+mission "Merchant's Guild Cargo VII [5]"
+	name "(Lv. 50+) Giant delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 3750 6250
+	to offer
+		has "Apoxys Level 50: declined"
+		has "Merchant's Guild Invitation: done"
 		random > 75
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -1763,3 +1770,106 @@ mission "Merchant's Guild Cargo VII [4]"
 		"merchant rating" += 960
 		dialog phrase "generic cargo delivery payment"
 
+# LEVEL 75 MERCHANT'S GUILD MISSIONS
+
+mission "Merchant's Guild Cargo VIII [0]"
+	name "(Lv. 75+) Gargantuan delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 7500 12500
+	to offer
+		has "Apoxys Level 75: declined"
+		has "Merchant's Guild Invitation: done"
+		random > 25
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	destination
+		distance 2 10
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	on offer
+		require "Apoxys Core DX"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		"combat rating" += 2200
+		"merchant rating" += 2200
+		dialog phrase "generic cargo delivery payment"
+
+mission "Merchant's Guild Cargo VIII [1]"
+	name "(Lv. 75+) Gargantuan delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 7500 12500
+	to offer
+		has "Apoxys Level 75: declined"
+		has "Merchant's Guild Invitation: done"
+		random > 25
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	destination
+		distance 2 10
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	on offer
+		require "Apoxys Core DX"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		"combat rating" += 2200
+		"merchant rating" += 2200
+		dialog phrase "generic cargo delivery payment"
+
+mission "Merchant's Guild Cargo VIII [2]"
+	name "(Lv. 75+) Gargantuan delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 7500 12500
+	to offer
+		has "Apoxys Level 75: declined"
+		has "Merchant's Guild Invitation: done"
+		random > 25
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	destination
+		distance 2 10
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	on offer
+		require "Apoxys Core DX"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		"combat rating" += 2200
+		"merchant rating" += 2200
+		dialog phrase "generic cargo delivery payment"
+
+# LEVEL 100 MERCHANT'S GUILD MISSION
+
+mission "Merchant's Guild Cargo IX [0]"
+	name "(Lv. 100+) Gargantuan delivery to <planet>"
+	job
+	repeat
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	cargo random 12250 18750
+	to offer
+		has "Apoxys Level 100: declined"
+		has "Merchant's Guild Invitation: done"
+		random > 50
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	destination
+		distance 2 10
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	on offer
+		require "Apoxys Core DX"
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		"combat rating" += 3800
+		"merchant rating" += 3800
+		dialog phrase "generic cargo delivery payment"

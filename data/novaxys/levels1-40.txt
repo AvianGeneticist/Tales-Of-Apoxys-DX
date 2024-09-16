@@ -1,0 +1,1442 @@
+outfit "Novaxys Level I"
+	category "Level-Ups"
+	cost 0
+	"mass" 10
+	"outfit space" 20
+	"weapon capacity" 5
+	"engine capacity" 3
+	"unplunderable" 1
+	"hull" 200
+	"shields" 300
+	"heat capacity" 10
+	"operating costs" 100
+	"drag" 0.3
+	description "Levels 1-20 give these stats immediately, plus the player's choice of spec. By the end of these early levels, you should be able to take on most human ships."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Novaxys Durability I"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"unplunderable" 1
+	"shields" 1000
+	"hull" 600
+	description "A low level durability extension. The Novaxys always skews shield."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Novaxys Support I"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 20
+	"heat capacity" 25
+	"unplunderable" 1
+	description "An expansion for outfit space and heat capacity, to cover back-end needs for fighting."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Novaxys Combat I"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"weapon capacity" 10
+	"engine capacity" 5
+	"unplunderable" 1
+	description "An expansion of weapons and engines for fighting."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Novaxys Utility I"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"shield generation multiplier" 0.025
+	"hull repair multiplier" 0.025
+	"radar jamming" 1
+	"optical jamming" 1
+	"unplunderable" 1
+	description "An expansion of various side utilities. These abilities are unique in that they aren't enhanced on a typical level up."
+	description "YOU SHOULD NEVER SEE THIS." 
+	
+outfit "Novaxys Milestone I"
+	category "Level-Ups"
+	cost 0
+	"mass" 20
+	"outfit space" 60
+	"weapon capacity" 20
+	"engine capacity" 11
+	"unplunderable" 1
+	"hull" 1000
+	"shields" 1600
+	"heat capacity" 45
+	"operating costs" 200
+	"shield generation multiplier" 0.025
+	"hull repair multiplier" 0.025
+	"radar jamming" 1
+	"optical jamming" 1
+	"drag" 0.6
+	description "Novaxys Milestones are weird because you get 2 levels in one. It seems lackluster compared to the Apoxys levels, because you're receiving 1 Basal and 1 Milestone as well as 2 Picks."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Novaxys Level II"
+	category "Level-Ups"
+	cost 0
+	"mass" 15
+	"outfit space" 30
+	"weapon capacity" 8
+	"engine capacity" 5
+	"unplunderable" 1
+	"hull" 300
+	"shields" 450
+	"heat capacity" 15
+	"operating costs" 150
+	"drag" 0.4
+	description "Levels 21-40 give these stats immediately, plus the player's choice of spec. By the end of these early levels, you should be able to take on most human ships."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Novaxys Durability II"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"unplunderable" 1
+	"shields" 1500
+	"hull" 900
+	description "A low level durability extension. The Novaxys always skews shield."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Novaxys Support II"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 30
+	"heat capacity" 40
+	"unplunderable" 1
+	description "An expansion for outfit space and heat capacity, to cover back-end needs for fighting."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Novaxys Combat II"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"weapon capacity" 15
+	"engine capacity" 8
+	"unplunderable" 1
+	description "An expansion of weapons and engines for fighting."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Novaxys Utility II"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"shield generation multiplier" 0.04
+	"hull repair multiplier" 0.04
+	"radar jamming" 1.5
+	"optical jamming" 1.5
+	"unplunderable" 1
+	description "An expansion of various side utilities. These abilities are unique in that they aren't enhanced on a typical level up."
+	description "YOU SHOULD NEVER SEE THIS." 
+	
+outfit "Novaxys Milestone II"
+	category "Level-Ups"
+	cost 0
+	"mass" 30
+	"outfit space" 90
+	"weapon capacity" 30
+	"engine capacity" 17
+	"unplunderable" 1
+	"hull" 1500
+	"shields" 2400
+	"heat capacity" 70
+	"operating costs" 300
+	"shield generation multiplier" 0.04
+	"hull repair multiplier" 0.04
+	"radar jamming" 1.5
+	"optical jamming" 1.5
+	"drag" 0.8
+	description "Novaxys Milestones are weird because you get 2 levels in one. It seems lackluster compared to the Apoxys levels, because you're receiving 1 Basal and 1 Milestone as well as 2 Picks."
+	description "YOU SHOULD NEVER SEE THIS."
+
+mission "Novaxys Level 1-2"
+	landing
+	name "Level 1-2"
+	description "You've reached level 1-2!"
+	to offer
+		"combat rating" >= 9534
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is convulsing as you check in on her now. "Captain, I don't know what's happening," She expresses panickedly. "I just feel all jittery."`
+			`	You recall the times when Maribelle gets like this, explaining the concept of upgrades to Rosalynd. She seems to grasp it fairly quickly, though perhaps you shouldn't be quite so particular with your upgrade suggestions...`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 1-2" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 1-2" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 1-2" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 1-2" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level I" 1
+			`"I don't know if it'll be enough, captain... I still have lots of energy," Rosalynd expresses. "Can you stay with me for a bit?" She requests. Maybe you should keep the Novaxys as your flagship for a second day.`
+				decline
+
+mission "Novaxys Level 3-4"
+	landing
+	name "Level 3-4"
+	description "You've reached level 3-4!"
+	to offer
+		"combat rating" >= 11499
+		has "Novaxys Level 1-2: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 3-4" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 3-4" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 3-4" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 3-4" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level I" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 5-6"
+	landing
+	name "Level 5-6"
+	description "You've reached level 5-6!"
+	to offer
+		"combat rating" >= 14045
+		has "Novaxys Level 3-4: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 5-6" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 5-6" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 5-6" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 5-6" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level I" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 7-8"
+	landing
+	name "Level 7-8"
+	description "You've reached level 7-8!"
+	to offer
+		"combat rating" >= 17289
+		has "Novaxys Level 5-6: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 7-8" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 7-8" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 7-8" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 7-8" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level I" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 9-10"
+	landing
+	name "Level 9-10"
+	description "You've reached level 9-10!"
+	to offer
+		"combat rating" >= 21327
+		has "Novaxys Level 7-8: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is a bit more calm than she is usually when she's convulsing energetically, but she seems to be shaking more than usual. "Captain, I think... I think this is going to be a really big upgrade," She expresses. "I feel like I hit a big milestone or something."`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 9-10" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 9-10" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 9-10" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 9-10" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Milestone I" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 11-12"
+	landing
+	name "Level 11-12"
+	description "You've reached level 11-12!"
+	to offer
+		"combat rating" >= 26223
+		has "Novaxys Level 9-10: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 11-12" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 11-12" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 12-13" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 12-13" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level I" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 13-14"
+	landing
+	name "Level 13-14"
+	description "You've reached level 13-14!"
+	to offer
+		"combat rating" >= 32010
+		has "Novaxys Level 11-12: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 13-14" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 13-14" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 13-14" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 13-14" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level I" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 15-16"
+	landing
+	name "Level 15-16"
+	description "You've reached level 15-16!"
+	to offer
+		"combat rating" >= 38701
+		has "Novaxys Level 13-14: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 15-16" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 15-16" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 15-16" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 15-16" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level I" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 17-18"
+	landing
+	name "Level 17-18"
+	description "You've reached level 17-18!"
+	to offer
+		"combat rating" >= 46300
+		has "Novaxys Level 15-16: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 17-18" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 17-18" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 17-18" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 17-18" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level I" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 19-20"
+	landing
+	name "Level 19-20"
+	description "You've reached level 19-20!"
+	to offer
+		"combat rating" >= 54807
+		has "Novaxys Level 17-18: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is a bit more calm than she is usually when she's convulsing energetically, but she seems to be shaking more than usual. "Captain, I think... I think this is going to be a really big upgrade," She expresses. "I feel like I hit a big milestone or something."`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability I" 1
+				log "Novaxys Levels" "Levels 19-20" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support I" 1
+				log "Novaxys Levels" "Levels 19-20" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat I" 1
+				log "Novaxys Levels" "Levels 19-20" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility I" 1
+				log "Novaxys Levels" "Levels 19-20" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Milestone I" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 21-22"
+	landing
+	name "Level 21-22"
+	description "You've reached Level 21-22!"
+	to offer
+		"combat rating" >= 64222
+		has "Novaxys Level 19-20: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 21-22" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 21-22" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 22-23" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 22-23" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 23-24"
+	landing
+	name "Level 23-24"
+	description "You've reached Level 23-24!"
+	to offer
+		"combat rating" >= 74545
+		has "Novaxys Level 21-22: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 23-24" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 23-24" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 23-24" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 23-24" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 25-26"
+	landing
+	name "Level 25-26"
+	description "You've reached Level 25-26!"
+	to offer
+		"combat rating" >= 85776
+		has "Novaxys Level 23-24: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 25-26" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 25-26" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 25-26" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 25-26" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 27-28"
+	landing
+	name "Level 27-28"
+	description "You've reached Level 27-28!"
+	to offer
+		"combat rating" >= 97915
+		has "Novaxys Level 25-26: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 27-28" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 27-28" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 27-28" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 27-28" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 29-30"
+	landing
+	name "Level 29-30"
+	description "You've reached Level 29-30!"
+	to offer
+		"combat rating" >= 110962
+		has "Novaxys Level 27-28: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is a bit more calm than she is usually when she's convulsing energetically, but she seems to be shaking more than usual. "Captain, I think... I think this is going to be a really big upgrade," She expresses. "I feel like I hit a big milestone or something."`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 29-30" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 29-30" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 29-30" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 29-30" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Milestone II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 31-32"
+	landing
+	name "Level 31-32"
+	description "You've reached Level 31-32!"
+	to offer
+		"combat rating" >= 124917
+		has "Novaxys Level 29-30: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 31-32" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 31-32" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 32-33" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 32-33" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 33-34"
+	landing
+	name "Level 33-34"
+	description "You've reached Level 33-34!"
+	to offer
+		"combat rating" >= 139780
+		has "Novaxys Level 31-32: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 33-34" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 33-34" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 33-34" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 33-34" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 35-36"
+	landing
+	name "Level 35-36"
+	description "You've reached Level 35-36!"
+	to offer
+		"combat rating" >= 155550
+		has "Novaxys Level 33-34: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 35-36" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 35-36" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 35-36" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 35-36" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 37-38"
+	landing
+	name "Level 37-38"
+	description "You've reached Level 37-38!"
+	to offer
+		"combat rating" >= 172220
+		has "Novaxys Level 35-36: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 37-38" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 37-38" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 37-38" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 37-38" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Level II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+
+mission "Novaxys Level 39-40"
+	landing
+	name "Level 39-40"
+	description "You've reached Level 39-40!"
+	to offer
+		"combat rating" >= 189782
+		has "Novaxys Level 37-38: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is a bit more calm than she is usually when she's convulsing energetically, but she seems to be shaking more than usual. "Captain, I think... I think this is going to be a really big upgrade," She expresses. "I feel like I hit a big milestone or something."`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability II" 1
+				log "Novaxys Levels" "Levels 39-40" "Chose durability upgrade."
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support II" 1
+				log "Novaxys Levels" "Levels 39-40" "Chose support upgrade."
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat II" 1
+				log "Novaxys Levels" "Levels 39-40" "Chose combat upgrade."
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility II" 1
+				log "Novaxys Levels" "Levels 39-40" "Chose utility upgrade."
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+			action
+				"novaxys perks" += 1
+				outfit "Novaxys Milestone II" 1
+			`"I think I have another one of those special upgrades, too," Rosalynd expresses. "Can we pick those out next time we land?"`
+				decline
+

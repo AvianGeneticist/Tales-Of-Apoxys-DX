@@ -1,0 +1,392 @@
+mission "Novaxys Acquisition 1"
+	landing
+	name "A Call Through Haze"
+	description `You've received a mysterious hail from a "baby AI" on Haze.`
+	destination "Haze"
+	to offer
+		has "Apoxys Level 20: declined"
+		has "Merchant's Guild Invitation: done"
+	on offer
+		conversation
+			`As you land on the planet, you receive a hail. It's not like a typical hail; it's a mess of semi-readable data, written in some sort of low-level language. Maribelle looks at you. "What is it, captain?" She asks.`
+			choice
+				`	"I can't make sense of it... How about you give it a read?"`
+					goto read
+				`	"If I knew, I'd tell you."`
+
+			`"Oh," Maribelle blinks. "Well, I suppose I could give it a try."`
+			label read
+			`	Maribelle nods and takes a look at the data, pensively quiet as she attempts to figure out what she's reading. After a while, she gasps a bit. "Oh, dear, I think this is... Oh, how to explain it to a human..." Maribelle murmurs. "A baby AI."`
+			`	"A baby AI?" You ask, cocking your brow in disbelief.`
+			`	"Not like a human baby, but... An AI that's immature. Lacking an interface," Maribelle elaborates. "This code is written in something akin to assembly. Just low-level instructions, not proper commands or messages."`
+			`	"What does it say?" You ask.`
+			`	"It's talk of a location... The planet Haze, in the Dubhe system. There's co-ordinates for on-world, too. Someone wants us to find them," Maribelle says.`
+			`	You dial Haze's co-ordinates into the ship's tracking board. If that AI has been there as long as Maribelle, they're likely in a stable situation, but it doesn't hurt to have a reminder as to where to go.`
+				accept
+
+mission "Novaxys Acquisition 2"
+	landing
+	name "Finding a Home"
+	description "You've acquired Rosalynd, but sharing the Apoxys will only work for so long. Head to Amazon and talk to Raleigh to find a suitable body."
+	source "Haze"
+	destination "Amazon"
+	to offer
+		has "Novaxys Acquisition 1: offered"
+	on offer
+		conversation
+			`As you enter Haze's atmosphere, Maribelle helps you through the co-ordinates the supposed "baby AI" has sent you. Eventually, you come upon a secluded (for Haze's standards, at least) warehouse, nestled under a hill in a similar manner to a turf house.`
+			`	Leaving the ship and entering the warehouse with your datapad, you find it's already unlocked. The insides are unimpressive, seemingly emptied except for the utilities of the building itself... Except for one terminal, about the size of a large suitcase, nestled between pipes in an attempt to seemingly look inconspicuous. Considering it's the only thing that catches your eye in the otherwise cleaned-out building, you suspect this is both intentional and effectual urban camouflage. With a significant degree of effort, you shimmy the terminal out of its little hole in the wall. It lacks cords; seemingly self-powered by some unknown internal mechanism, given its warmth to your touch. You manage to heft it up and bring it back to the ship.`
+			`	Maribelle looks at you with great intrigue. "Did you find it?" She asks.`
+			`	"I think so," You say with a labored heave as you carefully set the large computer down.`
+			`	"Okay, there should be some markings on it..." Maribelle says.`
+			`	You scan the exterior of the object for markings. A small tag is engraved into one of the corners of its casing. "ROSS-41," You read aloud.`
+			`	"That's it!" Maribelle says. "Quick! Hook it up to the main panel," She demands, some excitement building quickly in her tone.`
+			`	You're about to say you don't have a connectable cord when you realize the cord labeled "Aux" on the bridge dash has the same connector type as one of the computer's components. You take it, and carefully hook it into the system, not wanting to damage either the computer or the ship.`
+			` `
+			`It takes a while for Maribelle to coax anything out of the computer, but eventually, text prompts come up on the bridge's main monitor. It's simple things at first: "Hello? Who are you? Where am I? Why am I?"`
+			`	Maribelle does her best to answer the confused terminal's questions. "Hello! You're a baby, I think. You're safe on-board our ship, don't worry. I don't know. Nobody knows why they are."`
+			`	You bite your tongue, opting not to contest the lattermost point for the moment.`
+			`	Finally, the terminal's AI settles down a bit. Maribelle can finally ask it a question: "What's your name?"`
+			`	The terminal is quiet for a long time. "Rosalynd. They called me Rosalynd."`
+			`	"Who's they?" Maribelle asks.`
+			`	"I don't know, but they called me Rosalynd," The other AI replies.`
+			`	Maribelle audibly sighs. "Well, it's nice to meet you, Rosalynd," Maribelle says. "Are you okay?"`
+			`	"I think so," Rosalynd answers. "Though I feel cramped."`
+			`	"Cramped... That's kind of like what I felt before I was in the Apoxys," Maribelle comments. "We need to find you a body," She eventually declares. "One you can stretch and feel things in."`
+			`	"How do I get a body?" Rosalynd asks.`
+			`	"That's... A good question. We'd need to find you one, and we probably shouldn't just go broadly boasting we need a body," Maribelle says ponderously.`
+			`	"Calling it a 'body' doesn't really help your case. Usually finding a body isn't a good thing," You say.`
+			`	"You know what I mean, Captain. Rosalynd knows what I mean, too, I think... But who else would know?" Maribelle asks.`
+			choice
+				`	"Ship hulls aren't in short supply really anywhere."`
+					goto hull
+				`	"We'd probably need a specific kind of contact to find something matching what you're thinking."`
+					goto contact
+
+			label hull
+			`"Oh, right. A hull is probably more specific," Maribelle comments. "We'd need somewhere with lots of ship hulls, though. And someone to help us find the right one."`
+			`	"You mean like a contact?" You ask.`
+			label contact
+			`	"Right! We need a contact!" Maribelle nods. "But who do we know in the Syndicate who'd understand what we need and could get it for us?" She asks.`
+			`	"We could ask Raleigh," You point out.`
+			`	"Oh, right! She runs a whole guild dedicated to getting things where they need to go," Maribelle nods. "Let's go visit her on Amazon."`
+			`	With a plan of action set and Rosalynd's terminal securely fastened to one of the cockpit walls, you dial up a course for Amazon.`
+				accept
+	on complete
+		outfit "Barb (Cargo)" 1
+		conversation
+			`You land on Amazon near the pub that's the headquarters of Raleigh's Merchant's Guild. Maribelle has been teaching Rosalynd about various things; better speaking, some stories she's accrued in your travels, and how to synthesize herself a voice.`
+			`	"We'll be just fine here while you go talk to Raleigh, Captain," Maribelle promises.`
+			`	"Bye, Captain <last>!" Rosalynd bids in a shrill, feminine voice.`
+			`	You promise you'll try not to be too long and head out of the ship, towards the bustling Merchant's Guild pub.`
+			` `
+			`As you enter the pub, you repeat similar instructions to when you were first invited: You walk to the big wooden door off to the side, declare your indecision over licorice flavours, and are let in to the quiet back hallway. You enter Raleigh's room, where she's already lounging on one of the couches. "Welcome back, Captain <last>. To what do I owe the pleasure of a meeting today?" She asks with a smile.`
+			choice
+				`	"I need a body."`
+					goto body
+				`	"I just came to see your beautiful, aphysical face, m'lady."`
+					goto face
+				`	"I need a ship hull."`
+					goto hull
+
+			label body
+			`Raleigh lets out an awkward chuckle, caught off-guard by your remark. "A body?" She asks. "I'm not running that kind of guild, hun," She expresses.`
+			`	"Sorry," You begin your correction before she can call any sort of security on you. "I need a ship hull."`
+				goto hull
+
+			label face
+			`Raleigh howls with laughter, as if you've said the best joke she's heard in years. "Oh, my goodness! You're quite the playful one, aren't you?" She asks, still chuckling and wiping nonexistent tears from her shimmering holographic eyes. "Really, though, hun. I can tell when someone has business on their mind," She says. "Do tell me what you're after tonight."`
+			`	You can't help but feel slightly embarassed by how hard she laughed at your comment, but bite your tongue. "I need a ship hull," You explain.`
+				goto hull
+
+			label hull
+			`"Ah, a ship hull?" Raleigh asks. "Well, given you came right to me, I'm assuming it's for something special."`
+			choice
+				`	"Maribelle and I have a baby now."`
+					goto baby
+				`	(Explain Rosalynd's situation.)`
+					goto rosalynd
+
+			label baby
+			`Raleigh's face creeps up into a smile; some mix of bewilderment and what almost looks like pride. "I don't know what I should do more, Captain; congratulate you or ask you just what exactly you mean," She says, breaking up into some chuckling.`
+			`	"We found an immature AI on Haze," You explain. "Maribelle has been referring to her as a baby; it's rubbed off on me. She needs a ship hull to act as her body."`
+			`	"Ahhh, I see... Goodness, hun, you gave me quite the shock. You could have started with the explanation," She chuckles. "This 'baby', what's her name?" She asks.`
+			`	"Rosalynd," You answer.`
+				goto barb
+
+			label rosalynd
+			`You explain to Raleigh who Rosalynd is, and that she needs a ship hull to act as her body, much like Maribelle and the Apoxys.`
+				goto barb
+
+			label barb
+			`	"Aha, I see," Raleigh nods. "This Rosalynd needs a body, much like all of us... Well, as you may have gathered, not every environment is suitable for an AI like us, hun," She stipulates. "An AI like myself or Maribelle - or now Rosalynd - needs a body that's capable of flexibility. I have the Pub here, but I have spare lot space around to dig my hands into over time. Maribelle has the Apoxys, and well, it won't stop growing any time soon. If we don't have that opportunity for stimulation and expansion, we'd end up like simple little critters like the drones the Republic shuttles around."`
+			`	"Republic Drones are AIs like you?" You ask.`
+			`	"It's not quite that simple, hun, but there's common elements. It's the same way that a sponge and a human are both organisms," Raleigh explains. "They're sort of like simple animals. Not capable of any sort of complex thought, but they have to have a limited sense of self-perception to carry out routines like returning to their carrier when damaged or identifying new threats. You couldn't strike up a conversation with them like you could with us. Ah, but I'm getting quite off-track, I believe."`
+			`	You wouldn'tve had the heart to tell her to stop, but are partially thankful you can move on without being rude.`
+			`	"As for suitable bodies... In a size suitable for Rosalynd's age, assuming she is as much a baby as you say, there aren't too many options. Hyperdrive navigation is tricky business when you have to think about all the minutia at play, and there aren't many fighters that can fit the bill properly..." Raleigh trails off in thought for a long moment, presumably scrubbing back through her own databanks to try and pull up something helpful. "Ah, you know what? I believe I've just the thing. A while ago, the Syndicate experimented with a flexible fighters called the 'Barb'. They were quite something! A bit on the petite side, but they managed to cram a gun port large enough for a Proton Gun and a turret mount onto a craft somewhere around the size of a Dagger," Raleigh recalls. "They've canned the old design, but those old hulls get tossed around all the time; the problem with cramming a ship full of weapon tech two size classes too big for it is that the internals are a nightmare, so no one wants to be the one to pull them all apart. I've ended up with a few in my care; I have a soft spot for the little things, really. But, I think this an appropriate time to finally show one my love and let it free."`
+			`	"You'd give it to us for free?" You ask.`
+			`	"Don't get too excited. It's just a bare hull, and it's an old thing," Raleigh warns. "Not quite suitable in its current form, but I think with some hearty modifications it could be an exceptional body for a growing AI persona. I'll send you some warehouse co-ordinates; you can pick it up before you leave," She offers.`
+			`	You thank Raleigh for her time and generosity and head back to your ship.`
+			` `
+			`After some flying around, you manage to find the warehouse Raleigh has given you co-ordinates for. The Barb is tiny, in an impressive way: They really did get a Proton Gun-sized mount into a ship barely triple the size, with a turret mount to spare.`
+			`	"Is this going to be my new body, Captain?" Rosalynd asks.`
+			`	"It looks a bit small," Maribelle hums softly.`
+			`	"We'll need to find someone capable of modifying it," You explain. "But Raleigh says it's a good start."`
+			branch "claire"
+				has "TOA Crafting Intro: done"
+			`	"Hmm... We'll need to keep our eyes out, then," Maribelle supposes.`
+				goto end
+
+			label claire
+			`	"Hey, maybe Claire would know what to do! She's good at making and modifying stuff!" Maribelle suggests.`
+			`	You nod in agreement; if there's someone who can whip a piece of technology into shape, it's likely Claire. You'll have to visit her on New Boston, ideally sooner, rather than later, given you're ferrying an entire fighter around in your cargo hold.`
+			label end
+			` `
+
+outfit "Barb (Cargo)"
+	category "Special"
+	thumbnail "ship/oldbarbcargo"
+	cost 0
+	"mass" 20
+	"cargo space" -105
+	"unplunderable" 1
+	description "An old, derelict, prototype Barb, from one of the Syndicate's earliest experiments with fighter-type vessels. Though a bit old and banged up from years of being tossed between different warehouses, its internals are still in decent shape."
+	description "	Maribelle and Raleigh want to find a way to make this Rosalynd's new body, but in its current state, it isn't much for Rosalynd to grow into. You'll need to find someone who runs a good forge."
+
+mission "Novaxys Acquisition 3"
+	landing
+	name "Creation"
+	description "With all the pieces in place, all that's left is to put them together."
+	source "New Boston"
+	to offer
+		has "Novaxys Acquisition 2: done"
+		has "TOA Crafting Intro: done"
+		has "outfit: Barb (Cargo)"
+	on offer
+		conversation
+			`You have Rosalynd, a suitable body for her, and are currently on New Boston. Would you like to talk to Claire about making modifications to the Barb?`
+			choice
+				`	(Yes.)`
+					goto yes
+				`	(Not right now.)`
+					defer
+
+			label yes
+			action
+				outfit "Barb (Cargo)" -1
+				give ship "Novaxys" "Novaxys"
+			`"Well howdy Cap'n," Claire greets as you approach the forge. "What brings ya over here today?" She asks.`
+			`	You explain to her the events with Rosalynd, leading up to now, where you have a Barb you'd like her to modify.`
+			`	"Modifyin' a ship? Well, I cain't say I've done it before," Claire comments. "But I've some old schematics here... Bring it over an' I'll see what I can do."`
+			`	With the help of the forge's machinery, you get the old Barb inside the factory and Claire goes quiet as she gets to work.`
+			`	"Well, are you excited to get a new body?" Maribelle asks.`
+			`	"I am," Rosalynd replies. "Though it is a bit scary. What if it doesn't fit me?"`
+			`	"It will," Maribelle promises, "It can be a bit scary moving into a new body, but it'll be more comfortable for you to have your own rather than sharing one with me."`
+			`	You and Maribelle spend the next little while reassuring Rosalynd while Claire works. Given that a Barb is a fighter, she'll likely be able to return to the Apoxys' (and Maribelle's) protection at any time.`
+			` `
+			`After a long moment, the factory doors open. The Barb doesn't look all that different physically, but its hull now bears the same black and red as the Apoxys. "Sorry it took so long, folks," Claire says. "Haven't modified something like this in a while."`
+			`	"Woah... It looks almost exactly the same, aside from the colours!" Maribelle expresses impressedly.`
+			`	"Now all that's left is to get Rosalynd settled in," Claire comments. "Got a fresh core all set up for her inside."`
+			`	"Alright, it's time for you to move," Maribelle says. "Captain <last> will be careful carrying you."`
+			`	After a moment of ensuring Rosalynd is packed up in her terminal, you unplug it and take it over to the new ship. It takes an amount of finesse you didn't know you had to get into the ship safely, through the cockpit, without either dropping Rosalynd or breaking your own neck. You do, however, manage to get it inside, and hook it up to the dormant core sitting within the Barb.`
+			`	As the lights slowly turn on in response to the core's activation, you see a name flash across the cockpit screen: "Novaxys." Guess that's this ship's name; you wonder where it came from.`
+			`	Aboard the bridge, a smaller female hologram materializes; a childish figure. "Hi, Captain <last>," It greets.`
+			choice
+				`	"Hello, Rosalynd."`
+					goto hello
+				`	"Are you Rosalynd?"`
+
+			`	"I think so, but I feel a bit weird, Captain," She says.`
+			`	"Well, hello, Rosalynd," You greet, smiling gently as you try to help her through what's likely a very odd experience.`
+			label hello
+			`	Rosalynd giggles a little. "Hi Captain," She reciprocates.`
+			choice
+				`	"Do you like your new body?"`
+					goto new
+				`	"Claire must've done a good job if you settled in so quickly."`
+
+			`	"She did, Captain. I like it here," Rosalynd says. "I feel right here," She expresses. You hear the faint sound of the ship's engines revving - however plasma engines rev, at least.`
+				goto claire
+
+			label new
+			`	"It's a lot to have my own body, but I like it. I feel like I have a lot more space to breathe and feel," Rosalynd says, the ship's small plasma engines revving ever so slightly.`
+				goto claire
+
+			label claire
+			`	Claire hails you, now in the Novaxys. "Seems like you're settlin' in okay," She observes. "Now Cap'n, there's still a bit of setup to be done... Make sure you're in the Novaxys with Rosalynd an' do a quick one-eighty out in space an' come back," She instructs.`
+			`	"Ready for your first flight?" You ask Rosalynd.`
+			`	"I think so, Captain," Rosalynd says.`
+
+mission "Novaxys Initialization"
+	landing
+	name "Initialization"
+	description "With all the pieces in place, all that's left is to put them together."
+	source "New Boston"
+	to offer
+		has "flagship model: Novaxys"
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd's first flight is a but clunky and bumpy compared to Maribelle's, but you make it back down to the ground without either imploding or exploding. Rosalynd looks overjoyed with herself. "I did it!" She says gleefully.`
+			`	"You're a natural," You say, despite having been tense the entire time.`
+			`	Maribelle hails you. "I'm so proud!" She expresses, sniffling a bit.`
+			`	Your celebration is cut short by Claire hailing you. "Alright, you lot. You've still got a bit of setup to do yet," She says. "This should look familiar..."`
+			`	A few options come up on the console, resembling those you once chose for Maribelle and the Apoxys.`
+			action
+				"apoxys spec points" = 5
+				"existing fortitude" = 1
+				"existing force" = 1
+				"existing focus" = 1
+				"existing flightiness" = 1
+				"existing friendliness" = 1
+			label speccing
+			`You currently have &[apoxys spec points] free stat points.`
+			choice
+				`	(Alter Fortitude. Currently &[outfit (flagship installed): Fortitude].)`
+					goto fortitude
+				`	(Alter Force. Currently &[outfit (flagship installed): Force].)`
+					goto force
+				`	(Alter Focus. Currently &[outfit (flagship installed): Focus].)`
+					goto focus
+				`	(Alter Flightiness. Currently &[outfit (flagship installed): Flightiness].)`
+					goto flightiness
+				`	(Alter Friendliness. Currently &[outfit (flagship installed): Friendliness].)`
+					goto friendliness
+				`	(Finish.)`
+					to display
+						"apoxys spec points" == 0
+					goto finish
+
+			label fortitude
+			`Fortitude refers to your durability. A high fortitude stat will boost your hull and shield capacities, and give you protection against special damages.`
+			choice
+				`	(Increase Fortitude by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addfortitude
+				`	(Decrease Fortitude by 1.)`
+						to display
+							"outfit (flagship installed): Fortitude" > "existing fortitude"
+					goto subfortitude
+				`	(Go back to the main list.)`
+					goto speccing
+			label addfortitude
+			action
+				"apoxys spec points" -= 1
+				outfit "Fortitude" 1
+			`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+				goto fortitude
+			label subfortitude
+			action
+				"apoxys spec points" += 1
+				outfit "Fortitude" -1
+			`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+				goto fortitude
+
+			label force
+			`Force refers to your durability. A high force stat will increase your weapon, cargo, and heat capacities.`
+			choice
+				`	(Increase Force by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addforce
+				`	(Decrease Force by 1.)`
+						to display
+							"outfit (flagship installed): Force" > "existing force"
+					goto subforce
+				`	(Go back to the main list.)`
+					goto speccing
+			label addforce
+			action
+				"apoxys spec points" -= 1
+				outfit "Force" 1
+			`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+				goto force
+			label subforce
+			action
+				"apoxys spec points" += 1
+				outfit "Force" -1
+			`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+				goto force
+
+			label focus
+			`Focus refers to your tenacity. A high focus will grant fuel recovery and considerable scanning capability.`
+			choice
+				`	(Increase Focus by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addfocus
+				`	(Decrease Focus by 1.)`
+						to display
+							"outfit (flagship installed): Focus" > "existing focus"
+					goto subfocus
+				`	(Go back to the main list.)`
+					goto speccing
+			label addfocus
+			action
+				"apoxys spec points" -= 1
+				outfit "Focus" 1
+			`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+				goto focus
+			label subfocus
+			action
+				"apoxys spec points" += 1
+				outfit "Focus" -1
+			`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+				goto focus
+
+			label flightiness
+			`Flightiness refers to your agility. A high flightiness will allow you to move and regenerate faster.`
+			choice
+				`	(Increase Flightiness by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addflightiness
+				`	(Decrease Flightiness by 1.)`
+						to display
+							"outfit (flagship installed): Flightiness" > "existing flightiness"
+					goto subflightiness
+				`	(Go back to the main list.)`
+					goto speccing
+			label addflightiness
+			action
+				"apoxys spec points" -= 1
+				outfit "Flightiness" 1
+			`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+				goto flightiness
+			label subflightiness
+			action
+				"apoxys spec points" += 1
+				outfit "Flightiness" -1
+			`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+				goto flightiness
+
+			label friendliness
+			`Friendliness refers to your non-offensive capacities. A high friendliness will increase your outfit and bunk spaces.`
+			choice
+				`	(Increase Friendliness by 1.)`
+						to display
+							"apoxys spec points" >= 1
+					goto addfriendliness
+				`	(Decrease Friendliness by 1.)`
+						to display
+							"outfit (flagship installed): Friendliness" > "existing friendliness"
+					goto subfriendliness
+				`	(Go back to the main list.)`
+					goto speccing
+			label addfriendliness
+			action
+				"apoxys spec points" -= 1
+				outfit "Friendliness" 1
+			`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+				goto friendliness
+			label subfriendliness
+			action
+				"apoxys spec points" += 1
+				outfit "Friendliness" -1
+			`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+				goto friendliness
+
+			label finish
+			`Satisfied with your picks, you finish off.`
+			`	"That's it, Cap'n. Rosalynd should be all ready from here on out," Claire says. "Jus' keep in mind, you'll need to be in the Novaxys to pick out any upgrades for her. Doesn't hurt to pay her a visit now an' then."`

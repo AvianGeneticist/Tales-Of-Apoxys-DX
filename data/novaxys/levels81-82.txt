@@ -1,0 +1,166 @@
+outfit "Novaxys Level V"
+	category "Level-Ups"
+	cost 0
+	"mass" 30
+	"outfit space" 10
+	"weapon capacity" 15
+	"engine capacity" 12
+	"unplunderable" 1
+	"hull" 600
+	"shields" 900
+	"heat capacity" 30
+	"operating costs" 300
+	"drag" 0.7
+	description "Levels 1-20 give these stats immediately, plus the player's choice of spec. By the end of these early levels, you should be able to take on most human ships."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Novaxys Durability V"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"unplunderable" 1
+	"shields" 3000
+	"hull" 1800
+	description "A low level durability extension. The Novaxys always skews shield."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Novaxys Support V"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 60
+	"heat capacity" 75
+	"unplunderable" 1
+	description "An expansion for outfit space and heat capacity, to cover back-end needs for fighting."
+	description "YOU SHOULD NEVER SEE THIS."
+	
+outfit "Novaxys Combat V"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"weapon capacity" 30
+	"engine capacity" 15
+	"unplunderable" 1
+	description "An expansion of weapons and engines for fighting."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Novaxys Utility V"
+	category "Level-Ups"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"shield generation multiplier" 0.075
+	"hull repair multiplier" 0.075
+	"radar jamming" 3
+	"optical jamming" 3
+	"unplunderable" 1
+	description "An expansion of various side utilities. These abilities are unique in that they aren't enhanced on a typical level up."
+	description "YOU SHOULD NEVER SEE THIS." 
+	
+outfit "Novaxys Milestone V"
+	category "Level-Ups"
+	cost 0
+	"mass" 60
+	"outfit space" 180
+	"weapon capacity" 60
+	"engine capacity" 40
+	"unplunderable" 1
+	"hull" 3000
+	"shields" 4800
+	"heat capacity" 135
+	"operating costs" 600
+	"shield generation multiplier" 0.075
+	"hull repair multiplier" 0.075
+	"radar jamming" 3
+	"optical jamming" 3
+	"drag" 1.4
+	description "Novaxys Milestones are weird because you get 2 levels in one. It seems lackluster compared to the Apoxys levels, because you're receiving 1 Basal and 1 Milestone as well as 2 Picks."
+	description "YOU SHOULD NEVER SEE THIS."
+
+mission "Novaxys Level 80+"
+	landing
+	repeat
+	name "Level Beyond!"
+	description "You're in levels beyond!"
+	to offer
+		"combat rating" >= "novaxys level requirement"
+		has "Novaxys Level 80 Choices: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd is once, again, convulsing. "It's happening again, Captain," She expresses, "Can you help me pick things out again?" She's less panicked than the first time, but it's clear it's still causing her some sense of urgency.`
+			action
+				"novaxys choices" = 2
+			label pick
+			`You have &[novaxys choices] picks left.`
+			choice
+				`	"You should increase your overall durability."`
+					goto durability
+				`	"You should increase your support outfit and heat capacities."`
+					goto support
+				`	"You should increase your combat abilities."`
+					goto combat
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utility
+				`	"Let's hold onto that thought for now."`
+					defer
+					
+			label durability
+			action
+				outfit "Novaxys Durability V" 1
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto next
+			label support
+			action
+				outfit "Novaxys Support V" 1
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto next
+			label combat
+			action
+				outfit "Novaxys Combat V" 1
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto next
+			label utility
+			action
+				outfit "Novaxys Utility V" 1
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto next
+
+			label next
+			action
+				"novaxys choices" --
+			branch "pick"
+				"novaxys choices" != 0
+
+			action
+				"novaxys level requirement" += 14313
+				"novaxys perk" ++
+			`You've received a perk point!`
+				goto milestone
+
+			label milestone
+			branch "milestoneii" "normal"
+				"novaxys milestone level" == 4
+
+			label milestoneii
+			action
+				"novaxys milestone level" = 0
+				outfit "Novaxys Milestone V" 1
+			`Oh, happy milestone!`
+				goto end
+
+			label normal
+			action
+				"novaxys milestone level" += 1
+				outfit "Novaxys Level V" 1
+			` `
+				goto end
+
+			label end
+			action
+
+			`And that's it for the level-up!`
+				decline

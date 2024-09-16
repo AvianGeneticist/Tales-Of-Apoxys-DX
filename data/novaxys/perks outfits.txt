@@ -1,0 +1,129 @@
+outfit "Perk: Thick Skin"
+	plural "Fortitude"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" -0
+	"unplunderable" 1
+	"hull protection" .025
+	"corrosion protection" .025
+	"hull multiplier" .05
+	description "Adds extra durability via hull multipliers. Great if you don't want the Novaxys to die."
+
+outfit "Perk: Tough Shields"
+	plural "Perk: Tough Shields"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" -0
+	"unplunderable" 1
+	"shield protection" .025
+	"discharge protection" .025
+	"shield multiplier" .05
+	description "Adds extra durability via shield multipliers. Great if you don't want the Novaxys to die."
+
+outfit "Perk: Lighten Up"
+	category "Apoxys Perks"
+	cost 0
+	"mass" -0
+	"outfit space" 0
+	"drag reduction" 0.2
+	"inertia reduction" 0.05
+	"unplunderable" 1
+	description "Overall improves mobility, multiplicatively."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Unstoppable"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"force protection" 0.25
+	"slowing resistance" 0.75
+	"unplunderable" 1
+	description "Makes it harder for other ships to restrict your movement. Critical on a fighter."
+
+outfit "Perk: Pack Mule"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"cargo space" 200
+	"unplunderable" 1
+	description "Adds 200 cargo space to the Novaxys. It can't get cargo capacity via normal levelling, so this is a good alternative to upping Force."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Fuel Reserves"
+	plural "Perk: Fuel Reserves"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"fuel generation" 0.025
+	"fuel capacity" 400
+	"unplunderable" 1
+	description "Generates 1.5 fuel per second and gives a good 400 fuel capacity. Excellent if you want to use afterburners or fuel-powered secondaries on the Novaxys, but unremarkable if that's not in your plans."
+	description "YOU SHOULD NEVER SEE THIS."
+
+# HEAT PERKS
+# The Novaxys' big theme build is self-heat/burn related.
+
+outfit "Perk: Thermophile"
+	category "Apoxys Perks"
+	cost 0
+	"mass" -0
+	"outfit space" 0
+	"heat dissipation" 0.09
+	"heat capacity" 100
+	"cooling energy" -10
+	"unplunderable" 1
+	description "Increases heat maximums and allows you to generate energy the closer you are to your heat max."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Controlled Burn"
+	category "Apoxys Perks"
+	cost 0
+	"mass" -0
+	"outfit space" 0
+	"burn resistance" 0.00125
+	"burn resistance heat" -7.5
+	"unplunderable" 1
+	description "Grants 450 effective cooling per rank while affected by burning. Does not provide much actual burning resistance (just enough to make the perk work)."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Pyromaniac"
+	category "Apoxys Perks"
+	cost 0
+	"mass" -0
+	"outfit space" 0
+	"burn resistance" 0.00125
+	"burn resistance energy" -5
+	"unplunderable" 1
+	description "Grants 300 energy generation per rank while affected by burning. Does not provide much actual burning resistance (just enough to make the perk work)."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Tinder"
+	category "Apoxys Perks"
+	cost 0
+	"mass" -0
+	"outfit space" 0
+	"burn resistance" 0.00125
+	"burn resistance fuel" -.15
+	"unplunderable" 1
+	description "Grants 9 fuel generation per rank while affected by burning. Does not provide much actual burning resistance (just enough to make the perk work)."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Perk: Burning Rush"
+	category "Apoxys Perks"
+	cost 0
+	"mass" -0
+	"outfit space" 0
+	"thrusting burn" .125
+	"turning burn" .125
+	"afterburner burn" .25
+	"acceleration multiplier" 0.1
+	"turn multiplier" 0.1
+	"unplunderable" 1
+	description "Causes engine heat and burn, but increases engine strength by a tenth. While this sounds like more downside than upside at a first glance, it's very useful for triggering the above perks."
+	description "YOU SHOULD NEVER SEE THIS."
+

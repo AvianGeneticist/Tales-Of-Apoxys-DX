@@ -57,6 +57,10 @@ conversation "perkslist"
 			goto pickmeup
 		`	(Adrenal Surge.)`
 			goto adrenalsurge
+		`	(Barrage Squad.)`
+			goto barragesquad
+		`	(Crippler Squad.)`
+			goto cripplersquad
 		`	(Not now.)`
 			defer
 
@@ -185,11 +189,11 @@ conversation "perkslist"
 	label flightiness
 	`Flightiness refers to your agility. A high flightiness will allow you to move and regenerate faster.`
 	choice
-		`	(Increase Focus by 1.)`
+		`	(Increase Flightiness by 1.)`
 				to display
 					"apoxys spec points" >= 1
 			goto addflightiness
-		`	(Decrease Focus by 1.)`
+		`	(Decrease Flightiness by 1.)`
 				to display
 					"outfit (flagship installed): Flightiness" > "existing flightiness"
 			goto subflightiness
@@ -199,13 +203,13 @@ conversation "perkslist"
 	action
 		"apoxys spec points" -= 1
 		outfit "Flightiness" 1
-	`Focus increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+	`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
 		goto flightiness
 	label subflightiness
 	action
 		"apoxys spec points" += 1
 		outfit "Flightiness" -1
-	`Focus increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+	`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
 		goto flightiness
 
 	label friendliness
@@ -512,7 +516,7 @@ conversation "perkslist"
 						has "Apoxys Level 38: declined"
 						"outfit (flagship installed): Perk: Shieldsmith" == 1
 					and
-						has "Apoxys Level 68: declined"
+						has "Apoxys Level 80: declined"
 						"outfit (flagship installed): Perk: Shieldsmith" == 2
 			goto shieldsmith2
 		`	(Return to the main list.)`
@@ -557,7 +561,7 @@ conversation "perkslist"
 		goto buffer
 
 	label naturalrepair
-	`Natural Repair grants 90 hull regeneration per second per rank, at the cost of 1 energy and 1 heat per hull.`
+	`Natural Repair grants 90 hull repair per second per rank, at the cost of 1 energy and 1 heat per hull.`
 	`	This perk can be taken 5 times. Rank 1 starts at level 8, rank 2 at level 24, rank 3 at level 32, rank 4 at level 44, and rank 5 at level 58. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Natural Repair] ranks.)`
 	choice
 		`	(Take a rank in the Natural Repair Perk.)`
@@ -810,5 +814,67 @@ conversation "perkslist"
 	action
 		outfit "Perk: Adrenal Surge" 1
 	`You have taken the Adrenal Surge Perk.`
+		goto buffer
+
+	label barragesquad
+	`Barrage Squad provides you with self-replenishing followers equipped with long-ranged weaponry, at a rate of 2 per rank. Note that each follower will take a drone bay, so you can't take more follower perks than you have drone bays.`
+	`	This perk can be taken 5 times. Rank 1 starts at level 16, rank 2 at level 34, rank 3 at level 52, rank 4 at level 70, and rank 5 at level 88. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Barrage Squad] ranks.)`
+	choice
+		`	(Take a rank in the Barrage Squad Perk.)`
+			to display
+				and
+					2 <= ( "flagship bays: Drone" - ( ( 2 * "outfit (flagship installed): Perk: Barrage Squad" ) + "outfit (flagship installed): Perk: Crippler Squad" ) )
+					or
+						and
+							has "Apoxys Level 16: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 0
+						and
+							has "Apoxys Level 34: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 1
+						and
+							has "Apoxys Level 52: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 2
+						and
+							has "Apoxys Level 70: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 3
+						and
+							has "Apoxys Level 88: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 4
+			goto barragesquad2
+		`	(Return to the main list.)`
+			goto hub
+
+	label barragesquad2
+	action
+		outfit "Perk: Barrage Squad" 1
+	`You have taken a rank in the Barrage Squad Perk.`
+		goto buffer
+
+	label cripplersquad
+	`Crippler Squad provides you with self-replenishing followers equipped with slowing/crippling weaponry, at a rate of 1 per rank. Note that each follower will take a drone bay, so you can't take more follower perks than you have drone bays.`
+	`	This perk can be taken 3 times. Rank 1 starts at level 26, rank 2 at level 44, and rank 3 at level 64. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Crippler Squad] ranks.)`
+	choice
+		`	(Take a rank in the Crippler Squad Perk.)`
+			to display
+				and
+					1 <= ( "flagship bays: Drone" - ( ( 2 * "outfit (flagship installed): Perk: Barrage Squad" ) + "outfit (flagship installed): Perk: Crippler Squad" ) )
+					or
+						and
+							has "Apoxys Level 16: declined"
+							"outfit (flagship installed): Perk: Crippler Squad" == 0
+						and
+							has "Apoxys Level 34: declined"
+							"outfit (flagship installed): Perk: Crippler Squad" == 1
+						and
+							has "Apoxys Level 52: declined"
+							"outfit (flagship installed): Perk: Crippler Squad" == 2
+			goto cripplersquad2
+		`	(Return to the main list.)`
+			goto hub
+
+	label cripplersquad2
+	action
+		outfit "Perk: Crippler Squad" 1
+	`You have taken a rank in the Crippler Squad Perk.`
 		goto buffer
 

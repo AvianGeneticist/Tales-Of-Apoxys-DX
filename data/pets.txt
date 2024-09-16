@@ -1,3 +1,5 @@
+# The weapon and the hostile pet government are deprecated.
+
 government "Pet"
 	swizzle 1
 	"player reputation" -1000
@@ -10,13 +12,15 @@ government "Pet (Friendly)"
 outfit "Emotional Support"
 	"gun ports" -1
 	weapon
+		"tracking" 1
+		"homing" 4
 		"reload" 1
-		"velocity" 30
-		"lifetime" 10
-		"phasing"
-		"heat damage" -50
-		"ion damage" -0.5
-		"scrambling damage" -0.5
+		"velocity" 1
+		"acceleration" 1
+		"range override" 200
+		"drag" 1
+		"turn" 1
+		"lifetime" 1
 
 ship "Subsidurial (Pet)"
 	noun "creature"
@@ -60,10 +64,11 @@ ship "Subsidurial (Pet)"
 mission "Subsidurial Pet Rescue"
 	invisible
 	landing
-	repeat
+	deadline 5
 	to offer
 		has "Apoxys Level 10: declined"
 		not "Subsidurial Pet Rescue: active"
+		not "sylvia rescued"
 		not "Subsidurial Pet Rescue: done"
 	npc accompany assist
 		government "Pet (Friendly)"
@@ -71,12 +76,33 @@ mission "Subsidurial Pet Rescue"
 		system "Orbona"
 		ship "Subsidurial (Pet)" "Sylvia"
 		on assist
+			set "sylvia rescued"
 			conversation
 				`As you pull alongside the Subsidurial, you notice several blast marks along its body. It looks like someone was either hunting it, or using it as target practice.`
 				`	"It looks tired and worn down, captain," Maribelle expresses concernedly. "Perhaps we could bring some asteroids over to feed it?"`
 				`	After some coaxing, you manage to get the Subsidurial to settle among a nook of the Apoxys, and ferry it around the system, feeding it asteroids. Its energy comes back after a while, and it moves around the ship, occasionally brushing and nuzzling against parts of the hull."`
 				`	"Aww, it looks like we have a friend!" Maribelle giggles. "What a sweetheart!"`
 					decline
+
+mission "Subsidurial Pet Buff"
+	invisible
+	landing
+	to offer
+		has "sylvia rescued"
+	on offer
+		outfit "Sylvia's Blessing" 1
+
+outfit "Sylvia's Blessing"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 0
+	"outfit space" 0
+	"cooling" 50
+	"ion resistance" 0.5
+	"scramble resistance" 0.5
+	"unplunderable" 1
+	description "Emulates the cuddly feeling of a big, friendly space cow."
+	description "YOU SHOULD NEVER SEE THIS."
 
 mission "Subsidurial Pet Accompaniment"
 	invisible
@@ -85,10 +111,10 @@ mission "Subsidurial Pet Accompaniment"
 	to offer
 		not "Subsidurial Pet Rescue: active"
 		not "Subsidurial Pet Accompaniment: active"
-		has "Subsidurial Pet Rescue: done"
+		has "sylvia rescued"
 	npc
-		government "Pet"
-		personality heroic unconstrained launching nemesis escort
+		government "Pet (Friendly)"
+		personality timid unconstrained launching escort
 		ship "Subsidurial (Pet)" "Sylvia"
 
 

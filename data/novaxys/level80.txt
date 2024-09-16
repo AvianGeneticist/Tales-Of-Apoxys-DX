@@ -1,0 +1,374 @@
+mission "Novaxys Level 80 Conversion"
+	landing
+	name "Level 80"
+	description "You've reached Level 80!"
+	source "New Boston"
+	to offer
+		has "Novaxys Level 80 Notification: offered"
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation
+			`Rosalynd seems nervous as you approach the factory. "Are you sure we're ready, captain?" She asks.`
+			`	"Maribelle and I did this not too long ago," You reassure. You remember what Maribelle said about stripping the ship of outfits.`
+			choice
+				`	"C'mon, let's do this."`
+					goto ultimatum
+				`	"Let's take a moment to fix the outfit situation first."`
+					defer
+
+			label ultimatum
+			`As you carefully fly the ship into the factory, Claire greets you on the monitor. "This is it, 'ey folks?" She asks.`
+			`	"I think we're ready," Rosalynd says.`
+			`	"Loud and clear," Claire says. "This'll take a while. Hope you aren't gonna miss anything."`
+			` `
+			action
+				take ship "Novaxys"
+				give ship "Novaxys II" "Novaxys"
+			`Similar to the time before, when Maribelle took this plunge, the factory is dark, only lit up by the odd flash of working machinery. Unlike the Apoxys, however, the procedure seems to progress quite quickly; perhaps because the Novaxys is a notably smaller ship.`
+			`	After what only feels like a couple hours, the ship's lights come on, and Rosalynd materializes in front of you. She looks visibly older; not to the degree of an adult, but closer to an adolescent than a child. "How do you feel?" You ask her.`
+			`	"I feel different, Captain," Rosalynd says. "I feel stronger, but also kind of weaker at the same time."`
+			`	"We still have to pick out your upgrades," You explain.`
+				decline
+
+mission "Novaxys Level 80 Choices"
+	landing
+	name "Level 80"
+	description "You've reached Level 80!"
+	to offer
+		has "Novaxys Level 80 Conversion: declined"
+	
+	on offer
+		require "Novaxys Core DX"
+		"novaxys spec points" = 10
+		"mark i choices" = 20
+		"mark ii choices" = 20
+		"mark iii choices" = 20
+		"mark iv choices" = 20
+		conversation
+			`You look at Rosalynd as you land. "Ready to pick out all your upgrades?" You ask.`
+			`	"Whenever you're ready, Captain," Rosalynd replies.`
+			choice
+				`	"Let's do it."`
+					goto deal
+				`	"I need a moment to prepare."`
+					defer
+
+			label deal
+			action
+				"novaxys level requirement" = 700726
+				"novaxys perks" = 39
+				"existing fortitude" = 1
+				"existing force" = 1
+				"existing focus" = 1
+				"existing flightiness" = 1
+				"existing friendliness" = 1
+			label speccing
+			`"We should probably start with base stats, captain," Rosalynd supposes. "It's been a long time since I thought about them. We have &[novaxys spec points] free attributes left."`
+			choice
+				`	(Alter Fortitude. Currently &[outfit (flagship installed): Fortitude].)`
+					goto fortitude
+				`	(Alter Force. Currently &[outfit (flagship installed): Force].)`
+					goto force
+				`	(Alter Focus. Currently &[outfit (flagship installed): Focus].)`
+					goto focus
+				`	(Alter Flightiness. Currently &[outfit (flagship installed): Flightiness].)`
+					goto flightiness
+				`	(Alter Friendliness. Currently &[outfit (flagship installed): Friendliness].)`
+					goto friendliness
+				`	(Finish.)`
+					to display
+						"novaxys spec points" == 0
+					goto marki
+
+			label fortitude
+			`Fortitude refers to your durability. A high fortitude stat will boost your hull and shield capacities, and give you protection against special damages.`
+			choice
+				`	(Increase Fortitude by 1.)`
+						to display
+							"novaxys spec points" >= 1
+					goto addfortitude
+				`	(Decrease Fortitude by 1.)`
+						to display
+							"outfit (flagship installed): Fortitude" >= 2
+					goto subfortitude
+				`	(Go back to the main list.)`
+					goto speccing
+			label addfortitude
+			action
+				"novaxys spec points" -= 1
+				outfit "Fortitude" 1
+			`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+				goto fortitude
+			label subfortitude
+			action
+				"novaxys spec points" += 1
+				outfit "Fortitude" -1
+			`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+				goto fortitude
+
+			label force
+			`Force refers to your durability. A high force stat will increase your weapon, cargo, and heat capacities.`
+			choice
+				`	(Increase Force by 1.)`
+						to display
+							"novaxys spec points" >= 1
+					goto addforce
+				`	(Decrease Force by 1.)`
+						to display
+							"outfit (flagship installed): Force" >= 2
+					goto subforce
+				`	(Go back to the main list.)`
+					goto speccing
+			label addforce
+			action
+				"novaxys spec points" -= 1
+				outfit "Force" 1
+			`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+				goto force
+			label subforce
+			action
+				"novaxys spec points" += 1
+				outfit "Force" -1
+			`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+				goto force
+
+			label focus
+			`Focus refers to your tenacity. A high focus will grant fuel recovery and considerable scanning capability.`
+			choice
+				`	(Increase Focus by 1.)`
+						to display
+							"novaxys spec points" >= 1
+					goto addfocus
+				`	(Decrease Focus by 1.)`
+						to display
+							"outfit (flagship installed): Focus" >= 2
+					goto subfocus
+				`	(Go back to the main list.)`
+					goto speccing
+			label addfocus
+			action
+				"novaxys spec points" -= 1
+				outfit "Focus" 1
+			`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+				goto focus
+			label subfocus
+			action
+				"novaxys spec points" += 1
+				outfit "Focus" -1
+			`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+				goto focus
+
+			label flightiness
+			`Flightiness refers to your agility. A high flightiness will allow you to move and regenerate faster.`
+			choice
+				`	(Increase Flightiness by 1.)`
+						to display
+							"novaxys spec points" >= 1
+					goto addflightiness
+				`	(Decrease Flightiness by 1.)`
+						to display
+							"outfit (flagship installed): Flightiness" >= 2
+					goto subflightiness
+				`	(Go back to the main list.)`
+					goto speccing
+			label addflightiness
+			action
+				"novaxys spec points" -= 1
+				outfit "Flightiness" 1
+			`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+				goto flightiness
+			label subflightiness
+			action
+				"novaxys spec points" += 1
+				outfit "Flightiness" -1
+			`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+				goto flightiness
+
+			label friendliness
+			`Friendliness refers to your non-offensive capacities. A high friendliness will increase your outfit and bunk spaces.`
+			choice
+				`	(Increase Friendliness by 1.)`
+						to display
+							"novaxys spec points" >= 1
+					goto addfriendliness
+				`	(Decrease Friendliness by 1.)`
+						to display
+							"outfit (flagship installed): Friendliness" >= 2
+					goto subfriendliness
+				`	(Go back to the main list.)`
+					goto speccing
+			label addfriendliness
+			action
+				"novaxys spec points" -= 1
+				outfit "Friendliness" 1
+			`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+				goto friendliness
+			label subfriendliness
+			action
+				"novaxys spec points" += 1
+				outfit "Friendliness" -1
+			`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+				goto friendliness
+
+			label marki
+			`"We start with the tiny choices first, right?" Rosalynd asks. "We have &[mark i choices] left."`
+			choice
+				`	"You should increase your overall durability."`
+					goto durabilityi
+				`	"You should increase your support outfit and heat capacities."`
+					goto supporti
+				`	"You should increase your combat abilities."`
+					goto combati
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utilityi
+					
+			label durabilityi
+			action
+				outfit "Novaxys Durability I" 1
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto nexti
+			label supporti
+			action
+				outfit "Novaxys Support I" 1
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto nexti
+			label combati
+			action
+				outfit "Novaxys Combat I" 1
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto nexti
+			label utilityi
+			action
+				outfit "Novaxys Utility I" 1
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto nexti
+
+			label nexti
+			action
+				"mark i choices" -= 1
+			branch "markii" "marki"
+				"mark i choices" == 0
+
+			label markii
+			`"It's small upgrades now, Captain," Rosalyd says. "We have &[mark ii choices] left."`
+			choice
+				`	"You should increase your overall durability."`
+					goto durabilityii
+				`	"You should increase your support outfit and heat capacities."`
+					goto supportii
+				`	"You should increase your combat abilities."`
+					goto combatii
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utilityii
+					
+			label durabilityii
+			action
+				outfit "Novaxys Durability II" 1
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto nextii
+			label supportii
+			action
+				outfit "Novaxys Support II" 1
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto nextii
+			label combatii
+			action
+				outfit "Novaxys Combat II" 1
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto nextii
+			label utilityii
+			action
+				outfit "Novaxys Utility II" 1
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto nextii
+
+			label nextii
+			action
+				"mark ii choices" -= 1
+			branch "markiii" "markii"
+				"mark ii choices" == 0
+
+			label markiii
+			`"It's medium upgrades now, Captain," Rosalyd says. "We have &[mark iii choices] left."`
+			choice
+				`	"You should increase your overall durability."`
+					goto durabilityiii
+				`	"You should increase your support outfit and heat capacities."`
+					goto supportiii
+				`	"You should increase your combat abilities."`
+					goto combatiii
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utilityiii
+					
+			label durabilityiii
+			action
+				outfit "Novaxys Durability III" 1
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto nextiii
+			label supportiii
+			action
+				outfit "Novaxys Support III" 1
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto nextiii
+			label combatiii
+			action
+				outfit "Novaxys Combat III" 1
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto nextiii
+			label utilityiii
+			action
+				outfit "Novaxys Utility III" 1
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto nextiii
+
+			label nextiii
+			action
+				"mark iii choices" -= 1
+			branch "markiv" "markiii"
+				"mark iii choices" == 0
+
+			label markiv
+			`"It's large upgrades now, Captain," Rosalyd says. "We have &[mark iv choices] left."`
+			choice
+				`	"You should increase your overall durability."`
+					goto durabilityiv
+				`	"You should increase your support outfit and heat capacities."`
+					goto supportiv
+				`	"You should increase your combat abilities."`
+					goto combativ
+				`	"You should enhance your utility characteristics, like regeneration optimization and missile jamming."`
+					goto utilityiv
+					
+			label durabilityiv
+			action
+				outfit "Novaxys Durability IV" 1
+			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
+				goto nextiv
+			label supportiv
+			action
+				outfit "Novaxys Support IV" 1
+			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
+				goto nextiv
+			label combativ
+			action
+				outfit "Novaxys Combat IV" 1
+			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
+				goto nextiv
+			label utilityiv
+			action
+				outfit "Novaxys Utility IV" 1
+			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
+				goto nextiv
+
+			label nextiv
+			action
+				"mark iv choices" -= 1
+			branch "options" "markiv"
+				"mark iv choices" == 0
+
+			label options
+			`"I still have a lot of energy even after all that, Captain," Rosalynd expresses.`
+			`	"You still have special upgrades to do," You remind her.`
+			`	"Oh, right," Rosalynd nods.`
+				decline

@@ -1,0 +1,145 @@
+shipyard "human"
+	"Apoxys"
+
+ship "Novaxys"
+	plural "Novacies"
+	sprite "ship/novaxys"
+	thumbnail "ship/novaxys"
+	swizzle 6
+	attributes
+		category "Fighter"
+		"cost" 200000
+		"shields" 14000
+		"hull" 8000
+		"required crew" 2
+		"bunks" 6
+		"mass" 75
+		"drag" 2.5
+		"heat dissipation" .9
+		"outfit space" 300
+		"weapon capacity" 140
+		"engine capacity" 110
+		"growth" -1
+		"fostersome" 1
+		weapon
+			"blast radius" 50
+			"shield damage" 720
+			"hull damage" 360
+			"hit force" 420
+	outfits
+		"nGVF-BB Fuel Cell"
+		"Novaxys Core DX"
+
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+
+		"Fortitude" 2
+		"Force" 2
+		"Focus" 2
+		"Flightiness" 2
+		"Friendliness" 2
+		
+	engine -10 28
+	engine 9 28
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	turret 8 6
+	turret 8 6
+	turret 8 6
+	turret 8 6
+	leak "leak" 60 50
+	explode "tiny explosion" 25
+	explode "small explosion" 10
+	description "The Novaxys is a heavily modified, old-model Barb, enhanced with similar technologies seen aboard the Apoxys. Helmed by the AI Rosalynd, its small size obscures much of its power and potential."
+
+outfit "Novaxys Core DX"
+	"display name" "Novaxys Core"
+	category "Systems"
+	cost 0
+	"mass" 0
+	"outfit space" -0
+	"unplunderable" 1
+	"fostersome" -1
+	"growth" 1
+	description "This core houses the AI Rosalynd, the core of the Novaxys. Like other AI cores, it can't be removed from the ship it's installed on, nor installed aboard another vessel."
+
+ship "Novaxys II"
+	plural "Novacies"
+	sprite "ship/novaxys"
+	thumbnail "ship/novaxys"
+	swizzle 6
+	attributes
+		category "Fighter"
+		"cost" 500000
+		"shields" 21000
+		"hull" 12000
+		"required crew" 2
+		"bunks" 6
+		"mass" 125
+		"drag" 4
+		"heat dissipation" .9
+		"outfit space" 450
+		"weapon capacity" 210
+		"engine capacity" 160
+		"growth" -1
+		"fostersome" 1
+		weapon
+			"blast radius" 50
+			"shield damage" 720
+			"hull damage" 360
+			"hit force" 420
+	outfits
+		"NT-200 Nucleovoltaic"
+		"Novaxys Core DX"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+
+		"Fortitude" 2
+		"Force" 2
+		"Focus" 2
+		"Flightiness" 2
+		"Friendliness" 2
+		"Novaxys Level I" 18
+		"Novaxys Level II" 18
+		"Novaxys Level III" 18
+		"Novaxys Level IV" 18
+		"Novaxys Milestone I" 2
+		"Novaxys Milestone II" 2
+		"Novaxys Milestone III" 2
+		"Novaxys Milestone IV" 2
+		
+	engine -10 28
+	engine 9 28
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	gun -9 -29
+	turret 8 6
+	turret 8 6
+	turret 8 6
+	turret 8 6
+	turret 8 6
+	turret 8 6
+	leak "leak" 60 50
+	explode "tiny explosion" 25
+	explode "small explosion" 10
+	description "The Novaxys is a heavily modified, old-model Barb, enhanced with similar technologies seen aboard the Apoxys. Helmed by the AI Rosalynd, its small size obscures much of its power and potential."

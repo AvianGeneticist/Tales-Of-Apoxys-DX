@@ -1,0 +1,573 @@
+mission "Novaxys Perks List"
+	landing
+	repeat
+	name "Perks List"
+	description "Pick a perk!"
+	to offer
+		"novaxys perks" != 0
+	
+	on offer
+		require "Novaxys Core DX"
+		conversation "novaperkslist"
+
+conversation "novaperkslist"
+	`Before you lies a large list of 'perks'; special upgrades that may alter how the ship handles in more drastic ways than simple level-up stat boosts. Be sure to read descriptions carefully!`
+	label hub
+	`	You have &[novaxys perks] perks left.`
+	choice
+		`	(Core Restructure.)`
+			goto corerestructure
+		`	(Tough Shields.)`
+			goto toughshields
+		`	(Thick Skin.)`
+			goto thickskin
+		`	(Lighten Up.)`
+			goto lightenup
+		`	(Unstoppable.)`
+			goto unstoppable
+		`	(Pack Mule.)`
+			goto packmule
+		`	(Fuel Reserves.)`
+			goto fuelreserves
+		`	(Thermophile.)`
+			goto thermophile
+		`	(Controlled Burn.)`
+			goto controlledburn
+		`	(Pyromaniac.)`
+			goto pyromaniac
+		`	(Tinder.)`
+			goto tinder
+		`	(Burning Rush.)`
+			goto burningrush
+		`	(Not now.)`
+			defer
+
+	label buffer
+	action
+		"novaxys perks" -= 1
+	branch "hub"
+		"novaxys perks" != 0
+
+	`You've spent all your perk points for now.`
+		decline
+
+	label corerestructure
+	`Core Restructure allows you to take an extra "spec point" in any of the Novaxys' core attributes: Fortitude, Force, Focus, Flightiness, or Friendliness. In addition to their core benefits, taking extra points in core attributes can allow you to unlock new perks.`
+	`	This perk can be taken infinitely, regardless of level. Do you want to take a rank?`
+	choice
+		`	(Take a rank of Core Restructure.)`
+			goto corerestructure2
+		`	(Return to the main list.)`
+			goto hub
+
+	label corerestructure2
+	action
+		"apoxys spec points" = 1
+		"existing fortitude" = "outfit (flagship installed): Fortitude"
+		"existing force" = "outfit (flagship installed): Force"
+		"existing focus" = "outfit (flagship installed): Focus"
+		"existing flightiness" = "outfit (flagship installed): Flightiness"
+		"existing friendliness" = "outfit (flagship installed): Friendliness"
+	label speccing
+	`You currently have &[apoxys spec points] free stat points.`
+	choice
+		`	(Alter Fortitude. Currently &[outfit (flagship installed): Fortitude].)`
+			goto fortitude
+		`	(Alter Force. Currently &[outfit (flagship installed): Force].)`
+			goto force
+		`	(Alter Focus. Currently &[outfit (flagship installed): Focus].)`
+			goto focus
+		`	(Alter Flightiness. Currently &[outfit (flagship installed): Flightiness].)`
+			goto flightiness
+		`	(Alter Friendliness. Currently &[outfit (flagship installed): Friendliness].)`
+			goto friendliness
+		`	(Finish.)`
+			to display
+				"apoxys spec points" == 0
+			goto buffer
+
+	label fortitude
+	`Fortitude refers to your durability. A high fortitude stat will boost your hull and shield capacities, and give you protection against special damages.`
+	choice
+		`	(Increase Fortitude by 1.)`
+				to display
+					"apoxys spec points" >= 1
+			goto addfortitude
+		`	(Decrease Fortitude by 1.)`
+				to display
+					"outfit (flagship installed): Fortitude" > "existing fortitude"
+			goto subfortitude
+		`	(Go back to the main list.)`
+			goto speccing
+	label addfortitude
+	action
+		"apoxys spec points" -= 1
+		outfit "Fortitude" 1
+	`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+		goto fortitude
+	label subfortitude
+	action
+		"apoxys spec points" += 1
+		outfit "Fortitude" -1
+	`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+		goto fortitude
+
+	label force
+	`Force refers to your durability. A high force stat will increase your weapon, cargo, and heat capacities.`
+	choice
+		`	(Increase Force by 1.)`
+				to display
+					"apoxys spec points" >= 1
+			goto addforce
+		`	(Decrease Force by 1.)`
+				to display
+					"outfit (flagship installed): Force" > "existing force"
+			goto subforce
+		`	(Go back to the main list.)`
+			goto speccing
+	label addforce
+	action
+		"apoxys spec points" -= 1
+		outfit "Force" 1
+	`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+		goto force
+	label subforce
+	action
+		"apoxys spec points" += 1
+		outfit "Force" -1
+	`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+		goto force
+
+	label focus
+	`Focus refers to your tenacity. A high focus will grant fuel recovery and considerable scanning capability.`
+	choice
+		`	(Increase Focus by 1.)`
+				to display
+					"apoxys spec points" >= 1
+			goto addfocus
+		`	(Decrease Focus by 1.)`
+				to display
+					"outfit (flagship installed): Focus" > "existing focus"
+			goto subfocus
+		`	(Go back to the main list.)`
+			goto speccing
+	label addfocus
+	action
+		"apoxys spec points" -= 1
+		outfit "Focus" 1
+	`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+		goto focus
+	label subfocus
+	action
+		"apoxys spec points" += 1
+		outfit "Focus" -1
+	`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+		goto focus
+
+	label flightiness
+	`Flightiness refers to your agility. A high flightiness will allow you to move and regenerate faster.`
+	choice
+		`	(Increase Flightiness by 1.)`
+				to display
+					"apoxys spec points" >= 1
+			goto addflightiness
+		`	(Decrease Flightiness by 1.)`
+				to display
+					"outfit (flagship installed): Flightiness" > "existing flightiness"
+			goto subflightiness
+		`	(Go back to the main list.)`
+			goto speccing
+	label addflightiness
+	action
+		"apoxys spec points" -= 1
+		outfit "Flightiness" 1
+	`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+		goto flightiness
+	label subflightiness
+	action
+		"apoxys spec points" += 1
+		outfit "Flightiness" -1
+	`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+		goto flightiness
+
+	label friendliness
+	`Friendliness refers to your non-offensive capacities. A high friendliness will increase your outfit and bunk spaces.`
+	choice
+		`	(Increase Friendliness by 1.)`
+				to display
+					"apoxys spec points" >= 1
+			goto addfriendliness
+		`	(Decrease Friendliness by 1.)`
+				to display
+					"outfit (flagship installed): Friendliness" > "existing friendliness"
+			goto subfriendliness
+		`	(Go back to the main list.)`
+			goto speccing
+	label addfriendliness
+	action
+		"apoxys spec points" -= 1
+		outfit "Friendliness" 1
+	`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+		goto friendliness
+	label subfriendliness
+	action
+		"apoxys spec points" += 1
+		outfit "Friendliness" -1
+	`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+		goto friendliness
+
+	label toughshields
+	`Tough Shields increases your base shield strength by 5% and your shield damage protection by 2.5% per rank (these two effects stack multiplicatively).`
+	`	This perk can be taken 10 times. Rank 1 starts at level 2, rank 2 at level 6, rank 3 at level 14, rank 4 at level 22, rank 5 at level 30, rank 6 at level 38, rank 7 at level 48, rank 8 at level 58, rank 9 at level 68, rank 10 at level 80. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Tough Shields] ranks.)`
+	choice
+		`	(Take a rank in the Tough Shields Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 1-2: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 0
+					and
+						has "Novaxys Level 5-6: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 1
+					and
+						has "Novaxys Level 13-14: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 2
+					and
+						has "Novaxys Level 21-22: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 3
+					and
+						has "Novaxys Level 29-30: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 4
+					and
+						has "Novaxys Level 37-38: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 5
+					and
+						has "Novaxys Level 47-48: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 6
+					and
+						has "Novaxys Level 57-58: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 7
+					and
+						has "Novaxys Level 67-68: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 8
+					and
+						has "Novaxys Level 79-80: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 9
+			goto toughshields2
+		`	(Return to the main list.)`
+			goto hub
+
+	label toughshields2
+	action
+		outfit "Perk: Tough Shields" 1
+	`You have taken a rank in the Tough Shields Perk.`
+		goto buffer
+
+	label thickskin
+	`Thick Skin increases your base hull strength by 5% and your hull damage protection by 2.5% per rank (these two effects stack multiplicatively).`
+	`	This perk can be taken 10 times. Rank 1 starts at level 2, rank 2 at level 6, rank 3 at level 14, rank 4 at level 22, rank 5 at level 30, rank 6 at level 38, rank 7 at level 48, rank 8 at level 58, rank 9 at level 68, rank 10 at level 80. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Thick Skin] ranks.)`
+	choice
+		`	(Take a rank in the Thick Skin Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 1-2: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 0
+					and
+						has "Novaxys Level 5-6: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 1
+					and
+						has "Novaxys Level 13-14: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 2
+					and
+						has "Novaxys Level 21-22: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 3
+					and
+						has "Novaxys Level 29-30: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 4
+					and
+						has "Novaxys Level 37-38: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 5
+					and
+						has "Novaxys Level 47-48: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 6
+					and
+						has "Novaxys Level 57-58: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 7
+					and
+						has "Novaxys Level 67-68: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 8
+					and
+						has "Novaxys Level 79-80: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 9
+			goto thickskin2
+		`	(Return to the main list.)`
+			goto hub
+
+	label thickskin2
+	action
+		outfit "Perk: Thick Skin" 1
+	`You have taken a rank in the Thick Skin Perk.`
+		goto buffer
+
+	label lightenup
+	`Lighten Up increases all of your mobility stats acceleration and turning speed by 5% per rank and your top speed by 20% per rank.`
+	`	This perk can be taken 3 times. Rank 1 starts at level 8, rank 2 starts at level 20, and rank 3 starts at level 36. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Lighten Up] ranks.)`
+	choice
+		`	(Take a rank in the Lighten Up Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 7-8: declined"
+						"outfit (flagship installed): Perk: Lighten Up" == 0
+					and
+						has "Novaxys Level 19-20: declined"
+						"outfit (flagship installed): Perk: Lighten Up" == 1
+					and
+						has "Novaxys Level 35-36: declined"
+						"outfit (flagship installed): Perk: Lighten Up" == 2
+			goto lightenup2
+		`	(Return to the main list.)`
+			goto hub
+
+	label lightenup2
+	action
+		outfit "Perk: Lighten Up" 1
+	`You have taken a rank in the Lighten Up Perk.`
+		goto buffer
+
+	label unstoppable
+	`Unstoppable reduces hit force by 20% (with diminishing returns, to a maximum of 72.5% at max rank), and grants 450 slowing resistance per rank.`
+	`	This perk can be taken 6 times. Rank 1 starts at level 4, rank 2 at level 12, rank 3 at level 24, rank 4 at level 40, rank 5 at level 56, and rank 6 starts at level 74. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Unstoppable] ranks.)`
+	choice
+		`	(Take a rank in the Unstoppable Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 3-4: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 0
+					and
+						has "Novaxys Level 11-12: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 1
+					and
+						has "Novaxys Level 23-24: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 2
+					and
+						has "Novaxys Level 39-40: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 3
+					and
+						has "Novaxys Level 55-56: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 4
+					and
+						has "Novaxys Level 73-74: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 5
+			goto unstoppable2
+		`	(Return to the main list.)`
+			goto hub
+
+	label unstoppable2
+	action
+		outfit "Perk: Unstoppable" 1
+	`You have taken a rank in the Unstoppable Perk.`
+		goto buffer
+
+	label packmule
+	`Pack Mule increases cargo space by 200 per rank.`
+	`	This perk can be taken 5 times. Rank 1 starts at level 4, rank 2 at level 16, rank 3 at level 28, rank 4 at level 42, and rank 5 starts at level 58. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Pack Mule] ranks.)`
+	choice
+		`	(Take a rank in the Pack Mule Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 3-4: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 0
+					and
+						has "Novaxys Level 15-16: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 1
+					and
+						has "Novaxys Level 27-28: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 2
+					and
+						has "Novaxys Level 41-42: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 3
+					and
+						has "Novaxys Level 57-58: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 4
+			goto packmule2
+		`	(Return to the main list.)`
+			goto hub
+
+	label packmule2
+	action
+		outfit "Perk: Pack Mule" 1
+	`You have taken a rank in the Pack Mule Perk.`
+		goto buffer
+
+	label fuelreserves
+	`Fuel Reserves grants 1.5 fuel generation and 400 fuel capacity per rank.`
+	`	This perk can be taken 5 times. Rank 1 starts at level 6, rank 2 at level 10, rank 3 at level 18, rank 4 at level 26, and rank 5 starts at level 34. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Fuel Reserves] ranks.)`
+	choice
+		`	(Take a rank in the Fuel Reserves Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 5-6: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 0
+					and
+						has "Novaxys Level 9-10: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 1
+					and
+						has "Novaxys Level 17-18: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 2
+					and
+						has "Novaxys Level 25-26: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 3
+					and
+						has "Novaxys Level 33-34: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 4
+			goto fuelreserves2
+		`	(Return to the main list.)`
+			goto hub
+
+	label fuelreserves2
+	action
+		outfit "Perk: Fuel Reserves" 1
+	`You have taken a rank in the Fuel Reserves Perk.`
+		goto buffer
+
+	label thermophile
+	`Thermophile increases your heat dissipation and capacity significantly and provides up to 600 energy generation per rank, starting at 0 when the ship is at 0 heat and ramping up to 600 towards the maximum heat cap.`
+	`	This perk can be taken 3 times. Rank 1 starts at level 8, rank 2 at level 24, and rank 3 at level 52. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Thermophile] ranks.)`
+	choice
+		`	(Take a rank in the Thermophile Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 7-8: declined"
+						"outfit (flagship installed): Perk: Thermophile" == 0
+					and
+						has "Novaxys Level 23-24: declined"
+						"outfit (flagship installed): Perk: Thermophile" == 1
+					and
+						has "Novaxys Level 51-52: declined"
+						"outfit (flagship installed): Perk: Thermophile" == 2
+			goto thermophile2
+		`	(Return to the main list.)`
+			goto hub
+
+	label thermophile2
+	action
+		outfit "Perk: Thermophile" 1
+	`You have taken a rank in the Thermophile Perk.`
+		goto buffer
+
+	label controlledburn
+	`Controlled Burn provides 450 effective cooling per second per rank, while the ship is afflicted with burning damage.`
+	`	This perk can be taken 3 times. Rank 1 starts at level 16, rank 2 at level 28, and rank 3 at level 40. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Controlled Burn] ranks.)`
+	choice
+		`	(Take a rank in the Controlled Burn Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 15-16: declined"
+						"outfit (flagship installed): Perk: Controlled Burn" == 0
+					and
+						has "Novaxys Level 27-28: declined"
+						"outfit (flagship installed): Perk: Controlled Burn" == 1
+					and
+						has "Novaxys Level 39-40: declined"
+						"outfit (flagship installed): Perk: Controlled Burn" == 2
+			goto controlledburn2
+		`	(Return to the main list.)`
+			goto hub
+
+	label controlledburn2
+	action
+		outfit "Perk: Controlled Burn" 1
+	`You have taken a rank in the Controlled Burn Perk.`
+		goto buffer
+
+	label pyromaniac
+	`Pyromaniac provides 300 energy per second per rank, while the ship is afflicted with burning damage.`
+	`	This perk can be taken 3 times. Rank 1 starts at level 18, rank 2 at level 32, and rank 3 at level 46. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Pyromaniac] ranks.)`
+	choice
+		`	(Take a rank in the Pyromaniac Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 17-18: declined"
+						"outfit (flagship installed): Perk: Pyromaniac" == 0
+					and
+						has "Novaxys Level 31-32: declined"
+						"outfit (flagship installed): Perk: Pyromaniac" == 1
+					and
+						has "Novaxys Level 45-46: declined"
+						"outfit (flagship installed): Perk: Pyromaniac" == 2
+			goto pyromaniac2
+		`	(Return to the main list.)`
+			goto hub
+
+	label pyromaniac2
+	action
+		outfit "Perk: Pyromaniac" 1
+	`You have taken a rank in the Pyromaniac Perk.`
+		goto buffer
+
+	label tinder
+	`Tinder provides 9 fuel per second per rank, while the ship is afflicted with burning damage.`
+	`	This perk can be taken 3 times. Rank 1 starts at level 20, rank 2 at level 36, and rank 3 at level 52. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Tinder] ranks.)`
+	choice
+		`	(Take a rank in the Tinder Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 19-20: declined"
+						"outfit (flagship installed): Perk: Tinder" == 0
+					and
+						has "Novaxys Level 35-36: declined"
+						"outfit (flagship installed): Perk: Tinder" == 1
+					and
+						has "Novaxys Level 51-52: declined"
+						"outfit (flagship installed): Perk: Tinder" == 2
+			goto tinder2
+		`	(Return to the main list.)`
+			goto hub
+
+	label tinder2
+	action
+		outfit "Perk: Tinder" 1
+	`You have taken a rank in the Tinder Perk.`
+		goto buffer
+
+	label burningrush
+	`Burning Rush increases turn and acceleration by 10% per rank, but also causes 150 burning per second while thrusting or turning, or 300 burning per second while firing an afterburner.`
+	`	This perk can be taken 5 times. Rank 1 starts at level 10, rank 2 at level 22, rank 3 at level 34, rank 4 at level 46, and rank 5 at level 60. Do you want to take a rank? (You currently have &[outfit (flagship installed): Perk: Burning Rush] ranks.)`
+	choice
+		`	(Take a rank in the Burning Rush Perk.)`
+			to display
+				or
+					and
+						has "Novaxys Level 9-10: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 0
+					and
+						has "Novaxys Level 21-22: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 1
+					and
+						has "Novaxys Level 33-34: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 2
+					and
+						has "Novaxys Level 45-46: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 3
+					and
+						has "Novaxys Level 59-60: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 4
+			goto burningrush2
+		`	(Return to the main list.)`
+			goto hub
+
+	label burningrush2
+	action
+		outfit "Perk: Burning Rush" 1
+	`You have taken a rank in the Burning Rush Perk.`
+		goto buffer
+

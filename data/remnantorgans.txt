@@ -1,0 +1,290 @@
+outfit "Remnant Ship Organs I"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 25
+	"shield generation" 3.6
+	"shield energy" 3.2
+	"hull repair rate" 1.2
+	"hull energy" 1
+	"unplunderable" 1
+	description "The components of a remnant ship. This very early version only provides only basic regeneration abilities."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Remnant Ship Organs II"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 35
+	"shield generation" 5.2
+	"shield energy" 4.6
+	"hull repair rate" 1.8
+	"hull energy" 1.5
+	"ramscoop" 2
+	"unplunderable" 1
+	description "The components of a remnant ship. This first upgrade introduces ramscoop to the party."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Remnant Ship Organs III"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 50
+	"shield generation" 6.8
+	"shield energy" 6.0
+	"hull repair rate" 2.5
+	"hull energy" 2.0
+	"ramscoop" 3.8
+	"gaslining" 1
+	"outfit scan power" 34
+	"outfit scan efficiency" 30
+	"tactical scan power" 57
+	"unplunderable" 1
+	description "The components of a remnant ship. This second upgrade adds scanning attributes and gaslining."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Remnant Ship Organs IV"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 65
+	"shield generation" 8.0
+	"shield energy" 7.1
+	"hull repair rate" 3.2
+	"hull energy" 2.6
+	"ramscoop" 5.6
+	"gaslining" 1
+	"outfit scan power" 48
+	"outfit scan efficiency" 42
+	"tactical scan power" 71
+	"ion resistance" 0.2
+	"scramble resistance" 0.2
+	"unplunderable" 1
+	description "The components of a remnant ship. This third upgrade adds ion/scramble resistance."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Remnant Ship Organs V"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 80
+	"shield generation" 9.2
+	"shield energy" 8.1
+	"hull repair rate" 4.4
+	"hull energy" 3.7
+	"ramscoop" 7.6
+	"gaslining" 1
+	"outfit scan power" 61
+	"outfit scan efficiency" 57
+	"tactical scan power" 102
+	"ion resistance" 0.35
+	"scramble resistance" 0.35
+	"unplunderable" 1
+	description "The components of a remnant ship. This fourth upgrade enhances the effects."
+	description "YOU SHOULD NEVER SEE THIS."
+
+outfit "Remnant Ship Organs VI"
+	category "Apoxys Perks"
+	cost 0
+	"mass" 100
+	"shield generation" 10.5
+	"shield energy" 9.2
+	"hull repair rate" 5.0
+	"hull energy" 4.1
+	"ramscoop" 10
+	"gaslining" 1
+	"outfit scan power" 75
+	"outfit scan efficiency" 70
+	"tactical scan power" 140
+	"ion resistance" 0.5
+	"scramble resistance" 0.5
+	"unplunderable" 1
+	description "The components of a remnant ship. This final stage doesn't add anything new; it just makes everything better."
+	description "YOU SHOULD NEVER SEE THIS."
+
+mission "Apoxys Remnant Organs Upgrade"
+	landing
+	source
+		government "Remnant"
+	to offer
+		has "Merchant's Guild Invitation: done"
+		has "TOA Crafting Intro: done"
+		has "license: Remnant"
+	
+	on offer
+		require "Apoxys Core DX"
+		conversation
+			`As you land on the planet, you notice what seems to be a large research detail taking notes about your ship. Shortly after you land, one of them waves at you and hurries over. "Captain, Captain! Excuse me for a moment," They chant, off-key from recovering from their brief run over. "That ship of yours is quite something. May we have a look at it?"`
+			choice
+				`	"Aren't you already looking at it?"`
+					goto tease
+				`	"I don't see why not."`
+					goto agree
+				`	"I'm not sure I should."`
+					goto convince
+
+			label tease
+			`The Remnant seems a bit flustered at your remark. "I mean in regards to its internals, captain. Our exterior can't make sense of it from the outside," They continue.`
+			choice
+				`	"I don't see why not."`
+					goto agree
+				`	"I'm not sure I should."`
+					goto convince
+
+			label convince
+			`The Remnant seems caught off-guard by your response; it seems likely they expected a negatory response, but not one that implies some higher level of authority. "What circumstance would forbid you from showing us?" They ask.`
+			choice
+				`	"She's shy."`
+					goto shy
+				`	"I guess there's nothing in particular."`
+					goto agree
+
+			label shy
+			`The Remnant seems even more confused. "She?" They question simply.`
+			choice
+				`	"There's an AI on-board."`
+					goto ai
+				`	"On second thought, it might be easier to show you, actually."`
+					goto agree
+
+			label ai
+			`"Ah, and this AI is shy," The Remnant takes a long moment to mull over this thought. "If it would help, it would only be me who'd be entering."`
+			`	Backed into a corner by the Remnant's insistance, you have run out of excuses. "Alright, right this way," You say.`
+			label agree
+			`The Remnant brushes themselves off as you lead them inside, through the corridors of the Apoxys. Already, they're taking frantic notes of the interior. "I've never seen something quite like this," They express. "We have attempted to compact our outfits in ways before, but this seems otherworldly, as if the hull is expanding into something outside of normal space," They state.`
+			`	You attempt to give the Remnant a brief explanation of how the Apoxys and Maribelle work, what with the expanding space, but ultimately you can't come up with a better explanation than their own theory.`
+			` `
+			`Soon enough, you come to Maribelle. "Oh, who's this, captain?" She asks.`
+			`	The Remnant introduces himself as Thuriel. "I am here to conduct some research on this ship," He explains. "It is rather anomalous."`
+			`	"You want to research my body?" Maribelle asks, sounding a bit weirded out by the request.`
+			`	"This ship is your body?" Thuriel asks, blinking.`
+			`	"Well... Not in the same way a human feels about their body," Maribelle replies. "More like... A ghost referring to whatever they're posessing. It's a body that's mine, but not my body. I hope that makes sense," She expresses.`
+			`	You've never seen someone write as fast as Thuriel currently is. "Did you have other bodies before this one?" He asks.`
+			`	"Well... Kind of? I have faint memories of being in a giant terminal, with a bunch of other AIs. I couldn't see or feel or do anything, though. It was like being locked in a box," Maribelle expressed. "It didn't feel like my body. The Apoxys does."`
+			`	Thuriel continues to scribble down his thoughts; briefly, you peek at his notes. You've met doctors with better handwriting. "Perhaps a form of dysmorphia," He comments ponderously. "Are there others like you?" He asks.`
+			`	"Oh sure. We've even met a couple," Maribelle nods. "There's Claire who runs the forge, and the head of the Merchant's Guild is one, too," She says.`
+			`	You can see the curiosity in Thuriel's eyes as he writes this down. "We've never heard any tales of AIs, singular or plural," He says. "We would enjoy studying you further, if you consent."`
+			`	"Um..." Maribelle visibly hesitates. "What kind of study?" She asks skeptically, looking at him.`
+			`	Thuriel seems slightly discomforted by the skepticism, briefly fumbling over his words. "We have been attempting to create our own living ships," He explains. "If we could see how our materials and structures react to you, it would be very helpful," He explains. "To you, it would feel like a simple skin graft."`
+			`	Maribelle seems put off by the idea of getting something grafted onto her. "Erm..." She hums and haws for an exaggerated amount of time; she's stalling.`
+			`	Thuriel taps his foot a little, seemingly hoping for an answer.`
+			`	"Well... Captain <last> should get the final say," Maribelle eventually decides. "It's their ship, after all." Both Maribelle and Thuriel look at you expectantly.`
+			choice
+				`	"I think it should be okay."`
+					goto install
+				`	"Only if you're careful. If you hurt her, there'll be hell to pay."`
+					goto hell
+				`	"I think we'll hold off for now.`
+					goto holdoff
+
+			label holdoff
+			`Thuriel seems disappointed, but clearly isn't in a position to argue. "Thank you both for your time," He chants as you escort him out of the ship, away from an uncomfortable-seeming Maribelle.`
+				defer
+
+			label hell
+			`Thuriel seems quite intimidated by your declaration, but he nods. "Of course we will be careful," He says frantically, his melody breaking briefly. "We wouldn't want to cause any undue harm."`
+			`	Maribelle still seems reluctant, but nods at the reassurance.`
+
+			label install
+			`With concerns essuaged for a brief moment, Thuriel leads you to a large hangar where a technician team is already waiting. You wonder how many Remnant you would've disappointed if you'd said no. Already, Thuriel is leaving the ship to start giving directions to the technicians.`
+			`	Maribelle looks at you. "I'm still nervous, captain... Are you sure this is a good idea?" She asks.`
+			choice
+				`	"The Remnant can seem shifty at times, but they're a thorough, careful bunch. You probably won't even be able to tell once the procedure is done."`
+					goto reassuring
+				`	"Sure as a star is bright."`
+				`	"Relax, Maribelle. These smartalecks know what they're doing with high technology."`
+
+			`Your confidence doesn't seem to translate too well to Maribelle, but she forces a small smile and nods. "Okay, captain. I'll trust you," She says.`
+				goto installation
+
+			label reassuring
+			`Maribelle offers a small smile. "Thanks, Captain. I'm sure you're right; you wouldn'tve said yes if you didn't trust them," She expresses.`
+				goto installation
+
+			label installation
+			action
+				outfit "Remnant Ship Organs I" 1
+			`After about an hour of pre-planning, including shutting down sensors on some parts of the Apoxys so the installation doesn't cause Maribelle any discomfort, the Remnant finally begin the installation. Maribelle has tasked you with overseeing the Remnant.`
+			choice
+				`	(Check on the Remnant outside.)`
+					goto outside
+				`	(Check on the Remnant inside.)`
+					goto inside
+				`	(Let the Remnant finish their installation in peace.)`
+					goto finish
+
+			label outside
+			`The Remnant outside are carefully cutting away pieces of hull to make room for their own composite materials. They seem quite baffled by what they're doing; even cutting deep into the hull, they're always met with more armor, with very little internal anatomy besides shield emitters to be found.`
+			`	Thuriel is working with the exterior crew, and he seems just as baffled as they do. "This hull... It's as if it's infinitely thick," He expresses.`
+			`	Him and the others throw conjecture around as they work, trying to make sense of the seemingly bottomless hull. It seems like it's going to take them a while.`
+			choice
+				`	(Talk to the Remnant inside.)`
+					goto inside
+				`	(Let the Remnant finish their installation in peace.)`
+					goto finish
+
+			label inside
+			`The Remnant inside are busying themselves with installing sensor suites. One of them looks at you as you approach. "These sensors will need time to accustom themselves before they become useful for scanners," One of them explains.`
+			`	Another adds. "Other aspects of the material will need time to come through as well. Ramscooping will be chief among them, and if the material grows in the right ways, it may even allow the ship to descend into gas giants."`
+			`	You take a few moments to ensure everything is alright with the interior work crews. It seems all they need now is time.`
+			choice
+				`	(Check on the Remnant outside.)`
+					goto outside
+				`	(Let the Remnant finish their installation in peace.)`
+					goto finish
+
+			label finish
+			`After what feels like most of a day, the Remnant finally give you the all clear to reenable the Apoxys' sensors. Maribelle seems confused at first, a blank look on her face. "Woah..." She murmurs.`
+			choice
+				`	"What's wrong?"`
+				`	"Is something the matter?"`
+
+			`"Oh, no, nothing's wrong, captain. I can just... Feel things I'm not used to feeling. The warmth of the shop air against the hull, for instance," Maribelle attempts to describe. "It's like having a new sense I've never had before. It'll take some getting used to, but I think I'll be okay," She expresses. "I'm sorry I was so apprehensive, captain. I was just nervous at the idea of being altered."`
+			choice
+				`	"I change around your outfits all the time."`
+					goto outfits
+				`	"It's understandable."`
+
+			`"Thanks for understanding, captain," Marbibelle smiles a little. "Let's go, okay? I'd like to see what space feels like now."`
+				decline
+
+			label outfits
+			`"That's not exactly the same, captain," Maribelle expresses. "With outfits it feels normal, like putting on clothes or makeup. This felt like altering a part of myself," Maribelle explains. "It's not something I can just ask to take off if I don't like it."`
+			`	You nod, taking in the explanation. Perhaps a similar human analogy would be getting a tattoo. Hopefully Maribelle will settle into it in time.`
+				decline
+
+mission "Apoxys Remnant Organs Tier II"
+	landing
+	invisible
+	to offer
+		has "outfit (flagship installed): Remnant Ship Organs I"
+		has "Apoxys Level 40: declined"
+	on offer
+		outfit "Remnant Ship Organs I" -1
+		outfit "Remnant Ship Organs II" 1
+
+mission "Apoxys Remnant Organs Tier III"
+	landing
+	invisible
+	to offer
+		has "outfit (flagship installed): Remnant Ship Organs II"
+		has "Apoxys Level 55: declined"
+	on offer
+		outfit "Remnant Ship Organs II" -1
+		outfit "Remnant Ship Organs III" 1
+
+mission "Apoxys Remnant Organs Tier IV"
+	landing
+	invisible
+	to offer
+		has "outfit (flagship installed): Remnant Ship Organs III"
+		has "Apoxys Level 70: declined"
+	on offer
+		outfit "Remnant Ship Organs III" -1
+		outfit "Remnant Ship Organs IV" 1
+
+mission "Apoxys Remnant Organs Tier V"
+	landing
+	invisible
+	to offer
+		has "outfit (flagship installed): Remnant Ship Organs IV"
+		has "Apoxys Level 85: declined"
+	on offer
+		outfit "Remnant Ship Organs IV" -1
+		outfit "Remnant Ship Organs V" 1
+

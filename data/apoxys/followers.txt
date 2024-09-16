@@ -1,0 +1,580 @@
+shipyard "everything"
+	"Cykraxys (Barrage)"
+	"Cykraxys (Barrage II)"
+	"Cykraxys (Barrage III)"
+	"Cykraxys (Barrage IV)"
+	"Cykraxys (Crippler)"
+	"Cykraxys (Crippler II)"
+	"Cykraxys (Crippler III)"
+	"Cykraxys (Crippler IV)"
+
+# BARRAGES
+# Damage-focused, acquired in pairs. The unspecialized infantry of any carrier build.
+
+outfit "Bombardment Cannon (Drone)"
+	category "Guns"
+	cost 0
+	thumbnail "outfit/bombardment cannon"
+	"mass" 10
+	"integrated weapon" 1
+	"gun ports" -1
+	weapon
+		sprite "projectile/bombardment"
+			"frame rate" 3.2
+			"no repeat"
+		sound "bombardment"
+		"hit effect" "bombardment impact"
+		"inaccuracy" 4
+		"velocity" 9
+		"random velocity" 2
+		"lifetime" 110
+		"reload" 9
+		"firing energy" 17
+		"firing heat" 14
+		"firing force" 3
+		"shield damage" 22
+		"hull damage" 25
+	description `This is a modified version of the Bombardment Cannon, found hard-wired into "Barrage"-type Cykraxys drones. It is lighter than a standard bombardment cannon, with superior velocity and range, but can't be removed.`
+
+ship "Cykraxys (Barrage)"
+	plural "Cykracies (Barrage)"
+	sprite "ship/cykraxys"
+	thumbnail "ship/cykraxys"
+	"never disabled"
+	swizzle 6
+	attributes
+		category "Drone"
+		"cost" 0
+		"shields" 7200
+		"shield generation" 1.2
+		"shield energy" 1.8
+		"hull" 4200
+		"hull repair rate" 0.7
+		"hull energy" 1.05
+		"hull heat" 1.05
+		"automaton" 1
+		"mass" 60
+		"drag" .9
+		"heat dissipation" 1.7
+		"outfit space" 0
+		"weapon capacity" 0
+		"engine capacity" 0
+		"integrated weapon" -3
+		"energy generation" 6.2
+		"heat generation" 12.6
+		"cooling" 7.5
+		"energy capacity" 9000
+		"thrust" 22
+		"thrusting energy" 1.2
+		"thrusting heat" 2.6
+		"flare sprite" "effect/korath flare/tiny"
+		"frame rate" 8
+		"flare sound" "plasma tiny"
+		"turn" 315.0
+		"turning energy" 0.5
+		"turning heat" 1.1
+		"steering flare sprite" "effect/korath flare/tiny"
+			"frame rate" 8
+		"steering flare sound" "plasma tiny"
+		weapon
+			"blast radius" 5
+			"shield damage" 50
+			"hull damage" 25
+			"hit force" 75
+	outfits
+		"Bombardment Cannon (Drone)" 3
+	engine -2 28
+	engine 8 28
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	explode "tiny explosion" 20
+	explode "small explosion" 10
+	description "These hardy little ships are equipped with long-ranged weaponry for barraging their foes. If destroyed, they'll come back, up to three at a time."
+	description "	Note: Automatically replenishing escorts like this get power boosts at levels 40, 70, and 100. If your followers seem underleveled, sell, disown, or blow them up so the game can make you new ones."
+
+mission "Cykraxys Barrage I (1)"
+	landing
+	invisible
+	repeat
+	to offer
+		not "Apoxys Level 40: declined"
+		1 == ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage)" "Cykraxys (Barrage)"
+
+mission "Cykraxys Barrage I (2)"
+	landing
+	invisible
+	repeat
+	to offer
+		not "Apoxys Level 40: declined"
+		2 == ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage)" "Cykraxys (Barrage)"
+
+mission "Cykraxys Barrage I (3)"
+	landing
+	invisible
+	repeat
+	to offer
+		not "Apoxys Level 40: declined"
+		3 <= ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage)" "Cykraxys (Barrage)"
+
+ship "Cykraxys (Barrage)" "Cykraxys (Barrage II)"
+	plural "Cykracies (Barrage)"
+	"never disabled"
+	swizzle 6
+	add attributes
+		"shields" 2400
+		"shield generation" 0.4
+		"shield energy" 0.6
+		"hull" 1800
+		"hull repair rate" 0.3
+		"hull energy" 0.45
+		"hull heat" 0.45
+		"mass" -10
+		"integrated weapon" -1
+		"energy generation" 2.9
+		"cooling" 2
+		"energy capacity" 2000
+	outfits
+		"Bombardment Cannon (Drone)" 4
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	explode "tiny explosion" 20
+	explode "small explosion" 10
+	description "These hardy little ships are equipped with long-ranged weaponry for barraging their foes. If destroyed, they'll come back, up to three at a time."
+	description "	Note: Automatically replenishing escorts like this get power boosts at levels 40, 70, and 100. If your followers seem underleveled, sell, disown, or blow them up so the game can make you new ones."
+
+mission "Cykraxys Barrage II (1)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 40: declined"
+		not "Apoxys Level 70: declined"
+		1 == ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage II)" "Cykraxys (Barrage)"
+
+mission "Cykraxys Barrage II (2)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 40: declined"
+		not "Apoxys Level 70: declined"
+		2 == ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage II)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage II)" "Cykraxys (Barrage)"
+
+mission "Cykraxys Barrage II (3)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 40: declined"
+		not "Apoxys Level 70: declined"
+		3 <= ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage II)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage II)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage II)" "Cykraxys (Barrage)"
+
+ship "Cykraxys (Barrage)" "Cykraxys (Barrage III)"
+	plural "Cykracies (Barrage)"
+	"never disabled"
+	swizzle 6
+	add attributes
+		"shields" 7200
+		"shield generation" 1.2
+		"shield energy" 1.8
+		"hull" 5400
+		"hull repair rate" 0.9
+		"hull energy" 1.35
+		"hull heat" 1.35
+		"mass" -30
+		"integrated weapon" -3
+		"energy generation" 8.7
+		"cooling" 6
+		"energy capacity" 6000
+	outfits
+		"Bombardment Cannon (Drone)" 6
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	explode "tiny explosion" 20
+	explode "small explosion" 10
+	description "These hardy little ships are equipped with long-ranged weaponry for barraging their foes. If destroyed, they'll come back, up to three at a time."
+	description "	Note: Automatically replenishing escorts like this get power boosts at levels 40, 70, and 100. If your followers seem underleveled, sell, disown, or blow them up so the game can make you new ones."
+
+mission "Cykraxys Barrage III (1)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 70: declined"
+		not "Apoxys Level 100 Choices: declined"
+		1 == ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage III)" "Cykraxys (Barrage)"
+
+mission "Cykraxys Barrage III (2)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 70: declined"
+		not "Apoxys Level 100 Choices: declined"
+		2 == ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage III)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage III)" "Cykraxys (Barrage)"
+
+mission "Cykraxys Barrage III (3)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 70: declined"
+		not "Apoxys Level 100 Choices: declined"
+		3 <= ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage III)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage III)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage III)" "Cykraxys (Barrage)"
+
+ship "Cykraxys (Barrage)" "Cykraxys (Barrage IV)"
+	plural "Cykracies (Barrage)"
+	"never disabled"
+	swizzle 6
+	add attributes
+		"shields" 10800
+		"shield generation" 1.8
+		"shield energy" 2.7
+		"hull" 9000
+		"hull repair rate" 1.5
+		"hull energy" 2.25
+		"hull heat" 2.25
+		"mass" -50
+		"integrated weapon" -5
+		"energy generation" 14.1
+		"cooling" 10
+		"energy capacity" 11000
+	outfits
+		"Bombardment Cannon (Drone)" 8
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	gun 0 -30
+	explode "tiny explosion" 20
+	explode "small explosion" 10
+	description "These hardy little ships are equipped with long-ranged weaponry for barraging their foes. If destroyed, they'll come back, up to three at a time."
+	description "	Note: Automatically replenishing escorts like this get power boosts at levels 40, 70, and 100. If your followers seem underleveled, sell, disown, or blow them up so the game can make you new ones."
+
+mission "Cykraxys Barrage IV (1)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 100 Choices: declined"
+		1 == ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage IV)" "Cykraxys (Barrage)"
+
+mission "Cykraxys Barrage IV (2)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 100 Choices: declined"
+		2 == ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage IV)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage IV)" "Cykraxys (Barrage)"
+
+mission "Cykraxys Barrage IV (3)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 100 Choices: declined"
+		3 <= ( ( "flagship attribute: barrage cykraxys" / 1000 ) - "ship model (all): Cykraxys (Barrage)" )
+	on offer
+		give ship "Cykraxys (Barrage IV)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage IV)" "Cykraxys (Barrage)"
+		give ship "Cykraxys (Barrage IV)" "Cykraxys (Barrage)"
+
+# CRIPPLERS
+# Less direct damage, and only found solo, but comes with detainers (multi-disruptors later on).
+
+outfit "Korath Detainer (Drone)"
+	category "Guns"
+	cost 0
+	thumbnail "outfit/detainer"
+	"mass" 30
+	"integrated weapon" 1
+	"gun ports" -1
+	weapon
+		sprite "projectile/detainer"
+			"frame rate" 2.5
+		sound "detainer"
+		"hit effect" "detainer impact" 3
+		"hit effect" "detainer smoke" 5
+		"live effect" "detainer sparks" 50
+		"inaccuracy" .5
+		"velocity" 14
+		"lifetime" 140
+		"reload" 60
+		"burst reload" 10
+		"burst count" 2
+		"firing energy" 756
+		"firing force" 100
+		"firing heat" 400
+		"hit force" 120
+		"shield damage" 320
+		"hull damage" 240
+		"slowing damage" 40
+		"blast radius" 20
+	description `A modified Detainer found on "Crippler"-type Cykraxys drones. While it appears to be greatly reduced in size compared to a typical Detainer, the fact it's hard-wired into the drone shuts down any fun ideas.`
+
+outfit "Multi-Disruptor (Drone)"
+	category "Guns"
+	cost 0
+	thumbnail "outfit/detainer"
+	"mass" 50
+	"gun ports" -1
+	weapon
+		sprite "projectile/detainer"
+			"frame rate" 2.5
+		sound "detainer"
+		"hit effect" "detainer impact" 3
+		"hit effect" "ion impact" 5
+		"hit effect" "detainer smoke" 5
+		"live effect" "detainer sparks" 50
+		"live effect" "ionball trail" 70
+		"inaccuracy" .5
+		"velocity" 14
+		"lifetime" 140
+		"reload" 72
+		"burst reload" 15
+		"burst count" 2
+		"firing energy" 1128
+		"firing force" 80
+		"firing heat" 600
+		"hit force" 180
+		"shield damage" 520
+		"hull damage" 380
+		"slowing damage" 40
+		"ion damage" 20
+		"scrambling damage" 15
+		"disruption damage" 15
+		"blast radius" 35
+	description "An entire Multi-Disruptor somehow sized down enough that a high-level Crippler Cekraxys drone can make use of it. Like other drone weapons, it is of course hard-wired into the drone it is a part of."
+
+ship "Cykraxys (Crippler)"
+	plural "Cykracies (Crippler)"
+	sprite "ship/cykraxys"
+	thumbnail "ship/cykraxys"
+	"never disabled"
+	swizzle 24
+	attributes
+		category "Drone"
+		"cost" 0
+		"shields" 8400
+		"shield generation" 1.4
+		"shield energy" 2.1
+		"hull" 4800
+		"hull repair rate" 0.8
+		"hull energy" 1.2
+		"hull heat" 1.2
+		"automaton" 1
+		"mass" 90
+		"drag" 1.2
+		"heat dissipation" 1.7
+		"outfit space" 0
+		"weapon capacity" 0
+		"engine capacity" 0
+		"integrated weapon" -1
+		"energy generation" 11.9
+		"heat generation" 22.9
+		"cooling" 18.5
+		"energy capacity" 10000
+		"thrust" 22
+		"thrusting energy" 1.2
+		"thrusting heat" 2.6
+		"flare sprite" "effect/korath flare/tiny"
+		"frame rate" 8
+		"flare sound" "plasma tiny"
+		"turn" 315.0
+		"turning energy" 0.5
+		"turning heat" 1.1
+		"steering flare sprite" "effect/korath flare/tiny"
+			"frame rate" 8
+		"steering flare sound" "plasma tiny"
+		weapon
+			"blast radius" 5
+			"shield damage" 50
+			"hull damage" 25
+			"hit force" 75
+	outfits
+		"Korath Detainer (Drone)" 1
+	engine -2 28
+	engine 8 28
+	gun 0 -30
+	explode "tiny explosion" 20
+	explode "small explosion" 10
+	description "These hardy little ships are equipped with slowing and support weaponry for crippling their foes. If destroyed, they'll come back, one at a time."
+	description "	Note: Automatically replenishing escorts like this get power boosts at levels 40, 70, and 100. If your followers seem underleveled, sell, disown, or blow them up so the game can make you new ones."
+
+mission "Cykraxys Crippler I (1)"
+	landing
+	invisible
+	repeat
+	to offer
+		not "Apoxys Level 40: declined"
+		1 <= ( ( "flagship attribute: crippler cykraxys" / 1000 ) - "ship model (all): Cykraxys (Crippler)" )
+	on offer
+		give ship "Cykraxys (Crippler)" "Cykraxys (Crippler)"
+
+ship "Cykraxys (Crippler)" "Cykraxys (Crippler II)"
+	plural "Cykracies (Crippler)"
+	"never disabled"
+	swizzle 24
+	add attributes
+		"shields" 4200
+		"shield generation" 0.7
+		"shield energy" 1.05
+		"hull" 2400
+		"hull repair rate" 0.4
+		"hull energy" 0.6
+		"hull heat" 0.6
+		"mass" 0
+		"integrated weapon" 0
+		"energy generation" 2
+		"cooling" 3.0
+		"energy capacity" 2000
+		weapon
+			"blast radius" 5
+			"shield damage" 50
+			"hull damage" 25
+			"hit force" 75
+	outfits
+		"Korath Detainer (Drone)" 1
+	gun 0 -30
+	explode "tiny explosion" 20
+	explode "small explosion" 10
+	description "These hardy little ships are equipped with slowing and support weaponry for crippling their foes. If destroyed, they'll come back, one at a time."
+	description "	Note: Automatically replenishing escorts like this get power boosts at levels 40, 70, and 100. If your followers seem underleveled, sell, disown, or blow them up so the game can make you new ones."
+
+mission "Cykraxys Crippler II (1)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 40: declined"
+		not "Apoxys Level 70: declined"
+		1 <= ( ( "flagship attribute: crippler cykraxys" / 1000 ) - "ship model (all): Cykraxys (Crippler)" )
+	on offer
+		give ship "Cykraxys (Crippler II)" "Cykraxys (Crippler)"
+
+ship "Cykraxys (Crippler)" "Cykraxys (Crippler III)"
+	plural "Cykracies (Crippler)"
+	"never disabled"
+	swizzle 24
+	add attributes
+		"shields" 7600
+		"shield generation" 1.6
+		"shield energy" 2.4
+		"hull" 6000
+		"hull repair rate" 1.0
+		"hull energy" 1.5
+		"hull heat" 1.5
+		"mass" -30
+		"integrated weapon" -1
+		"energy generation" 15.5
+		"cooling" 8.0
+		"energy capacity" 6000
+		weapon
+			"blast radius" 5
+			"shield damage" 50
+			"hull damage" 25
+			"hit force" 75
+	outfits
+		"Korath Detainer (Drone)" 2
+	gun 0 -30
+	gun 0 -30
+	explode "tiny explosion" 20
+	explode "small explosion" 10
+	description "These hardy little ships are equipped with slowing and support weaponry for crippling their foes. If destroyed, they'll come back, one at a time."
+	description "	Note: Automatically replenishing escorts like this get power boosts at levels 40, 70, and 100. If your followers seem underleveled, sell, disown, or blow them up so the game can make you new ones."
+
+mission "Cykraxys Crippler III (1)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 70: declined"
+		not "Apoxys Level 100 Choices: declined"
+		1 <= ( ( "flagship attribute: crippler cykraxys" / 1000 ) - "ship model (all): Cykraxys (Crippler)" )
+	on offer
+		give ship "Cykraxys (Crippler III)" "Cykraxys (Crippler)"
+
+ship "Cykraxys (Crippler)" "Cykraxys (Crippler IV)"
+	plural "Cykracies (Crippler)"
+	"never disabled"
+	swizzle 24
+	add attributes
+		"shields" 13200
+		"shield generation" 2.2
+		"shield energy" 3.3
+		"hull" 11400
+		"hull repair rate" 1.9
+		"hull energy" 2.85
+		"hull heat" 2.85
+		"mass" -50
+		"integrated weapon" -1
+		"energy generation" 20
+		"cooling" 9.5
+		"energy capacity" 10000
+		weapon
+			"blast radius" 5
+			"shield damage" 50
+			"hull damage" 25
+			"hit force" 75
+	outfits
+		"Korath Detainer (Drone)"
+		"Multi-Disruptor (Drone)"
+	gun 0 -30
+	gun 0 -30
+	explode "tiny explosion" 20
+	explode "small explosion" 10
+	description "These hardy little ships are equipped with slowing and support weaponry for crippling their foes. If destroyed, they'll come back, one at a time."
+	description "	Note: Automatically replenishing escorts like this get power boosts at levels 40, 70, and 100. If your followers seem underleveled, sell, disown, or blow them up so the game can make you new ones."
+
+mission "Cykraxys Crippler IV (1)"
+	landing
+	invisible
+	repeat
+	to offer
+		has "Apoxys Level 100 Choices: declined"
+		1 <= ( ( "flagship attribute: crippler cykraxys" / 1000 ) - "ship model (all): Cykraxys (Crippler)" )
+	on offer
+		give ship "Cykraxys (Crippler IV)" "Cykraxys (Crippler)"
+
