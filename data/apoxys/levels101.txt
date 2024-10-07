@@ -129,6 +129,7 @@ mission "Apoxys Level 100+"
 	on offer
 		require "Apoxys Core DX"
 		conversation
+			action
 			`Maribelle (the Apoxys' AI) seems very content as you come in for landing. "Captain!" She exclaims excitedly, "I know we've only just begun, but I think I'm already beginning to understand the galaxy. If you don't mind, I'd like to make some adjustments while we're parked today."`
 			`You notice a number of prompts before you. You could likely give Maribelle some feedback into what exactly you'd like to improve. You begin to say, "In addition to your own desired improvements..."`
 			choice

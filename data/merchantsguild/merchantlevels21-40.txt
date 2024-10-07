@@ -109,7 +109,7 @@ mission "Merchant's Guild Level 21"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 21
-				log "Merchant Levels" "Level 21" "Chose shield upgrade."
+				log Levels "Merchant" "Level 21: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -117,7 +117,7 @@ mission "Merchant's Guild Level 21"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 21
-				log "Merchant Levels" "Level 21" "Chose hull upgrade."
+				log Levels "Merchant" "Level 21: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -125,7 +125,7 @@ mission "Merchant's Guild Level 21"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 21
-				log "Merchant Levels" "Level 21" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 21: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -133,7 +133,7 @@ mission "Merchant's Guild Level 21"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 21
-				log "Merchant Levels" "Level 21" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 21: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -141,7 +141,7 @@ mission "Merchant's Guild Level 21"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 21
-				log "Merchant Levels" "Level 21" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 21: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -149,7 +149,7 @@ mission "Merchant's Guild Level 21"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 21
-				log "Merchant Levels" "Level 21" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 21: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -187,7 +187,7 @@ mission "Merchant's Guild Level 22"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 22
-				log "Merchant Levels" "Level 22" "Chose shield upgrade."
+				log Levels "Merchant" "Level 22: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -195,7 +195,7 @@ mission "Merchant's Guild Level 22"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 22
-				log "Merchant Levels" "Level 22" "Chose hull upgrade."
+				log Levels "Merchant" "Level 22: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -203,7 +203,7 @@ mission "Merchant's Guild Level 22"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 22
-				log "Merchant Levels" "Level 22" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 22: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -211,7 +211,7 @@ mission "Merchant's Guild Level 22"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 22
-				log "Merchant Levels" "Level 22" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 22: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -219,7 +219,7 @@ mission "Merchant's Guild Level 22"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 22
-				log "Merchant Levels" "Level 22" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 22: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -227,7 +227,7 @@ mission "Merchant's Guild Level 22"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 22
-				log "Merchant Levels" "Level 22" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 22: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 
@@ -271,7 +271,7 @@ mission "Merchant's Guild Level 23"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 23
-				log "Merchant Levels" "Level 23" "Chose shield upgrade."
+				log Levels "Merchant" "Level 23: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -279,7 +279,7 @@ mission "Merchant's Guild Level 23"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 23
-				log "Merchant Levels" "Level 23" "Chose hull upgrade."
+				log Levels "Merchant" "Level 23: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -287,7 +287,7 @@ mission "Merchant's Guild Level 23"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 23
-				log "Merchant Levels" "Level 23" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 23: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -295,7 +295,7 @@ mission "Merchant's Guild Level 23"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 23
-				log "Merchant Levels" "Level 23" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 23: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -303,7 +303,7 @@ mission "Merchant's Guild Level 23"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 23
-				log "Merchant Levels" "Level 23" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 23: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -311,7 +311,7 @@ mission "Merchant's Guild Level 23"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 23
-				log "Merchant Levels" "Level 23" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 23: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -349,7 +349,7 @@ mission "Merchant's Guild Level 24"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 24
-				log "Merchant Levels" "Level 24" "Chose shield upgrade."
+				log Levels "Merchant" "Level 24: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -357,7 +357,7 @@ mission "Merchant's Guild Level 24"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 24
-				log "Merchant Levels" "Level 24" "Chose hull upgrade."
+				log Levels "Merchant" "Level 24: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -365,7 +365,7 @@ mission "Merchant's Guild Level 24"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 24
-				log "Merchant Levels" "Level 24" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 24: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -373,7 +373,7 @@ mission "Merchant's Guild Level 24"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 24
-				log "Merchant Levels" "Level 24" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 24: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -381,7 +381,7 @@ mission "Merchant's Guild Level 24"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 24
-				log "Merchant Levels" "Level 24" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 24: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -389,7 +389,7 @@ mission "Merchant's Guild Level 24"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 24
-				log "Merchant Levels" "Level 24" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 24: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 
@@ -433,7 +433,7 @@ mission "Merchant's Guild Level 25"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 25
-				log "Merchant Levels" "Level 25" "Chose shield upgrade."
+				log Levels "Merchant" "Level 25: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -441,7 +441,7 @@ mission "Merchant's Guild Level 25"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 25
-				log "Merchant Levels" "Level 25" "Chose hull upgrade."
+				log Levels "Merchant" "Level 25: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -449,7 +449,7 @@ mission "Merchant's Guild Level 25"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 25
-				log "Merchant Levels" "Level 25" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 25: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -457,7 +457,7 @@ mission "Merchant's Guild Level 25"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 25
-				log "Merchant Levels" "Level 25" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 25: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -465,7 +465,7 @@ mission "Merchant's Guild Level 25"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 25
-				log "Merchant Levels" "Level 25" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 25: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -473,7 +473,7 @@ mission "Merchant's Guild Level 25"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 25
-				log "Merchant Levels" "Level 25" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 25: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -511,7 +511,7 @@ mission "Merchant's Guild Level 26"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 26
-				log "Merchant Levels" "Level 26" "Chose shield upgrade."
+				log Levels "Merchant" "Level 26: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -519,7 +519,7 @@ mission "Merchant's Guild Level 26"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 26
-				log "Merchant Levels" "Level 26" "Chose hull upgrade."
+				log Levels "Merchant" "Level 26: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -527,7 +527,7 @@ mission "Merchant's Guild Level 26"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 26
-				log "Merchant Levels" "Level 26" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 26: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -535,7 +535,7 @@ mission "Merchant's Guild Level 26"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 26
-				log "Merchant Levels" "Level 26" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 26: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -543,7 +543,7 @@ mission "Merchant's Guild Level 26"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 26
-				log "Merchant Levels" "Level 26" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 26: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -551,7 +551,7 @@ mission "Merchant's Guild Level 26"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 26
-				log "Merchant Levels" "Level 26" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 26: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 
@@ -595,7 +595,7 @@ mission "Merchant's Guild Level 27"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 27
-				log "Merchant Levels" "Level 27" "Chose shield upgrade."
+				log Levels "Merchant" "Level 27: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -603,7 +603,7 @@ mission "Merchant's Guild Level 27"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 27
-				log "Merchant Levels" "Level 27" "Chose hull upgrade."
+				log Levels "Merchant" "Level 27: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -611,7 +611,7 @@ mission "Merchant's Guild Level 27"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 27
-				log "Merchant Levels" "Level 27" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 27: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -619,7 +619,7 @@ mission "Merchant's Guild Level 27"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 27
-				log "Merchant Levels" "Level 27" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 27: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -627,7 +627,7 @@ mission "Merchant's Guild Level 27"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 27
-				log "Merchant Levels" "Level 27" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 27: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -635,7 +635,7 @@ mission "Merchant's Guild Level 27"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 27
-				log "Merchant Levels" "Level 27" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 27: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -673,7 +673,7 @@ mission "Merchant's Guild Level 28"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 28
-				log "Merchant Levels" "Level 28" "Chose shield upgrade."
+				log Levels "Merchant" "Level 28: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -681,7 +681,7 @@ mission "Merchant's Guild Level 28"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 28
-				log "Merchant Levels" "Level 28" "Chose hull upgrade."
+				log Levels "Merchant" "Level 28: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -689,7 +689,7 @@ mission "Merchant's Guild Level 28"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 28
-				log "Merchant Levels" "Level 28" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 28: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -697,7 +697,7 @@ mission "Merchant's Guild Level 28"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 28
-				log "Merchant Levels" "Level 28" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 28: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -705,7 +705,7 @@ mission "Merchant's Guild Level 28"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 28
-				log "Merchant Levels" "Level 28" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 28: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -713,7 +713,7 @@ mission "Merchant's Guild Level 28"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 28
-				log "Merchant Levels" "Level 28" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 28: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 
@@ -757,7 +757,7 @@ mission "Merchant's Guild Level 29"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 29
-				log "Merchant Levels" "Level 29" "Chose shield upgrade."
+				log Levels "Merchant" "Level 29: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -765,7 +765,7 @@ mission "Merchant's Guild Level 29"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 29
-				log "Merchant Levels" "Level 29" "Chose hull upgrade."
+				log Levels "Merchant" "Level 29: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -773,7 +773,7 @@ mission "Merchant's Guild Level 29"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 29
-				log "Merchant Levels" "Level 29" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 29: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -781,7 +781,7 @@ mission "Merchant's Guild Level 29"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 29
-				log "Merchant Levels" "Level 29" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 29: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -789,7 +789,7 @@ mission "Merchant's Guild Level 29"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 29
-				log "Merchant Levels" "Level 29" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 29: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -797,7 +797,7 @@ mission "Merchant's Guild Level 29"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 29
-				log "Merchant Levels" "Level 29" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 29: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -835,7 +835,7 @@ mission "Merchant's Guild Level 30"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 30
-				log "Merchant Levels" "Level 30" "Chose shield upgrade."
+				log Levels "Merchant" "Level 30: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -843,7 +843,7 @@ mission "Merchant's Guild Level 30"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 30
-				log "Merchant Levels" "Level 30" "Chose hull upgrade."
+				log Levels "Merchant" "Level 30: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -851,7 +851,7 @@ mission "Merchant's Guild Level 30"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 30
-				log "Merchant Levels" "Level 30" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 30: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -859,7 +859,7 @@ mission "Merchant's Guild Level 30"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 30
-				log "Merchant Levels" "Level 30" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 30: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -867,7 +867,7 @@ mission "Merchant's Guild Level 30"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 30
-				log "Merchant Levels" "Level 30" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 30: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -875,7 +875,7 @@ mission "Merchant's Guild Level 30"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 30
-				log "Merchant Levels" "Level 30" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 30: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 
@@ -919,7 +919,7 @@ mission "Merchant's Guild Level 31"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 31
-				log "Merchant Levels" "Level 31" "Chose shield upgrade."
+				log Levels "Merchant" "Level 31: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -927,7 +927,7 @@ mission "Merchant's Guild Level 31"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 31
-				log "Merchant Levels" "Level 31" "Chose hull upgrade."
+				log Levels "Merchant" "Level 31: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -935,7 +935,7 @@ mission "Merchant's Guild Level 31"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 31
-				log "Merchant Levels" "Level 31" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 31: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -943,7 +943,7 @@ mission "Merchant's Guild Level 31"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 31
-				log "Merchant Levels" "Level 31" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 31: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -951,7 +951,7 @@ mission "Merchant's Guild Level 31"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 31
-				log "Merchant Levels" "Level 31" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 31: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -959,7 +959,7 @@ mission "Merchant's Guild Level 31"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 31
-				log "Merchant Levels" "Level 31" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 31: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -997,7 +997,7 @@ mission "Merchant's Guild Level 32"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 32
-				log "Merchant Levels" "Level 32" "Chose shield upgrade."
+				log Levels "Merchant" "Level 32: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -1005,7 +1005,7 @@ mission "Merchant's Guild Level 32"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 32
-				log "Merchant Levels" "Level 32" "Chose hull upgrade."
+				log Levels "Merchant" "Level 32: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -1013,7 +1013,7 @@ mission "Merchant's Guild Level 32"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 32
-				log "Merchant Levels" "Level 32" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 32: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -1021,7 +1021,7 @@ mission "Merchant's Guild Level 32"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 32
-				log "Merchant Levels" "Level 32" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 32: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -1029,7 +1029,7 @@ mission "Merchant's Guild Level 32"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 32
-				log "Merchant Levels" "Level 32" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 32: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -1037,7 +1037,7 @@ mission "Merchant's Guild Level 32"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 32
-				log "Merchant Levels" "Level 32" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 32: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 
@@ -1081,7 +1081,7 @@ mission "Merchant's Guild Level 33"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 33
-				log "Merchant Levels" "Level 33" "Chose shield upgrade."
+				log Levels "Merchant" "Level 33: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -1089,7 +1089,7 @@ mission "Merchant's Guild Level 33"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 33
-				log "Merchant Levels" "Level 33" "Chose hull upgrade."
+				log Levels "Merchant" "Level 33: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -1097,7 +1097,7 @@ mission "Merchant's Guild Level 33"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 33
-				log "Merchant Levels" "Level 33" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 33: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -1105,7 +1105,7 @@ mission "Merchant's Guild Level 33"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 33
-				log "Merchant Levels" "Level 33" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 33: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -1113,7 +1113,7 @@ mission "Merchant's Guild Level 33"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 33
-				log "Merchant Levels" "Level 33" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 33: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -1121,7 +1121,7 @@ mission "Merchant's Guild Level 33"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 33
-				log "Merchant Levels" "Level 33" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 33: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -1159,7 +1159,7 @@ mission "Merchant's Guild Level 34"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 34
-				log "Merchant Levels" "Level 34" "Chose shield upgrade."
+				log Levels "Merchant" "Level 34: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -1167,7 +1167,7 @@ mission "Merchant's Guild Level 34"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 34
-				log "Merchant Levels" "Level 34" "Chose hull upgrade."
+				log Levels "Merchant" "Level 34: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -1175,7 +1175,7 @@ mission "Merchant's Guild Level 34"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 34
-				log "Merchant Levels" "Level 34" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 34: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -1183,7 +1183,7 @@ mission "Merchant's Guild Level 34"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 34
-				log "Merchant Levels" "Level 34" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 34: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -1191,7 +1191,7 @@ mission "Merchant's Guild Level 34"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 34
-				log "Merchant Levels" "Level 34" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 34: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -1199,7 +1199,7 @@ mission "Merchant's Guild Level 34"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 34
-				log "Merchant Levels" "Level 34" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 34: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 
@@ -1243,7 +1243,7 @@ mission "Merchant's Guild Level 35"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 35
-				log "Merchant Levels" "Level 35" "Chose shield upgrade."
+				log Levels "Merchant" "Level 35: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -1251,7 +1251,7 @@ mission "Merchant's Guild Level 35"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 35
-				log "Merchant Levels" "Level 35" "Chose hull upgrade."
+				log Levels "Merchant" "Level 35: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -1259,7 +1259,7 @@ mission "Merchant's Guild Level 35"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 35
-				log "Merchant Levels" "Level 35" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 35: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -1267,7 +1267,7 @@ mission "Merchant's Guild Level 35"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 35
-				log "Merchant Levels" "Level 35" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 35: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -1275,7 +1275,7 @@ mission "Merchant's Guild Level 35"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 35
-				log "Merchant Levels" "Level 35" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 35: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -1283,7 +1283,7 @@ mission "Merchant's Guild Level 35"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 35
-				log "Merchant Levels" "Level 35" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 35: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -1321,7 +1321,7 @@ mission "Merchant's Guild Level 36"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 36
-				log "Merchant Levels" "Level 36" "Chose shield upgrade."
+				log Levels "Merchant" "Level 36: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -1329,7 +1329,7 @@ mission "Merchant's Guild Level 36"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 36
-				log "Merchant Levels" "Level 36" "Chose hull upgrade."
+				log Levels "Merchant" "Level 36: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -1337,7 +1337,7 @@ mission "Merchant's Guild Level 36"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 36
-				log "Merchant Levels" "Level 36" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 36: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -1345,7 +1345,7 @@ mission "Merchant's Guild Level 36"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 36
-				log "Merchant Levels" "Level 36" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 36: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -1353,7 +1353,7 @@ mission "Merchant's Guild Level 36"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 36
-				log "Merchant Levels" "Level 36" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 36: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -1361,7 +1361,7 @@ mission "Merchant's Guild Level 36"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 36
-				log "Merchant Levels" "Level 36" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 36: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 
@@ -1405,7 +1405,7 @@ mission "Merchant's Guild Level 37"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 37
-				log "Merchant Levels" "Level 37" "Chose shield upgrade."
+				log Levels "Merchant" "Level 37: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -1413,7 +1413,7 @@ mission "Merchant's Guild Level 37"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 37
-				log "Merchant Levels" "Level 37" "Chose hull upgrade."
+				log Levels "Merchant" "Level 37: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -1421,7 +1421,7 @@ mission "Merchant's Guild Level 37"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 37
-				log "Merchant Levels" "Level 37" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 37: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -1429,7 +1429,7 @@ mission "Merchant's Guild Level 37"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 37
-				log "Merchant Levels" "Level 37" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 37: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -1437,7 +1437,7 @@ mission "Merchant's Guild Level 37"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 37
-				log "Merchant Levels" "Level 37" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 37: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -1445,7 +1445,7 @@ mission "Merchant's Guild Level 37"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 37
-				log "Merchant Levels" "Level 37" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 37: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -1483,7 +1483,7 @@ mission "Merchant's Guild Level 38"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 38
-				log "Merchant Levels" "Level 38" "Chose shield upgrade."
+				log Levels "Merchant" "Level 38: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -1491,7 +1491,7 @@ mission "Merchant's Guild Level 38"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 38
-				log "Merchant Levels" "Level 38" "Chose hull upgrade."
+				log Levels "Merchant" "Level 38: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -1499,7 +1499,7 @@ mission "Merchant's Guild Level 38"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 38
-				log "Merchant Levels" "Level 38" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 38: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -1507,7 +1507,7 @@ mission "Merchant's Guild Level 38"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 38
-				log "Merchant Levels" "Level 38" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 38: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -1515,7 +1515,7 @@ mission "Merchant's Guild Level 38"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 38
-				log "Merchant Levels" "Level 38" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 38: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -1523,7 +1523,7 @@ mission "Merchant's Guild Level 38"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 38
-				log "Merchant Levels" "Level 38" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 38: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 
@@ -1567,7 +1567,7 @@ mission "Merchant's Guild Level 39"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 39
-				log "Merchant Levels" "Level 39" "Chose shield upgrade."
+				log Levels "Merchant" "Level 39: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				decline
 			label hullcap
@@ -1575,7 +1575,7 @@ mission "Merchant's Guild Level 39"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 39
-				log "Merchant Levels" "Level 39" "Chose hull upgrade."
+				log Levels "Merchant" "Level 39: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				decline
 			label cargocap
@@ -1583,7 +1583,7 @@ mission "Merchant's Guild Level 39"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 39
-				log "Merchant Levels" "Level 39" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 39: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				decline
 			label fuelcap
@@ -1591,7 +1591,7 @@ mission "Merchant's Guild Level 39"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 39
-				log "Merchant Levels" "Level 39" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 39: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				decline
 			label jamming
@@ -1599,7 +1599,7 @@ mission "Merchant's Guild Level 39"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 39
-				log "Merchant Levels" "Level 39" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 39: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				decline
 			label concealment
@@ -1607,7 +1607,7 @@ mission "Merchant's Guild Level 39"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 39
-				log "Merchant Levels" "Level 39" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 39: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				decline
 
@@ -1645,7 +1645,7 @@ mission "Merchant's Guild Level 40"
 				outfit "Shields II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 40
-				log "Merchant Levels" "Level 40" "Chose shield upgrade."
+				log Levels "Merchant" "Level 40: Chose shield upgrade."
 			`Maribelle nods in agreement. "More shields can't hurt, can it?" She asks.`
 				goto next
 			label hullcap
@@ -1653,7 +1653,7 @@ mission "Merchant's Guild Level 40"
 				outfit "Hull II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 40
-				log "Merchant Levels" "Level 40" "Chose hull upgrade."
+				log Levels "Merchant" "Level 40: Chose hull upgrade."
 			`Maribelle nods in agreement. "More hull can't hurt, can it?" She asks.`
 				goto next
 			label cargocap
@@ -1661,7 +1661,7 @@ mission "Merchant's Guild Level 40"
 				outfit "Cargo II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 40
-				log "Merchant Levels" "Level 40" "Chose cargo upgrade."
+				log Levels "Merchant" "Level 40: Chose cargo upgrade."
 			`"Well, she is rewarding it for merchant work. It does make sense we'd want to do more, faster," Maribelle says.`
 				goto next
 			label fuelcap
@@ -1669,7 +1669,7 @@ mission "Merchant's Guild Level 40"
 				outfit "Fuel II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 40
-				log "Merchant Levels" "Level 40" "Chose fuel upgrade."
+				log Levels "Merchant" "Level 40: Chose fuel upgrade."
 			`"I didn't even know I could get my fuel capacity increased separately," Maribelle admits.`
 				goto next
 			label jamming
@@ -1677,7 +1677,7 @@ mission "Merchant's Guild Level 40"
 				outfit "Jamming II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 40
-				log "Merchant Levels" "Level 40" "Chose jamming upgrade."
+				log Levels "Merchant" "Level 40: Chose jamming upgrade."
 			`"Jamming? Wow, I never even thought about that before," Maribelle says. "It should alleviate some missile pressure, shouldn't it?"`
 				goto next
 			label concealment
@@ -1685,7 +1685,7 @@ mission "Merchant's Guild Level 40"
 				outfit "Concealment II (Merchant)" 1
 				outfit "Basal Level II (Merchant)" 1
 				"merchant's guild level" = 40
-				log "Merchant Levels" "Level 40" "Chose concealment upgrade."
+				log Levels "Merchant" "Level 40: Chose concealment upgrade."
 			`"Ooh, concealment? What are you trying to hide, Captain? An embarassing sixth-grade photo?" Maribelle jokes, giggling.`
 				goto next
 

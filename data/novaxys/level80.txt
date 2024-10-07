@@ -368,6 +368,7 @@ mission "Novaxys Level 80 Choices"
 				"mark iv choices" == 0
 
 			label options
+			log Levels "Novaxys" "Levels 79-80: Re-chose upgrades."
 			`"I still have a lot of energy even after all that, Captain," Rosalynd expresses.`
 			`	"You still have special upgrades to do," You remind her.`
 			`	"Oh, right," Rosalynd nods.`

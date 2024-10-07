@@ -191,25 +191,25 @@ mission "Novaxys Level 41-42"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 41-42" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 41-42: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 41-42" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 41-42: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 42-43" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 41-42: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 42-43" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 41-42: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -255,25 +255,25 @@ mission "Novaxys Level 43-44"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 43-44" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 43-44: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 43-44" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 43-44: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 43-44" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 43-44: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 43-44" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 43-44: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -319,25 +319,25 @@ mission "Novaxys Level 45-46"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 45-46" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 45-46: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 45-46" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 45-46: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 45-46" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 45-46: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 45-46" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 45-46: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -383,25 +383,25 @@ mission "Novaxys Level 47-48"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 47-48" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 47-48: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 47-48" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 47-48: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 47-48" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 47-48: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 47-48" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 47-48: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -447,25 +447,25 @@ mission "Novaxys Level 49-50"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 49-50" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 49-50: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 49-50" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 49-50: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 49-50" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 49-50: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 49-50" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 49-50: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -511,25 +511,25 @@ mission "Novaxys Level 51-52"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 51-52" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 51-52: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 51-52" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 51-52: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 52-53" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 51-52: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 52-53" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 51-52: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -575,25 +575,25 @@ mission "Novaxys Level 53-54"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 53-54" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 53-54: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 53-54" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 53-54: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 53-54" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 53-54: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 53-54" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 53-54: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -639,25 +639,25 @@ mission "Novaxys Level 55-56"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 55-56" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 55-56: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 55-56" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 55-56: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 55-56" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 55-56: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 55-56" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 55-56: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -703,25 +703,25 @@ mission "Novaxys Level 57-58"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 57-58" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 57-58: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 57-58" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 57-58: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 57-58" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 57-58: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 57-58" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 57-58: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -767,25 +767,25 @@ mission "Novaxys Level 59-60"
 			label durability
 			action
 				outfit "Novaxys Durability III" 1
-				log "Novaxys Levels" "Levels 59-60" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 59-60: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support III" 1
-				log "Novaxys Levels" "Levels 59-60" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 59-60: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat III" 1
-				log "Novaxys Levels" "Levels 59-60" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 59-60: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility III" 1
-				log "Novaxys Levels" "Levels 59-60" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 59-60: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -831,25 +831,25 @@ mission "Novaxys Level 61-62"
 			label durability
 			action
 				outfit "Novaxys Durability IV" 1
-				log "Novaxys Levels" "Levels 61-62" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 61-62: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support IV" 1
-				log "Novaxys Levels" "Levels 61-62" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 61-62: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat IV" 1
-				log "Novaxys Levels" "Levels 62-63" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 61-62: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility IV" 1
-				log "Novaxys Levels" "Levels 62-63" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 61-62: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -895,25 +895,25 @@ mission "Novaxys Level 63-64"
 			label durability
 			action
 				outfit "Novaxys Durability IV" 1
-				log "Novaxys Levels" "Levels 63-64" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 63-64: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support IV" 1
-				log "Novaxys Levels" "Levels 63-64" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 63-64: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat IV" 1
-				log "Novaxys Levels" "Levels 63-64" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 63-64: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility IV" 1
-				log "Novaxys Levels" "Levels 63-64" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 63-64: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -959,25 +959,25 @@ mission "Novaxys Level 65-66"
 			label durability
 			action
 				outfit "Novaxys Durability IV" 1
-				log "Novaxys Levels" "Levels 65-66" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 65-66: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support IV" 1
-				log "Novaxys Levels" "Levels 65-66" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 65-66: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat IV" 1
-				log "Novaxys Levels" "Levels 65-66" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 65-66: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility IV" 1
-				log "Novaxys Levels" "Levels 65-66" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 65-66: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -1023,25 +1023,25 @@ mission "Novaxys Level 67-68"
 			label durability
 			action
 				outfit "Novaxys Durability IV" 1
-				log "Novaxys Levels" "Levels 67-68" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 67-68: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support IV" 1
-				log "Novaxys Levels" "Levels 67-68" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 67-68: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat IV" 1
-				log "Novaxys Levels" "Levels 67-68" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 67-68: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility IV" 1
-				log "Novaxys Levels" "Levels 67-68" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 67-68: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -1087,25 +1087,25 @@ mission "Novaxys Level 69-70"
 			label durability
 			action
 				outfit "Novaxys Durability IV" 1
-				log "Novaxys Levels" "Levels 69-70" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 69-70: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support IV" 1
-				log "Novaxys Levels" "Levels 69-70" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 69-70: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat IV" 1
-				log "Novaxys Levels" "Levels 69-70" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 69-70: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility IV" 1
-				log "Novaxys Levels" "Levels 69-70" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 69-70: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -1151,25 +1151,25 @@ mission "Novaxys Level 71-72"
 			label durability
 			action
 				outfit "Novaxys Durability IV" 1
-				log "Novaxys Levels" "Levels 71-72" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 71-72: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support IV" 1
-				log "Novaxys Levels" "Levels 71-72" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 71-72: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat IV" 1
-				log "Novaxys Levels" "Levels 72-73" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 71-72: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility IV" 1
-				log "Novaxys Levels" "Levels 72-73" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 71-72: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -1215,25 +1215,25 @@ mission "Novaxys Level 73-74"
 			label durability
 			action
 				outfit "Novaxys Durability IV" 1
-				log "Novaxys Levels" "Levels 73-74" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 73-74: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support IV" 1
-				log "Novaxys Levels" "Levels 73-74" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 73-74: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat IV" 1
-				log "Novaxys Levels" "Levels 73-74" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 73-74: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility IV" 1
-				log "Novaxys Levels" "Levels 73-74" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 73-74: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -1279,25 +1279,25 @@ mission "Novaxys Level 75-76"
 			label durability
 			action
 				outfit "Novaxys Durability IV" 1
-				log "Novaxys Levels" "Levels 75-76" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 75-76: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support IV" 1
-				log "Novaxys Levels" "Levels 75-76" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 75-76: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat IV" 1
-				log "Novaxys Levels" "Levels 75-76" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 75-76: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility IV" 1
-				log "Novaxys Levels" "Levels 75-76" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 75-76: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
@@ -1343,25 +1343,25 @@ mission "Novaxys Level 77-78"
 			label durability
 			action
 				outfit "Novaxys Durability IV" 1
-				log "Novaxys Levels" "Levels 77-78" "Chose durability upgrade."
+				log Levels "Novaxys" "Levels 77-78: Chose durability upgrade."
 			`"Okay, Captain," Rosalynd replies. "It would be nice to not get blown up."`
 				goto next
 			label support
 			action
 				outfit "Novaxys Support IV" 1
-				log "Novaxys Levels" "Levels 77-78" "Chose support upgrade."
+				log Levels "Novaxys" "Levels 77-78: Chose support upgrade."
 			`"It doesn't hurt to carry extra equipment," Rosalynd agrees.`
 				goto next
 			label combat
 			action
 				outfit "Novaxys Combat IV" 1
-				log "Novaxys Levels" "Levels 77-78" "Chose combat upgrade."
+				log Levels "Novaxys" "Levels 77-78: Chose combat upgrade."
 			`"I would like to be a stronger fighter," Rosalynd nods. "Okay, Captain."`
 				goto next
 			label utility
 			action
 				outfit "Novaxys Utility IV" 1
-				log "Novaxys Levels" "Levels 77-78" "Chose utility upgrade."
+				log Levels "Novaxys" "Levels 77-78: Chose utility upgrade."
 			`"Utilities... I think I have a few ideas, Captain," Rosalynd nods.`
 				goto next
 
