@@ -154,56 +154,56 @@ mission "Apoxys Level 61"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 61" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 61: Chose shield upgrade."
 			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 61" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 61: Chose hull upgrade."
 			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 61" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 61: Chose outfit upgrade."
 			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 61" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 61: Chose heat capacity upgrade."
 			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. No heat will be too mighty for our heatsinks!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 61" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 61: Chose weapon upgrade."
 			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 61" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 61: Chose engine upgrade."
 			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 61" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 61: Chose cargo upgrade."
 			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 61" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 61: Chose bunk upgrade."
 			`"Oh!" Maribelle replies, seemingly a bit surprised that you cared to give your own input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -244,56 +244,56 @@ mission "Apoxys Level 62"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 62" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 62: Chose shield upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 62" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 62: Chose hull upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 62" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 62: Chose outfit upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 62" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 62: Chose heat capacity upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 62" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 62: Chose weapon upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 62" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 62: Chose engine upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 62" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 62: Chose cargo upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 62" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 62: Chose bunk upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 
@@ -341,56 +341,56 @@ mission "Apoxys Level 63"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 63" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 63: Chose shield upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 63" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 63: Chose hull upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 63" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 63: Chose outfit upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 63" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 63: Chose heat capacity upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Heat shouldn't be nearly as much of an issue, now!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 63" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 63: Chose weapon upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 63" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 63: Chose engine upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 63" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 63: Chose cargo upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 63" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 63: Chose bunk upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -432,56 +432,56 @@ mission "Apoxys Level 64"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 64" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 64: Chose shield upgrade."
 			`"More shields sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 64" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 64: Chose hull upgrade."
 			`"More hull sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 64" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 64: Chose outfit upgrade."
 			`"More space sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 64" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 64: Chose heat capacity upgrade."
 			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 64" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 64: Chose weapon upgrade."
 			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 64" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 64: Chose engine upgrade."
 			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 64" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 64: Chose cargo upgrade."
 			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 64" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 64: Chose bunk upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 
@@ -528,56 +528,56 @@ mission "Apoxys Level 65"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 65" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 65: Chose shield upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 65" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 65: Chose hull upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 65" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 65: Chose outfit upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 65" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 65: Chose heat capacity upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Heat shouldn't be nearly as much of an issue, now!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 65" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 65: Chose weapon upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 65" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 65: Chose engine upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 65" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 65: Chose cargo upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 65" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 65: Chose bunk upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -619,56 +619,56 @@ mission "Apoxys Level 66"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 66" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 66: Chose shield upgrade."
 			`"More shields sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 66" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 66: Chose hull upgrade."
 			`"More hull sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 66" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 66: Chose outfit upgrade."
 			`"More space sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 66" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 66: Chose heat capacity upgrade."
 			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 66" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 66: Chose weapon upgrade."
 			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 66" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 66: Chose engine upgrade."
 			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 66" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 66: Chose cargo upgrade."
 			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 66" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 66: Chose bunk upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 
@@ -715,56 +715,56 @@ mission "Apoxys Level 67"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 67" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 67: Chose shield upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 67" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 67: Chose hull upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 67" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 67: Chose outfit upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 67" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 67: Chose heat capacity upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Heat shouldn't be nearly as much of an issue, now!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 67" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 67: Chose weapon upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 67" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 67: Chose engine upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 67" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 67: Chose cargo upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 67" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 67: Chose bunk upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -806,56 +806,56 @@ mission "Apoxys Level 68"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 68" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 68: Chose shield upgrade."
 			`"More shields sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 68" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 68: Chose hull upgrade."
 			`"More hull sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 68" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 68: Chose outfit upgrade."
 			`"More space sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 68" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 68: Chose heat capacity upgrade."
 			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 68" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 68: Chose weapon upgrade."
 			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 68" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 68: Chose engine upgrade."
 			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 68" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 68: Chose cargo upgrade."
 			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 68" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 68: Chose bunk upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 
@@ -902,56 +902,56 @@ mission "Apoxys Level 69"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 69" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 69: Chose shield upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 69" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 69: Chose hull upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 69" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 69: Chose outfit upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 69" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 69: Chose heat capacity upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Heat shouldn't be nearly as much of an issue, now!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 69" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 69: Chose weapon upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 69" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 69: Chose engine upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 69" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 69: Chose cargo upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 69" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 69: Chose bunk upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -992,56 +992,56 @@ mission "Apoxys Level 70"
 			action
 				outfit "Shields IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 70" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 70: Chose shield upgrade."
 			`Maribelle nods. "I'll be sure to have it done," She says, "Now..."`
 				goto next
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 70" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 70: Chose hull upgrade."
 			`Maribelle nods. "I'll be sure to have it done," She says, "Now..."`
 				goto next
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 70" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 70: Chose outfit upgrade."
 			`Maribelle nods. "I'll be sure to have it done," She says, "Now..."`
 				goto next
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 70" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 70: Chose heat capacity upgrade."
 			`Maribelle nods. "I'll be sure to have it done," She says, "Now..."`
 				goto next
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 70" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 70: Chose weapon upgrade."
 			`Maribelle nods. "I'll be sure to have it done," She says, "Now..."`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 70" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 70: Chose engine upgrade."
 			`Maribelle nods. "I'll be sure to have it done," She says, "Now..."`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 70" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 70: Chose cargo upgrade."
 			`Maribelle nods. "I'll be sure to have it done," She says, "Now..."`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 70" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 70: Chose bunk upgrade."
 			`Maribelle nods. "I'll be sure to have it done," She says, "Now..."`
 				goto next
 
@@ -1088,56 +1088,56 @@ mission "Apoxys Level 71"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 71" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 71: Chose shield upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 71" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 71: Chose hull upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 71" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 71: Chose outfit upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 71" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 71: Chose heat capacity upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Heat shouldn't be nearly as much of an issue, now!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 71" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 71: Chose weapon upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 71" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 71: Chose engine upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 71" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 71: Chose cargo upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 71" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 71: Chose bunk upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -1179,56 +1179,56 @@ mission "Apoxys Level 72"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 72" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 72: Chose shield upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 72" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 72: Chose hull upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 72" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 72: Chose outfit upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 72" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 72: Chose heat capacity upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 72" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 72: Chose weapon upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 72" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 72: Chose engine upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 72" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 72: Chose cargo upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 72" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 72: Chose bunk upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 
@@ -1276,56 +1276,56 @@ mission "Apoxys Level 73"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 73" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 73: Chose shield upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 73" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 73: Chose hull upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 73" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 73: Chose outfit upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 73" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 73: Chose heat capacity upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Heat shouldn't be nearly as much of an issue, now!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 73" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 73: Chose weapon upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 73" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 73: Chose engine upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 73" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 73: Chose cargo upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 73" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 73: Chose bunk upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -1367,56 +1367,56 @@ mission "Apoxys Level 74"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 74" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 74: Chose shield upgrade."
 			`"More shields sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 74" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 74: Chose hull upgrade."
 			`"More hull sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 74" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 74: Chose outfit upgrade."
 			`"More space sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 74" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 74: Chose heat capacity upgrade."
 			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 74" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 74: Chose weapon upgrade."
 			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 74" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 74: Chose engine upgrade."
 			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 74" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 74: Chose cargo upgrade."
 			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 74" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 74: Chose bunk upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 
@@ -1463,56 +1463,56 @@ mission "Apoxys Level 75"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 75" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 75: Chose shield upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 75" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 75: Chose hull upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 75" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 75: Chose outfit upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 75" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 75: Chose heat capacity upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Heat shouldn't be nearly as much of an issue, now!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 75" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 75: Chose weapon upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 75" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 75: Chose engine upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 75" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 75: Chose cargo upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 75" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 75: Chose bunk upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -1554,56 +1554,56 @@ mission "Apoxys Level 76"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 76" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 76: Chose shield upgrade."
 			`"More shields sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 76" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 76: Chose hull upgrade."
 			`"More hull sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 76" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 76: Chose outfit upgrade."
 			`"More space sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 76" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 76: Chose heat capacity upgrade."
 			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 76" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 76: Chose weapon upgrade."
 			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 76" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 76: Chose engine upgrade."
 			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 76" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 76: Chose cargo upgrade."
 			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 76" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 76: Chose bunk upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 
@@ -1650,56 +1650,56 @@ mission "Apoxys Level 77"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 77" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 77: Chose shield upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 77" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 77: Chose hull upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 77" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 77: Chose outfit upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 77" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 77: Chose heat capacity upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Heat shouldn't be nearly as much of an issue, now!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 77" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 77: Chose weapon upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 77" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 77: Chose engine upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 77" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 77: Chose cargo upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 77" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 77: Chose bunk upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -1755,42 +1755,42 @@ mission "Apoxys Level 78"
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 78" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 78: Chose outfit upgrade."
 			`"More space sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 78" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 78: Chose heat capacity upgrade."
 			`"More heat capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 78" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 78: Chose weapon upgrade."
 			`"More weaponry sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 78" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 78: Chose engine upgrade."
 			`"More engine capabilities sound good, captain!" Maribelle replies giddily.`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 78" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 78: Chose cargo upgrade."
 			`"More carrying capacity sounds good, captain!" Maribelle replies giddily.`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 78" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 78: Chose bunk upgrade."
 			`"I'll be sure it's done, captain," Maribelle replies.`
 				goto next
 
@@ -1837,56 +1837,56 @@ mission "Apoxys Level 79"
 			action
 				outfit "Shields IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 79" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 79: Chose shield upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Only the strongest shields to keep the bad things out!"`
 				decline
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 79" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 79: Chose hull upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. The most durable hull, for resisting all that space throws at us!"`
 				decline
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 79" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 79: Chose outfit upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Just imagine what we can do with all the extra space!"`
 				decline
 			label heatcap
 			action
 				outfit "Heat Capacity IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 79" "Chose heat capacity upgrade."
+				log Levels "Apoxys" "Level 79: Chose heat capacity upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Heat shouldn't be nearly as much of an issue, now!"`
 				decline
 			label weaponcap
 			action
 				outfit "Weapons IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 79" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 79: Chose weapon upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our projectiles will blot out the sun! Maybe even a couple suns."`
 				decline
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 79" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 79: Chose engine upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. Our engines will move us like a moth to a flame! Ideally without the burning alive part."`
 				decline
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 79" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 79: Chose cargo upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll be able to carry plenty of goodies now!"`
 				decline
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Basal Level IV" 1
-				log Levels "Level 79" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 79: Chose bunk upgrade."
 			`"Okay!" Maribelle replies, quite happy with your input, "I'll do just that, then Captain. We'll have room for all sorts of friends!"`
 				decline
 
@@ -1929,21 +1929,21 @@ mission "Apoxys Level 80"
 			action
 				outfit "Shields IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 80" "Chose shield upgrade."
+				log Levels "Apoxys" "Level 80: Chose shield upgrade."
 			`"I'll be sure to delegate some energy to that!" Maribelle says, still shaking excitedly.`
 				goto next
 			label hullcap
 			action
 				outfit "Hull IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 80" "Chose hull upgrade."
+				log Levels "Apoxys" "Level 80: Chose hull upgrade."
 			`"I'll be sure to delegate some energy to that!" Maribelle says, still shaking excitedly.`
 				goto next
 			label outfitcap
 			action
 				outfit "Outfit IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 80" "Chose outfit upgrade."
+				log Levels "Apoxys" "Level 80: Chose outfit upgrade."
 			`"I'll be sure to delegate some energy to that!" Maribelle says, still shaking excitedly.`
 				goto next
 			label heatcap
@@ -1957,28 +1957,28 @@ mission "Apoxys Level 80"
 			action
 				outfit "Weapons IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 80" "Chose weapon upgrade."
+				log Levels "Apoxys" "Level 80: Chose weapon upgrade."
 			`"I'll be sure to delegate some energy to that!" Maribelle says, still shaking excitedly.`
 				goto next
 			label enginecap
 			action
 				outfit "Engines IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 80" "Chose engine upgrade."
+				log Levels "Apoxys" "Level 80: Chose engine upgrade."
 			`"I'll be sure to delegate some energy to that!" Maribelle says, still shaking excitedly.`
 				goto next
 			label cargocap
 			action
 				outfit "Cargo IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 80" "Chose cargo upgrade."
+				log Levels "Apoxys" "Level 80: Chose cargo upgrade."
 			`"I'll be sure to delegate some energy to that!" Maribelle says, still shaking excitedly.`
 				goto next
 			label bunkcap
 			action
 				outfit "Bunks IV" 1
 				outfit "Milestone IV" 1
-				log Levels "Level 80" "Chose bunk upgrade."
+				log Levels "Apoxys" "Level 80: Chose bunk upgrade."
 			`"I'll be sure to delegate some energy to that!" Maribelle says, still shaking excitedly.`
 				goto next
 

@@ -587,6 +587,8 @@ mission "Apoxys Level 100 Choices"
 				"mark v choices" == 0
 
 			label special
+			action
+				log Levels "Apoxys" "Level 100: Re-chose upgrades."
 			`"Okay, captain, we've got one more choice to make: Cloaking Field, or Spinal Mount?" Maribelle asks.`
 			choice
 				`	"Go for the Cloaking Field."`
@@ -597,7 +599,7 @@ mission "Apoxys Level 100 Choices"
 			label cloak
 			action
 				outfit "Perk: Cloaking Field" 1
-				log Levels "Level 100" "Chose Cloaking Field."
+				log Levels "Apoxys" "	Chose Cloaking Field."
 			`Maribelle looks at you. "Are you sure?" She asks.`
 			`	"Yes," You reply. "I'm certain."`
 			`	Maribelle nods. "Consider it done, then, captain."`
@@ -606,7 +608,7 @@ mission "Apoxys Level 100 Choices"
 			label spinal
 			action
 				outfit "Perk: Spinal Mount" 1
-				log Levels "Level 100" "Chose Spinal Mount."
+				log Levels "Apoxys" "	Chose Spinal Mount."
 			`Maribelle looks at you. "Are you sure?" She asks.`
 			`	"Yes," You reply. "I'm certain."`
 			`	Maribelle nods. "Consider it done, then, captain."`
