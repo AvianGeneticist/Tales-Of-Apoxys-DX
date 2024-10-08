@@ -507,7 +507,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Fortitude" -1
-	`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+	`Fortitude decreased by 1 (now &[outfit (flagship installed): Fortitude]).`
 		goto fortitude
 
 	label force
@@ -533,7 +533,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Force" -1
-	`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+	`Force decreased by 1 (now &[outfit (flagship installed): Force]).`
 		goto force
 
 	label focus
@@ -559,7 +559,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Focus" -1
-	`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+	`Focus decreased by 1 (now &[outfit (flagship installed): Focus]).`
 		goto focus
 
 	label flightiness
@@ -585,7 +585,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Flightiness" -1
-	`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+	`Flightiness decreased by 1 (now &[outfit (flagship installed): Flightiness]).`
 		goto flightiness
 
 	label friendliness
@@ -611,7 +611,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Friendliness" -1
-	`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+	`Friendliness decreased by 1 (now &[outfit (flagship installed): Friendliness]).`
 		goto friendliness
 
 	label shieldoverclock
