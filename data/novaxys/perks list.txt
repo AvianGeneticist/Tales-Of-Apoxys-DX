@@ -107,6 +107,7 @@ conversation "novaperkslist"
 						has "Novaxys Level 35-36: declined"
 						"outfit (flagship installed): Perk: Lighten Up" == 2
 		`	(Unstoppable.)`
+			to display
 				or
 					and
 						has "Novaxys Level 3-4: declined"
