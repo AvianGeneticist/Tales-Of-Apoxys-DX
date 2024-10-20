@@ -13,8 +13,240 @@ mission "Novaxys Perks List"
 conversation "novaperkslist"
 	`Before you lies a large list of 'perks'; special upgrades that may alter how the ship handles in more drastic ways than simple level-up stat boosts. Be sure to read descriptions carefully!`
 	label hub
+	branch "available perks" "all perks"
+		"apoxys show all perks" == 0
+
+	label "available perks"
 	`	You have &[novaxys perks] perks left.`
 	choice
+		`	(Show all perks.)
+				action
+					"apoxys show all perks" = 1
+			goto "all perks"
+		`	(Core Restructure.)`
+			goto corerestructure
+		`	(Tough Shields.)`
+			to display
+				or
+					and
+						has "Novaxys Level 1-2: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 0
+					and
+						has "Novaxys Level 5-6: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 1
+					and
+						has "Novaxys Level 13-14: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 2
+					and
+						has "Novaxys Level 21-22: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 3
+					and
+						has "Novaxys Level 29-30: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 4
+					and
+						has "Novaxys Level 37-38: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 5
+					and
+						has "Novaxys Level 47-48: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 6
+					and
+						has "Novaxys Level 57-58: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 7
+					and
+						has "Novaxys Level 67-68: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 8
+					and
+						has "Novaxys Level 80 Choices: declined"
+						"outfit (flagship installed): Perk: Tough Shields" == 9
+			goto toughshields
+		`	(Thick Skin.)`
+			to display
+				or
+					and
+						has "Novaxys Level 1-2: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 0
+					and
+						has "Novaxys Level 5-6: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 1
+					and
+						has "Novaxys Level 13-14: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 2
+					and
+						has "Novaxys Level 21-22: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 3
+					and
+						has "Novaxys Level 29-30: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 4
+					and
+						has "Novaxys Level 37-38: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 5
+					and
+						has "Novaxys Level 47-48: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 6
+					and
+						has "Novaxys Level 57-58: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 7
+					and
+						has "Novaxys Level 67-68: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 8
+					and
+						has "Novaxys Level 80 Choices: declined"
+						"outfit (flagship installed): Perk: Thick Skin" == 9
+			goto thickskin
+		`	(Lighten Up.)`
+			goto lightenup
+			to display
+				or
+					and
+						has "Novaxys Level 7-8: declined"
+						"outfit (flagship installed): Perk: Lighten Up" == 0
+					and
+						has "Novaxys Level 19-20: declined"
+						"outfit (flagship installed): Perk: Lighten Up" == 1
+					and
+						has "Novaxys Level 35-36: declined"
+						"outfit (flagship installed): Perk: Lighten Up" == 2
+		`	(Unstoppable.)`
+			to display
+				or
+					and
+						has "Novaxys Level 3-4: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 0
+					and
+						has "Novaxys Level 11-12: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 1
+					and
+						has "Novaxys Level 23-24: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 2
+					and
+						has "Novaxys Level 39-40: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 3
+					and
+						has "Novaxys Level 55-56: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 4
+					and
+						has "Novaxys Level 73-74: declined"
+						"outfit (flagship installed): Perk: Unstoppable" == 5
+			goto unstoppable
+		`	(Pack Mule.)`
+			to display
+				or
+					and
+						has "Novaxys Level 3-4: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 0
+					and
+						has "Novaxys Level 15-16: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 1
+					and
+						has "Novaxys Level 27-28: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 2
+					and
+						has "Novaxys Level 41-42: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 3
+					and
+						has "Novaxys Level 57-58: declined"
+						"outfit (flagship installed): Perk: Pack Mule" == 4
+			goto packmule
+		`	(Fuel Reserves.)`
+			to display
+				or
+					and
+						has "Novaxys Level 5-6: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 0
+					and
+						has "Novaxys Level 9-10: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 1
+					and
+						has "Novaxys Level 17-18: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 2
+					and
+						has "Novaxys Level 25-26: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 3
+					and
+						has "Novaxys Level 33-34: declined"
+						"outfit (flagship installed): Perk: Fuel Reserves" == 4
+			goto fuelreserves
+		`	(Thermophile.)`
+			to display
+				or
+					and
+						has "Novaxys Level 7-8: declined"
+						"outfit (flagship installed): Perk: Thermophile" == 0
+					and
+						has "Novaxys Level 23-24: declined"
+						"outfit (flagship installed): Perk: Thermophile" == 1
+					and
+						has "Novaxys Level 51-52: declined"
+						"outfit (flagship installed): Perk: Thermophile" == 2
+			goto thermophile
+		`	(Controlled Burn.)`
+			to display
+				or
+					and
+						has "Novaxys Level 15-16: declined"
+						"outfit (flagship installed): Perk: Controlled Burn" == 0
+					and
+						has "Novaxys Level 27-28: declined"
+						"outfit (flagship installed): Perk: Controlled Burn" == 1
+					and
+						has "Novaxys Level 39-40: declined"
+						"outfit (flagship installed): Perk: Controlled Burn" == 2
+			goto controlledburn
+		`	(Pyromaniac.)`
+			to display
+				or
+					and
+						has "Novaxys Level 17-18: declined"
+						"outfit (flagship installed): Perk: Pyromaniac" == 0
+					and
+						has "Novaxys Level 31-32: declined"
+						"outfit (flagship installed): Perk: Pyromaniac" == 1
+					and
+						has "Novaxys Level 45-46: declined"
+						"outfit (flagship installed): Perk: Pyromaniac" == 2
+			goto pyromaniac
+		`	(Tinder.)`
+			to display
+				or
+					and
+						has "Novaxys Level 19-20: declined"
+						"outfit (flagship installed): Perk: Tinder" == 0
+					and
+						has "Novaxys Level 35-36: declined"
+						"outfit (flagship installed): Perk: Tinder" == 1
+					and
+						has "Novaxys Level 51-52: declined"
+						"outfit (flagship installed): Perk: Tinder" == 2
+			goto tinder
+		`	(Burning Rush.)`
+			to display
+				or
+					and
+						has "Novaxys Level 9-10: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 0
+					and
+						has "Novaxys Level 21-22: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 1
+					and
+						has "Novaxys Level 33-34: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 2
+					and
+						has "Novaxys Level 45-46: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 3
+					and
+						has "Novaxys Level 59-60: declined"
+						"outfit (flagship installed): Perk: Burning Rush" == 4
+			goto burningrush
+		`	(Not now.)`
+			defer
+
+	label "all perks"
+	`	You have &[novaxys perks] perks left.`
+	choice
+		`	(Show available perks only.)
+				action
+					"apoxys show all perks" = 0
+			goto "available perks"
 		`	(Core Restructure.)`
 			goto corerestructure
 		`	(Tough Shields.)`
@@ -109,7 +341,7 @@ conversation "novaperkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Fortitude" -1
-	`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+	`Fortitude decreased by 1 (now &[outfit (flagship installed): Fortitude]).`
 		goto fortitude
 
 	label force
@@ -135,7 +367,7 @@ conversation "novaperkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Force" -1
-	`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+	`Force decreased by 1 (now &[outfit (flagship installed): Force]).`
 		goto force
 
 	label focus
@@ -161,7 +393,7 @@ conversation "novaperkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Focus" -1
-	`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+	`Focus decreased by 1 (now &[outfit (flagship installed): Focus]).`
 		goto focus
 
 	label flightiness
@@ -187,7 +419,7 @@ conversation "novaperkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Flightiness" -1
-	`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+	`Flightiness decreased by 1 (now &[outfit (flagship installed): Flightiness]).`
 		goto flightiness
 
 	label friendliness
@@ -213,7 +445,7 @@ conversation "novaperkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Friendliness" -1
-	`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+	`Friendliness decreased by 1 (now &[outfit (flagship installed): Friendliness]).`
 		goto friendliness
 
 	label toughshields
