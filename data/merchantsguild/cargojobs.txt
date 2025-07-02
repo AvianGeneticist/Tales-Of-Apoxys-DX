@@ -1,5 +1,6 @@
 # UNAFFILIATED CARGO JOBS
 # Basic cargo jobs to gauge the player's interest in the merchant lifestyle.
+# The first mission having no requirements aside from a very low chance allows the player to progress using merchant missions earlier.
 
 mission "Experience Cargo [0]"
 	name "(Lv. 0+) Small delivery to <planet>"
@@ -8,9 +9,7 @@ mission "Experience Cargo [0]"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 75 125
 	to offer
-		not and
-			"Apoxys Level 10: declined"
-			"Merchant's Guild Invitation: done"
+		random > 90
 
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
