@@ -13,8 +13,384 @@ mission "Apoxys Perks List"
 conversation "perkslist"
 	`Before you lies a large list of 'perks'; special upgrades that may alter how the ship handles in more drastic ways than simple level-up stat boosts. Be sure to read descriptions carefully!`
 	label hub
+	branch "available perks" "all perks"
+		"apoxys show all perks" == 0
+
+	label "available perks"
 	`	You have &[perk in waiting] perks left.`
 	choice
+		`	(Show all perks.)
+				action
+					"apoxys show all perks" = 1
+			goto "all perks"
+		`	(Core Restructure.)`
+			goto corerestructure
+		`	(Shield Overclock.)`
+			to display
+				or
+					and
+						has "Apoxys Level 2: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 0
+					and
+						has "Apoxys Level 6: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 1
+					and
+						has "Apoxys Level 10: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 2
+					and
+						has "Apoxys Level 14: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 3
+					and
+						has "Apoxys Level 20: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 4
+					and
+						has "Apoxys Level 30: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 5
+					and
+						has "Apoxys Level 42: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 6
+					and
+						has "Apoxys Level 56: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 7
+					and
+						has "Apoxys Level 72: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 8
+					and
+						has "Apoxys Level 90: declined"
+						"outfit (flagship installed): Perk: Shield Overclock" == 9
+					has "Apoxys Level 100 Choices: declined"
+			goto shieldoverclock
+		`	(Heat Dissipation.)`
+			to display
+				or
+					and
+						has "Apoxys Level 2: declined"
+						"outfit (flagship installed): Perk: Heat Dissipation" == 0
+					and
+						has "Apoxys Level 14: declined"
+						"outfit (flagship installed): Perk: Heat Dissipation" == 1
+					and
+						has "Apoxys Level 30: declined"
+						"outfit (flagship installed): Perk: Heat Dissipation" == 2
+			goto heatdissipation
+		`	(Drag Reduction.)`
+			to display
+				or
+					and
+						has "Apoxys Level 8: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 0
+					and
+						has "Apoxys Level 22: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 1
+					and
+						has "Apoxys Level 40: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 2
+					and
+						has "Apoxys Level 62: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 3
+					and
+						has "Apoxys Level 86: declined"
+						"outfit (flagship installed): Perk: Drag Reduction" == 4
+			goto dragreduction
+		`	(No Pushover.)`
+			to display
+				or
+					and
+						has "Apoxys Level 4: declined"
+						"outfit (flagship installed): Perk: No Pushover" == 0
+					and
+						has "Apoxys Level 32: declined"
+						"outfit (flagship installed): Perk: No Pushover" == 1
+			goto nopushover
+		`	(Long Hauler.)`
+			to display
+				or
+					and
+						has "Apoxys Level 4: declined"
+						"outfit (flagship installed): Perk: Long Hauler" == 0
+					and
+						has "Apoxys Level 18: declined"
+						"outfit (flagship installed): Perk: Long Hauler" == 1
+					and
+						has "Apoxys Level 38: declined"
+						"outfit (flagship installed): Perk: Long Hauler" == 2
+					and
+						has "Apoxys Level 60: declined"
+						"outfit (flagship installed): Perk: Long Hauler" == 3
+					and
+						has "Apoxys Level 88: declined"
+						"outfit (flagship installed): Perk: Long Hauler" == 4
+			goto longhauler
+		`	(Heat Shielding.)`
+			to display
+				or
+					and
+						has "Apoxys Level 6: declined"
+						"outfit (flagship installed): Perk: Heat Shielding" == 0
+					and
+						has "Apoxys Level 24: declined"
+						"outfit (flagship installed): Perk: Heat Shielding" == 1
+					and
+						has "Apoxys Level 46: declined"
+						"outfit (flagship installed): Perk: Heat Shielding" == 2
+			goto heatshield
+		`	(Energy Shielding.)`
+			to display
+				or
+					and
+						has "Apoxys Level 6: declined"
+						"outfit (flagship installed): Perk: Energy Shielding" == 0
+					and
+						has "Apoxys Level 24: declined"
+						"outfit (flagship installed): Perk: Energy Shielding" == 1
+					and
+						has "Apoxys Level 46: declined"
+						"outfit (flagship installed): Perk: Energy Shielding" == 2
+			goto energyshield
+		`	(Artilleur.)`
+			to display
+				or
+					and
+						has "Apoxys Level 8: declined"
+						"outfit (flagship installed): Perk: Artilleur" == 0
+					and
+						has "Apoxys Level 30: declined"
+						"outfit (flagship installed): Perk: Artilleur" == 1
+					and
+						has "Apoxys Level 60: declined"
+						"outfit (flagship installed): Perk: Artilleur" == 2
+			goto artilleur
+		`	(Engineer.)`
+			to display
+				or
+					and
+						has "Apoxys Level 14: declined"
+						"outfit (flagship installed): Perk: Engineer" == 0
+					and
+						has "Apoxys Level 38: declined"
+						"outfit (flagship installed): Perk: Engineer" == 1
+					and
+						has "Apoxys Level 68: declined"
+						"outfit (flagship installed): Perk: Engineer" == 2
+			goto engineer
+		`	(Shieldsmith.)`
+			to display
+				or
+					and
+						has "Apoxys Level 14: declined"
+						"outfit (flagship installed): Perk: Shieldsmith" == 0
+					and
+						has "Apoxys Level 38: declined"
+						"outfit (flagship installed): Perk: Shieldsmith" == 1
+					and
+						has "Apoxys Level 80: declined"
+						"outfit (flagship installed): Perk: Shieldsmith" == 2
+			goto shieldsmith
+		`	(Natural Regeneration.)`
+			to display
+				or
+					and
+						has "Apoxys Level 6: declined"
+						"outfit (flagship installed): Perk: Natural Regeneration" == 0
+					and
+						has "Apoxys Level 22: declined"
+						"outfit (flagship installed): Perk: Natural Regeneration" == 1
+					and
+						has "Apoxys Level 30: declined"
+						"outfit (flagship installed): Perk: Natural Regeneration" == 2
+					and
+						has "Apoxys Level 42: declined"
+						"outfit (flagship installed): Perk: Natural Regeneration" == 3
+					and
+						has "Apoxys Level 56: declined"
+						"outfit (flagship installed): Perk: Natural Regeneration" == 4
+			goto naturalregeneration
+		`	(Natural Repair.)`
+			to display
+				or
+					and
+						has "Apoxys Level 8: declined"
+						"outfit (flagship installed): Perk: Natural Repair" == 0
+					and
+						has "Apoxys Level 24: declined"
+						"outfit (flagship installed): Perk: Natural Repair" == 1
+					and
+						has "Apoxys Level 32: declined"
+						"outfit (flagship installed): Perk: Natural Repair" == 2
+					and
+						has "Apoxys Level 44: declined"
+						"outfit (flagship installed): Perk: Natural Repair" == 3
+					and
+						has "Apoxys Level 58: declined"
+						"outfit (flagship installed): Perk: Natural Repair" == 4
+			goto naturalrepair
+		`	(Repair Overdrive.)`
+			to display
+				or
+					and
+						has "Apoxys Level 16: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 0
+					and
+						has "Apoxys Level 20: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 1
+					and
+						has "Apoxys Level 26: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 2
+					and
+						has "Apoxys Level 32: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 3
+					and
+						has "Apoxys Level 40: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 4
+					and
+						has "Apoxys Level 48: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 5
+					and
+						has "Apoxys Level 58: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 6
+					and
+						has "Apoxys Level 70: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 7
+					and
+						has "Apoxys Level 82: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 8
+					and
+						has "Apoxys Level 96: declined"
+						"outfit (flagship installed): Perk: Repair Overdrive" == 9
+					has "Apoxys Level 100 Choices: declined"
+			goto repairoverdrive
+		`	(Raider Rally.)`
+			to display
+				or
+					and
+						has "Apoxys Level 10: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 0
+					and
+						has "Apoxys Level 24: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 1
+					and
+						has "Apoxys Level 44: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 2
+					and
+						has "Apoxys Level 66: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 3
+					and
+						has "Apoxys Level 92: declined"
+						"outfit (flagship installed): Perk: Raider Rally" == 4
+			goto raiderrally
+		`	(Stellar Drinker.)`
+			to display
+				or
+					and
+						has "Apoxys Level 12: declined"
+						"outfit (flagship installed): Perk: Stellar Drinker" == 0
+					and
+						has "Apoxys Level 28: declined"
+						"outfit (flagship installed): Perk: Stellar Drinker" == 1
+					and
+						has "Apoxys Level 42: declined"
+						"outfit (flagship installed): Perk: Stellar Drinker" == 2
+			goto stellardrinker
+		`	(Sneaky Packer.)`
+			to display
+				or
+					and
+						has "Apoxys Level 12: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 0
+					and
+						has "Apoxys Level 22: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 1
+					and
+						has "Apoxys Level 34: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 2
+					and
+						has "Apoxys Level 48: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 3
+					and
+						has "Apoxys Level 58: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 4
+					and
+						has "Apoxys Level 70: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 5
+					and
+						has "Apoxys Level 82: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 6
+					and
+						has "Apoxys Level 94: declined"
+						"outfit (flagship installed): Perk: Sneaky Packer" == 7
+			goto sneakypacker
+		`	(Disassembler.)`
+			to display
+				and
+					has "Apoxys Level 28: declined"
+					"outfit (flagship installed): Perk: Disassembler" == 0
+			goto disassembler
+		`	(Missile Lover.)`
+			to display
+				and
+					has "Apoxys Level 36: declined"
+					"outfit (flagship installed): Perk: Missile Lover" == 0
+			goto missilelover
+		`	(Pick-Me-Up.)`
+			to display
+				and
+					has "Apoxys Level 54: declined"
+					"outfit (flagship installed): Perk: Pick-Me-Up" == 0
+					"outfit (flagship installed): Fortitude" >= 8
+			goto pickmeup
+		`	(Adrenal Surge.)`
+			to display
+				and
+					has "Apoxys Level 36: declined"
+					"outfit (flagship installed): Perk: Adrenal Surge" == 0
+					"outfit (flagship installed): Focus" >= 7
+			goto adrenalsurge
+		`	(Barrage Squad.)`
+			to display
+				and
+					2 <= ( "flagship bays: Drone" - ( ( 2 * "outfit (flagship installed): Perk: Barrage Squad" ) + "outfit (flagship installed): Perk: Crippler Squad" ) )
+					or
+						and
+							has "Apoxys Level 16: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 0
+						and
+							has "Apoxys Level 34: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 1
+						and
+							has "Apoxys Level 52: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 2
+						and
+							has "Apoxys Level 70: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 3
+						and
+							has "Apoxys Level 88: declined"
+							"outfit (flagship installed): Perk: Barrage Squad" == 4
+			goto barragesquad
+		`	(Crippler Squad.)`
+			to display
+				and
+					1 <= ( "flagship bays: Drone" - ( ( 2 * "outfit (flagship installed): Perk: Barrage Squad" ) + "outfit (flagship installed): Perk: Crippler Squad" ) )
+					or
+						and
+							has "Apoxys Level 16: declined"
+							"outfit (flagship installed): Perk: Crippler Squad" == 0
+						and
+							has "Apoxys Level 34: declined"
+							"outfit (flagship installed): Perk: Crippler Squad" == 1
+						and
+							has "Apoxys Level 52: declined"
+							"outfit (flagship installed): Perk: Crippler Squad" == 2
+			goto cripplersquad
+		`	(Not now.)`
+			defer
+
+	label "all perks"
+	`	You have &[perk in waiting] perks left.`
+	choice
+		`	(Show available perks only.)
+				action
+					"apoxys show all perks" = 0
+			goto "available perks"
 		`	(Core Restructure.)`
 			goto corerestructure
 		`	(Shield Overclock.)`
@@ -131,7 +507,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Fortitude" -1
-	`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+	`Fortitude decreased by 1 (now &[outfit (flagship installed): Fortitude]).`
 		goto fortitude
 
 	label force
@@ -157,7 +533,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Force" -1
-	`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+	`Force decreased by 1 (now &[outfit (flagship installed): Force]).`
 		goto force
 
 	label focus
@@ -183,7 +559,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Focus" -1
-	`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+	`Focus decreased by 1 (now &[outfit (flagship installed): Focus]).`
 		goto focus
 
 	label flightiness
@@ -209,7 +585,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Flightiness" -1
-	`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+	`Flightiness decreased by 1 (now &[outfit (flagship installed): Flightiness]).`
 		goto flightiness
 
 	label friendliness
@@ -235,7 +611,7 @@ conversation "perkslist"
 	action
 		"apoxys spec points" += 1
 		outfit "Friendliness" -1
-	`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+	`Friendliness decreased by 1 (now &[outfit (flagship installed): Friendliness]).`
 		goto friendliness
 
 	label shieldoverclock

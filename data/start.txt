@@ -182,7 +182,7 @@ conversation "toa intro"
 	action
 		"apoxys spec points" += 1
 		outfit "Fortitude" -1
-	`Fortitude increased by 1 (now &[outfit (flagship installed): Fortitude]).`
+	`Fortitude decreased by 1 (now &[outfit (flagship installed): Fortitude]).`
 		goto fortitude
 
 	label force
@@ -208,7 +208,7 @@ conversation "toa intro"
 	action
 		"apoxys spec points" += 1
 		outfit "Force" -1
-	`Force increased by 1 (now &[outfit (flagship installed): Force]).`
+	`Force decreased by 1 (now &[outfit (flagship installed): Force]).`
 		goto force
 
 	label focus
@@ -234,17 +234,17 @@ conversation "toa intro"
 	action
 		"apoxys spec points" += 1
 		outfit "Focus" -1
-	`Focus increased by 1 (now &[outfit (flagship installed): Focus]).`
+	`Focus decreased by 1 (now &[outfit (flagship installed): Focus]).`
 		goto focus
 
 	label flightiness
 	`Flightiness refers to your agility. A high flightiness will allow you to move and regenerate faster.`
 	choice
-		`	(Increase Focus by 1.)`
+		`	(Increase Flightiness by 1.)`
 				to display
 					"apoxys spec points" >= 1
 			goto addflightiness
-		`	(Decrease Focus by 1.)`
+		`	(Decrease Flightiness by 1.)`
 				to display
 					"outfit (flagship installed): Flightiness" >= 2
 			goto subflightiness
@@ -254,13 +254,13 @@ conversation "toa intro"
 	action
 		"apoxys spec points" -= 1
 		outfit "Flightiness" 1
-	`Focus increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+	`Flightiness increased by 1 (now &[outfit (flagship installed): Flightiness]).`
 		goto flightiness
 	label subflightiness
 	action
 		"apoxys spec points" += 1
 		outfit "Flightiness" -1
-	`Focus increased by 1 (now &[outfit (flagship installed): Flightiness]).`
+	`Flightiness decreased by 1 (now &[outfit (flagship installed): Flightiness]).`
 		goto flightiness
 
 	label friendliness
@@ -286,7 +286,7 @@ conversation "toa intro"
 	action
 		"apoxys spec points" += 1
 		outfit "Friendliness" -1
-	`Friendliness increased by 1 (now &[outfit (flagship installed): Friendliness]).`
+	`Friendliness decreased by 1 (now &[outfit (flagship installed): Friendliness]).`
 		goto friendliness
 
 
